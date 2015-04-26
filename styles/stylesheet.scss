@@ -25,6 +25,11 @@ html, body{
 a{
 	text-decoration:none;
 }
+
+img{
+	max-width:100%;
+	box-sizing:border-box;
+}
 header {
 	color: rgb(255, 255, 255);
 	font-size:56px;
@@ -170,7 +175,7 @@ h1 {
 }
 
 h2 {
-	font-size:28px;
+	font-size:$h2-font-size;
 	font-weight:bold;
 	color:$primary-colour;
 	padding-left:10px;
