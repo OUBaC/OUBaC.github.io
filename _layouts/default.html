@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% include head-inner.html %}
+		<title>OUBaC - {{page.title}}</title>
+		{% for stylesheet in page.stylesheets %}
+		<link rel="stylesheet" type="text/css" href="{{stylesheet}}"/>
+		{% endfor %}
+	</head>
+	<body>
+		{% include top-nav.html %}
+		{% include side-nav.html %}
+		<div id="content">
+		{{content}}
+		</div>
+	</body>
+</html>

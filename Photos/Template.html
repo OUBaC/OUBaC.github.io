@@ -1,0 +1,33 @@
+---
+layout: default
+title: Photos
+stylesheets:
+ - /styles/photos-styles.css
+---
+
+{% for gallery in site.data.photos.Galleries %}
+	{% if gallery.path == page.path %}
+		<div style="max-width:1200px; font-size:0px;">
+		<h2>{{ gallery.Name }}</h2>
+	{% assign currentWidth = 0 %}
+	{% assign startIndex = 0 %}
+	{% for photo in gallery.Photos limit:7 %}
+		{% assign width = photo.width|times: 1.0 |divided_by: photo.height %}
+		{% assign currentWidth = currentWidth |plus: width %}
+		{% if forloop.last and currentWidth <= 4 %}
+			{% assign currentWidth = 4 %}
+		{% endif %}
+		{% if currentWidth >= 4 %}
+			{{currentWidth}}
+			{% for i in (startIndex...forloop.index0) %}
+				{% assign width = gallery.Photos[i].width|times: 1.0 |divided_by: gallery.Photos[i].height %}
+				<img src="{{gallery.Photos[i].path}}" width="{{width | times: 100 |divided_by: currentWidth}}%" class="photo"/>
+			{% endfor %}
+			{% assign currentWidth =0 %}
+			{% assign startIndex = forloop.index %}
+			
+		{% endif %}
+	{% endfor %}
+		</div>
+	{% endif %}
+{% endfor %}

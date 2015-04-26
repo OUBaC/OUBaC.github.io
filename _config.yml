@@ -1,0 +1,6 @@
+name: "OUBaC"
+description: "Description"
+
+url: "localhost:4000"
+
+paginate: 10

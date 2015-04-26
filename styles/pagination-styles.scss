@@ -1,0 +1,38 @@
+---
+---
+@import 'variables';
+
+.pagination-links{
+	text-align:center;
+}
+
+.page-number{
+	display:inline;
+}
+
+.button{
+	background:$primary-colour;
+	color:#fff;
+	padding:0px 15px;
+	font-size:24px;
+	font-weight:bold;
+	border-width:2px;
+	border-style:solid;
+	border-color:#fff;
+	box-shadow: rgba(0, 0, 0, 0.258824) 2px 2px 2px 2px;
+}
+
+.button-grey-out{
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:2;
+	display:inline-block;
+	background:rgba(255,255,255,0.6);
+	
+}
+
+.button-container{
+	display:inline-block;
+	position:relative;
+}
