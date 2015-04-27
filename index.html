@@ -4,7 +4,7 @@ layout: default
 stylesheets:
  - /styles/pagination-styles.css
 ---
-{% for post in site.posts %}
+{% for post in paginator.posts %}
 <div class="post">
 	<a href="{{post.url}}"> <h2 class="title">{{post.title}}</h2></a>
 	<p class="date">{{ post.date | date_to_long_string }}</p>
