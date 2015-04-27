@@ -155,8 +155,9 @@ h1 {
 	margin-top:($small-header-height - $small-title-height)/2;
 }
 .side-nav-logo{
-	padding:5%;
-	width:90%;
+	width:100%;
+	padding:15px;
+	box-sizing:border-box;
 	border-bottom-color: rgba(255, 255, 255, 0.12);
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
