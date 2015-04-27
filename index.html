@@ -2,13 +2,13 @@
 title: Latest News
 layout: default
 stylesheets:
- - /styles/pagination-styles.css
+ - /styles/index-styles.css
 ---
 {% for post in paginator.posts %}
 <div class="post">
 	<a href="{{post.url}}"> <h2 class="title">{{post.title}}</h2></a>
-	<p class="date">{{ post.date | date_to_long_string }}</p>
-	<div style="width:100%;height:1px;background:#BDBDBD"></div>
+	<p class="date"><span class="aligner"></span>{{ post.date | date_to_long_string }}</p>
+	<div style="width:100%;height:1px;background:#BDBDBD;overflow:hidden;"></div>
 	{{post.content}}
 </div>
 {% endfor %}

@@ -195,19 +195,8 @@ p {
 	padding-right:10px;
 }
 
-.title{
-	padding-left:2%;
-	padding-right:0px;
-	display:inline-block;
-	width:48%;
-}
-.date{
-	padding-left:0px;
-	padding-right:0px;
-	font-size:16px;
-	width:48%;
-	text-align:right;
-	display:inline-block;
+.aligner{
+	font-size:$h2-font-size;
 }
 
 li:hover > .drop-down-menu{
