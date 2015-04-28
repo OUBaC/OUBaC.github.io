@@ -4,3 +4,16 @@ description: "Description"
 url: "localhost:4000"
 
 paginate: 10
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"	  
+  -
+    scope:
+      path: "" 
+      type: "posts"
+    values:
+      layout: "post"

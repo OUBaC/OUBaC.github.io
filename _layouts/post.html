@@ -1,9 +1,12 @@
 ---
 layout: default
+stylesheets:
+ - /styles/index-styles.css
 ---
 <div class="post">
 	<h2 class="title">{{page.title}}</h2>
-	<p class="date">{{ page.date | date_to_long_string }}</p>
-	<div style="width:100%;height:1px;background:#BDBDBD"></div>
+	<p class="date"><span class="aligner"></span>{{ page.date | date_to_long_string }}</p>
+	<div style="width:100%;height:1px;background:#BDBDBD;overflow:hidden;"></div>
 	{{content}}
 </div>
+
