@@ -2,83 +2,63 @@
 ---
 @import 'variables';
 
-.post
-{
-    margin: 15px 0;
+.post{
+	margin:15px 0px;
 }
 
-.title
-{
-    float: left;
-
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-right: 0;
+.title{
+	padding-right:0px;
+	float:left;
+	margin-top:0px;
+	margin-bottom:0px;
 }
-.date
-{
-    font-size: 16px;
-
-    display: block;
-    overflow: hidden;
-
-    margin: 0;
-
-    text-align: right;
+.date{
+	margin:0px;
+	font-size:16px;
+	text-align:right;
+	display:block;
+	overflow:hidden;
 }
-.pagination-links
-{
-    text-align: center;
+.pagination-links{
+	text-align:center;
 }
 
-.page-number
-{
-    display: inline;
+.page-number{
+	display:inline;
 }
 
-.button
-{
-    font-size: 24px;
-    font-weight: bold;
-
-    padding: 0 15px;
-
-    color: #fff;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #fff;
-    background: $primary-colour;
-    box-shadow: rgba(0, 0, 0, .258824) 2px 2px 2px 2px;
+.button{
+	background:$primary-colour;
+	color:#fff;
+	padding:0px 15px;
+	font-size:24px;
+	font-weight:bold;
+	border-width:2px;
+	border-style:solid;
+	border-color:#fff;
+	box-shadow: rgba(0, 0, 0, 0.258824) 2px 2px 2px 2px;
 }
 
-.button-grey-out
-{
-    position: absolute;
-    z-index: 2;
-
-    display: inline-block;
-
-    width: 100%;
-    height: 100%;
-
-    background: rgba(255,255,255,.6);
+.button-grey-out{
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:2;
+	display:inline-block;
+	background:rgba(255,255,255,0.6);
+	
 }
 
-.button-container
-{
-    position: relative;
-
-    display: inline-block;
+.button-container{
+	display:inline-block;
+	position:relative;
 }
 
-@media all and (max-width: 950px)
-{
-    .title
-    {
-        float: none;
-    }
-    .date
-    {
-        text-align: left;
-    }
+@media all and (max-width: 950px) {
+	.title{
+		float:none;
+		}
+	.date{
+		text-align:left;
+		}
 }

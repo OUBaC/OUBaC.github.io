@@ -1,30 +1,24 @@
 ---
 ---
 @import 'variables';
-.button
-{
-    font-size: 24px;
-    font-weight: bold;
-
-    padding: 5px 15px;
-
-    color: #fff;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #fff;
-    background: $primary-colour;
-    box-shadow: rgba(0, 0, 0, .258824) 2px 2px 2px 2px;
+.button{
+	background:$primary-colour;
+	color:#fff;
+	padding:5px 15px;
+	font-size:24px;
+	font-weight:bold;
+	border-width:2px;
+	border-style:solid;
+	border-color:#fff;
+	box-shadow: rgba(0, 0, 0, 0.258824) 2px 2px 2px 2px;
 }
-.winners
-{
-    margin: 0 auto;
-    padding-right: 15px;
-    padding-left: 15px;
-
-    text-align: center;
+.winners{
+	padding-left:15px;
+	padding-right:15px;
+	text-align:center;
+	margin:0px auto;
 }
-.winners td
-{
-    padding-right: 15px;
-    padding-left: 15px;
-}
+.winners td{
+		padding-left:15px;
+		padding-right:15px;
+	}
