@@ -41,10 +41,21 @@ a:hover{
 	}
 img
 {
-box-sizing: border-box;
+	box-sizing: border-box;
     max-width: 100%;
 }
+table {
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
 
+	font-size: 19px;
+    text-align: center;
+}
+td{
+	padding-left:15px;
+	padding-right:15px;
+	}
 ul{
 	list-style-type: none;
 }
