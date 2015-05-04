@@ -132,7 +132,7 @@ header
 
 li:nth-child(1)
 {
-border: none !important;
+	border: none !important;
 }
 .side-nav li:hover,
 .top-nav li:hover
@@ -190,8 +190,7 @@ border: none !important;
     box-sizing: border-box;
     width: auto;
     margin-top: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
+	padding: 10px 20px;
 	
     color: #fff;
     border-width: 0;
@@ -204,8 +203,6 @@ border: none !important;
 .top-nav a,
 .top-nav label
 {
-padding-right: 15px;
-padding-left: 15px;
 
 color: #fff;
 }	
@@ -326,11 +323,11 @@ input:checked + ul
     display: none;
 }
 
-.drop-down-menu a
+.drop-down-menu li
 {
     color: $accent-colour;
 }
-.drop-down-menu li:hover > a
+.drop-down-menu li:hover 
 {
     color: #fff;
 }	
