@@ -1,6 +1,5 @@
 $(function() {
     $(window).scroll(function() {
-		console.log("HelloWorld");
         var scroll = $(window).scrollTop();
  
         if (scroll >= 50) {
@@ -14,6 +13,7 @@ $(function() {
         }
     });
 });
+
 
 function expandSideNav(){
 		document.getElementById('navigation-drawer').style.left="0px";

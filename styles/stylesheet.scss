@@ -243,6 +243,7 @@ padding-right: 15px;
 
 #small-grey-out
 {
+	display:none;
     position: fixed;
     z-index: 1;
 	
@@ -385,6 +386,10 @@ padding: $side-nav-vertical-padding $side-nav-horizontal-padding;
 
 @media all and (max-width: 1500px)
 {
+	#small-grey-out{
+			display: initial;
+	}
+	
 .side-nav-trigger
 {
 	display: inline-block;
