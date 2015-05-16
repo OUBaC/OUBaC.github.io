@@ -22,6 +22,7 @@ $social-links-height: 30px;
 $change-width: 1500px;
 
 // Tags
+
 html,
 body{
 	background: #f9f9f9;
@@ -114,7 +115,7 @@ header{
 	box-shadow: rgba(0, 0, 0, .258824) 0 2px 5px 0;
 	color: rgb(255, 255, 255);	
     font-size: 56px;
-    font-size: 0; \\TODO  Why?	
+    font-size: 0;	
 	height: $large-header-height;
 	overflow: visible;
     position: fixed;
