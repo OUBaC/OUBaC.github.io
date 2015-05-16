@@ -276,6 +276,15 @@ padding-right: 15px;
     border-bottom-style: solid;
     border-bottom-color: rgba(255, 255, 255, .12);
 }
+
+.side-nav-label{
+	width: 100%;
+	height: 100%;
+	display: block;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	}
+	
 .side-nav
 {
     display: none;
@@ -354,7 +363,8 @@ input:checked + ul
 .side-nav li
 {
 font-size: $top-nav-text-height;
-    font-weight: bold;
+	
+	font-weight: bold;
 	
     display: block;
 	
@@ -376,8 +386,8 @@ border-top-color: rgba(0, 0, 0, .12);
 
 .side-nav li
 {
-padding: $side-nav-vertical-padding $side-nav-horizontal-padding;
-	
+	padding: $side-nav-vertical-padding $side-nav-horizontal-padding;
+	color: #fff;
     text-align: center;
 	
     border-top-color: rgba(255, 255, 255, .12);
@@ -457,31 +467,25 @@ padding: $side-nav-vertical-padding $side-nav-horizontal-padding;
 	}
     .side-nav-expand-menu
     {
+		
         position: relative;
         top: 100%;
 		
         display: none;
 		
-        margin-top: $side-nav-vertical-padding;
-        margin-right: - $side-nav-horizontal-padding;
-        margin-bottom: - $side-nav-vertical-padding;
-        margin-left: - $side-nav-horizontal-padding;
         padding: 0 !important;
 		
         background: #fff;
 	}
 	
 	
-    .side-nav-expand-menu a
-    {
-        color: $accent-colour;
-	}
-    .side-nav-expand-menu li:hover > a
+    .side-nav-expand-menu li:hover 
     {
         color: #fff;
 	}
     .side-nav-expand-menu li
     {
+		color: $accent-colour;
         border-top-color: rgba(0, 0, 0, .12);
 	}
 	
