@@ -4,46 +4,53 @@
 
 $large-header-height: 150px;
 $small-header-height: 70px;
-$social-links-height: 30px;
-$side-nav-vertical-padding: 10px;
-$side-nav-horizontal-padding: 20px;
-$small-title-height: 30px;
-$small-hamburger-height: $small-title-height * 1.15;
 
 $large-title-height: 48px;
+$small-title-height: 30px;
+
+$large-hamburger-height: $large-title-height * 1.15;
+$small-hamburger-height: $small-title-height * 1.15;
+
 $top-nav-text-height: 20px;
 $top-nav-text-padding: 10px;
-$large-hamburger-height: $large-title-height * 1.15;
+
+$side-nav-vertical-padding: 10px;
+$side-nav-horizontal-padding: 20px;
+
+$social-links-height: 30px;
 
 $change-width: 1500px;
 
-
+// Tags
 html,
-body
-{
+body{
 	background: #f9f9f9;
 	font-family: RobotoDraft, Roboto, sans-serif;
 	height: 100%;
     margin: 0;    
 }
-a
-{
+
+a{
 	text-decoration: none;
 }
+
 a:link{
 	color:#005EA5;
 }
+
 a:visited{
 	color:#4C2C92;
 }
+
 a:hover{
 	color:#2E8ACA;
 }
-img
-{
+
+img{
 	box-sizing: border-box;
     max-width: 100%;
 }
+
 table {
 	font-size: 19px;
     padding-left: 15px;
@@ -51,157 +58,133 @@ table {
 	margin: 0 auto;
 	text-align: center;
 }
+
 td{
 	padding-left:15px;
 	padding-right:15px;
 }
+
 ul{
 	list-style-type: none;
 }
+
 li{
 	font-size: 19px;
 	padding: 5px;
 }
-h1
-{
+
+h1{
+	display: inline-block;
     font-size: $large-title-height;
-    font-weight: bold;
-	
-    display: inline-block;
-	
-    margin: 0;
-    padding-top: $large-header-height - 1.15 * $large-title-height - 1.15 * $top-nav-text-height - 2 * $top-nav-text-padding;
+    font-weight: bold;	
+	padding-top: $large-header-height - 1.15 * $large-title-height - 1.15 * $top-nav-text-height - 2 * $top-nav-text-padding;
     padding-left: 0;
-	
+    margin: 0;
     transition: height .1s;
 }
-.smaller h1
-{
+
+.smaller h1{
     font-size: $small-title-height;
-	
     padding-top: ($small-header-height - $small-title-height)/2;
 }
 
-h2
-{
+h2{
+	color: $primary-colour;
     font-size: $h2-font-size;
     font-weight: bold;
-	
-    padding-right: 10px;
-    padding-left: 10px;
-	
-    color: $primary-colour;
+	padding-left: 10px;
+    padding-right: 10px;	
 }
 
-h3
-{
+h3{
     font-size: 19px;
     font-weight: bold;
-	
-    padding-right: 10px;
     padding-left: 20px;
+	padding-right: 10px;
 }
 
-p
-{
+p{
     font-size: 19px;
-	
-    padding-right: 10px;
     padding-left: 20px;
+	padding-right: 10px;
 }
-header
-{
+
+header{
+	background: $primary-colour;
+	box-shadow: rgba(0, 0, 0, .258824) 0 2px 5px 0;
+	color: rgb(255, 255, 255);	
     font-size: 56px;
-    font-size: 0;
-	
+    font-size: 0; \\TODO  Why?	
+	height: $large-header-height;
+	overflow: visible;
     position: fixed;
+	transition: height left .1s;
+	width: 100%;
     z-index: 1;
-	
-    overflow: visible;
-	
-    width: 100%;
-    height: $large-header-height;
-	
-    transition: height left .1s;
-	
-    color: rgb(255, 255, 255);
-    background: $primary-colour;
-    box-shadow: rgba(0, 0, 0, .258824) 0 2px 5px 0;
 }
 
-a:nth-child(1) > li
-{
-border: none !important;
-}
-.side-nav li:hover,
-.top-nav li:hover
-{
-	background-color: $accent-colour;
+a:nth-child(1) > li{
+	border: none !important;
 }
 
-.side-nav-wrapper
+\\Top Nav
+
+.top-nav
 {
-	font-size: 0;
-	position: relative;
-	box-sizing: border-box;
-	min-height: 100%;
-	padding-bottom: $social-links-height + 2 * $side-nav-vertical-padding;
+	display: block;
+	font-size: 0;	
+    padding: 10px;
 }
 
-.top-nav-logo
-{
+.top-nav-logo{
 	float: left;	
 	height: 100%;
     margin-right: 20px;
     padding: 10px;
 }
 
-.top-nav
-{
-	font-size: 0;
-	
-    display: block;
-	
-    padding: 10px;
-}
-.top-nav > ul
-{
-	font-size: 0;
-	
+.top-nav > ul{
 	display: inline;
-	
-	padding-left: 0;
-	
+	font-size: 0;
 	list-style-type: none;
+	padding-left: 0;	
 }	
-.top-nav  li
-{
+.top-nav  li{
+	border-color: rgba(255, 255, 255, .12);
+	border-style: solid;
+	border-width: 0;
+	border-left-width: 1px;
+	box-sizing: border-box;
+	color: #fff;
+	display: inline;
 	font-size: 20px;
 	font-weight: bold;
-	
-	position: relative;
-	
-	display: inline;
-	
-	box-sizing: border-box;
-	width: auto;
-	margin-top: 0;
 	padding: 10px 20px;
-	
-	color: #fff;
-	border-width: 0;
-	border-style: solid;
-	border-color: rgba(255, 255, 255, .12);
-	border-left-width: 1px;
+	position: relative;
+	margin-top: 0;	
+	width: auto;	
 }	
 
+.top-nav li:hover{
+	background-color: $accent-colour;
+}
 
 .top-nav a,
-.top-nav label
-{
+.top-nav label{
+	color: #fff;
+}
 
-color: #fff;
-}	
+//Side Nav
+
+.side-nav-wrapper{
+	box-sizing: border-box;
+	font-size: 0;
+	min-height: 100%;
+	padding-bottom: $social-links-height + 2 * $side-nav-vertical-padding;
+	position: relative;
+}
+
+	
 .side-nav-trigger
 {
 display: none;
@@ -249,6 +232,10 @@ z-index: 1;
 	.smaller .top-nav
 	{
 display: inline;
+}
+
+.side-nav li:hover{
+	background-color: $accent-colour;
 }
 
 .smaller
