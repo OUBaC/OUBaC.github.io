@@ -15,6 +15,8 @@ $top-nav-text-height: 20px;
 $top-nav-text-padding: 10px;
 $large-hamburger-height: $large-title-height * 1.15;
 
+$change-width: 1500px;
+
 
 html,
 body
@@ -381,7 +383,7 @@ padding: $side-nav-vertical-padding $side-nav-horizontal-padding;
     border-top-color: rgba(255, 255, 255, .12);
 	}
 
-@media all and (max-width: 1500px)
+@media all and (max-width: $change-width)
 {
 	#small-grey-out{
 			display: initial;
@@ -513,6 +515,11 @@ h1
     {
 	height: $small-hamburger-height !important;
         margin-top: $large-header-height - $small-title-height  - 20px;
+		}
+}
+@media all and (min-width: $change-width){
+	body{
+			position: static !important;
 		}
 	}
 		
