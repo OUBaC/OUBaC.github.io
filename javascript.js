@@ -18,10 +18,10 @@ $(function() {
 function expandSideNav(){
 		document.getElementById('navigation-drawer').style.left="0px";
 		document.getElementById('small-grey-out').style.width="100%";
-		document.getElementsByTagName('body')[0].style.position="fixed";
+		document.getElementsByTagName('body')[0].style.overflow="hidden";
 }
 function hideSideNav(){
 		document.getElementById('navigation-drawer').style.left="-300px";
 		document.getElementById('small-grey-out').style.width="0%";
-		document.getElementsByTagName('body')[0].style.position="static";
+		document.getElementsByTagName('body')[0].style.overflow="initial";
 }

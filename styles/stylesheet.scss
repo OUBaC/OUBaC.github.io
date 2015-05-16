@@ -519,7 +519,7 @@ h1
 }
 @media all and (min-width: $change-width){
 	body{
-			position: static !important;
+			overflow: initial !important;
 		}
 	}
 		
