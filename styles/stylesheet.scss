@@ -114,7 +114,6 @@ header{
 	background: $primary-colour;
 	box-shadow: rgba(0, 0, 0, .258824) 0 2px 5px 0;
 	color: rgb(255, 255, 255);	
-    font-size: 56px;
     font-size: 0;	
 	height: $large-header-height;
 	overflow: visible;
@@ -133,7 +132,7 @@ input:checked + ul{
 	opacity: 1;
 }
 
-\\Misc
+//Misc
 
 .aligner{
 	font-size: $h2-font-size;
@@ -157,7 +156,7 @@ input:checked + ul{
 	width: auto;
 }
 
-\\Top Nav
+//Top Nav
 
 .top-nav
 {
