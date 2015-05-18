@@ -1,0 +1,96 @@
+---
+---
+@import 'variables';
+$critical-value: 1000px;
+
+table {
+	border-collapse: collapse;
+	box-sizing: border-box;
+	margin: 2%;
+	width: 96%; 
+}
+
+tr{
+	border: 2px solid $primary-colour;
+	overflow: hidden;
+}
+
+tr:hover{
+	background-color:#EEEEEE;
+}
+
+th {
+	background-color: #002147;
+	color: white;
+	font-weight: normal;
+	padding: 15px;
+	text-align: center;
+	vertical-align: middle;
+	
+	&:first-of-type {
+		text-align: left; 
+	}
+}	
+
+th[scope="row"] {
+	color: initial;
+	background-color: transparent;
+}
+
+td {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+td[data-title]:before {
+	content: attr(data-title);
+	float: left;
+	
+	@media (min-width: $critical-value) {
+		content: none; 
+	}
+} 
+
+@media (max-width: $critical-value) {
+	
+	thead {	
+		display: none;
+	}
+	
+	tbody,
+	tr,
+	th,
+	td {
+		display: block;
+		text-align: right;
+		
+	}
+	
+	tr{
+		margin-bottom: 20px;
+	}
+	
+	tr:hover{
+		background-color: transparent;
+	}
+	
+	th[scope="row"] {
+		background-color: $primary-colour;
+		color: white;	
+	}
+	
+	td{
+		border: 1px solid $primary-colour;
+		color: rgba(0,0,0,0.54)
+	}
+	td:hover{
+		background-color: #EEEEEE;
+	}
+}
+	
+	
+	
+	
+		

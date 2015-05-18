@@ -1,0 +1,132 @@
+---
+title: College Captains
+stylesheets:
+- /styles/college-captains.css
+Colleges:
+ - College: Balliol
+   M: james.yow@balliol.ox.ac.uk
+   W: --
+ - College: Brasenose
+   M: frederick.hinds@bnc.ox.ac.uk
+   W: fleur.snow@bnc.ox.ac.uk
+ - College: Christ Church
+   M: joseph.badawi-crook@chch.ox.ac.uk
+   W: --
+ - College: Corpus Christi
+   M: --
+   W: --
+ - College: Exeter
+   M: adam.ward@exeter.ox.ac.uk
+   W: imogen.parry@exeter.ox.ac.uk
+ - College: Green-Templeton
+   M: --
+   W: --
+ - College: Hertford
+   M: thomas.nicholls@hertford.ox.ac.uk
+   W: --
+ - College: Jesus
+   M: owain.turner@jesus.ox.ac.uk
+   W: sarah.toh@jesus.ox.ac.uk
+ - College: Keble
+   M: michael.greenhalgh@keble.ox.ac.uk
+   W: --
+ - College: Lady Margaret Hall
+   M: eric.grunstein@lmh.ox.ac.uk
+   W: cyan.koay@lmh.ox.ac.uk
+ - College: Lincoln
+   M: joshua.long@lincoln.ox.ac.uk
+   W: --
+ - College: Linacre
+   M: warren.kretzschmar@well.ox.ac.uk
+   W: --
+ - College: Magdalen
+   M: louisa.britton@magd.ox.ac.uk
+   W: --
+ - College: Merton
+   M: matthew.raybould@merton.ox.ac.uk
+   W: --
+ - College: New
+   M: --
+   W: alicia.walker@new.ox.ac.uk
+ - College: Oriel
+   M: mark.gowers@oriel.ox.ac.uk
+   W: --
+ - College: Osler
+   M: --
+   W: --
+ - College: Pembroke
+   M: rory.weaver@pmb.ox.ac.uk
+   W: --
+ - College: Queen&apos;s
+   M: ashley.sim@queens.ox.ac.uk
+   W: ruth.ng@queens.ox.ac.uk
+ - College: Somerville
+   M: james.woodfield@some.ox.ac.uk
+   W: michael.lin@some.ox.ac.uk
+ - College: St Anne&apos;s
+   M: rory.irwin@st-annes.ox.ac.uk
+   W: laura.carter@st-annes.ox.ac.uk  
+ - College: St Benet&apos;s
+   M: --
+   W: --
+ - College: St Catherine&apos;s
+   M: anirudh.mandagere@stcatz.ox.ac.uk
+   W: -- 
+ - College: St Cross/Wolfson
+   M: --
+   W: amy.cottle@stx.ox.ac.uk 
+ - College: St Edmund
+   M: kusal.lokuge@seh.ox.ac.uk
+   W: --
+ - College: St Hilda&apos;s
+   M: --
+   W: rachel.moorse@st-hildas.ox.ac.uk
+ - College: St Hugh&apos;s
+   M: kon.kwek@st-hughs.ox.ac.uk
+   W: --
+ - College: St John's/Mansfield
+   M: james.zhou@mansfield.ox.ac.uk
+   M2: felix.grainger@sjc.ox.ac.uk
+   W: Use Men's Contacts
+ - College: St Peter&apos;s
+   M: benjamin.kobryner@spc.ox.ac.uk
+   W: miriam.stewart@spc.ox.ac.uk
+ - College: Trinity
+   M: john.nicholls@trinity.ox.ac.uk
+   W: christine.shi@trinity.ox.ac.uk
+ - College: University
+   M: abdul.mahadi@univ.ox.ac.uk
+   W: --
+ - College: Wadham
+   M: edwin.poon@wadh.ox.ac.uk
+   M2: zhan.ng@wadh.ox.ac.uk
+   W: mili.malde@wadh.ox.ac.uk
+ - College: Worcester
+   M: jake.brittain@worc.ox.ac.uk
+   W: anna.coombes@worc.ox.ac.uk
+---
+<h2>College Captains</h2>
+<table cellspacing="0" cellpadding="0" class="responsive-table">
+	<thead>
+		<th scope="col">College</th>
+		<th scope="col">Men's Team Captain</th>
+		<th scope="col">Ladies' Team Captain</th>
+	</thead>
+	{% for college in page.Colleges %}
+	<tr>
+		<th scope="row">{{college.College}}</th>
+		{% if college.M == '--' %}
+			<td data-title="Men's Team Captain">--</td>
+		{% elsif college.M2 %}
+			<td data-title="Men's Team Captain"><a href="mailto:{{college.M}}">{{college.M}}<br><a href="mailto:{{college.M2}}">{{college.M2}}</td>
+		{% else %}
+		<td data-title="Men's Team Captain"><a href="mailto:{{college.M}}">{{college.M}}</td>
+		{% endif %}
+		{% if college.W == '--' %}
+			<td data-title="Ladies' Team Captain">--</td>
+		{% else %}
+			<td data-title="Ladies' Team Captain"><a href="mailto:{{college.W}}">{{college.W}}</td>
+		{% endif %}
+	</tr>
+	{% endfor %}
+	
