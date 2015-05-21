@@ -19,7 +19,7 @@ $side-nav-horizontal-padding: 20px;
 
 $social-links-height: 30px;
 
-$change-width: 1500px;
+$change-width: 1360px;
 
 // Tags
 
@@ -172,7 +172,6 @@ input:checked + ul{
 .top-nav-logo{
 	float: left;	
 	height: 100%;
-    margin-right: 20px;
     padding: 10px;
 }
 
@@ -192,7 +191,7 @@ input:checked + ul{
 	display: inline;
 	font-size: 20px;
 	font-weight: bold;
-	padding: 10px 20px;
+	padding: 10px 10px;
 	position: relative;
 	margin-top: 0;	
 	width: auto;	
