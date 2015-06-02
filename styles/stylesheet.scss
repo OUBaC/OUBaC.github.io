@@ -118,7 +118,6 @@ header{
 	height: $large-header-height;
 	overflow: visible;
     position: fixed;
-	top: 0px;
 	transition: height left .1s;
 	width: 100%;
     z-index: 1;
@@ -150,11 +149,10 @@ input:checked + ul{
 }
 
 #content{
+	padding-top: $large-header-height;
 	padding-bottom: 30px;
 	margin: 0 auto;
-	margin-top: $large-header-height;
 	max-width: 1200px;
-	overflow: hidden;
 	width: auto;
 }
 
