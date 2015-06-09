@@ -4,104 +4,135 @@ stylesheets:
 - /styles/college-captains.css
 Colleges:
  - College: Balliol
+   img: balliol
    M: james.yow@balliol.ox.ac.uk
    W: --
  - College: Brasenose
+   img: Brasenose
    M: frederick.hinds@bnc.ox.ac.uk
    W: fleur.snow@bnc.ox.ac.uk
  - College: Christ Church
+   img: christ-church
    M: joseph.badawi-crook@chch.ox.ac.uk
    W: --
  - College: Corpus Christi
+   img: corpus-christi
    M: --
    W: --
  - College: Exeter
+   img: exeter
    M: adam.ward@exeter.ox.ac.uk
    W: imogen.parry@exeter.ox.ac.uk
  - College: Green-Templeton
+   img: green-templeton
    M: --
    W: --
  - College: Hertford
+   img: hertford
    M: thomas.nicholls@hertford.ox.ac.uk
    W: --
  - College: Jesus
+   img: jesus
    M: owain.turner@jesus.ox.ac.uk
    W: sarah.toh@jesus.ox.ac.uk
  - College: Keble
+   img: keble
    M: michael.greenhalgh@keble.ox.ac.uk
    W: --
  - College: Lady Margaret Hall
+   img: lady-margaret-hall
    M: eric.grunstein@lmh.ox.ac.uk
    W: cyan.koay@lmh.ox.ac.uk
  - College: Lincoln
+   img: lincoln
    M: joshua.long@lincoln.ox.ac.uk
    W: --
  - College: Linacre
+   img: linacre
    M: warren.kretzschmar@well.ox.ac.uk
    W: --
  - College: Magdalen
+   img: magdalen
    M: louisa.britton@magd.ox.ac.uk
    W: --
  - College: Merton
+   img: merton
    M: matthew.raybould@merton.ox.ac.uk
    W: --
  - College: New
+   img: new
    M: --
    W: alicia.walker@new.ox.ac.uk
  - College: Oriel
+   img: oriel
    M: mark.gowers@oriel.ox.ac.uk
    W: --
- - College: Osler
-   M: --
-   W: --
  - College: Pembroke
+   img: pembroke
    M: rory.weaver@pmb.ox.ac.uk
    W: --
  - College: Queen&apos;s
+   img: queens
    M: ashley.sim@queens.ox.ac.uk
    W: ruth.ng@queens.ox.ac.uk
  - College: Somerville
+   img: somerville
    M: james.woodfield@some.ox.ac.uk
    W: michael.lin@some.ox.ac.uk
  - College: St Anne&apos;s
+   img: st-annes
    M: rory.irwin@st-annes.ox.ac.uk
    W: laura.carter@st-annes.ox.ac.uk  
  - College: St Benet&apos;s
+   img: st-benets
    M: --
    W: --
  - College: St Catherine&apos;s
+   img: st-catherines
    M: anirudh.mandagere@stcatz.ox.ac.uk
    W: -- 
  - College: St Cross/Wolfson
+   img: st-cross
+   img2: wolfson
    M: --
    W: amy.cottle@stx.ox.ac.uk 
  - College: St Edmund
+   img: st-edmund
    M: kusal.lokuge@seh.ox.ac.uk
    W: --
  - College: St Hilda&apos;s
+   img: st-hildas
    M: --
    W: rachel.moorse@st-hildas.ox.ac.uk
  - College: St Hugh&apos;s
+   img: st-hughs
    M: kon.kwek@st-hughs.ox.ac.uk
    W: --
  - College: St John's/Mansfield
+   img: st-johns
+   img2: mansfield
    M: james.zhou@mansfield.ox.ac.uk
    M2: felix.grainger@sjc.ox.ac.uk
    W: Use Men's Contacts
  - College: St Peter&apos;s
+   img: st-peters
    M: benjamin.kobryner@spc.ox.ac.uk
    W: miriam.stewart@spc.ox.ac.uk
  - College: Trinity
+   img: trinity
    M: john.nicholls@trinity.ox.ac.uk
    W: christine.shi@trinity.ox.ac.uk
  - College: University
+   img: university
    M: abdul.mahadi@univ.ox.ac.uk
    W: --
  - College: Wadham
+   img: wadham
    M: edwin.poon@wadh.ox.ac.uk
    M2: zhan.ng@wadh.ox.ac.uk
    W: mili.malde@wadh.ox.ac.uk
  - College: Worcester
+   img: worcester
    M: jake.brittain@worc.ox.ac.uk
    W: anna.coombes@worc.ox.ac.uk
 ---
@@ -114,7 +145,13 @@ Colleges:
 	</thead>
 	{% for college in page.Colleges %}
 	<tr>
-		<th scope="row">{{college.College}}</th>
+		<th scope="row">
+		{% if college.img2%}
+		 <img src="/assets/colleges/{{college.img}}.svg" class="left" ><img src="/assets/colleges/{{college.img2}}.svg" class="right"><span style="padding-right: 0.5em"></span>
+		{% else %}
+			<img src="/assets/colleges/{{college.img}}.svg" style="height: 2em;vertical-align: middle; padding-right:0.5em;">
+		{% endif %}
+			{{college.College}}</th>
 		{% if college.M == '--' %}
 			<td data-title="Men's Team Captain">--</td>
 		{% elsif college.M2 %}
@@ -129,4 +166,4 @@ Colleges:
 		{% endif %}
 	</tr>
 	{% endfor %}
-	
+</table>

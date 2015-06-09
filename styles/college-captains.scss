@@ -3,6 +3,22 @@
 @import 'variables';
 $critical-value: 1000px;
 
+.left{
+	height: 2em;
+	vertical-align: middle;
+	-webkit-clip-path: inset(0 50% 0 0);
+	clip-path: inset(0 50% 0 0);
+	}
+	
+.right{
+	position: absolute;
+	height: 2em;
+	vertical-align: middle;
+	-webkit-clip-path: inset(0 0 0 50%);
+	clip-path: inset(0 0 0 50%);
+	transform:translateX(-100%);
+	}
+	
 table {
 	border-collapse: collapse;
 	box-sizing: border-box;
