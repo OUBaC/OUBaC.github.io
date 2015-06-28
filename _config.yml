@@ -3,7 +3,7 @@ description: "Description"
 
 url: "localhost:4000"
 
-paginate: 10
+paginate: 5
 
 defaults:
   -

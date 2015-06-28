@@ -10,66 +10,54 @@
 .title
 {
     float: left;
-
     margin-top: 0;
     margin-bottom: 0;
     padding-right: 0;
 }
+
 .date
 {
+	display: block;
     font-size: 16px;
-
-    display: block;
+	margin: 0;
     overflow: hidden;
-
-    margin: 0;
-
     text-align: right;
 }
-.pagination-links
-{
-    text-align: center;
-}
 
-.page-number
-{
-    display: inline;
-}
+.active{
+	background-color: $primary-colour;
+	color: #fff;
+	}
 
-.button
-{
-    font-size: 24px;
-    font-weight: bold;
+.step-page{
+		font-size: 150%;
+		font-weight: bold;
+	}
 
-    padding: 0 15px;
+.pagination-links-list{
+		
+		text-align: center;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		
+		li{
+			border-radius: 2px;
+			display: inline-block;
+			line-height: 30px;
+			padding: 0 10px;
+			text-align: center;
+		}
+		
+	}
 
-    color: #fff;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #fff;
-    background: $primary-colour;
-    box-shadow: rgba(0, 0, 0, .258824) 2px 2px 2px 2px;
-}
-
-.button-grey-out
-{
-    position: absolute;
-    z-index: 2;
-
-    display: inline-block;
-
-    width: 100%;
-    height: 100%;
-
-    background: rgba(255,255,255,.6);
-}
-
-.button-container
-{
-    position: relative;
-
-    display: inline-block;
-}
+.disabled{
+		opacity: 0.3;
+	}	
+	
 
 @media all and (max-width: 950px)
 {
