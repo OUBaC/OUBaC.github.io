@@ -148,9 +148,8 @@ input:checked + ul{
 .smaller{
 	height: $small-header-height !important;
 }
-#twitter-logo,
-#facebook-logo,
-#github-logo{
+
+.social-logo{
 	height: $social-links-height;
 	padding-right: 15px;
 }
