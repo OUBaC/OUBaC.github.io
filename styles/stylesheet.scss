@@ -410,6 +410,12 @@ li:hover > .drop-down-menu{
 	z-index: 1;
 }
 
+@media all and (max-width: 1500px){
+	.top-nav-logo{
+		height: 100%;
+	}
+}
+
 @media all and (max-width: $change-width){
 	
 	header{
