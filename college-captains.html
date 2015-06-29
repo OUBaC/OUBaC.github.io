@@ -147,9 +147,9 @@ Colleges:
 	<tr>
 		<th scope="row">
 		{% if college.img2%}
-		 <img src="/assets/colleges/{{college.img}}.svg" class="left" ><img src="/assets/colleges/{{college.img2}}.svg" class="right"><span style="padding-right: 0.5em"></span>
+		 <img src="/assets/colleges/{{college.img}}.svg" class="left" alt="{{college.College}}"><img src="/assets/colleges/{{college.img2}}.svg" class="right" alt="{{college.College}}"><span style="padding-right: 0.5em"></span>
 		{% else %}
-			<img src="/assets/colleges/{{college.img}}.svg" style="height: 2em;vertical-align: middle; padding-right:0.5em;">
+			<img src="/assets/colleges/{{college.img}}.svg" style="height: 2em;vertical-align: middle; padding-right:0.5em; " alt="{{college.College}}">
 		{% endif %}
 			{{college.College}}</th>
 		{% if college.M == '--' %}
