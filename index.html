@@ -15,7 +15,7 @@ stylesheets:
 <div class="pagination-links">
 	<ul class="pagination-links-list">
 		{% if paginator.previous_page %}
-			<a href="{{ paginator.previous_page_path }}"><li class="step-page">&lsaquo;</li></a>
+			<li class="step-page"><a href="{{ paginator.previous_page_path }}">&lsaquo;</a></li>
 		{% else %}
 			<li class="step-page disabled">&lsaquo;</li>
 		{% endif %}
@@ -35,16 +35,16 @@ stylesheets:
 
 		{% for page in (start..end) %}
 			{% if page == paginator.page %}
-				<a href="#"><li class="active">{{page}}</li></a>
+				<li class="active"><a href="#">{{page}}</a></li>
 			{% elsif page == 1 %}
-				<a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}"><li>{{ page }}</li></a>
+				<li><a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
 			{% else %}
-				<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}"><li>{{ page }}</li></a>
+				<li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
 			{% endif %}
 		{% endfor %}
 		
 		{% if paginator.next_page %}
-			<a href="{{ paginator.next_page_path }}"><li class="step-page">&rsaquo;</li></a>
+				<li class="step-page"><a href="{{ paginator.next_page_path }}">&rsaquo;</a></li>
 		{% else %}
 			<li class="step-page disabled">&rsaquo;</li>
 		{% endif %}
