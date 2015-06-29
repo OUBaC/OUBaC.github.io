@@ -72,6 +72,13 @@ ul{
 li{
 	font-size: 19px;
 	padding: 5px;
+	
+	a{
+		box-sizing: border-box;
+		display: block;
+		height: 100%;
+		width: 100%;
+	}
 }
 
 h1{
@@ -162,7 +169,7 @@ input:checked + ul{
 {
 	display: block;
 	font-size: 0;	
-    padding: 10px;
+    padding: 0px 10px;
 }
 
 .smaller .top-nav{
@@ -188,13 +195,19 @@ input:checked + ul{
 	border-left-width: 1px;
 	box-sizing: border-box;
 	color: #fff;
-	display: inline;
-	font-size: 20px;
+	display: inline-block;
+	font-size: 0;
 	font-weight: bold;
-	padding: 10px 10px;
+	padding: 0px;
 	position: relative;
 	margin-top: 0;	
-	width: auto;	
+	width: auto;
+	
+	a, label{
+		font-size: $top-nav-text-height;
+		padding:  0px 10px;
+		line-height: 1.15 * $top-nav-text-height + 2 * $top-nav-text-padding;
+	}
 }	
 
 .top-nav li:hover{
@@ -242,12 +255,18 @@ li:hover > .drop-down-menu{
 	box-sizing: border-box;
 	color: $accent-colour;
 	display: block;
-	font-size: $top-nav-text-height;
+	font-size: 0;
 	font-weight: bold;
 	margin-top: 0;
-	padding-top: $top-nav-text-padding;
-	padding-bottom: $top-nav-text-padding;
-	width: auto;	
+	padding: 0;
+	width: auto;
+	
+	a{
+		color: inherit;
+		font-size: $top-nav-text-height;
+		height: 1.15 * $top-nav-text-height + 2 * $top-nav-text-padding;
+		padding: 0 10px;	
+	}
 }
 
 .drop-down-menu li:hover {
@@ -319,7 +338,7 @@ li:hover > .drop-down-menu{
 	box-sizing: border-box;
 	display: block;
 	height: 100%;
-	padding: 10px 20px;
+	padding: $side-nav-vertical-padding $side-nav-horizontal-padding;
 	width: 100%;
 }
 
@@ -339,9 +358,14 @@ li:hover > .drop-down-menu{
 	font-size: $top-nav-text-height;
 	font-weight: bold;
 	margin-top: 0;
-	padding: $side-nav-vertical-padding $side-nav-horizontal-padding;
+	padding: 0;
 	text-align: center;
-	width: auto;	
+	width: auto;
+
+	a{
+		color: inherit;
+		padding: $side-nav-vertical-padding $side-nav-horizontal-padding;	
+	}
 }
 
 .side-nav li:hover{
