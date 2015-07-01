@@ -155,7 +155,7 @@ Colleges:
 		{% if college.M == '--' %}
 			<td data-title="Men's Team Captain">--</td>
 		{% elsif college.M2 %}
-			<td data-title="Men's Team Captain"><a href="mailto:{{college.M}}">{{college.M}}<br><a href="mailto:{{college.M2}}">{{college.M2}}</td>
+			<td data-title="Men's Team Captain"><a href="mailto:{{college.M}}">M1: {{college.M}}<br><a href="mailto:{{college.M2}}">M2: {{college.M2}}</td>
 		{% else %}
 		<td data-title="Men's Team Captain"><a href="mailto:{{college.M}}">{{college.M}}</td>
 		{% endif %}
