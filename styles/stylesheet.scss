@@ -10,6 +10,7 @@ $small-title-height: 30px;
 
 $large-hamburger-height: $large-title-height * 1.15;
 $small-hamburger-height: $small-title-height * 1.15;
+$side-nav-triggerhorizontal-padding: 15px;
 
 $top-nav-text-height: 20px;
 $top-nav-text-padding: 10px;
@@ -325,7 +326,7 @@ li:hover > .drop-down-menu{
 	float: left;	
 	height: $large-hamburger-height;
 	margin-top: $large-header-height - $large-title-height - 20px;
-	padding: 0 15px;	
+	padding: 0 $side-nav-triggerhorizontal-padding;	
 }
 
 .smaller .side-nav-trigger{
@@ -426,6 +427,8 @@ li:hover > .drop-down-menu{
 		display: block;
 		padding-top: $large-header-height - $large-title-height - 20px;
 		padding-left: 0;
+		overflow: hidden;
+		text-overlow: ellipses;
 	}
 	
 	#content{
@@ -445,7 +448,7 @@ li:hover > .drop-down-menu{
 	}
 	
 	.top-nav-logo{
-		display: none;
+		float: right;
 	}
 	
 	.side-nav{
@@ -456,8 +459,9 @@ li:hover > .drop-down-menu{
 		display: inline-block;
 	}
 	
-}	
-@media all and (max-width: 600px)
+}
+
+@media all and (max-width: 750px)
 {
 	h1{
 		font-size: $small-title-height;
@@ -468,6 +472,34 @@ li:hover > .drop-down-menu{
 		height: $small-hamburger-height !important;
 		margin-top: $large-header-height - $small-title-height  - 20px;
 	}
+}
+
+@media all and( max-width: 550px){
+	
+	header{
+		height: auto;
+	}
+	
+	h1{
+		padding-bottom: 5px;
+	}
+	
+	.smaller h1 {
+		display: none;
+	}
+	
+	.top-nav-logo{
+		display: none;
+	}
+	
+	.smaller .top-nav-logo{
+		display: block;
+		float: none;
+		left: - $small-hamburger-height/2 - $side-nav-triggerhorizontal-padding;
+		margin: 0 auto;
+		position: relative;
+	}
+	
 }
 
 @media all and (min-width: $change-width){
