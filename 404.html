@@ -1,0 +1,157 @@
+---
+title: 404
+layout : null
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		{% include head-inner.html %}
+		<title>{{page.title}} - OUBaC</title>
+	</head>
+	<style> 
+		svg{
+		width:100%;
+		height:100%;
+		}
+		
+		body{
+		background-color: #002147;
+		}
+		
+		span{
+		color: #fff;
+		font-size:25vw;
+		}
+		
+		.right4{
+			margin-left: 25vw;
+		}
+		
+		iframe{
+		border: none;
+		bottom: 0;
+		height:25vw;
+		position: absolute; 
+		visibility: hidden;
+		width:25vw;
+		}
+		
+		html,
+		body{
+		font-family: RobotoDraft, Roboto, sans-serif;
+		height: 100%;
+		margin: 0;    
+		}
+		
+		a{
+		color: #fff;
+		}
+		
+		ul{
+		list-style-type: none;
+		}
+		
+		p{
+		color: #fff;
+		font-size: 19px;
+		padding-left: 20px;
+		padding-right: 10px;
+		text-align: center;
+		}
+		
+	@media all and (min-width:1200px){
+		span{
+			font-size: 300px
+		}
+		
+		.right4{
+			margin-left: 300px;
+		}
+		
+		iframe{
+			height: 300px;
+			width: 300px;
+		}
+	}
+		
+	</style>
+	<div style="display:flex; justify-content:center; height:100%; flex-direction: column">
+	<div style="position:relative; margin: 0 auto; text-align: center;">
+		<span>4</span>
+		<iframe src="/assets/logo/logo-oxford-blue-white-background.svg" id="svg" onload="run()" seamless></iframe>
+		<span class="right4" >4</span>
+		<a href="/"><div style="position: absolute; height:100%; width:100%; top :0" ></div></a>
+	</div>	
+	<p>
+		The page you were looking for wasn't found.
+		<br/>
+		It could have moved, been deleted or never even have existed.
+		<br/>
+		If you followed a link or are sure the URL is correct then send an email to <a href="mailto:{{site.data.variables.IT.email}}">{{site.data.variables.IT.email}}</a>
+	</p>
+	</div>
+	
+	
+	<script>
+		
+		var nodeIndex =0;
+		var index = 0;
+		var length = 0;
+		var test;
+		var d;
+		var breakpoints =[];
+		var nodes =[];
+		
+		function run(){
+			nodeIndex =0;
+			var iframe = document.getElementById("svg");
+			var svg = iframe.contentDocument.childNodes[0];
+			svg.style.height = '100%';
+			svg.style.width = '100%';
+			nodes = svg.getElementsByTagName("*");
+			length = nodes.length;
+			for( var i=0; i< length; i++ ){
+				nodes[i].style.visibility = 'hidden';
+			}
+			iframe.style.visibility =  'visible';
+			showNext();
+		}
+		
+		
+		function addPoint(){
+			test.setAttribute('d',d.substring(0,breakpoints[index+1]));
+			index++;
+			if(index< breakpoints.length){
+				setTimeout(addPoint, 20);
+				}else{
+				showNext();
+			}
+		}
+		
+		function showNext(){
+			if(nodeIndex==length){
+				return;
+			}
+			test = nodes[nodeIndex];
+			nodeIndex++;	
+			test.style.visibility = 'visible';
+			if(test.tagName != 'path'){
+				showNext();
+				return;
+			}
+			d = test.getAttribute('d');
+			test.setAttribute('d','');
+			breakpoints =[];
+			for( i=0; i< d.length; i++){
+				if((['m','c','l','v','h'].indexOf(d.charAt(i).toLowerCase())) !=-1){
+					breakpoints.push(i);
+				}
+			}
+			index = 0;
+			addPoint();
+			
+			
+		}
+	</script>
+</body>
+</html>
