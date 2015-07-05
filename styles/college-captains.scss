@@ -49,7 +49,7 @@ th {
 }	
 
 th[scope="row"] {
-	color: initial;
+	color: black;
 	background-color: transparent;
 }
 
@@ -64,7 +64,7 @@ td[data-title]:before {
 	content: attr(data-title);
 	float: left;
 	
-	@media only screen and (min-width: $critical-value + 1px ) {
+	@media not print and (max-width: $critical-value ) {
 		content: none; 
 	}
 } 
