@@ -126,7 +126,7 @@ header{
 	height: $large-header-height;
 	overflow: visible;
     position: fixed;
-	transition: height left .1s;
+	transition: height .1s;
 	width: 100%;
     z-index: 1;
 }
