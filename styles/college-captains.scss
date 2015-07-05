@@ -2,6 +2,7 @@
 ---
 @import 'variables';
 $critical-value: 1000px;
+$print-critical-value: 360px; //This number has been chosen such that the table looks fine across most of the paper sizes in Chrome's print preview.
 
 .left{
 	height: 2em;
@@ -61,15 +62,15 @@ td {
 }
 
 td[data-title]:before {
-	content: attr(data-title);
+	content: none; 
 	float: left;
 	
-	@media not print and (max-width: $critical-value ) {
-		content: none; 
+	@media only screen and (max-width: $critical-value),(max-width: $print-critical-value){
+		content: attr(data-title);
 	}
 } 
 
-@media only screen and (max-width: $critical-value){
+@media only screen and (max-width: $critical-value), (max-width: $print-critical-value){
 	
 	thead {	
 		display: none;

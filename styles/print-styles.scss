@@ -1,0 +1,53 @@
+---
+---
+$logo-size: 100px;
+
+*{
+	font-size: 12pt;
+}
+
+html, body{
+	background: white;
+	font-size: 12pt;
+}
+
+header{
+	height: 0px;
+	position: static;
+	visibility: hidden;
+}
+	
+h1{
+	visibility: visible;
+	color: black;
+	padding: 0px;
+	padding-left: $logo-size;
+	margin-top: $logo-size/2;
+	transform: translateY(-50%);
+}
+	
+.top-nav-logo{
+	display: block;
+	float: none;
+	height: $logo-size;
+	position: absolute;
+	top: 0;
+	visibility: visible !important;
+}
+	
+nav{
+	display: none;
+}
+	
+#content{
+	padding: 0;
+	padding-top: $logo-size;
+	top: 0;
+	position: absolute;
+}
+
+#side-nav-trigger{
+	display: none;
+}
+
+	
