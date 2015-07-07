@@ -1,0 +1,98 @@
+.card{
+	background: white;
+	border-radius: 2px;
+	box-shadow: rgba(0, 0, 0, 0.156863) 0px 2px 5px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 10px 0px;
+	box-sizing: border-box;
+	display: inline-flex;
+	margin: 10px 5px;
+	max-width: 580px;
+	padding: 20px;
+}
+
+.card-title{
+	padding-left: 0px;
+	display: inline;
+	font-weight: normal;
+	margin: 0;
+}
+
+.college-crest{
+	height: 1em;
+	vertical-align: middle;
+}
+
+.picture{
+	background-color: #002147;
+	margin-left: -20px;
+	margin-top: -20px;
+	margin-bottom: -20px;
+	margin-right: 20px;
+	min-width: 200px;
+	object-fit: cover;
+}
+.profile{
+	border-collapse: collapse;
+	border-color: rgba(0,0,0,0.05);
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+.profile li{
+	padding: 2px;
+}
+
+.sub-list{
+	margin: 0;
+	padding: 0;
+}
+.subhead{
+	display: inline;
+	color: rgba(0,0,0,0.54);
+	font-weight: normal;
+	margin: 0px;
+	padding: 0px;
+	white-space: nowrap;
+}
+
+.profile tr:nth-child(odd){
+	background-color: rgba(0,0,0,0.03);
+}
+.profile td{
+	box-sizing: border-box;
+	padding: 5px 0;
+	text-align: left;
+}
+
+.profile td:first-child{
+	color: rgba(0,0,0,0.7);
+	padding: 0 5px;
+}
+
+.sub-table{
+	margin: 0;
+	padding: 0;
+}
+
+.sub-table tr{
+	background-color: rgba(0,0,0,0) !important;
+}
+
+.sub-table td{
+	color: black !important;
+}
+
+@media all and (max-width: 600px){
+	.card{
+		flex-direction: column;
+	}
+	
+	.picture{
+		margin-right: -20px;
+		margin-bottom: 0px;
+		object-fit: contain;
+	}
+}
