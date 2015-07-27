@@ -2,22 +2,39 @@
 title: Cuppers
 ---
 <style>
+.versus{
+  padding: 0 0.5em;
+  color: rgba(0,0,0,0.5);
+}
+
 .inline-college-logo{
   height: 1.5em;
   vertical-align: middle;
 }
+.left{
+  -webkit-clip-path: inset(0 50% 0 0);
+  clip-path: inset(0 50% 0 0);
+}
+
+.right{
+  position: absolute;
+  -webkit-clip-path: inset(0 0 0 50%);
+  clip-path: inset(0 0 0 50%);
+  transform:translateX(-100%);
+}
 
 .college-name{
   display: inline-block;
-  margin: 10px 0;
-  padding: 0 5px;
+  padding: 0 0.5em;
   text-overflow: ellipsis;
+  font-weight: normal;
 }
 
 .cuppers-card{
   padding: 7.5px;
   width: 100%;
   margin: 10px 5px;
+  margin-left: 0;
   box-sizing: border-box;
 }
 .round{
@@ -26,62 +43,207 @@ title: Cuppers
   display: inline-flex;
   flex-direction: column;
   justify-content: space-around;
-  margin : 5px;
 }
- .winner{
+.horizontal-lines{
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+.vertical-lines{
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
- }
- .loser{
-      filter: grayscale(100%);
-      -webkit-filter: grayscale(100%);
-      opacity: 0.5;
- }
+.loser{
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  opacity: 0.5;
+}
+.horizontal-line{
+  background-color: rgba(0,0,0,0.12);
+  width:100%;
+  min-width: 4px;
+  height:2px;
+}
+.vertical-line{
+  background-color: rgba(0,0,0,0.12);
+  padding: 2px 0;
+  width:2px;
+  flex-grow:2;
+}
+.blank{
+  flex-grow:1;
+}
+.double-blank{
+  flex-grow:2;
+}
+
+@media all and (max-width:1050px){
+
+.college-name{
+  display: none;
+}
+.inline-college-logo{
+  height: 2em;
+}
+.cuppers-card{
+  background-color: rgba(0,0,0,0);
+  box-shadow: none;
+  padding: 5px 0;
+  margin: 0;
+  text-align: center;
+}
+
+}
+
 </style>
-<div style="display:flex">
+
+<div style="display:flex; margin: 10px;">
   <div id="round-one" class="round">
     <div class="card cuppers-card">
-      <img src="/assets/colleges/jesus.svg" class="inline-college-logo">
-      <h3 class="college-name">Jesus</h3>
-      <div class="divider"></div>
-      <img src="/assets/colleges/jesus.svg" class="inline-college-logo loser">
-      <h3 class="college-name loser">Jesus</h3>
+      <img src="/assets/colleges/keble.svg" class="inline-college-logo">
+      <span class="college-name">Keble</span>
     </div>
     <div class="card cuppers-card">
-      <img src="/assets/colleges/jesus.svg" class="inline-college-logo">
-      <h3 class="college-name">Jesus</h3>
-      <div class="divider"></div>
-      <img src="/assets/colleges/jesus.svg" class="inline-college-logo">
-      <h3 class="college-name">Jesus</h3>
+      <img src="/assets/colleges/st-annes.svg" class="inline-college-logo">
+      <span class="college-name">St Anne's</span>
     </div>
     <div class="card cuppers-card">
-      <img src="/assets/colleges/jesus.svg" class="inline-college-logo">
-      <h3 class="college-name">Jesus</h3>
-      <div class="divider"></div>
-      <img src="/assets/colleges/jesus.svg" class="inline-college-logo">
-      <h3 class="college-name">Jesus</h3>
+      <img src="/assets/colleges/st-peters.svg" class="inline-college-logo">
+      <span class="college-name">St Peter's</span>
     </div>
     <div class="card cuppers-card">
-      <img src="/assets/colleges/jesus.svg" class="inline-college-logo">
-      <h3 class="college-name">Jesus</h3>
-      <div class="divider"></div>
-      <img src="/assets/colleges/jesus.svg" class="inline-college-logo">
-      <h3 class="college-name">Jesus</h3>
+      <img src="/assets/colleges/exeter.svg" class="inline-college-logo">
+      <span class="college-name">Exeter</span>
+    </div>
+    <div class="card cuppers-card">
+      <img src="/assets/colleges/worcester.svg" class="inline-college-logo">
+      <span class="college-name">Worcester</span>
+    </div>
+    <div class="card cuppers-card">
+      <img src="/assets/colleges/magdalen.svg" class="inline-college-logo">
+      <span class="college-name">Magdalen</span>
+    </div>
+    <div class="card cuppers-card">
+      <img src="/assets/colleges/trinity.svg" class="inline-college-logo loser">
+      <span class="college-name loser">Trinity</span>
+    </div>
+    <div class="card cuppers-card">
+      <img src="/assets/colleges/university.svg" class="inline-college-logo">
+      <span class="college-name">University</span>
     </div>
   </div>
+  {% include cuppers-lines.html num="8" %}
   <div id="round-two" class="round">
     <div class="card cuppers-card">
-      <img src="/assets/colleges/jesus.svg" class="inline-college-logo">
-      <h3 class="college-name">Jesus</h3>
-      <div class="divider"></div>
-      <img src="/assets/colleges/jesus.svg" class="inline-college-logo">
-      <h3 class="college-name">Jesus</h3>
+      <img src="/assets/logo/logo-oxford-blue-tight.svg" class="inline-college-logo">
+      <span class="college-name">???</span>
+    </div>
+    <div class="card cuppers-card">
+      <img src="/assets/logo/logo-oxford-blue-tight.svg" class="inline-college-logo">
+      <span class="college-name">???</span>
+    </div>
+    <div class="card cuppers-card">
+      <img src="/assets/logo/logo-oxford-blue-tight.svg" class="inline-college-logo">
+      <span class="college-name">???</span>
+    </div>
+    <div class="card cuppers-card">
+      <img src="/assets/colleges/university.svg" class="inline-college-logo">
+      <span class="college-name">University</span>
+    </div>
+  </div>
+  {% include cuppers-lines.html num="4" %}
+  <div id="round-three" class="round">
+    <div class="card cuppers-card">
+      <img src="/assets/logo/logo-oxford-blue-tight.svg" class="inline-college-logo">
+      <span class="college-name">???</span>
+    </div>
+    <div class="card cuppers-card">
+      <img src="/assets/colleges/university.svg" class="inline-college-logo">
+      <span class="college-name">University</span>
+    </div>
+  </div>
+  {% include cuppers-lines.html num="2" %}
+  <div id="round-four" class="round">
+    <div class="card cuppers-card">
+      <img src="/assets/colleges/university.svg" class="inline-college-logo">
+      <span class="college-name">University</span>
+    </div>
+  </div>
+  <div class="round"><span class="versus">vs</span></div>
+  <div id="round-four-right" class="round">
+    <div class="card cuppers-card">
+      <img src="/assets/colleges/wadham.svg" class="inline-college-logo loser">
+      <span class="college-name loser">Wadham</span>
+    </div>
+  </div>
+  {% include cuppers-lines-right.html num="2" %}
+  <div id="round-three-right" class="round">
+    <div class="card cuppers-card">
+      <img src="/assets/logo/logo-oxford-blue-tight.svg" class="inline-college-logo">
+      <span class="college-name">???</span>
+    </div>
+    <div class="card cuppers-card">
+      <img src="/assets/colleges/university.svg" class="inline-college-logo">
+      <span class="college-name">University</span>
+    </div>
+  </div>
+  {% include cuppers-lines-right.html num="4" %}
+  <div id="round-two-right" class="round">
+    <div class="card cuppers-card">
+      <img src="/assets/logo/logo-oxford-blue-tight.svg" class="inline-college-logo">
+      <span class="college-name">???</span>
+    </div>
+    <div class="card cuppers-card">
+      <img src="/assets/logo/logo-oxford-blue-tight.svg" class="inline-college-logo">
+      <span class="college-name">???</span>
+    </div>
+    <div class="card cuppers-card">
+      <img src="/assets/logo/logo-oxford-blue-tight.svg" class="inline-college-logo">
+      <span class="college-name">???</span>
+    </div>
+    <div class="card cuppers-card">
+      <img src="/assets/colleges/university.svg" class="inline-college-logo">
+      <span class="college-name">University</span>
+    </div>
+  </div>
+  {% include cuppers-lines-right.html num="8" %}
+  <div id="round-one-right" class="round">
+    <div class="card cuppers-card">
+      <img src="/assets/colleges/wadham.svg" class="inline-college-logo">
+      <span class="college-name">Wadham</span>
+    </div>
+    <div class="card cuppers-card">
+      <img src="/assets/colleges/lady-margaret-hall.svg" class="inline-college-logo">
+      <span class="college-name">Lady Margaret Hall</span>
+    </div>
+    <div class="card cuppers-card">
+      <img src="/assets/colleges/st-johns.svg" class="left inline-college-logo"><img src="/assets/colleges/mansfield.svg" class="right inline-college-logo">
+      <span class="college-name">St John's/Mansfield</span>
+    </div>
+    <div class="card cuppers-card">
+      <img src="/assets/colleges/balliol.svg" class="inline-college-logo">
+      <span class="college-name">Balliol</span>
+    </div>
+    <div class="card cuppers-card">
+      <img src="/assets/colleges/st-hughs.svg" class="inline-college-logo">
+      <span class="college-name">St Hugh's</span>
+    </div>
+    <div class="card cuppers-card">
+      <img src="/assets/colleges/st-edmund.svg" class="inline-college-logo">
+      <span class="college-name">St Edmund Hall</span>
     </div>
     <div class="card cuppers-card">
       <img src="/assets/colleges/jesus.svg" class="inline-college-logo">
-      <h3 class="college-name">Jesus</h3>
-      <div class="divider"></div>
-      <img src="/assets/colleges/jesus.svg" class="inline-college-logo">
-      <h3 class="college-name">Jesus</h3>
+      <span class="college-name">Jesus</span>
+    </div>
+    <div class="card cuppers-card">
+      <img src="/assets/colleges/queens.svg" class="inline-college-logo">
+      <span class="college-name">Queen's</span>
     </div>
   </div>
 </div>
