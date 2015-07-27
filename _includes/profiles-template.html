@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="/styles/profiles-styles.css"/>
 <div style="display:flex; justify-content: center; flex-wrap: wrap;">
 	{% for member in page.squad %}
-	<div class="card">
+	<div class="card profile-card">
 		<img class="picture" src="{{page.path}}{{member.img}}" alt="{{member.name}}">
 		<div>
 			<div>
@@ -32,13 +32,13 @@
 				<tr>
 					<td>Varsity History</td>
 					<td>
-						<table class="sub-table">	
+						<table class="sub-table">
 							{% for team in member.varsity-history %}
 							<tr>
 								<td>{{team.name}}</td>
 								<td>{{team.years}}</td>
 							</tr>
-							{% endfor %}	
+							{% endfor %}
 						</table>
 					</td>
 				</tr>

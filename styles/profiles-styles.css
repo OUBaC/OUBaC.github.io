@@ -1,4 +1,4 @@
-.card{
+.profile-card{
 	background: white;
 	border-radius: 2px;
 	box-shadow: rgba(0, 0, 0, 0.156863) 0px 2px 5px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 10px 0px;
@@ -86,10 +86,10 @@
 }
 
 @media all and (max-width: 600px){
-	.card{
+	.profile-card{
 		flex-direction: column;
 	}
-	
+
 	.picture{
 		margin-right: -20px;
 		margin-bottom: 0px;
