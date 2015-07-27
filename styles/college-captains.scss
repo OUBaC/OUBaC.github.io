@@ -1,7 +1,7 @@
 ---
 ---
 @import 'variables';
-$critical-value: 1000px;
+$critical-value: 800px;
 $print-critical-value: 360px; //This number has been chosen such that the table looks fine across most of the paper sizes in Chrome's print preview.
 
 .left{
@@ -10,7 +10,7 @@ $print-critical-value: 360px; //This number has been chosen such that the table 
 	-webkit-clip-path: inset(0 50% 0 0);
 	clip-path: inset(0 50% 0 0);
 	}
-	
+
 .right{
 	position: absolute;
 	height: 2em;
@@ -19,12 +19,12 @@ $print-critical-value: 360px; //This number has been chosen such that the table 
 	clip-path: inset(0 0 0 50%);
 	transform:translateX(-100%);
 	}
-	
+
 table {
 	border-collapse: collapse;
 	box-sizing: border-box;
 	margin: 2%;
-	width: 96%; 
+	width: 96%;
 }
 
 tr{
@@ -43,11 +43,11 @@ th {
 	padding: 15px;
 	text-align: center;
 	vertical-align: middle;
-	
+
 	&:first-of-type {
-		text-align: left; 
+		text-align: left;
 	}
-}	
+}
 
 th[scope="row"] {
 	color: black;
@@ -62,42 +62,42 @@ td {
 }
 
 td[data-title]:before {
-	content: none; 
+	content: none;
 	float: left;
-	
+
 	@media only screen and (max-width: $critical-value),(max-width: $print-critical-value){
 		content: attr(data-title);
 	}
-} 
+}
 
 @media only screen and (max-width: $critical-value), (max-width: $print-critical-value){
-	
-	thead {	
+
+	thead {
 		display: none;
 	}
-	
+
 	tbody,
 	tr,
 	th,
 	td {
 		display: block;
 		text-align: right;
-		
+
 	}
-	
+
 	tr{
 		margin-bottom: 20px;
 	}
-	
+
 	tr:hover{
 		background-color: transparent;
 	}
-	
+
 	th[scope="row"] {
 		background-color: $primary-colour;
-		color: white;	
+		color: white;
 	}
-	
+
 	td{
 		border: 1px solid $primary-colour;
 		color: rgba(0,0,0,0.54)
@@ -106,8 +106,3 @@ td[data-title]:before {
 		background-color: #EEEEEE;
 	}
 }
-	
-	
-	
-	
-		
