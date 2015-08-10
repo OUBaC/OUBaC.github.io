@@ -1,0 +1,170 @@
+---
+---
+$animation-delay: 0.5s;
+$animation-duration: 1s;
+$number-of-animations: 4;
+$lines-animation-delay: ($number-of-animations - 1) * $animation-delay + $animation-duration;
+
+#versus{
+  animation-delay: $lines-animation-delay;
+  animation-duration: $animation-duration;
+  animation-name: appear;
+}
+
+.one{
+  animation-delay: 0;
+}
+
+.two{
+  animation-delay: $animation-delay;
+}
+
+.three{
+  animation-delay: 2 * $animation-delay;
+}
+
+.four{
+  animation-delay: 3 * $animation-delay;
+}
+
+.blank{
+  flex-grow: 1;
+}
+.double-blank{
+  flex-grow: 2;
+}
+
+.college-name{
+  display: inline-block;
+  font-weight: normal;
+  padding: 0 0.5em;
+  text-overflow: ellipsis;
+}
+
+.cuppers-card{
+  box-sizing: border-box;
+  margin: 10px 5px;
+  margin-left: 0;
+  padding: 7.5px;
+  transition: left 10s;
+  width: 100%;
+}
+
+.inline-college-logo{
+  height: 1.5em;
+  vertical-align: middle;
+}
+
+.left{
+  clip-path: inset(0 50% 0 0);
+  -webkit-clip-path: inset(0 50% 0 0);
+}
+
+.loser{
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  opacity: 0.5;
+}
+
+
+.right{
+  clip-path: inset(0 0 0 50%);
+  -webkit-clip-path: inset(0 0 0 50%);
+  position: absolute;
+  transform:translateX(-100%);
+}
+
+.round{
+  animation-duration: $animation-duration;
+  animation-fill-mode: both;
+  animation-name: slideRight;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 200px;
+  overflow: visible;
+  position: relative;
+}
+
+//Note that .rightCard needs to be after .round as it needs to override the value of animation-name set in .round
+.rightCard{
+  animation-name: slideLeft;
+}
+
+.versus{
+  color: rgba(0,0,0,0.5);
+  padding: 0 0.5em;
+}
+
+//Lines
+.horizontal-lines{
+  animation-delay: $lines-animation-delay;
+  animation-duration: $animation-duration;
+  animation-fill-mode: both;
+  animation-name: appear;
+  display: inline-flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-around;
+  position: relative;
+}
+
+
+.horizontal-line{
+  background-color: rgba(0,0,0,0.12);
+  height:2px;
+  min-width: 4px;
+  width:100%;
+}
+
+.vertical-lines{
+  animation-delay: $lines-animation-delay;
+  animation-duration: $animation-duration;
+  animation-fill-mode: both;
+  animation-name: appear;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+
+.vertical-line{
+  background-color: rgba(0,0,0,0.12);
+  flex-grow:2;
+  padding: 2px 0;
+  width:2px;
+}
+
+//Animations
+@keyframes slideRight{
+  from{left:-50vw; opacity: 0;}
+  to{left: 0px; opacity: 1;}
+}
+
+@keyframes slideLeft{
+  from{right:-100vw; opacity: 0;}
+  to{right: 0px; opacity: 1;}
+}
+
+@keyframes appear{
+  from{ opacity: 0;}
+  to{ opacity: 1;}
+}
+
+@media all and (max-width:1050px){
+
+.college-name{
+  display: none;
+}
+.inline-college-logo{
+  height: 2em;
+}
+.cuppers-card{
+  background-color: rgba(0,0,0,0);
+  box-shadow: none;
+  padding: 5px 0;
+  margin: 0;
+  text-align: center;
+}
+
+}
