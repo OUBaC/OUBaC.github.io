@@ -2,6 +2,21 @@
 title: Cuppers
 ---
 <style>
+@keyframes slideRight{
+  from{left:-50vw; opacity: 0;}
+  to{left: 0px; opacity: 1;}
+}
+
+@keyframes slideLeft{
+  from{right:-100vw; opacity: 0;}
+  to{right: 0px; opacity: 1;}
+}
+
+@keyframes appear{
+  from{ opacity: 0;}
+  to{ opacity: 1;}
+}
+
 .versus{
   padding: 0 0.5em;
   color: rgba(0,0,0,0.5);
@@ -36,6 +51,8 @@ title: Cuppers
   margin: 10px 5px;
   margin-left: 0;
   box-sizing: border-box;
+  transition: left 10s;
+
 }
 .round{
   max-width: 200px;
@@ -43,19 +60,57 @@ title: Cuppers
   display: inline-flex;
   flex-direction: column;
   justify-content: space-around;
+  overflow: visible;
+  animation-name: slideRight;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
+
+.one{
+  animation-delay: 0s
+}
+
+.two{
+  animation-delay: 0.5s;
+}
+
+.three{
+  animation-delay: 1s;
+}
+
+.four{
+  animation-delay: 1.5s;
+}
+
+.rightCard{
+  animation-name: slideLeft;
+}
+
+#versus{
+  animation-name: appear;
+  animation-delay: 2.5s
+}
+
 .horizontal-lines{
   position: relative;
   display: inline-flex;
   flex-direction: column;
   justify-content: space-around;
   flex-grow: 1;
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
 }
 .vertical-lines{
   position: relative;
   display: inline-flex;
   flex-direction: column;
   justify-content: space-around;
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
 }
 
 .loser{
@@ -103,7 +158,7 @@ title: Cuppers
 </style>
 
 <div style="display:flex; margin: 10px;">
-  <div id="round-one" class="round">
+  <div id="round-one" class="round one">
     <div class="card cuppers-card">
       <img src="/assets/colleges/keble.svg" class="inline-college-logo">
       <span class="college-name">Keble</span>
@@ -138,7 +193,7 @@ title: Cuppers
     </div>
   </div>
   {% include cuppers-lines.html num="8" %}
-  <div id="round-two" class="round">
+  <div id="round-two" class="round two">
     <div class="card cuppers-card">
       <img src="/assets/logo/logo-oxford-blue-tight.svg" class="inline-college-logo">
       <span class="college-name">???</span>
@@ -157,7 +212,7 @@ title: Cuppers
     </div>
   </div>
   {% include cuppers-lines.html num="4" %}
-  <div id="round-three" class="round">
+  <div id="round-three" class="round three">
     <div class="card cuppers-card">
       <img src="/assets/logo/logo-oxford-blue-tight.svg" class="inline-college-logo">
       <span class="college-name">???</span>
@@ -168,21 +223,21 @@ title: Cuppers
     </div>
   </div>
   {% include cuppers-lines.html num="2" %}
-  <div id="round-four" class="round">
+  <div id="round-four" class="round four">
     <div class="card cuppers-card">
       <img src="/assets/colleges/university.svg" class="inline-college-logo">
       <span class="college-name">University</span>
     </div>
   </div>
-  <div class="round"><span class="versus">vs</span></div>
-  <div id="round-four-right" class="round">
+  <div id="versus" class="round"><span class="versus">vs</span></div>
+  <div id="round-four-right" class="round four rightCard">
     <div class="card cuppers-card">
       <img src="/assets/colleges/wadham.svg" class="inline-college-logo loser">
       <span class="college-name loser">Wadham</span>
     </div>
   </div>
   {% include cuppers-lines-right.html num="2" %}
-  <div id="round-three-right" class="round">
+  <div id="round-three-right" class="round three rightCard">
     <div class="card cuppers-card">
       <img src="/assets/logo/logo-oxford-blue-tight.svg" class="inline-college-logo">
       <span class="college-name">???</span>
@@ -193,7 +248,7 @@ title: Cuppers
     </div>
   </div>
   {% include cuppers-lines-right.html num="4" %}
-  <div id="round-two-right" class="round">
+  <div id="round-two-right" class="round two rightCard">
     <div class="card cuppers-card">
       <img src="/assets/logo/logo-oxford-blue-tight.svg" class="inline-college-logo">
       <span class="college-name">???</span>
@@ -212,7 +267,7 @@ title: Cuppers
     </div>
   </div>
   {% include cuppers-lines-right.html num="8" %}
-  <div id="round-one-right" class="round">
+  <div id="round-one-right" class="round one rightCard">
     <div class="card cuppers-card">
       <img src="/assets/colleges/wadham.svg" class="inline-college-logo">
       <span class="college-name">Wadham</span>
