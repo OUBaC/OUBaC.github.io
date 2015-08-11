@@ -9,6 +9,7 @@ $lines-animation-delay: ($number-of-animations - 1) * $animation-delay + $animat
   animation-delay: $lines-animation-delay;
   animation-duration: $animation-duration;
   animation-name: appear;
+  transform: translateZ(0); //This is to force webkit to use the GPU.
 }
 
 .one{
@@ -46,7 +47,6 @@ $lines-animation-delay: ($number-of-animations - 1) * $animation-delay + $animat
   margin: 10px 5px;
   margin-left: 0;
   padding: 7.5px;
-  transition: left 10s;
   width: 100%;
 }
 
@@ -84,6 +84,7 @@ $lines-animation-delay: ($number-of-animations - 1) * $animation-delay + $animat
   max-width: 200px;
   overflow: visible;
   position: relative;
+  transform: translateZ(0); //This is to force webkit to use the GPU.
 }
 
 //Note that .rightCard needs to be after .round as it needs to override the value of animation-name set in .round
@@ -107,6 +108,7 @@ $lines-animation-delay: ($number-of-animations - 1) * $animation-delay + $animat
   flex-grow: 1;
   justify-content: space-around;
   position: relative;
+  transform: translateZ(0); //This is to force webkit to use the GPU.
 }
 
 
@@ -126,6 +128,7 @@ $lines-animation-delay: ($number-of-animations - 1) * $animation-delay + $animat
   flex-direction: column;
   justify-content: space-around;
   position: relative;
+  transform: translateZ(0); //This is to force webkit to use the GPU.
 }
 
 .vertical-line{
