@@ -140,13 +140,13 @@ $lines-animation-delay: ($number-of-animations - 1) * $animation-delay + $animat
 
 //Animations
 @keyframes slideRight{
-  from{left:-50vw; opacity: 0;}
-  to{left: 0px; opacity: 1;}
+  from{transform: translateX(-50vw); opacity: 0;}
+  to{transform: translateX(0); opacity: 1;}
 }
 
 @keyframes slideLeft{
-  from{right:-100vw; opacity: 0;}
-  to{right: 0px; opacity: 1;}
+  from{transform: translateX(+50vw); opacity: 0;}
+  to{transform: translateX(0); opacity: 1;}
 }
 
 @keyframes appear{

@@ -34,12 +34,7 @@ body{
 	font-family: RobotoDraft, Roboto, sans-serif;
 	height: 100%;
 	width: 100%;
-	overflow-x: hidden;
   margin: 0;
-}
-
-body{
-	overflow-x: visible;
 }
 
 a{
@@ -183,6 +178,7 @@ input:checked + ul{
 	position: relative;
 	margin: 0 auto;
 	max-width: 1200px;
+	overflow-x: hidden;
 	width: auto;
 }
 
