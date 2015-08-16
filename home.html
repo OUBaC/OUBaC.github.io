@@ -14,6 +14,7 @@
 		color: #fff;
 		font-size:25vw;
 	}
+
 </style>
 <body>
 	<iframe src="/assets/logo/logo-grouped.svg" style="display: none;" id="svg" onload="run()" seamless></iframe>
@@ -45,40 +46,9 @@
     create();
 	}
 
-	function createWithDepth(){
-		var newDiv = document.createElement('div');
-		//newDiv.style.backgroundColor="rgba(255,255,255,0.2)";
-		newDiv.style.opacity="1";
-		newDiv.style.height="100%";
-		newDiv.style.width="100%";
-		newDiv.style.position="absolute";
-		var newSVG = document.createElementNS('http://www.w3.org/2000/svg','svg');
-
-		newSVG.style.position="absolute"
-		newSVG.appendChild(nodes[index].cloneNode(true));
-		var newNode;
-		for( var i=index; i < length; i++){
-			newNode = nodes[i].cloneNode(true);
-			newNode.style.opacity = "0.05"
-			newSVG.appendChild(newNode);
-		}
-		index++
-		var depth = layerDiff*index + offset;
-		var scale = (200-depth)/200;
-		newDiv.appendChild(newSVG);
-		newDiv.style.transition="transform 1s";
-		container.appendChild(newDiv);
-		//newDiv.style.transform="translateZ("+oldDepth+"px) scale("+scale+","+scale+")";
-		newDiv.style.transform = "translateZ("+depth+"px) scale("+scale+","+scale+")";
-		if(index<length){
-			setTimeout(createWithDepth,20);
-		}
-	}
-
   function create(){
 		for( index = 0; index<length;index++){
     var newDiv = document.createElement('div');
-    //newDiv.style.backgroundColor="rgba(255,255,255,0.2)";
     newDiv.style.opacity="1";
     newDiv.style.height="100%";
     newDiv.style.width="100%";
@@ -94,7 +64,6 @@
       newSVG.appendChild(newNode);
     }
     newDiv.appendChild(newSVG);
-		newDiv.style.transition="transform 1s";
     container.appendChild(newDiv);
 		}
 		addDepth();
@@ -110,21 +79,6 @@
 		}
 	}
 
-
-function addDepthSeries(){
-	if(index == 0){
-		index = length;
-	}
-	var depth = layerDiff*index + offset;
-	var newDiv = container.childNodes[index];
-	var scale = (200-depth)/200;
-	newDiv.style.transform="translateZ("+depth+"px) scale("+scale+","+scale+")";
-	index--;
-	if(index>0){
-		setTimeout(addDepthSeries,200);
-	}
-}
-
 	function removeDepth(){
 		var divs = container.childNodes;
 		for ( var i =1; i< divs.length; i++){
@@ -136,16 +90,8 @@ function addDepthSeries(){
 		}
 	}
 
-
-
-
-
-
-
-
-
 window.onload = addListeners;
-var radius =100;
+
 var mouseDownVect = [];
 var mouseMoveVect = [];
 var rotationAxis = [];
@@ -153,6 +99,7 @@ var angle;
 var currentMatrix = [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1];
 var boundingRect = container.getBoundingClientRect();
 var center = [(boundingRect.left+boundingRect.right)/2,(boundingRect.top+boundingRect.bottom)/2] ;
+var radius = Math.min();
 
 function addListeners(){
     document.getElementById('container').addEventListener('mousedown', mouseDown, false);
