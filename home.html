@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<style>
+	svg{
+		width:100%;
+		height:100%;
+	}
+
+	body{
+		background-color: #ffffff;
+	}
+
+	span{
+		color: #fff;
+		font-size:25vw;
+	}
+</style>
+<body>
+	<iframe src="/assets/logo/logo-grouped.svg" style="display: none;" id="svg" onload="run()" seamless></iframe>
+  <div id='container' style="perspective:200px; transform-style:preserve-3d; transform:rotateX(0deg);perspective-origin:initial; height:200px;" scroll="changePerspective()"></div>
+<script>
+
+	var index =0;
+	var nodeIndex =0;
+	var length = 0;
+	var test;
+	var d;
+	var breakpoints =[];
+	var nodes =[];
+  var singleNode;
+  var container = document.getElementById('container');
+  var offset =0;
+	var divs;
+	var layerDiff = 2;
+
+	function run(){
+		nodeIndex =0;
+		var iframe = document.getElementById("svg");
+		var svg = iframe.contentDocument.childNodes[0];
+		svg.style.height = '100%';
+		svg.style.width = '100%';
+		nodes = svg.childNodes;
+		length = nodes.length;
+    singleNode = nodes[0];
+    create();
+	}
+
+	function createWithDepth(){
+		var newDiv = document.createElement('div');
+		//newDiv.style.backgroundColor="rgba(255,255,255,0.2)";
+		newDiv.style.opacity="1";
+		newDiv.style.height="100%";
+		newDiv.style.width="100%";
+		newDiv.style.position="absolute";
+		var newSVG = document.createElementNS('http://www.w3.org/2000/svg','svg');
+
+		newSVG.style.position="absolute"
+		newSVG.appendChild(nodes[index].cloneNode(true));
+		var newNode;
+		for( var i=index; i < length; i++){
+			newNode = nodes[i].cloneNode(true);
+			newNode.style.opacity = "0.05"
+			newSVG.appendChild(newNode);
+		}
+		index++
+		var depth = layerDiff*index + offset;
+		var scale = (200-depth)/200;
+		newDiv.appendChild(newSVG);
+		newDiv.style.transition="transform 1s";
+		container.appendChild(newDiv);
+		//newDiv.style.transform="translateZ("+oldDepth+"px) scale("+scale+","+scale+")";
+		newDiv.style.transform = "translateZ("+depth+"px) scale("+scale+","+scale+")";
+		if(index<length){
+			setTimeout(createWithDepth,20);
+		}
+	}
+
+  function create(){
+		for( index = 0; index<length;index++){
+    var newDiv = document.createElement('div');
+    //newDiv.style.backgroundColor="rgba(255,255,255,0.2)";
+    newDiv.style.opacity="1";
+    newDiv.style.height="100%";
+    newDiv.style.width="100%";
+    newDiv.style.position="absolute";
+    var newSVG = document.createElementNS('http://www.w3.org/2000/svg','svg');
+		newSVG.setAttribute("viewBox", "0 0 1357 1357");
+    newSVG.style.position="absolute"
+    newSVG.appendChild(nodes[index].cloneNode(true));
+    var newNode;
+    for( var i=index; i < length; i++){
+      newNode = nodes[i].cloneNode(true);
+      newNode.style.opacity = "0.05"
+      newSVG.appendChild(newNode);
+    }
+    newDiv.appendChild(newSVG);
+		newDiv.style.transition="transform 1s";
+    container.appendChild(newDiv);
+		}
+		addDepth();
+  }
+
+	function addDepth(){
+		var divs = container.childNodes;
+		for ( var i =1; i< divs.length; i++){
+			var depth = layerDiff*i + offset;
+			var newDiv = container.childNodes[i];
+			var scale = (200-depth)/200;
+			newDiv.style.transform="translateZ("+depth+"px) scale("+scale+","+scale+")";
+		}
+	}
+
+
+function addDepthSeries(){
+	if(index == 0){
+		index = length;
+	}
+	var depth = layerDiff*index + offset;
+	var newDiv = container.childNodes[index];
+	var scale = (200-depth)/200;
+	newDiv.style.transform="translateZ("+depth+"px) scale("+scale+","+scale+")";
+	index--;
+	if(index>0){
+		setTimeout(addDepthSeries,200);
+	}
+}
+
+	function removeDepth(){
+		var divs = container.childNodes;
+		for ( var i =1; i< divs.length; i++){
+			var depth = 0;
+			var newDiv = container.childNodes[i];
+			var scale = (200-depth)/200;
+			newDiv.style.transition="transform 1s";
+			newDiv.style.transform="translateZ("+depth+"px) scale("+scale+","+scale+")";
+		}
+	}
+
+
+
+
+
+
+
+
+
+window.onload = addListeners;
+var radius =100;
+var mouseDownVect = [];
+var mouseMoveVect = [];
+var rotationAxis = [];
+var angle;
+var currentMatrix = [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1];
+var boundingRect = container.getBoundingClientRect();
+var center = [(boundingRect.left+boundingRect.right)/2,(boundingRect.top+boundingRect.bottom)/2] ;
+
+function addListeners(){
+    document.getElementById('container').addEventListener('mousedown', mouseDown, false);
+    window.addEventListener('mouseup', mouseUp, false);
+}
+
+function mouseUp(){
+    window.removeEventListener('mousemove', rotate, true);
+		var values = window.getComputedStyle(container,null).getPropertyValue("transform").split('(')[1].split(')')[0].split(',');
+		currentMatrix = values;
+		container.style.transform = "matrix3d("+currentMatrix+")";
+}
+
+function mouseDown(e){
+  mouseDownVect[0] = e.clientX - center[0];
+  mouseDownVect[1] = e.clientY - center[1];
+	zsq = radius*radius - mouseDownVect[0]*mouseDownVect[0] - mouseDownVect[1]*mouseDownVect[1];
+	console.log(zsq);
+	if(zsq > 0){
+		mouseDownVect[2] = Math.sqrt(zsq);
+	}else{
+		mouseDownVect[2]=0;
+	}
+  window.addEventListener('mousemove', rotate, true);
+}
+
+function rotate(e){
+			e.preventDefault();
+			mouseMoveVect[0] = e.clientX - center[0];
+		  mouseMoveVect[1] = e.clientY - center[1];
+			zsq = radius*radius - mouseMoveVect[0]*mouseMoveVect[0] - mouseMoveVect[1]*mouseMoveVect[1];
+			if(zsq > 0){
+				mouseMoveVect[2] = Math.sqrt(zsq);
+			}else{
+				mouseMoveVect[2]=0;
+			}
+					rotationAxis[0] = mouseDownVect[1]*mouseMoveVect[2]-mouseDownVect[2]*mouseMoveVect[1];
+					rotationAxis[1] = mouseDownVect[2]*mouseMoveVect[0]-mouseDownVect[0]*mouseMoveVect[2];
+					rotationAxis[2] = mouseDownVect[0]*mouseMoveVect[1]-mouseDownVect[1]*mouseMoveVect[0];
+					angle = calcAngle(mouseDownVect, mouseMoveVect);
+					container.style.transform = "rotate3d("+ rotationAxis+","+angle+"rad) matrix3d("+currentMatrix+")";
+
+    return false;
+}
+
+function calcAngle(vect_1, vect_2){
+		var numerator   =   vect_1[0]*vect_2[0] + vect_1[1]*vect_2[1] + vect_1[2]*vect_2[2],
+				denominator =   Math.sqrt(vect_1[0]*vect_1[0] + vect_1[1]*vect_1[1] + vect_1[2]*vect_1[2])*
+												Math.sqrt(vect_2[0]*vect_2[0] + vect_2[1]*vect_2[1] + vect_2[2]*vect_2[2]),
+				angle       =   Math.acos(numerator/denominator);
+
+		return angle;
+}
+
+function remove(){
+  if(index!=0){
+    index--;
+    container.removeChild(container.lastChild);
+    setTimeout(remove, 20);
+  };
+
+
+}
+
+</script>
+</body>
+</html>
