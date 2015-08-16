@@ -15,10 +15,23 @@
 		font-size:25vw;
 	}
 
+	#containerForRotation:hover {
+		animation-play-state: paused;
+	}
+
+@keyframes spin{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+
+}
+
 </style>
 <body>
 	<iframe src="/assets/logo/logo-grouped.svg" style="display: none;" id="svg" onload="run()" seamless></iframe>
-  <div id='container' style="perspective:200px; transform-style:preserve-3d; transform:rotateX(0deg);perspective-origin:initial; height:200px;" scroll="changePerspective()"></div>
+	<div id='container' style="perspective:200px; transform-style:preserve-3d; transform:rotateX(0deg);perspective-origin:initial; height:200px;" scroll="changePerspective()">
+  	<div id='containerForRotation'  style="height:100%; transform-style:preserve-3d; animation-duration:30s; animation-name: spin; animation-iteration-count:infinite; animation-timing-function: linear; animation-delay: 2s"></div>
+	</div>
 <script>
 
 	var index =0;
@@ -30,6 +43,7 @@
 	var nodes =[];
   var singleNode;
   var container = document.getElementById('container');
+	var containerForRotation = document.getElementById('containerForRotation');
   var offset =0;
 	var divs;
 	var layerDiff = 2;
@@ -64,26 +78,27 @@
       newSVG.appendChild(newNode);
     }
     newDiv.appendChild(newSVG);
-    container.appendChild(newDiv);
+		newDiv.style.transition = "transform 2s";
+    containerForRotation.appendChild(newDiv);
 		}
 		addDepth();
   }
 
 	function addDepth(){
-		var divs = container.childNodes;
+		var divs = containerForRotation.childNodes;
 		for ( var i =1; i< divs.length; i++){
 			var depth = layerDiff*i + offset;
-			var newDiv = container.childNodes[i];
+			var newDiv = containerForRotation.childNodes[i];
 			var scale = (200-depth)/200;
 			newDiv.style.transform="translateZ("+depth+"px) scale("+scale+","+scale+")";
 		}
 	}
 
 	function removeDepth(){
-		var divs = container.childNodes;
+		var divs =  containerForRotation.childNodes;
 		for ( var i =1; i< divs.length; i++){
 			var depth = 0;
-			var newDiv = container.childNodes[i];
+			var newDiv = containerForRotation.childNodes[i];
 			var scale = (200-depth)/200;
 			newDiv.style.transition="transform 1s";
 			newDiv.style.transform="translateZ("+depth+"px) scale("+scale+","+scale+")";
@@ -99,7 +114,7 @@ var angle;
 var currentMatrix = [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1];
 var boundingRect = container.getBoundingClientRect();
 var center = [(boundingRect.left+boundingRect.right)/2,(boundingRect.top+boundingRect.bottom)/2] ;
-var radius = Math.min();
+var radius = Math.min(boundingRect.height, boundingRect.width)/2;
 
 function addListeners(){
     document.getElementById('container').addEventListener('mousedown', mouseDown, false);
