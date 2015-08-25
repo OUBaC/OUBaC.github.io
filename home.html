@@ -1,37 +1,54 @@
-<!DOCTYPE html>
-<html>
+---
+title: O.U.Ba.C
+layout: default-without-content-div
+---
+
 <style>
+
+	h1{
+		font-family: Canterbury, RobotoDraft, Roboto, sans-serif;;
+		font-weight: normal;
+	}
+
 	svg{
 		width:100%;
 		height:100%;
 	}
 
-	body{
-		background-color: #ffffff;
-	}
-
-	span{
-		color: #fff;
-		font-size:25vw;
-	}
-
 	#containerForRotation:hover {
 		animation-play-state: paused;
 	}
+@keyframes translateZ1{
+	from{transform: translateZ(0) scale(1,1);}
+	to{transform: translateZ(2px) scale(0.99,0.99);}
+}
 
 @keyframes spin{
 	from{transform: rotate(0deg);}
 	to{transform: rotate(360deg);}
 }
 
+@keyframes rotateToPosition{
+	from{transform: rotateX(0deg);}
+	to{transform: matrix3d(0.722194997242236, 0.111347787760592, 0.682668335371656, 0, -0.407952325294303, 0.865591767448551, 0.290389036315536, 0, -0.558577914211848, -0.488213644100733, 0.670550633038719, 0, 0, 0, 0, 1);}
+}
+
+@font-face {
+    font-family: Canterbury;
+    src: url('/assets/Canterbury.ttf');
 }
 
 </style>
-<body>
 	<iframe src="/assets/logo/logo-grouped.svg" style="display: none;" id="svg" onload="run()" seamless></iframe>
-	<div id='container' style="perspective:200px; transform-style:preserve-3d; transform:rotateX(0deg);perspective-origin:initial; height:200px;" scroll="changePerspective()">
-  	<div id='containerForRotation'  style="height:100%; transform-style:preserve-3d; animation-duration:30s; animation-name: spin; animation-iteration-count:infinite; animation-timing-function: linear; animation-delay: 2s"></div>
-	</div>
+	<div id="placeholder" style="height: 50vw; max-height: 100vh ; width:100%; padding-top:140px; box-sizing:border-box;"></div>
+	<div style="display:flex;  height: 50vw; max-height: 100vh ; width:100%; align-items: center; overflow: hidden; position:absolute; top:0; padding-top:140px; box-sizing:border-box;">
+		<div id='container' style="perspective:200px; transform-style:preserve-3d; transform:rotateX(0deg);perspective-origin:initial; height:50vw; width:50vw;animation-duration:5s;position:absolute; right:0; top:140px; opacity:0.5; z-index:0;">
+			<div id='containerForRotation'  style="height:100%; transform-style:preserve-3d; animation-duration:30s; animation-name: spin; animation-iteration-count:infinite; animation-timing-function: linear; animation-delay: 6s"></div>
+		</div>
+		<div style="flex-grow: 1;  z-index:1"></div>
+		<h2 style="font-family: Canterbury; font-weight: normal; font-size: 10vw; margin: 0px; text-align:center; align-items: center;  z-index:1">O.U.Ba.C</h2>
+		<div style="flex-grow:2;  z-index:1"></div>
+
 <script>
 
 	var index =0;
@@ -47,6 +64,7 @@
   var offset =0;
 	var divs;
 	var layerDiff = 2;
+	var styleSheet = document.styleSheets[0];
 
 	function run(){
 		nodeIndex =0;
@@ -67,6 +85,8 @@
     newDiv.style.height="100%";
     newDiv.style.width="100%";
     newDiv.style.position="absolute";
+		newDiv.style.animationDuration="2s";
+		newDiv.addEventListener("animationend",function (){this.style.animationName = "";});
     var newSVG = document.createElementNS('http://www.w3.org/2000/svg','svg');
 		newSVG.setAttribute("viewBox", "0 0 1357 1357");
     newSVG.style.position="absolute"
@@ -78,18 +98,27 @@
       newSVG.appendChild(newNode);
     }
     newDiv.appendChild(newSVG);
-		newDiv.style.transition = "transform 2s";
     containerForRotation.appendChild(newDiv);
 		}
-		addDepth();
+		container.style.animationName = "rotateToPosition";
+		container.addEventListener("animationend",function (){this.style.animationName = "";});
+		container.style.transform ="matrix3d(0.722194997242236, 0.111347787760592, 0.682668335371656, 0, -0.407952325294303, 0.865591767448551, 0.290389036315536, 0, -0.558577914211848, -0.488213644100733, 0.670550633038719, 0, 0, 0, 0, 1)";
+		currentMatrix = [0.722194997242236, 0.111347787760592, 0.682668335371656, 0, -0.407952325294303, 0.865591767448551, 0.290389036315536, 0, -0.558577914211848, -0.488213644100733, 0.670550633038719, 0, 0, 0, 0, 1];
+		setTimeout(addDepth,5000);
   }
 
 	function addDepth(){
+		console.log("addDepth");
 		var divs = containerForRotation.childNodes;
 		for ( var i =1; i< divs.length; i++){
 			var depth = layerDiff*i + offset;
 			var newDiv = containerForRotation.childNodes[i];
 			var scale = (200-depth)/200;
+			//newDiv.animate([  {transform: "translateZ(0) scale(1,1)"},  {transform: "translateZ("+depth+"px) scale("+scale+","+scale+")"}], 1000);
+			var keyframes ="@keyframes translateZ"+i+"{				from{transform: translateZ(0) scale(1,1);}				to{transform: translateZ("+depth+"px) scale("+scale+","+scale+");}			}";
+			styleSheet.insertRule(keyframes,0);
+			newDiv.style.animationDirection = "normal";
+			newDiv.style.animationName = "translateZ"+i;
 			newDiv.style.transform="translateZ("+depth+"px) scale("+scale+","+scale+")";
 		}
 	}
@@ -97,12 +126,19 @@
 	function removeDepth(){
 		var divs =  containerForRotation.childNodes;
 		for ( var i =1; i< divs.length; i++){
-			var depth = 0;
 			var newDiv = containerForRotation.childNodes[i];
-			var scale = (200-depth)/200;
-			newDiv.style.transition="transform 1s";
-			newDiv.style.transform="translateZ("+depth+"px) scale("+scale+","+scale+")";
+			newDiv.style.animationDirection = "reverse";
+			newDiv.style.animationName = "translateZ"+i;
+			newDiv.style.transform="translateZ(0) scale(1,1)";
 		}
+	}
+
+	function removeRotation(){
+		var keyframes ="@keyframes removeRotation{				from{transform: matrix3d("+currentMatrix+")}				to{transform: rotateX(0)}			}";
+		styleSheet.insertRule(keyframes,0);
+		container.style.animationName="removeRotation";
+		container.style.transform = "rotateX(0)";
+		currentMatrix = [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1];
 	}
 
 window.onload = addListeners;
@@ -180,5 +216,3 @@ function remove(){
 }
 
 </script>
-</body>
-</html>
