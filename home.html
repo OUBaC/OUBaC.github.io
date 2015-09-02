@@ -41,7 +41,7 @@ layout: default-without-content-div
 </style>
 	<iframe src="/assets/logo/logo-grouped.svg" style="display: none;" id="svg" onload="run()" seamless></iframe>
 
-	<div style="display:flex;  height: 70vw; max-height: 100vh ; width:100%; align-items: center; overflow: hidden; position:absolute; top:0; padding-top:140px;">
+	<div style="display:flex;  height: 50vw; max-height: 50vh ; width:100%; align-items: center; position:absolute; top:0; padding-top:140px; overflow: hidden;">
 		<div id='container' style="perspective:200px; transform-style:preserve-3d; transform:rotateX(0deg);perspective-origin:initial; height:50vw; width:50vw;animation-duration:5s;position:absolute; right:0; top:140px; opacity:0.5; z-index:0;">
 			<div id='containerForRotation'  style="height:100%; transform-style:preserve-3d; animation-duration:30s; animation-name: spin; animation-iteration-count:infinite; animation-timing-function: linear; animation-delay: 6s"></div>
 		</div>
@@ -49,7 +49,18 @@ layout: default-without-content-div
 		<h2 style="font-family: Canterbury; font-weight: normal; font-size: 10vw; margin: 0px; text-align:center; align-items: center;  z-index:1">O.U.Ba.C</h2>
 		<div style="flex-grow:2;  z-index:1"></div>
 	</div>
-<div id="placeholder" style="height: 70vw; max-height: 100vh ; width:100%; padding-top:140px;"></div>
+<div id="placeholder" style="height: 50vw; max-height: 50vh ; width:100%; padding-top:140px;"></div>
+<div style="display: flex; flex-wrap: wrap; margin: 0 auto; max-width: 1200px; justify-content: center;">
+	<div style="display: inline-block; background-color:#002147; margin: 5px; box-sizing: border-box; padding: 10px; color: #f9f9f9; max-width: 600px; " class="card">
+		<h2 style="color: #f9f9f9">Latest <br> News</h3>
+	</div>
+	{% for post in site.posts limit 12 %}
+		<div style="display: inline-block; background-color:#002147; margin: 5px; width:280px; box-sizing: border-box; padding: 10px; color: #f9f9f9; flex-grow: 1; max-width: 600px; " class="card">
+			<h3>{{post.title}}</h3>
+			<p>{{post.excerpt}}</p>
+		</div>
+	{% endfor %}
+</div>
 <script>
 
 	var index =0;
