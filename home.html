@@ -55,10 +55,11 @@ layout: default-without-content-div
 		<h2 style="color: #f9f9f9">Latest <br> News</h3>
 	</div>
 	{% for post in site.posts limit 12 %}
-		<div style="display: inline-block; background-color:#002147; margin: 5px; width:280px; box-sizing: border-box; padding: 10px; color: #f9f9f9; flex-grow: 1; max-width: 600px; " class="card">
+		<a href="{{post.url}}" style="display: inline-block; background-color:#002147; margin: 5px; width:280px; box-sizing: border-box; padding: 10px; color: #f9f9f9; flex-grow: 1; max-width: 600px; " class="card"><div >
 			<h3>{{post.title}}</h3>
 			<p>{{post.excerpt}}</p>
 		</div>
+	</a>
 	{% endfor %}
 </div>
 <script>
