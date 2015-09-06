@@ -22,6 +22,8 @@ $social-links-height: 30px;
 
 $change-width: 1360px;
 
+$animation-duration: 5s;
+
 // Tags
 
 *{
@@ -89,15 +91,15 @@ h1{
 	display: inline-block;
     font-size: $large-title-height;
     font-weight: bold;
-	padding-top: $large-header-height - 1.15 * $large-title-height - 1.15 * $top-nav-text-height - 2 * $top-nav-text-padding;
     padding-left: 0;
     margin: 0;
-    transition: height .1s;
 }
 
 .smaller h1{
+		flex-basis: 0px;
+		flex-grow: 1;
     font-size: $small-title-height;
-    padding-top: ($small-header-height - $small-title-height)/2;
+
 }
 
 h2{
@@ -128,9 +130,8 @@ header{
 	overflow: visible;
   position: fixed;
 	top: 0;
-	transition: height .1s;
 	width: 100%;
-  z-index: 1;
+  z-index: 100;
 }
 
 a:nth-child(1) > li{
@@ -185,21 +186,29 @@ input:checked + ul{
 
 //Top Nav
 
+.top-nav-container{
+	display: flex;
+	flex-direction: column;
+	justify-content:	flex-end;
+	height: 100%;
+}
+
+.smaller-top-nav-container{
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
 .top-nav
 {
 	display: block;
 	font-size: 0;
-    padding: 0px 10px;
-}
-
-.smaller .top-nav{
-	display: inline;
 }
 
 .top-nav-logo{
 	float: left;
 	height: 150%;
-    padding: 10px;
+  padding: 10px;
 }
 
 .top-nav > ul{
@@ -218,6 +227,7 @@ input:checked + ul{
 	display: inline-block;
 	font-size: 0;
 	font-weight: bold;
+	height: 1.15 * $top-nav-text-height + 2 * $top-nav-text-padding;
 	padding: 0px;
 	position: relative;
 	margin-top: 0;
@@ -300,6 +310,11 @@ li:hover > .drop-down-menu{
 	z-index: 2;
 }
 
+.smaller #social-links{
+	display: none;
+}
+
+
 //Side Nav
 
 .side-nav{
@@ -345,13 +360,11 @@ li:hover > .drop-down-menu{
 	display: none;
 	float: left;
 	height: $large-hamburger-height;
-	margin-top: $large-header-height - $large-title-height - 20px;
 	padding: 0 $side-nav-triggerhorizontal-padding;
 }
 
 .smaller .side-nav-trigger{
 	height: $small-hamburger-height !important;
-	margin-top: ($small-header-height - $small-title-height)/2;
 }
 
 .side-nav-label{
@@ -445,10 +458,23 @@ li:hover > .drop-down-menu{
 
 	h1{
 		display: block;
-		padding-top: $large-header-height - $large-title-height - 20px;
 		padding-left: 0;
-		overflow: hidden;
-		text-overflow: ellipses;
+	}
+
+	.top-nav-container{
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-end;
+		position: absolute;
+		padding-bottom: 10px;
+		box-sizing: border-box;
+		top: 0;
+	}
+
+	.smaller .top-nav-container{
+		align-items: center;
+		padding-bottom: 0px;
+		;
 	}
 
 	#content{
@@ -485,24 +511,14 @@ li:hover > .drop-down-menu{
 {
 	h1{
 		font-size: $small-title-height;
-		padding-top: $large-header-height - $small-title-height - 20px;
 	}
 
 	.side-nav-trigger{
 		height: $small-hamburger-height !important;
-		margin-top: $large-header-height - $small-title-height  - 20px;
 	}
 }
 
 @media all and( max-width: 550px){
-
-	header{
-		height: auto;
-	}
-
-	h1{
-		padding-bottom: 5px;
-	}
 
 	.smaller h1 {
 		display: none;
@@ -515,9 +531,7 @@ li:hover > .drop-down-menu{
 	.smaller .top-nav-logo{
 		display: block;
 		float: none;
-		left: - $small-hamburger-height/2 - $side-nav-triggerhorizontal-padding;
 		margin: 0 auto;
-		position: relative;
 	}
 
 }
