@@ -149,9 +149,15 @@ input:checked + ul{
 
 .divider{
 	background:#BDBDBD;
-	height:1px;
+	height: 2px;
 	overflow:hidden;
 	width:100%;
+}
+
+.vertical-divider{
+	background:#BDBDBD;
+	overflow:hidden;
+	width: 2px;
 }
 
 .card{
@@ -161,6 +167,47 @@ input:checked + ul{
 	box-sizing: border-box;
 	margin: 10px 5px;
 	padding: 20px;
+}
+
+.loading {
+	position: relative;
+	height: 4px;
+	width: 90%;
+	background-color: #acece6;
+	overflow: hidden;
+	margin: 0 5%;
+}
+
+.loading::before{
+	content: '';
+	height: 4px;
+	position: absolute;
+	background-color: #002147;
+	will-change: left, right;
+	animation: loading-long 2.1s cubic-bezier(0.650, 0.815, 0.735, 0.395) infinite;
+
+}
+
+.loading::after {
+	content: '';
+	position: absolute;
+	height: 4px;
+	background-color: #002147;
+	will-change: left, right;
+	animation: loading-short 2.1s cubic-bezier(0.165, 0.840, 0.440, 1.000) infinite;
+	animation-delay: 1.15s;
+}
+
+@keyframes loading-long{
+	0% {left: -35%;right:100%;}
+	60% {left: 100%;right: -90%;}
+	100% {left: 100%;right: -90%;}
+}
+
+@keyframes loading-short{
+	0% {left: -200%;right: 100%;}
+	60% {left: 107%;right: -8%;}
+	100% {left: 107%;right: -8%;}
 }
 
 .smaller{

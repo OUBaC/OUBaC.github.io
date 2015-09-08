@@ -5,14 +5,14 @@ stylesheets:
 - /styles/sessions-styles.css
 ---
 <style>
-	.day{
+.day{
 	margin-bottom:0px;
-	}
-	
-	.exceptions{
+}
+
+.exceptions{
 	padding-left:40px;
 	margin-top:0px;
-	}
+}
 </style>
 
 <div>
@@ -28,11 +28,11 @@ stylesheets:
 		Exception:<br/>
 		8th September - Not on.
 	</p>
-	
+
 	<p class="day">
 		<b>Thursday</b> (From 20th August, 3 courts)<b>:</b> 20:00-22:30
 	</p>
-	
+
 	<p class="day">
 		<b>Saturday:</b> 14:00-16:00
 	</p>
@@ -40,10 +40,10 @@ stylesheets:
 		Exception:<br/>
 		26th September - Not on.
 	</p>
-	
-	<h3>Squad:</h3>	
+
+	<h3>Squad:</h3>
 	<p class="day">
-		<b>Wednesday</b> (August and September)<b>:</b>  18:00-19:30 
+		<b>Wednesday</b> (August and September)<b>:</b>  18:00-19:30
 	</p>
 	<p class="exceptions">
 		Exception:<br/>
@@ -51,6 +51,40 @@ stylesheets:
 	</p>
 </div>
 
+<style>
+
+</style>
+
+<script>
+
+var oldElement;
+
+function changeSource(elem,newSource){
+	document.getElementById("map").src = newSource;
+	if(!oldElement){
+		oldElement = document.getElementById("initialSelector");
+	}
+	oldElement.classList.remove("selected");
+	elem.classList.add("selected");
+	oldElement = elem;
+}
+</script>
+
+
+<div>
+	<h2>Maps</h2>
+	<div style="padding: 0;" class="card">
+		<div style="display: flex; background-color: white;" >
+			<h3 id="initialSelector" class="location-option selected" onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=Oxford%20University%20Sports%2C%20Oxford%2C%20United%20Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15')">Iffley Road</h3>
+			<div class="vertical-divider"></div>
+			<h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=Virgin+Active+Oxfordshire,+Woodstock+Road,+Oxford,+Oxfordshire,+United+Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15')">Virgin Active</h3>
+		</div>
+		<div id="map-container">
+			<div class="loading" style="top: 50%; transform: translateY(-50%);"></div>
+			<iframe id="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Oxford%20University%20Sports%2C%20Oxford%2C%20United%20Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15" allowfullscreen></iframe>
+		</div>
+	</div>
+</div>
 
 <div>
 	<h2>Calendar</h2>
