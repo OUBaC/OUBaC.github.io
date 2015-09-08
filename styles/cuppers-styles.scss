@@ -1,5 +1,10 @@
 ---
 ---
+@import 'variables';
+
+$critical-value: 450px;
+$print-critical-value: 360px;
+
 $animation-delay: 0.5s;
 $animation-duration: 1s;
 $number-of-animations: 4;
@@ -171,3 +176,5 @@ $lines-animation-delay: ($number-of-animations - 1) * $animation-delay + $animat
 }
 
 }
+
+@import 'responsive-table';
