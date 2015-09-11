@@ -1,15 +1,17 @@
 $(function() {
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
- 
+
         if (scroll >= 50) {
             	$("header").addClass('smaller');
-				$("#side-nav-trigger").addClass('smaller');
-				$("#top-nav").addClass('smaller');
+				      $("#side-nav-trigger").addClass('smaller');
+              $("#social-links").addClass('smaller');
+				      $("#top-nav-container").addClass('smaller-top-nav-container');
         } else {
-            	$("header").removeClass("smaller");
-				$("#side-nav-trigger").removeClass('smaller');
-				$("#top-nav").removeClass('smaller');
+              $("header").removeClass("smaller");
+				      $("#side-nav-trigger").removeClass('smaller');
+              $("#social-links").addClass('smaller');
+				      $("#top-nav-container").removeClass('smaller-top-nav-container');
         }
     });
 });
