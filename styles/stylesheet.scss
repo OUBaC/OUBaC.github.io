@@ -250,6 +250,7 @@ input:checked + ul{
 {
 	display: block;
 	font-size: 0;
+	height: 1.15 * $top-nav-text-height + 2 * $top-nav-text-padding;
 }
 
 .top-nav-logo{
@@ -315,13 +316,18 @@ li:hover > .drop-down-menu{
 	background: #fff;
 	box-shadow: 0 2px 3px rgba(0,0,0,.2);
 	display: none;
-	left: 0;
+	left: -1px; //To align with the border
 	opacity: 0;
 	padding: 0;
 	position: absolute;
 	top: 100%;
 	transition: opacity linear .15s;
 	width: 160%;
+}
+
+.smaller-top-nav-container .drop-down-menu{
+	left: auto;
+	right: 0px;
 }
 
 .drop-down-menu li{
