@@ -380,13 +380,14 @@ li:hover > .drop-down-menu{
 	display: none;
 	font-family: RobotoDraft, Roboto, sans-serif;
 	height: 100%;
-	left: -300px;
+	//left: -300px;
 	max-width: 70%;
 	overflow: auto;
 	position: fixed;
 	z-index: 200;
 	top: 0;
-	transition: left .3s;
+	transform: translateX(-300px);
+	transition: transform .3s;
 	width: 250px;
 }
 
