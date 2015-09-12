@@ -2,6 +2,8 @@
 ---
 @import 'variables';
 
+$button-colour: $primary-colour;
+
 $large-header-height: 150px;
 $small-header-height: 70px;
 
@@ -147,6 +149,29 @@ input:checked + ul{
 
 .aligner{
 	font-size: $h2-font-size;
+}
+
+.button {
+	background-color: $button-colour;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
+	color: $button-colour;
+	display: inline-block;
+	font-size: 110%;
+	letter-spacing: 0.5px;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	vertical-align: middle;
+	transition: all .2s ease-out;
+	z-index:1;
+	-webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    background-color: lighten($button-colour, 20%);
+  }
 }
 
 .divider{
