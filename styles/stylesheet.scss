@@ -267,6 +267,7 @@ input:checked + ul{
 }
 .top-nav  li{
 	border-color: rgba(255, 255, 255, .12);
+	border-radius: 2px;
 	border-style: solid;
 	border-width: 0;
 	border-left-width: 1px;
@@ -288,6 +289,9 @@ input:checked + ul{
 	}
 }
 
+.top-nav .drop-down{
+	border-radius: 2px 2px 0px 0px;
+}
 .top-nav li:hover{
 	background-color: $accent-colour;
 }
@@ -314,20 +318,24 @@ li:hover > .drop-down-menu{
 
 .drop-down-menu{
 	background: #fff;
+	border-radius: 0px 2px 2px 2px;
 	box-shadow: 0 2px 3px rgba(0,0,0,.2);
 	display: none;
 	left: -1px; //To align with the border
 	opacity: 0;
+	overflow: hidden;
 	padding: 0;
 	position: absolute;
 	top: 100%;
 	transition: opacity linear .15s;
 	width: 160%;
+	z-index: 100;
 }
 
 .smaller-top-nav-container .drop-down-menu{
 	left: auto;
 	right: 0px;
+	border-radius: 2px 0px 2px 2px;
 }
 
 .drop-down-menu li{
