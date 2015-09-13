@@ -59,6 +59,7 @@ stylesheets:
 
 var oldElement;
 var indicator;
+var iFrame;
 
 function changeSource(elem,newSource){
 	if(!indicator){
@@ -67,7 +68,13 @@ function changeSource(elem,newSource){
 	if(!oldElement){
 			oldElement = document.getElementById("initialSelector");
 		}
-	document.getElementById("map").src = newSource;
+	if(!iFrame){
+		iFrame = document.getElementById("map");
+	}
+	while (iFrame.firstChild) {
+    iFrame.removeChild(iFrame.firstChild);
+	}
+	iFrame.src = newSource;
 	oldElement.classList.remove("selected");
 	elem.classList.add("selected");
 

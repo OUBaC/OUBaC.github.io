@@ -2,9 +2,8 @@
 ---
 @import 'variables';
 
-$button-colour: $primary-colour;
+$button-colour: lighten(#033,10%);
 
-$large-header-height: 150px;
 $small-header-height: 70px;
 
 $large-title-height: 48px;
@@ -247,7 +246,7 @@ input:checked + ul{
 	padding-right: 15px;
 }
 
-#content{
+.content{
 	padding-top: $large-header-height;
 	padding-bottom: 30px;
 	position: relative;

@@ -1,0 +1,123 @@
+---
+---
+@import 'variables';
+
+h1{
+  font-family: Canterbury, RobotoDraft, Roboto, sans-serif;;
+  font-weight: normal;
+}
+
+svg{
+  width:100%;
+  height:100%;
+}
+
+.svg-layer{
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.key-point{
+  box-sizing: border-box;
+  padding: 20px;
+  display: inline-block;
+  vertical-align: top;
+  width: 33%;
+}
+
+.letter-in-circle{
+  background-color: #002147;
+  clip-path: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+  color: white;
+  display: block;
+  font-size: 80px;
+  height: 100px;
+  line-height: 100px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100px;
+}
+
+#home-title{
+  align-items: center;
+  font-family: Canterbury;
+  font-size: 10vw;
+  font-weight: normal;
+  margin: 0px;
+  text-align: center;
+  z-index: 1
+}
+
+#title-and-logo-container{
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+  padding-top: $large-header-height;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+#title-and-logo-container,
+#placeholder{
+  height: 50vw;
+  max-height: 50vh;
+  padding-top: $large-header-height;
+}
+
+#container{
+  height: 50vw;
+  opacity: 0.5;
+  perspective: 200px;
+  position: absolute;
+  right: 0;
+  top: $large-header-height;
+  transform: rotateX(0deg);
+  transform-style: preserve-3d;
+  width: 50vw;
+  z-index: 0;
+}
+
+#containerForRotation{
+  animation-duration:30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+#containerForRotation:hover {
+  animation-play-state: paused;
+}
+
+#key-point-container{
+  font-size: 0;
+  overflow: hidden;
+  padding: 50px 0 0 0;
+  text-align:center;
+}
+
+@keyframes translateZ1{
+  from{transform: translateZ(0) scale(1,1);}
+  to{transform: translateZ(2px) scale(0.99,0.99);}
+}
+
+@keyframes spin{
+  from{transform: rotate(0deg);}
+  to{transform: rotate(360deg);}
+}
+
+@font-face {
+  font-family: Canterbury;
+  src: url('/assets/Canterbury.ttf');
+}
+
+@media all and (max-width: 600px){
+  .key-point{
+    display: block;
+    width: 100%;
+  }
+}
