@@ -2,9 +2,9 @@
 ---
 @import 'variables';
 
+$tabs-animation-duration: 0.3s;
+
 .location-option{
-  border-style: solid;
-  border-width: 0;
   cursor: pointer;
   flex-basis:0px;
   flex-grow:1;
@@ -13,13 +13,22 @@
   padding:10px;
   text-align:center;
   text-decoration: none;
+  transition: color $tabs-animation-duration ease-out;
 
-  border-bottom-width: 4px;
 }
 
 .location-option.selected{
-  border-color: $accent-colour;
   color: $accent-colour;
+}
+
+#indicator{
+  background-color: $accent-colour;
+  bottom: 0;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  transition: transform $tabs-animation-duration ease-out;
+  width: 50%;
 }
 
 #map{

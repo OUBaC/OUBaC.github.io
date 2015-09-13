@@ -58,15 +58,23 @@ stylesheets:
 <script>
 
 var oldElement;
+var indicator;
 
 function changeSource(elem,newSource){
-	document.getElementById("map").src = newSource;
-	if(!oldElement){
-		oldElement = document.getElementById("initialSelector");
+	if(!indicator){
+		indicator = document.getElementById('indicator');
 	}
+	if(!oldElement){
+			oldElement = document.getElementById("initialSelector");
+		}
+	document.getElementById("map").src = newSource;
 	oldElement.classList.remove("selected");
 	elem.classList.add("selected");
+
+	indicator.style.transform = "translateX("+ (elem.getBoundingClientRect().left - elem.parentNode.getBoundingClientRect().left)+"px)";
 	oldElement = elem;
+
+
 }
 </script>
 
@@ -74,9 +82,9 @@ function changeSource(elem,newSource){
 <div>
 	<h2>Maps</h2>
 	<div style="padding: 0;" class="card">
-		<div style="display: flex; background-color: white;" >
+		<div style="display: flex; background-color: white; position: relative;">
+			<div id="indicator"></div>
 			<h3 id="initialSelector" class="location-option selected" onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=Oxford%20University%20Sports%2C%20Oxford%2C%20United%20Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15')">Iffley Road</h3>
-			<div class="vertical-divider"></div>
 			<h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=Virgin+Active+Oxfordshire,+Woodstock+Road,+Oxford,+Oxfordshire,+United+Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15')">Virgin Active</h3>
 		</div>
 		<div id="map-container">
