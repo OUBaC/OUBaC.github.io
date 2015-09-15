@@ -17,6 +17,20 @@ $lines-animation-delay: ($number-of-animations - 1) * $animation-delay + $animat
   transform: translateZ(0); //This is to force webkit to use the GPU.
 }
 
+#cuppers-container{
+  display: flex;
+  margin: 10px;
+  overflow-x: auto;
+}
+
+#show-names-container{
+  display: none;
+}
+
+.flex{
+  overflow-x: hidden !important;
+}
+
 .one{
   animation-delay: 0;
 }
@@ -159,22 +173,24 @@ $lines-animation-delay: ($number-of-animations - 1) * $animation-delay + $animat
   to{ opacity: 1;}
 }
 
-@media all and (max-width:1050px){
+@media all and (max-width: 1200px){
 
-.college-name{
+.flex .college-name{
   display: none;
 }
-.inline-college-logo{
+.flex .inline-college-logo{
   height: 2em;
 }
-.cuppers-card{
+.flex .cuppers-card{
   background-color: rgba(0,0,0,0);
   box-shadow: none;
   padding: 5px 0;
   margin: 0;
   text-align: center;
 }
-
+#show-names-container{
+  display: block;
+}
 }
 
 @import 'responsive-table';

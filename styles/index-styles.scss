@@ -4,7 +4,7 @@
 
 .post
 {
-    margin: 15px 0;
+  margin: 15px 0;
 	overflow: hidden;
 }
 
@@ -19,10 +19,9 @@
 .date
 {
 	display: block;
-    font-size: 16px;
 	margin: 0;
-    overflow: hidden;
-    text-align: right;
+  overflow: hidden;
+  text-align: right;
 }
 
 .active{
@@ -36,7 +35,7 @@
 	}
 
 .pagination-links-list{
-		
+
 		text-align: center;
 		-webkit-touch-callout: none;
 		-webkit-user-select: none;
@@ -44,26 +43,26 @@
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
-		
+
 		li{
 			border-radius: 2px;
 			display: inline-block;
 			line-height: 30px;
 			padding: 0;
 			text-align: center;
-			
+
 			a{
 				color: inherit;
 				padding: 0 10px;
 			}
 		}
-		
+
 	}
 
 .disabled{
 		opacity: 0.3;
-	}	
-	
+	}
+
 
 @media all and (max-width: 950px)
 {

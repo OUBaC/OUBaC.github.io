@@ -1,11 +1,9 @@
 .profile-card{
-	background: white;
-	border-radius: 2px;
-	box-shadow: rgba(0, 0, 0, 0.156863) 0px 2px 5px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 10px 0px;
+	//Note that some properties from the card class have been left here.
 	box-sizing: border-box;
 	display: inline-flex;
 	margin: 10px 5px;
-	max-width: 580px;
+	width: 580px;
 	padding: 20px;
 }
 

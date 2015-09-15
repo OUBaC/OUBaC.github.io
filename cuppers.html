@@ -3,8 +3,13 @@ title: Cuppers
 stylesheets:
  - /styles/cuppers-styles.css
 ---
+<script>
+  function toggle(){
+    document.getElementById('cuppers-container').classList.toggle('flex');
+  }
+</script>
 <h2>Men's Cuppers</h2>
-<div style="display:flex; margin: 10px;">
+<div id="cuppers-container" class="flex">
   <div id="round-one" class="round one">
     <div class="card cuppers-card">
       <img src="/assets/colleges/keble.svg" class="inline-college-logo">
@@ -149,8 +154,11 @@ stylesheets:
     </div>
   </div>
 </div>
+<div id="show-names-container" style="text-align:center">
+  <div class="button" style="font-size: 80%; margin: 0 auto;" onclick="toggle()">Show college names</div>
+</div>
 <h2>Women's Cuppers</h2>
-<p>Have you seen the spreadsheet for last year's draw...</p>
+<p>Have you seen the spreadsheet for last year's draw?</p>
 <h2>Men's Hall of Fame</h2>
 <table cellspacing="0" cellpadding="0" class="responsive-table">
 	<thead>

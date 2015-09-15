@@ -28,7 +28,7 @@ $animation-duration: 5s;
 // Tags
 
 *{
-	font-size: 15px;
+	font-size: 1rem;
 }
 
 html,
@@ -62,7 +62,7 @@ img{
 }
 
 table {
-    padding-left: 15px;
+  padding-left: 15px;
 	padding-right: 15px;
 	margin: 0 auto;
 	text-align: center;
@@ -105,21 +105,13 @@ h1{
 
 h2{
 	color: $primary-colour;
-    font-size: $h2-font-size;
-    font-weight: normal;
-	padding-left: 10px;
-    padding-right: 10px;
+  font-size: $h2-font-size;
+  font-weight: normal;
+	margin: 2rem 0 0.5rem 0 ;
 }
 
 h3{
-    font-weight: bold;
-    padding-left: 20px;
-	padding-right: 10px;
-}
-
-p{
-    padding-left: 20px;
-	padding-right: 10px;
+  font-weight: bold;
 }
 
 header{
@@ -156,7 +148,7 @@ input:checked + ul{
 	border-radius: 2px;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 	cursor: pointer;
-	color: $button-colour;
+	color: white;
 	display: inline-block;
 	font-size: 110%;
 	letter-spacing: 0.5px;
@@ -253,7 +245,7 @@ input:checked + ul{
 	margin: 0 auto;
 	max-width: 1200px;
 	overflow-x: hidden;
-	width: auto;
+	width: 90%;
 }
 
 //Top Nav
