@@ -13,13 +13,30 @@ stylesheets:
 	padding-left:40px;
 	margin-top:0px;
 }
+
+#tabs-container{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	background-color: white;
+	position: relative;
+}
+
+#loading{
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+
 </style>
 
 <div>
 	<h2>Sessions - Summer Vacation 2015</h2>
 	<p>The summer vacation times will run from Tuesday 7th July to Saturday 3rd October. All the sessions are at Iffley Road unless otherwise specified.</p>
 	<p class="day">
-		<b>Sunday</b> (12th July to 20th September)<b>:</b> 14:00-15:30
+		<b>Sunday</b> (12th July to 20th September)<b>:</b>; 14:00-15:30
 	</p>
 	<p class="day">
 		<b>Tuesday:</b> 10:00-13:00
@@ -51,13 +68,9 @@ stylesheets:
 	</p>
 </div>
 
-<style>
-
-</style>
-
 <script>
 
-var oldElement;
+var ;oldElement;
 var indicator;
 var iFrame;
 
@@ -79,6 +92,7 @@ function changeSource(elem,newSource){
 	elem.classList.add("selected");
 
 	indicator.style.transform = "translateX("+ (elem.getBoundingClientRect().left - elem.parentNode.getBoundingClientRect().left)+"px)";
+	indicator.style.webkitTransform = "translateX("+ (elem.getBoundingClientRect().left - elem.parentNode.getBoundingClientRect().left)+"px)";
 	oldElement = elem;
 
 
@@ -89,13 +103,13 @@ function changeSource(elem,newSource){
 <div>
 	<h2>Maps</h2>
 	<div style="padding: 0;" class="card">
-		<div style="display: flex; background-color: white; position: relative;">
+		<div id="tabs-container">
 			<div id="indicator"></div>
 			<h3 id="initialSelector" class="location-option selected" onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=Oxford%20University%20Sports%2C%20Oxford%2C%20United%20Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15')">Iffley Road</h3>
 			<h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=Virgin+Active+Oxfordshire,+Woodstock+Road,+Oxford,+Oxfordshire,+United+Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15')">Virgin Active</h3>
 		</div>
 		<div id="map-container">
-			<div class="loading" style="top: 50%; transform: translateY(-50%);"></div>
+			<div id="loading" class="loading"></div>
 			<iframe id="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Oxford%20University%20Sports%2C%20Oxford%2C%20United%20Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15" allowfullscreen></iframe>
 		</div>
 	</div>

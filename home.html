@@ -19,13 +19,13 @@ stylesheets:
 <div style="position:relative;"> <div style="background: url(/assets/test-white.svg);height:100%; position: absolute; width: 100%; opacity: 0.2; top: 0;z-index:1;"></div>
 <div style="background-color: #002147; z-index: 2; position: relative;">
 	<div style="background: url(/assets/test.svg);">
-		<div class="content" style="display: flex; justify-content:space-around; padding: 20px;">
+		<div class="content" id="latest-news-container">
 			<div>
 				<h2 style="color: #f9f9f9; font-size:40px;">Latest <br> News</h3>
 				</div>
-				<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+				<div id="latest-news-card-container">
 					{% for post in site.posts limit: 3 %}
-					<a href="{{post.url}}" style="margin: 5px; box-sizing: border-box; padding: 10px; max-width: 400px; flex-grow: 1; " class="card"><div>
+					<a href="{{post.url}}" class="card latest-news-card"><div>
 						<h3>{{post.title}}</h3>
 						<p>{{post.excerpt}}</p>
 					</div>
