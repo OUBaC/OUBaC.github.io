@@ -1,6 +1,9 @@
 .profile-card{
 	//Note that some properties from the card class have been left here.
 	box-sizing: border-box;
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
 	display: inline-flex;
 	margin: 10px 5px;
 	width: 580px;
@@ -26,7 +29,8 @@
 	margin-bottom: -20px;
 	margin-right: 20px;
 	min-width: 200px;
-	object-fit: cover;
+	-o-object-fit: cover;
+	   object-fit: cover;
 }
 .profile{
 	border-collapse: collapse;
@@ -85,12 +89,17 @@
 
 @media all and (max-width: 600px){
 	.profile-card{
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 	}
 
 	.picture{
 		margin-right: -20px;
 		margin-bottom: 0px;
-		object-fit: contain;
+		-o-object-fit: contain;
+		   object-fit: contain;
 	}
 }

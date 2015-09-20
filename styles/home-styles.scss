@@ -42,7 +42,10 @@ svg{
 }
 
 #home-title{
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: Canterbury;
   font-size: 10vw;
   font-weight: normal;
@@ -52,7 +55,13 @@ svg{
 }
 
 #title-and-logo-container{
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
   position: absolute;
@@ -70,25 +79,33 @@ svg{
 #container{
   height: 50vw;
   opacity: 0.5;
-  perspective: 200px;
+  -webkit-perspective: 200px;
+          perspective: 200px;
   position: absolute;
   right: 0;
-  transform: rotateX(0deg);
-  transform-style: preserve-3d;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   width: 50vw;
   z-index: 0;
 }
 
 #containerForRotation{
-  animation-duration:30s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  -webkit-animation-duration:30s;
+          animation-duration:30s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   height: 100%;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 #containerForRotation:hover {
-  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 #key-point-container{
@@ -98,14 +115,24 @@ svg{
   text-align:center;
 }
 
+@-webkit-keyframes translateZ1{
+  from{-webkit-transform: translateZ(0) scale(1,1);transform: translateZ(0) scale(1,1);}
+  to{-webkit-transform: translateZ(2px) scale(0.99,0.99);transform: translateZ(2px) scale(0.99,0.99);}
+}
+
 @keyframes translateZ1{
-  from{transform: translateZ(0) scale(1,1);}
-  to{transform: translateZ(2px) scale(0.99,0.99);}
+  from{-webkit-transform: translateZ(0) scale(1,1);transform: translateZ(0) scale(1,1);}
+  to{-webkit-transform: translateZ(2px) scale(0.99,0.99);transform: translateZ(2px) scale(0.99,0.99);}
+}
+
+@-webkit-keyframes spin{
+  from{-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+  to{-webkit-transform: rotate(360deg);transform: rotate(360deg);}
 }
 
 @keyframes spin{
-  from{transform: rotate(0deg);}
-  to{transform: rotate(360deg);}
+  from{-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+  to{-webkit-transform: rotate(360deg);transform: rotate(360deg);}
 }
 
 @font-face {

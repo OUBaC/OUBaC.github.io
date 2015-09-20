@@ -16,16 +16,18 @@ header{
 	position: static;
 	visibility: hidden;
 }
-	
+
 h1{
 	visibility: visible;
 	color: black;
 	padding: 0px;
 	padding-left: $logo-size;
 	margin-top: $logo-size/2;
-	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
 }
-	
+
 .top-nav-logo{
 	display: block;
 	float: none;
@@ -34,11 +36,11 @@ h1{
 	top: 0;
 	visibility: visible !important;
 }
-	
+
 nav{
 	display: none;
 }
-	
+
 #content{
 	padding: 0;
 	padding-top: $logo-size;
@@ -49,5 +51,3 @@ nav{
 #side-nav-trigger{
 	display: none;
 }
-
-	
