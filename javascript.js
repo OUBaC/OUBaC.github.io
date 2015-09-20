@@ -18,12 +18,12 @@ $(function() {
 
 
 function expandSideNav(){
-		document.getElementById('navigation-drawer').style.transform="translateX(0)";
+		document.getElementById('navigation-drawer').classList.add('show');
 		document.getElementById('small-grey-out').style.width="100%";
 		document.getElementsByTagName('body')[0].style.overflow="hidden";
 }
 function hideSideNav(){
-		document.getElementById('navigation-drawer').style.transform="translateX(-300px)";
+		document.getElementById('navigation-drawer').classList.remove('show');
 		document.getElementById('small-grey-out').style.width="0%";
 		document.getElementsByTagName('body')[0].style.overflow="initial";
 }

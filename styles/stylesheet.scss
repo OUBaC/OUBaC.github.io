@@ -462,6 +462,12 @@ li:hover > .drop-down-menu{
 	width: 250px;
 }
 
+.show.side-nav{
+	-webkit-transform: translateX(0px);
+	    -ms-transform: translateX(0px);
+	        transform: translateX(0px);
+}
+
 .side-nav-wrapper{
 	box-sizing: border-box;
 	display: -webkit-box;
