@@ -29,6 +29,7 @@ $animation-duration: 5s;
 
 *{
 	font-size: 1rem;
+	box-sizing: border-box;
 }
 
 html,
@@ -123,7 +124,7 @@ header{
 	overflow: visible;
   position: fixed;
 	top: 0;
-	width: 100%;
+	width: 100vw;
   z-index: 100;
 }
 

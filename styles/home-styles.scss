@@ -55,7 +55,6 @@ svg{
   align-items: center;
   display: flex;
   overflow: hidden;
-  padding-top: $large-header-height;
   position: absolute;
   top: 0;
   width: 100%;
@@ -65,7 +64,7 @@ svg{
 #placeholder{
   height: 50vw;
   max-height: 50vh;
-  padding-top: $large-header-height;
+  margin-top: $large-header-height;
 }
 
 #container{
@@ -74,7 +73,6 @@ svg{
   perspective: 200px;
   position: absolute;
   right: 0;
-  top: $large-header-height;
   transform: rotateX(0deg);
   transform-style: preserve-3d;
   width: 50vw;
