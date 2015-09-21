@@ -459,8 +459,8 @@ li:hover > .drop-down-menu{
 	-webkit-transform: translateX(-300px);
 	    -ms-transform: translateX(-300px);
 	        transform: translateX(-300px);
-	        -webkit-transition: -webkit-transform height .3s;
-	                transition: transform height .3s;
+	                -webkit-transition: all .3s;
+	                        transition: all .3s;
 	width: 250px;
 }
 
