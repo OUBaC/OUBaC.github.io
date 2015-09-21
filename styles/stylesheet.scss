@@ -583,7 +583,7 @@ li:hover > .drop-down-menu{
 
 #small-grey-out	{
 	background: rgba(0,0,0,.4);
-	box-sizing: border-box;
+	box-sizing: content-box;
 	display:none;
 	height: 100%;
 	padding-bottom: 60px;
