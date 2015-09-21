@@ -583,9 +583,10 @@ li:hover > .drop-down-menu{
 	background: rgba(0,0,0,.4);
 	display:none;
 	height: 100%;
-	position: fixed;
+	position: absolute;
+	top: 0;
 	width: 0;
-	z-index: 1;
+	z-index: 150;
 }
 
 @media all and (max-width: 1500px){
