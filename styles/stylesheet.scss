@@ -444,6 +444,7 @@ li:hover > .drop-down-menu{
 	border-right-style: solid;
 	border-right-color: rgba(255, 255, 255, .12);
 	box-shadow: rgba(0, 0, 0, .258824) 0 5px 0 0;
+	box-sizing: content-box;
 	color: #fff;
 	display: none;
 	font-family: RobotoDraft, Roboto, sans-serif;
@@ -451,6 +452,7 @@ li:hover > .drop-down-menu{
 	//left: -300px;
 	max-width: 70%;
 	overflow: auto;
+	padding-bottom: 60px;
 	position: fixed;
 	z-index: 200;
 	top: 0;
