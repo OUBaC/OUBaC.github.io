@@ -1,20 +1,30 @@
-$(function() {
-    $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
+var startHeight;
+var changeHeight = 100;
+var stopHeight = 70;
 
-        if (scroll >= 50) {
-            	$("header").addClass('smaller');
-				      $("#side-nav-trigger").addClass('smaller');
-              $("#social-links").addClass('smaller');
-				      $("#top-nav-container").addClass('smaller-top-nav-container');
-        } else {
-              $("header").removeClass("smaller");
-				      $("#side-nav-trigger").removeClass('smaller');
-              $("#social-links").addClass('smaller');
-				      $("#top-nav-container").removeClass('smaller-top-nav-container');
-        }
-    });
-});
+
+function scrollAdjuster(){
+  if(!startHeight){
+    startHeight = document.getElementById('header').offsetHeight;
+  }
+  var scrollDistance = document.body.scrollTop;
+  if(scrollDistance>=startHeight-changeHeight){
+    document.getElementById('header').classList.add('smaller');
+    document.getElementById('top-nav-container').classList.add('smaller-top-nav-container');
+  }else{
+    document.getElementById('header').classList.remove('smaller');
+    document.getElementById('top-nav-container').classList.remove('smaller-top-nav-container');
+  }
+  if(scrollDistance>=startHeight-stopHeight){
+    document.getElementById('header').classList.add('box-shadow');
+    document.getElementById('header').style.height = stopHeight+"px";
+  }else{
+    document.getElementById('header').classList.remove('box-shadow');
+    document.getElementById('header').style.height = startHeight - scrollDistance + "px";
+  }
+
+}
+
 
 
 function expandSideNav(){
