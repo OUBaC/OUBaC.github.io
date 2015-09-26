@@ -1,0 +1,18 @@
+<div id="committee-cards-container">
+{% for member in page.members %}
+<div class="card role-container-new">
+  <div class="photo-section-container">
+    <div class="photo-container" style="background-image: url({{member.photo}});">
+    </div>
+    <div class="comment-container" >
+      <p class="comment">
+      {{member.comment}}
+      </p>
+    </div>
+  </div>
+    <h2 class="role-name">{{member.name}}</h2>
+    <h3>{{member.role}}</h3>
+    <a href="mailto:{{member.email}}">{{member.email}}</a>
+  </div>
+{% endfor %}
+</div>
