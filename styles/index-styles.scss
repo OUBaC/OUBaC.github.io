@@ -2,26 +2,31 @@
 ---
 @import 'variables';
 
-.post
-{
-  margin: 15px 0;
-	overflow: hidden;
+.title{
+  margin-bottom: 0;
+}
+.title-link{
+  color: inherit !important;
+  font-size: inherit;
 }
 
-.title
-{
-    float: left;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-right: 0;
+.post{
+  border-color : rgba(0,0,0,0.12);
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  margin-top: 3rem;
+  padding-top: 3rem;
 }
 
-.date
-{
-	display: block;
-	margin: 0;
-  overflow: hidden;
-  text-align: right;
+.post:first-child{
+  border-width: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.date{
+  opacity: 0.7;
+  font-size: 0.9rem;
 }
 
 .active{
@@ -35,7 +40,7 @@
 	}
 
 .pagination-links-list{
-
+    margin-top: 3rem;
 		text-align: center;
 		-webkit-touch-callout: none;
 		-webkit-user-select: none;
