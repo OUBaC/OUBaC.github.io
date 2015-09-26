@@ -2,6 +2,15 @@
 ---
 @import 'variables';
 
+
+header{
+    background-color: transparent;
+}
+
+.box-shadow{
+  background-color: #002147;
+}
+
 h1{
   opacity: 0;
   font-family: Canterbury, RobotoDraft, Roboto, sans-serif;;
@@ -141,6 +150,7 @@ svg{
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   width: 50vw;
+  top: 0;
   z-index: 0;
 }
 
