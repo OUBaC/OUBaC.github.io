@@ -3,8 +3,33 @@
 @import 'variables';
 
 h1{
+  opacity: 0;
   font-family: Canterbury, RobotoDraft, Roboto, sans-serif;;
   font-weight: normal;
+  transition: opacity 0.3s;
+}
+
+.box-shadow h1{
+  opacity: 1;
+}
+
+.full-justify {
+  text-align: justify;
+}
+
+.full-justify:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+#top-nav-logo{
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.box-shadow #top-nav-logo{
+  opacity: 1;
 }
 
 svg{
@@ -52,6 +77,7 @@ svg{
           flex-grow: 1;
 }
 #home-title{
+  color: #fff;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -64,7 +90,23 @@ svg{
   z-index: 1
 }
 
+.home-title-caption{
+  color: #fff;
+  text-align: justify;
+  font-size: 2.5vw;
+  //font-family: Canterbury;
+  font-weight: normal;
+  margin: 0;
+}
+
+.canterbury{
+  font-family: Canterbury;
+  font-size: inherit;
+  font-size: 110%;
+}
+
 #title-and-logo-container{
+  background-color: #002147;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -81,9 +123,10 @@ svg{
 
 #title-and-logo-container,
 #placeholder{
+  box-sizing: content-box;
   height: 50vw;
   max-height: 50vh;
-  margin-top: $large-header-height;
+  padding-top: $large-header-height;
 }
 
 #container{

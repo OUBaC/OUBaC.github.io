@@ -1,27 +1,27 @@
 ---
 title: O.U.Ba.C
-layout: default-without-content-div
+layout: home
 stylesheets:
 - /styles/home-styles.css
 ---
-
-<iframe src="/assets/logo/logo-grouped.svg" style="display: none;" id="svg" onload="run()" seamless></iframe>
-
 <div id="title-and-logo-container">
 	<div id='container'>
 		<div id='containerForRotation'  style=""></div>
 	</div>
 	<div style="-webkit-box-flex: 1;-webkit-flex-grow: 1;-ms-flex-positive: 1;flex-grow: 1; z-index:1"></div>
-	<h2 id="home-title">O.U.Ba.C</h2>
+	<div>
+		<h2 id="home-title">O.U.Ba.C</h2>
+		<h3 class="home-title-caption full-justify"><span class="canterbury">O</span>xford <span class="canterbury">U</span>niversity <span class="canterbury">Ba</span>dminton <span class="canterbury">C</span>lub</h3>
+	</div>
 	<div style="-webkit-box-flex: 2;-webkit-flex-grow: 2;-ms-flex-positive: 2;flex-grow: 2; z-index:1"></div>
 </div>
 <div id="placeholder" ></div>
 <div style="position:relative;"> <div style="background: url(/assets/test-white.svg);height:100%; position: absolute; width: 100%; opacity: 0.2; top: 0;z-index:1;"></div>
-<div style="background-color: #002147; z-index: 2; position: relative;">
-	<div style="background: url(/assets/test.svg);">
+<div style="z-index: 2; position: relative;">
+	<div style="background: url(/assets/test.svg);position:absolute; height:100%; width:100%;opacity:0.5;"></div>
 		<div class="content" id="latest-news-container">
 			<div>
-				<h2 style="color: #f9f9f9; font-size:40px;">Latest <br> News</h3>
+				<h2 style="color: #002147; font-size:40px;">Latest <br> News</h3>
 				</div>
 				<div id="latest-news-card-container">
 					{% for post in site.posts limit: 3 %}
@@ -33,7 +33,6 @@ stylesheets:
 				{% endfor %}
 			</div>
 		</div>
-	</div>
 </div>
 <div style="background-color: #033;text-align:center; padding: 10px; position: relative;" >
 	<h2 style="color: #fff; font-size: 25px; display: inline; background-color: #033; border-radius: 5px; vertical-align: middle; z-index: 2;font-weight: normal;">Join the Mailing List</h2>
@@ -222,3 +221,4 @@ function remove(){
 }
 
 </script>
+<iframe src="/assets/logo/logo-grouped.svg" style="display: none;" id="svg" onload="run()" seamless></iframe>
