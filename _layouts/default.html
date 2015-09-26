@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		{% include head-inner.html %}
+		{% include google-analytics-code.html %}	
 		<title>{{page.title}} - OUBaC</title>
 		<link rel="stylesheet" type="text/css" href="/styles/stylesheet.css"/>
 		<link rel="stylesheet" type="text/css" media="print" href="/styles/print-styles.css"/>
 		{% for stylesheet in page.stylesheets %}
 		<link rel="stylesheet" type="text/css" href="{{stylesheet}}"/>
 		{% endfor %}
+		{% include head-inner.html %}
 	</head>
 	<body onscroll="scrollAdjuster()">
 		{% include top-nav.html %}
