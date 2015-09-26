@@ -150,7 +150,7 @@ svg{
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   width: 50vw;
-  top: 0;
+  top: calc(50% + #{$large-header-height} / 2 - 25vw);
   z-index: 0;
 }
 
