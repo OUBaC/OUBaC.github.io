@@ -1,6 +1,6 @@
 ---
 ---
-$logo-size: 100px;
+$logo-size: 110px;
 
 *{
 	font-size: 12pt;
@@ -22,6 +22,7 @@ h1{
 	color: black;
 	padding: 0px;
 	padding-left: $logo-size;
+	position: absolute;
 	margin-top: $logo-size/2;
 	-webkit-transform: translateY(-50%);
 	    -ms-transform: translateY(-50%);
@@ -41,7 +42,7 @@ nav{
 	display: none;
 }
 
-#content{
+.content{
 	padding: 0;
 	padding-top: $logo-size;
 	top: 0;
