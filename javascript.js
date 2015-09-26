@@ -10,10 +10,8 @@ function scrollAdjuster(){
   var scrollDistance = document.body.scrollTop;
   if(scrollDistance>=startHeight-changeHeight){
     document.getElementById('header').classList.add('smaller');
-    document.getElementById('top-nav-container').classList.add('smaller-top-nav-container');
   }else{
     document.getElementById('header').classList.remove('smaller');
-    document.getElementById('top-nav-container').classList.remove('smaller-top-nav-container');
   }
   if(scrollDistance>=startHeight-stopHeight){
     document.getElementById('header').classList.add('box-shadow');
