@@ -4,19 +4,20 @@ description: "Description"
 url: "localhost:4000"
 
 paginate: 5
+paginate_path: "/latest-news/page:num/" 
 
 gems:
- - jekyll-sitemap 
+ - jekyll-sitemap
 
 defaults:
   -
     scope:
       path: ""
     values:
-      layout: "default"	  
+      layout: "default"
   -
     scope:
-      path: "" 
+      path: ""
       type: "posts"
     values:
       layout: "post"
