@@ -11,7 +11,6 @@ $small-title-height: 30px;
 
 $large-hamburger-height: $large-title-height * 1.15;
 $small-hamburger-height: $small-title-height * 1.15;
-$side-nav-triggerhorizontal-padding: 15px;
 
 $top-nav-text-height: 20px;
 $top-nav-text-padding: 10px;
@@ -23,7 +22,7 @@ $social-links-height: 30px;
 
 $change-width: 1360px;
 
-$animation-duration: 5s;
+$side-nav-drag-width: 30px;
 
 // Tags
 
@@ -443,38 +442,30 @@ li:hover > .drop-down-menu{
 //Side Nav
 
 .side-nav{
-	background: $primary-colour;
-	border-right-width: 1px;
-	border-right-style: solid;
-	border-right-color: rgba(255, 255, 255, .12);
 	box-shadow: rgba(0, 0, 0, .258824) 0 5px 0 0;
 	box-sizing: content-box;
 	color: #fff;
 	display: none;
 	font-family: RobotoDraft, Roboto, sans-serif;
 	height: 100%;
-	//left: -300px;
 	max-width: 70%;
 	overflow: auto;
 	padding-bottom: 60px;
+	padding-right: $side-nav-drag-width;
 	position: fixed;
 	z-index: 200;
 	top: 0;
-	-webkit-transform: translateX(-100%);
-	-ms-transform: translateX(-100%);
-	transform: translateX(-100%);
-	-webkit-transition: -webkit-transform .3s;
-	transition: transform .3s;
+	transform: translateX(calc(-100% + #{$side-nav-drag-width}));
 	width: 250px;
 }
 
-.show.side-nav{
-	-webkit-transform: translateX(0px);
-	-ms-transform: translateX(0px);
-	transform: translateX(0px);
+.transition{
+	transition: transform .3s;
 }
 
+
 .side-nav-wrapper{
+	background: $primary-colour;
 	box-sizing: border-box;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -505,7 +496,7 @@ li:hover > .drop-down-menu{
 	display: none;
 	float: left;
 	height: $large-hamburger-height;
-	padding: 0 $side-nav-triggerhorizontal-padding;
+	padding: 0 $side-nav-drag-width;
 }
 
 .smaller .side-nav-trigger{
@@ -594,11 +585,10 @@ li:hover > .drop-down-menu{
 	padding-bottom: 60px;
 	position: fixed;
 	top: 0;
-	-webkit-transition: opacity 0.3s;
-	transition: opacity 0.3s;
 	width: 0;
 	z-index: 150;
 }
+
 
 @media all and (max-width: 1500px){
 	.top-nav-logo{

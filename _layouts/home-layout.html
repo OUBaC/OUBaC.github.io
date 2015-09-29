@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		{% include google-analytics-code.html %}	
+		{% include google-analytics-code.html %}
 		<title>{{page.title}} - OUBaC</title>
 		<link rel="stylesheet" type="text/css" href="/styles/stylesheet.css"/>
 		<link rel="stylesheet" type="text/css" media="print" href="/styles/print-styles.css"/>
@@ -10,7 +10,7 @@
 		{% endfor %}
 		{% include head-inner.html %}
 	</head>
-	<body class="smaller" onscroll="scrollAdjuster()">
+	<body class="smaller" onscroll="scrollAdjuster()" onload="initialiseSideNav();">
 		{% include home-top-nav.html %}
 		{% include side-nav.html %}
 		{{content}}
