@@ -1,0 +1,33 @@
+---
+title: League
+stylesheets:
+ - /styles/league-styles.css
+---
+ <table cellspacing="0" cellpadding="0" class="responsive-table">
+   <thead>
+     <th scope="col">Year</th>
+     <th scope="col">Men's Winner</th>
+     <th scope="col">Ladies Winner</th>
+     <th scope="col">Mixed Winner</th>
+   </thead>
+   {% for year in site.data.winners %}
+   <tr>
+     <th scope="row">{{year.year}}</th>
+     {% if year.mens-league %}
+     <td data-title="Men's Winner">{{year.mens-league}}</td>
+     {% else %}
+     <td data-title="Men's Winner">--</td>
+     {% endif %}
+     {% if year.womens-league %}
+     <td data-title="Ladies Winner">{{year.womens-league}}</td>
+     {% else %}
+     <td data-title="Ladies Winner">--</td>
+     {% endif %}
+     {% if year.mixed-league %}
+     <td data-title="Mixed Winner">{{year.mixed-league}}</td>
+     {% else %}
+     <td data-title="Mixed Winner">--</td>
+     {% endif %}
+   </tr>
+   {% endfor %}
+ </table>
