@@ -67,6 +67,10 @@ function expandSideNav(){
 		document.getElementById('small-grey-out').style.width="100%";
     document.getElementById('small-grey-out').style.opacity="1";
 		document.getElementsByTagName('body')[0].style.overflow="hidden";
+    navigationDrawer.removeEventListener("touchstart",startDragSideNav,false);
+    navigationDrawer.removeEventListener("touchmove",dragSideNav, false);
+    navigationDrawer.removeEventListener("touchend",endDragSideNav,false);
+    navigationDrawer.removeEventListener("touchcancel",endDragSideNav,false);
 }
 function hideSideNav(){
     navigationDrawer.style[transformProperty] = "translateX("+(-width + dragMarginSize)+"px)";
@@ -75,6 +79,10 @@ function hideSideNav(){
 		document.getElementById('small-grey-out').style.width="0%";
     document.getElementById('small-grey-out').style.opacity="0";
 		document.getElementsByTagName('body')[0].style.overflow="initial";
+    navigationDrawer.addEventListener("touchstart",startDragSideNav,false);
+    navigationDrawer.addEventListener("touchmove",dragSideNav, false);
+    navigationDrawer.addEventListener("touchend",endDragSideNav,false);
+    navigationDrawer.addEventListener("touchcancel",endDragSideNav,false);
 
 }
 
