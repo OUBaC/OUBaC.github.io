@@ -127,6 +127,7 @@ function addDepth(){
 
 function startSpin(){
 	containerForRotation.style.animationName = "spin";
+	addListeners();
 }
 
 function removeDepth(){
@@ -146,8 +147,6 @@ function removeRotation(){
 	container.style.transform = "rotateX(0)";
 	currentMatrix = [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1];
 }
-
-window.onload = addListeners;
 
 var mouseDownVect = [];
 var mouseMoveVect = [];
