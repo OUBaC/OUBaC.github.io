@@ -30,10 +30,12 @@ function scrollAdjuster(){
 function expandSideNav(){
 		document.getElementById('navigation-drawer').classList.add('show');
 		document.getElementById('small-grey-out').style.width="100%";
+    document.getElementById('small-grey-out').style.opacity="1";
 		document.getElementsByTagName('body')[0].style.overflow="hidden";
 }
 function hideSideNav(){
 		document.getElementById('navigation-drawer').classList.remove('show');
 		document.getElementById('small-grey-out').style.width="0%";
+    document.getElementById('small-grey-out').style.opacity="0";
 		document.getElementsByTagName('body')[0].style.overflow="initial";
 }

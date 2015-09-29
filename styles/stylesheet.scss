@@ -38,7 +38,7 @@ body{
 	font-family: RobotoDraft, Roboto, sans-serif;
 	height: 100%;
 	width: 100%;
-  margin: 0;
+	margin: 0;
 }
 
 a{
@@ -59,11 +59,11 @@ a:hover{
 
 img{
 	box-sizing: border-box;
-    max-width: 100%;
+	max-width: 100%;
 }
 
 table {
-  padding-left: 15px;
+	padding-left: 15px;
 	padding-right: 15px;
 	margin: 0 auto;
 	text-align: center;
@@ -91,51 +91,52 @@ li{
 
 h1{
 	display: inline-block;
-    font-size: $large-title-height;
-    font-weight: bold;
-    padding-left: 0;
-    margin: 0;
+	font-size: $large-title-height;
+	font-weight: bold;
+	padding-left: 0;
+	margin: 0;
 }
 
 .smaller h1{
-		    -ms-flex-preferred-size: 0px;
-		        -webkit-flex-basis: 0px;
-		            flex-basis: 0px;
-		-webkit-box-flex: 1;
-		-webkit-flex-grow: 1;
-		    -ms-flex-positive: 1;
-		        flex-grow: 1;
-    font-size: $small-title-height;
+	-ms-flex-preferred-size: 0px;
+	-webkit-flex-basis: 0px;
+	flex-basis: 0px;
+	-webkit-box-flex: 1;
+	-webkit-flex-grow: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	font-size: $small-title-height;
 
 }
 
 h2{
 	color: $primary-colour;
-  font-size: $h2-font-size;
-  font-weight: normal;
+	font-size: $h2-font-size;
+	font-weight: normal;
 	margin: 2rem 0 0.5rem 0 ;
 }
 
 h3{
-  font-weight: bold;
+	font-weight: bold;
 }
 
 header{
 	background: $primary-colour;
 	color: rgb(255, 255, 255);
-  font-size: 0;
+	font-size: 0;
 	height: $large-header-height;
 	overflow: visible;
-  position: fixed;
+	position: fixed;
 	top: 0;
+	-webkit-transition: box-shadow 0.3s;
 	transition: box-shadow 0.3s;
 	width: 100%;
 	will-change: height, box-shadow;
-  z-index: 100;
+	z-index: 100;
 }
 
 .box-shadow{
-		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 a:nth-child(1) > li{
@@ -169,13 +170,13 @@ input:checked + ul{
 	text-transform: uppercase;
 	vertical-align: middle;
 	-webkit-transition: all .2s ease-out;
-	        transition: all .2s ease-out;
+	transition: all .2s ease-out;
 	-webkit-tap-highlight-color: transparent;
 
-  &:hover {
-    background-color: lighten($button-colour, 20%);
+	&:hover {
+		background-color: lighten($button-colour, 20%);
 		box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-  }
+	}
 }
 
 .divider{
@@ -216,7 +217,7 @@ input:checked + ul{
 	background-color: #002147;
 	will-change: left, right;
 	-webkit-animation: loading-long 2.1s cubic-bezier(0.650, 0.815, 0.735, 0.395) infinite;
-	        animation: loading-long 2.1s cubic-bezier(0.650, 0.815, 0.735, 0.395) infinite;
+	animation: loading-long 2.1s cubic-bezier(0.650, 0.815, 0.735, 0.395) infinite;
 
 }
 
@@ -227,9 +228,9 @@ input:checked + ul{
 	background-color: #002147;
 	will-change: left, right;
 	-webkit-animation: loading-short 2.1s cubic-bezier(0.165, 0.840, 0.440, 1.000) infinite;
-	        animation: loading-short 2.1s cubic-bezier(0.165, 0.840, 0.440, 1.000) infinite;
+	animation: loading-short 2.1s cubic-bezier(0.165, 0.840, 0.440, 1.000) infinite;
 	-webkit-animation-delay: 1.15s;
-	        animation-delay: 1.15s;
+	animation-delay: 1.15s;
 }
 
 @-webkit-keyframes loading-long{
@@ -282,12 +283,12 @@ input:checked + ul{
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
 	-webkit-box-pack:	end;
 	-webkit-justify-content:	flex-end;
-	    -ms-flex-pack:	end;
-	        justify-content:	flex-end;
+	-ms-flex-pack:	end;
+	justify-content:	flex-end;
 	height: 100%;
 }
 
@@ -295,16 +296,16 @@ input:checked + ul{
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	-webkit-flex-direction: row;
-	    -ms-flex-direction: row;
-	        flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
 	-webkit-box-pack: start;
 	-webkit-justify-content: flex-start;
-	    -ms-flex-pack: start;
-	        justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
 	-webkit-box-align: center;
 	-webkit-align-items: center;
-	    -ms-flex-align: center;
-	        align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 
 .top-nav
@@ -317,7 +318,7 @@ input:checked + ul{
 .top-nav-logo{
 	float: left;
 	height: 150%;
-  padding: 10px;
+	padding: 10px;
 }
 
 .top-nav > ul{
@@ -389,7 +390,7 @@ li:hover > .drop-down-menu{
 	position: absolute;
 	top: 100%;
 	-webkit-transition: opacity linear .15s;
-	        transition: opacity linear .15s;
+	transition: opacity linear .15s;
 	width: 160%;
 	z-index: 100;
 }
@@ -459,18 +460,18 @@ li:hover > .drop-down-menu{
 	position: fixed;
 	z-index: 200;
 	top: 0;
-	-webkit-transform: translateX(-300px);
-	    -ms-transform: translateX(-300px);
-	        transform: translateX(-300px);
+	-webkit-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	transform: translateX(-100%);
 	-webkit-transition: -webkit-transform .3s;
-	        transition: transform .3s;
+	transition: transform .3s;
 	width: 250px;
 }
 
 .show.side-nav{
 	-webkit-transform: translateX(0px);
-	    -ms-transform: translateX(0px);
-	        transform: translateX(0px);
+	-ms-transform: translateX(0px);
+	transform: translateX(0px);
 }
 
 .side-nav-wrapper{
@@ -482,8 +483,8 @@ li:hover > .drop-down-menu{
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
 	font-size: 0;
 	min-height: 100%;
 	position: relative;
@@ -522,8 +523,8 @@ li:hover > .drop-down-menu{
 .side-nav ul	{
 	-webkit-box-flex: 1;
 	-webkit-flex-grow: 1;
-	    -ms-flex-positive: 1;
-	        flex-grow: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
 	font-size: 0;
 	padding: 0;
 }
@@ -572,13 +573,13 @@ li:hover > .drop-down-menu{
 }
 
 .side-nav-expand-menu li:hover {
-		color: #fff;
+	color: #fff;
 }
 
 #side-nav-social-links{
 	-webkit-align-self: flex-end;
-	    -ms-flex-item-align: end;
-	        align-self: flex-end;
+	-ms-flex-item-align: end;
+	align-self: flex-end;
 	padding: $side-nav-vertical-padding 0;
 	text-align: center;
 	width: 100%;
@@ -589,9 +590,12 @@ li:hover > .drop-down-menu{
 	box-sizing: content-box;
 	display:none;
 	height: 100%;
+	opacity: 0;
 	padding-bottom: 60px;
 	position: fixed;
 	top: 0;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
 	width: 0;
 	z-index: 150;
 }
@@ -617,16 +621,16 @@ li:hover > .drop-down-menu{
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		-webkit-flex-direction: row;
-		    -ms-flex-direction: row;
-		        flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
 		-webkit-box-pack: start;
 		-webkit-justify-content: flex-start;
-		    -ms-flex-pack: start;
-		        justify-content: flex-start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
 		-webkit-box-align: end;
 		-webkit-align-items: flex-end;
-		    -ms-flex-align: end;
-		        align-items: flex-end;
+		-ms-flex-align: end;
+		align-items: flex-end;
 		position: absolute;
 		padding-bottom: 10px;
 		box-sizing: border-box;
@@ -636,8 +640,8 @@ li:hover > .drop-down-menu{
 	.smaller .top-nav-container{
 		-webkit-box-align: center;
 		-webkit-align-items: center;
-		    -ms-flex-align: center;
-		        align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
 		padding-bottom: 0px;
 		;
 	}
