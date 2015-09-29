@@ -2,6 +2,7 @@
 title: Squad
 
 stylesheets:
+ - /styles/squad-styles.css
 ---
 <h2>Squad</h2>
 <p>
@@ -28,5 +29,58 @@ The squad competes in the BUCS league, and enters pairings into the BUCS individ
 
 <h2>Varsity</h2>
 <p>
-Every year all five squads of the Oxford University Badminton Club face off against their old rivals from Cambridge University in the Varsity match. Oxford has been in the ascendancy in recent years. The final score in the 2014 match was a comfortable 46-29 win. 
+Every year all five squads of the Oxford University Badminton Club face off against their old rivals from Cambridge University in the Varsity match. Oxford has been in the ascendancy in recent years.
 </p>
+<table cellspacing="0" cellpadding="0" class="responsive-table">
+	<thead>
+		<th scope="col">Year</th>
+		<th scope="col">Overall Winner</th>
+		<th scope="col">Overall Score</th>
+		<th scope="col">Men's Blues</th>
+		<th scope="col">Women's Blues</th>
+		<th scope="col">Men's Seconds</th>
+		<th scope="col">Women's Seconds</th>
+		<th scope="col">Men's Thirds</th>
+	</thead>
+	{% for year_hash in site.data.varsity reversed %}
+	{% assign year = year_hash[1] %}
+	<tr>
+		<th scope="row">{{year.year}}</th>
+		{% if year.winner %}
+		<td data-title="Overall Winner">{{year.winner}}</td>
+		{% else %}
+		<td data-title="Overall Winner">--</td>
+		{% endif %}
+		{% if year.oxford %}
+		<td data-title="Overall Score">{{year.oxford}} - {{year.cambridge}}</td>
+		{% else %}
+		<td data-title="Overall Score">--</td>
+		{% endif %}
+		{% if year.oxford-mens-1 %}
+		<td data-title="Men's Blues">{{year.oxford-mens-1}} - {{year.cambridge-mens-1}}</td>
+		{% else %}
+		<td data-title="Men's Blues">--</td>
+		{% endif %}
+		{% if year.oxford-ladies-1 %}
+		<td data-title="Women's Blues">{{year.oxford-ladies-1}} - {{year.cambridge-ladies-1}}</td>
+		{% else %}
+		<td data-title="Women's Blues">--</td>
+		{% endif %}
+		{% if year.oxford-mens-2 %}
+		<td data-title="Men's Seconds">{{year.oxford-mens-2}} - {{year.cambridge-mens-2}}</td>
+		{% else %}
+		<td data-title="Men's Seconds">--</td>
+		{% endif %}
+		{% if year.oxford-ladies-2 %}
+		<td data-title="Women's Seconds">{{year.oxford-ladies-2}} - {{year.cambridge-ladies-2}}</td>
+		{% else %}
+		<td data-title="Women's Seconds">--</td>
+		{% endif %}
+		{% if year.oxford-mens-3 %}
+		<td data-title="Men's Thirds">{{year.oxford-mens-3}} - {{year.cambridge-mens-3}}</td>
+		{% else %}
+		<td data-title="Men's Thirds">--</td>
+		{% endif %}
+	</tr>
+	{% endfor %}
+</table>

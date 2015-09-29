@@ -1,0 +1,7 @@
+---
+---
+@import 'variables';
+$critical-value: 800px;
+$print-critical-value: 360px; //This number has been chosen such that the table looks fine across most of the paper sizes in Chrome's print preview.
+
+@import 'responsive-table'
