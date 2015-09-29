@@ -62,13 +62,15 @@ function initialiseSideNav(){
 
 
 function expandSideNav(){
-		navigationDrawer.style[transformProperty] = "translateX(0px)" ;
+		navigationDrawer.style[transformProperty] = "translateX(0px)" ;;
+    navigationDrawer.style.paddingRight = "0";
 		document.getElementById('small-grey-out').style.width="100%";
     document.getElementById('small-grey-out').style.opacity="1";
 		document.getElementsByTagName('body')[0].style.overflow="hidden";
 }
 function hideSideNav(){
     navigationDrawer.style[transformProperty] = "translateX("+(-width + dragMarginSize)+"px)";
+    navigationDrawer.style.paddingRight = dragMarginSize + "px";
 		document.getElementById('navigation-drawer').classList.remove('show');
 		document.getElementById('small-grey-out').style.width="0%";
     document.getElementById('small-grey-out').style.opacity="0";
