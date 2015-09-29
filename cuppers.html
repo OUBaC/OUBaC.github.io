@@ -166,32 +166,42 @@ stylesheets:
 		<th scope="col">College</th>
 		<th scope="col">Team</th>
 	</thead>
-	<tr>
-		<th scope="row">2015</th>
-    <td data-title="College">University</td>
-    <td data-title="Team">Claire Weaver, Chris Lim, Matt Kinloch, Shaun Tang</td>
-  </tr>
+  {% for year in site.data.winners %}
   <tr>
-    <th scope="row">2014</th>
-    <td data-title="College">University</td>
+    <th scope="row">{{year.year}}</th>
+    {% if year.mens-cuppers %}
+    <td data-title="College">{{year.mens-cuppers}}</td>
+    {% else %}
+    <td data-title="College">--</td>
+    {% endif %}
+    {% if year.mens-cuppers-team %}
+    <td data-title="Team">{{year.mens-cuppers-team}}</td>
+    {% else %}
     <td data-title="Team">--</td>
+    {% endif %}
   </tr>
+  {% endfor %}
 </table>
 <h2>Women's Hall of Fame</h2>
 <table cellspacing="0" cellpadding="0" class="responsive-table">
 	<thead>
 		<th scope="col">Year</th>
-		<th scope="col">College</th>
+    <th scope="col">College</th>
 		<th scope="col">Team</th>
 	</thead>
-	<tr>
-		<th scope="row">2015</th>
-    <td data-title="College">St Anne's</td>
-    <td data-title="Team">--</td>
-  </tr>
+  {% for year in site.data.winners %}
   <tr>
-    <th scope="row">2014</th>
+    <th scope="row">{{year.year}}</th>
+    {% if year.womens-cuppers %}
+    <td data-title="College">{{year.womens-cuppers}}</td>
+    {% else %}
     <td data-title="College">--</td>
+    {% endif %}
+    {% if year.womens-cuppers-team %}
+    <td data-title="Team">{{year.womens-cuppers-team}}</td>
+    {% else %}
     <td data-title="Team">--</td>
+    {% endif %}
   </tr>
+  {% endfor %}
 </table>
