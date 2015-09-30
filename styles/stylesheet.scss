@@ -22,7 +22,7 @@ $social-links-height: 30px;
 
 $change-width: 1360px;
 
-$side-nav-drag-width: 30px;
+$side-nav-drag-width: 5vw;
 
 // Tags
 
@@ -449,13 +449,12 @@ li:hover > .drop-down-menu{
 	font-family: RobotoDraft, Roboto, sans-serif;
 	height: 100%;
 	max-width: 70%;
-	overflow: auto;
+	overflow-x: visible;
 	padding-bottom: 60px;
-	padding-right: $side-nav-drag-width;
 	position: fixed;
 	z-index: 200;
 	top: 0;
-	transform: translateX(calc(-100% + #{$side-nav-drag-width}));
+	transform: translateX(-100%);
 	width: 250px;
 }
 
@@ -463,6 +462,19 @@ li:hover > .drop-down-menu{
 	transition: transform .3s;
 }
 
+#side-nav-drag{
+	height: 100%;
+	padding-left: 20px;
+	padding-right: $side-nav-drag-width;
+	position: absolute;
+	right: - $side-nav-drag-width;
+	z-index: 300;
+}
+
+#side-nav-wrapper-wrapper{
+		height: 100%;
+		overflow: scroll;
+}
 
 .side-nav-wrapper{
 	background: $primary-colour;

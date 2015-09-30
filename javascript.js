@@ -41,19 +41,24 @@ var dragMarginSize;
 var width;
 var navigationDrawer;
 var smallGreyOut;
+var sideNavDrag;
 
 function initialiseSideNav(){
   transformProperty = getSupportedPropertyName(transform);
 
   navigationDrawer = document.getElementById('navigation-drawer');
-  dragMarginSize = navigationDrawer.getBoundingClientRect().right;
-  width = navigationDrawer.getBoundingClientRect().width;
   smallGreyOut = document.getElementById('small-grey-out');
+  sideNavDrag = document.getElementById('side-nav-drag');
+  dragMarginSize = sideNavDrag.getBoundingClientRect().right;
+  width = navigationDrawer.getBoundingClientRect().width;
+  currentX = -width;
+
   //
-  navigationDrawer.addEventListener("touchstart",startDragSideNav,false);
-  navigationDrawer.addEventListener("touchmove",dragSideNav, false);
-  navigationDrawer.addEventListener("touchend",endDragSideNav,false);
-  navigationDrawer.addEventListener("touchcancel",endDragSideNav,false);
+  sideNavDrag.addEventListener("touchstart",startDragSideNav,false);
+  sideNavDrag.addEventListener("touchmove",dragSideNav, false);
+  sideNavDrag.addEventListener("touchend",endDragSideNav,false);
+  sideNavDrag.addEventListener("touchcancel",endDragSideNav,false);
+
   smallGreyOut.addEventListener("touchstart",startDragSideNav,false);
   smallGreyOut.addEventListener("touchmove",dragSideNav, false);
   smallGreyOut.addEventListener("touchend",endDragSideNav,false)
@@ -62,31 +67,33 @@ function initialiseSideNav(){
 
 
 function expandSideNav(){
-		navigationDrawer.style[transformProperty] = "translateX(0px)" ;;
-    navigationDrawer.style.paddingRight = "0";
-		document.getElementById('small-grey-out').style.width="100%";
-    document.getElementById('small-grey-out').style.opacity="1";
+		navigationDrawer.style[transformProperty] = "translateX(0px)" ;
+    sideNavDrag.style.paddingRight = "0";
+    sideNavDrag.style.right="0";
+		smallGreyOut.style.width="100%";
+    smallGreyOut.style.opacity="1";
 		document.getElementsByTagName('body')[0].style.overflow="hidden";
-    navigationDrawer.removeEventListener("touchstart",startDragSideNav,false);
-    navigationDrawer.removeEventListener("touchmove",dragSideNav, false);
-    navigationDrawer.removeEventListener("touchend",endDragSideNav,false);
-    navigationDrawer.removeEventListener("touchcancel",endDragSideNav,false);
+    currentX = 0;
 }
 function hideSideNav(){
-    navigationDrawer.style[transformProperty] = "translateX("+(-width + dragMarginSize)+"px)";
-    navigationDrawer.style.paddingRight = dragMarginSize + "px";
-		document.getElementById('navigation-drawer').classList.remove('show');
-		document.getElementById('small-grey-out').style.width="0%";
-    document.getElementById('small-grey-out').style.opacity="0";
-		document.getElementsByTagName('body')[0].style.overflow="initial";
-    navigationDrawer.addEventListener("touchstart",startDragSideNav,false);
-    navigationDrawer.addEventListener("touchmove",dragSideNav, false);
-    navigationDrawer.addEventListener("touchend",endDragSideNav,false);
-    navigationDrawer.addEventListener("touchcancel",endDragSideNav,false);
+    navigationDrawer.style[transformProperty] = "translateX(-100%)";
 
+    sideNavDrag.style.paddingRight = dragMarginSize + "px";
+    sideNavDrag.style.right = - dragMarginSize + "px";
+		smallGreyOut.style.width="0%";
+    smallGreyOut.style.opacity="0";
+		document.getElementsByTagName('body')[0].style.overflow="initial";
+    currentX = -width;
 }
 
+
+var previousTouchX = 0;
+var currentX;
+var opening = false;
+
 function startDragSideNav(evt){
+  console.log("dragStart at"+evt.changedTouches[0].pageX);
+  previousTouchX = evt.changedTouches[0].pageX;
   navigationDrawer.classList.remove("transition");
   smallGreyOut.classList.remove("transition");
   smallGreyOut.style.width="100%";
@@ -96,20 +103,32 @@ function dragSideNav(evt){
   evt.preventDefault();
   var touches = evt.changedTouches;
   var touch = touches[0];
-  if(touch.pageX > width - dragMarginSize){
+  console.log(currentX);
+  if(touch.pageX - previousTouchX>0){
+    opening = true;
+  }else{
+    opening = false;
+  }
+  currentX = currentX + touch.pageX - previousTouchX;
+  previousTouchX = touch.pageX;
+  console.log(currentX);
+  if(currentX > 0){
     navigationDrawer.style[transformProperty] = "translateX(0px)";
     smallGreyOut.style.opacity = "1";
   }else{
-    navigationDrawer.style[transformProperty]= "translateX("+(-width + touch.pageX +dragMarginSize) +"px)";
-    smallGreyOut.style.opacity = touch.pageX/(width - dragMarginSize);
+    navigationDrawer.style[transformProperty]= "translateX("+currentX+"px)";
+    smallGreyOut.style.opacity = (width+currentX)/(width);
   }
 }
 
   function endDragSideNav(evt){
       navigationDrawer.classList.add("transition");
       smallGreyOut.classList.add("transition");
-      var touch = evt.changedTouches[0];
-      if(touch.pageX/(width-dragMarginSize)>0.7){
+      if((width+currentX)/width>0.9){
+        expandSideNav();
+      }else if((width+currentX)/width<0.1){
+        hideSideNav();
+      }else if(opening){
         expandSideNav();
       }else{
         hideSideNav();
