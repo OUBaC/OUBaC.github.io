@@ -92,7 +92,6 @@ var currentX;
 var opening = false;
 
 function startDragSideNav(evt){
-  console.log("dragStart at"+evt.changedTouches[0].pageX);
   previousTouchX = evt.changedTouches[0].pageX;
   navigationDrawer.classList.remove("transition");
   smallGreyOut.classList.remove("transition");
@@ -103,7 +102,6 @@ function dragSideNav(evt){
   evt.preventDefault();
   var touches = evt.changedTouches;
   var touch = touches[0];
-  console.log(currentX);
   if(touch.pageX - previousTouchX>0){
     opening = true;
   }else{
@@ -111,7 +109,6 @@ function dragSideNav(evt){
   }
   currentX = currentX + touch.pageX - previousTouchX;
   previousTouchX = touch.pageX;
-  console.log(currentX);
   if(currentX > 0){
     navigationDrawer.style[transformProperty] = "translateX(0px)";
     smallGreyOut.style.opacity = "1";
