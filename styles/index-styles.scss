@@ -5,6 +5,8 @@
 
 header{
     background-color: transparent;
+    -webkit-transition: none;
+            transition: none;
 }
 
 .box-shadow{
@@ -15,11 +17,14 @@ h1{
   opacity: 0;
   font-family: Canterbury, RobotoDraft, Roboto, sans-serif;;
   font-weight: normal;
-  transition: opacity 0.3s;
+  -webkit-transition: none;
+          transition: none;
 }
 
 .box-shadow h1{
   opacity: 1;
+  -webkit-transition: opacity 0.3s;
+          transition: opacity 0.3s;
 }
 
 .full-justify {
@@ -34,11 +39,14 @@ h1{
 
 #top-nav-logo{
   opacity: 0;
-  transition: opacity 0.3s;
+  -webkit-transition: none;
+          transition: none;
 }
 
 .box-shadow #top-nav-logo{
   opacity: 1;
+  -webkit-transition: opacity 0.3s;
+          transition: opacity 0.3s;
 }
 
 svg{
