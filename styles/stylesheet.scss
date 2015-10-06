@@ -440,6 +440,7 @@ li:hover > .drop-down-menu{
 //Side Nav
 
 .side-nav{
+	background: $primary-colour;
 	box-shadow: rgba(0, 0, 0, .258824) 0 5px 0 0;
 	box-sizing: content-box;
 	color: #fff;
@@ -475,7 +476,6 @@ li:hover > .drop-down-menu{
 }
 
 .side-nav-wrapper{
-	background: $primary-colour;
 	box-sizing: border-box;
 	display: -webkit-box;
 	display: -webkit-flex;
