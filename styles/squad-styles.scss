@@ -4,4 +4,64 @@
 $critical-value: 800px;
 $print-critical-value: 360px; //This number has been chosen such that the table looks fine across most of the paper sizes in Chrome's print preview.
 
-@import 'responsive-table'
+@import 'responsive-table';
+
+@import 'slider-styles';
+
+#oxford{
+  color: #002147;
+  font-family: Canterbury;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+#oxford > span{
+  display: inline-block;
+  width: 25px;
+  font-size: 30px;
+
+}
+
+#cambridge{
+  color: #A3C1AD;
+  font-family: Canterbury;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+#cambridge > span{
+  display: inline-block;
+  width: 25px;
+  font-size: 30px;
+}
+
+#games-won, #longest-streak, #most-crushing-victory{
+  text-align: center;
+  font-size: 3rem;
+  color: #002147;
+}
+
+
+@font-face {
+  font-family: Canterbury;
+  src: url('/assets/Canterbury.ttf');
+}
+
+.fact{
+  display: inline-block;
+  max-width: 200px;
+  text-align: center;
+  vertical-align: top;
+}
+
+#stats-title, #starting-year{
+  font-weight: normal;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+h3{
+  font-weight: normal;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}

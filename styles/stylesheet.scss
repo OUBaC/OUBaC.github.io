@@ -2,7 +2,6 @@
 ---
 @import 'variables';
 
-$button-colour: lighten(#033,10%);
 
 $small-header-height: 70px;
 
@@ -173,7 +172,7 @@ input:checked + ul{
 	-webkit-tap-highlight-color: transparent;
 
 	&:hover {
-		background-color: lighten($button-colour, 15%);
+		background-color: $button-hover-colour;
 		box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 	}
 }
