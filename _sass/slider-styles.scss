@@ -1,0 +1,82 @@
+$slider-background-colour: #ccc;
+$track-height: 10px;
+$thumb-height: 20px;
+
+.input-range {
+  -webkit-appearance: none;
+  width: 100%;
+  height:$track-height;
+  outline: none;
+  margin: 0;
+  background-color: rgba(33,33,33,0.12);
+  z-index: 3;
+  position: relative;
+
+  // Slider Handle
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: $thumb-height;
+    height: $thumb-height;
+    border-radius: 50%;
+    background: $button-colour;
+    cursor: pointer;
+    -webkit-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out;
+    z-index: 3;
+    position: relative;
+
+
+
+  &:hover {
+    background: $button-hover-colour;
+  }
+}
+
+&:active::-webkit-slider-thumb {
+  background: $button-hover-colour;
+}
+
+&::-moz-range-thumb {
+  width: $thumb-height;
+  height: $thumb-height;
+  border-radius: 50%;
+  background: $button-colour;
+  cursor: pointer;
+  -webkit-transition: background .15s ease-in-out;
+  transition: background .15s ease-in-out;
+  z-index: 3;
+  position: relative;
+  margin: 0;
+
+  &:hover {
+    background: $button-hover-colour;
+  }
+}
+
+&:active::-moz-range-thumb {
+  background: $button-hover-colour;
+}
+}
+
+// Firefox Overrides
+::-moz-range-track {
+  background: transparent;
+  border: 0;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+}
+
+.track-highlighter{
+  left: 0;
+  right: 0;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  //border-radius: 5px 0 0 5px;
+  z-index: 2;
+  background-color: $button-colour;
+}
