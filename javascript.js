@@ -139,4 +139,12 @@ window.onload = function() {
     window.addEventListener('scroll', function() {
         scrollAdjuster();
     });
+
+	document.getElementById('side-nav-trigger').addEventListener('click', function() {
+		expandSideNav();
+	});
+
+	document.getElementById('small-grey-out').addEventListener('click', function() {
+		hideSideNav();
+	});
 }
