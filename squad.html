@@ -31,10 +31,12 @@ The squad competes in the BUCS league, and enters pairings into the BUCS individ
 <p>
 Every year all five squads of the Oxford University Badminton Club face off against their old rivals from Cambridge University in the Varsity match. Oxford has been in the ascendancy in recent years.
 </p>
+{% assign first_year = 1994 %}
+{% assign last_year = 2015 %}
 
-<h3 id="stats-title">Stats <span id="starting-year">1994</span> - 2015</h3>
+<h3 id="stats-title">Stats <span id="starting-year">{{first_year}}</span> - {{last_year}}</h3>
 <div style="width: 100%; position: relative; font-size: 0; margin: 10px 0;">
-  <input id="input" class="input-range" type="range" value="1994" min="1994" max="2015" oninput="sliderMoved(this.value)">
+  <input id="input" class="input-range" type="range" value="{{first_year}}" min="{{first_year}}" max="{{last_year}}" oninput="sliderMoved(this.value)">
   <div id="track-highlighter" class="track-highlighter"></div>
 </div>
 <div id="stats-container" style="position: relative; text-align: center;">
@@ -72,7 +74,7 @@ Every year all five squads of the Oxford University Badminton Club face off agai
 		<th scope="col">Women's Seconds</th>
 		<th scope="col">Men's Thirds</th>
 	</thead>
-	{% for index in (1994...2015) reversed %}
+	{% for index in ({{first_year}}...{{last_year}}) reversed %}
   {% assign index_string = index | downcase %}
 	{% assign year = site.data.varsity[index_string] %}
 	<tr>
@@ -117,7 +119,7 @@ Every year all five squads of the Oxford University Badminton Club face off agai
 </table>
 
 <script>
-{% for starting_year in (1994...2015) reversed %}
+{% for starting_year in ({{first_year}}...{{last_year}}) reversed %}
 // <!-- Number of Victories -->
 {% assign oxford_victories = 0 %}
 {% assign cambridge_victories =0 %}
@@ -136,7 +138,7 @@ Every year all five squads of the Oxford University Badminton Club face off agai
 {% assign most_crushing_cambridge_year = 0 %}
 
 
-{% for index in (starting_year...2015) %}
+{% for index in (starting_year...{{last_year}}) %}
 {% assign index_string = index | downcase %}
 {% assign year = site.data.varsity[index_string] %}
 
@@ -277,5 +279,5 @@ var input = document.getElementById('input');
     }
     update(e);
   }
-  document.addEventListener('load', sliderMoved(1994))
+  document.addEventListener('load', sliderMoved({{first_year}}))
 </script>
