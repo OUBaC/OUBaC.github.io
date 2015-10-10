@@ -19,7 +19,7 @@ function scrollAdjuster(){
   if(!startHeight){
     startHeight = document.getElementById('header').offsetHeight;
   }
-  var scrollDistance = document.body.scrollTop;
+  var scrollDistance = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
   if(scrollDistance>=startHeight-changeHeight){
     document.getElementById('header').classList.add('smaller');
     document.getElementById('top-nav-container').classList.add('smaller-top-nav-container');
