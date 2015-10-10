@@ -71,8 +71,7 @@ svg{
 
 .letter-in-circle{
   background-color: #002147;
-  clip-path: circle(50% at 50% 50%);
-  -webkit-clip-path: circle(50% at 50% 50%);
+  border-radius: 50%;
   color: white;
   display: block;
   font-size: 80px;
