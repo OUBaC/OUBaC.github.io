@@ -382,6 +382,7 @@ li:hover > .drop-down-menu{
 	box-shadow: 0 2px 3px rgba(0,0,0,.2);
 	display: none;
 	left: -1px; //To align with the border
+	min-width: 100%;
 	opacity: 0;
 	overflow: hidden;
 	padding: 0;
@@ -389,7 +390,7 @@ li:hover > .drop-down-menu{
 	top: 100%;
 	-webkit-transition: opacity linear .15s;
 	transition: opacity linear .15s;
-	width: 160%;
+	white-space: nowrap;
 	z-index: 100;
 }
 
