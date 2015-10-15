@@ -35,7 +35,7 @@ $tabs-animation-duration: 0.3s;
   position: absolute;
   -webkit-transition: -webkit-transform $tabs-animation-duration ease-out;
           transition: transform $tabs-animation-duration ease-out;
-  width: 50%;
+  width: 33.33333%;
 }
 
 #map{
@@ -51,6 +51,31 @@ $tabs-animation-duration: 0.3s;
   position:relative;
   max-height: 50vh;
   width:100%;
+}
+
+.day{
+	margin-bottom:0px;
+}
+
+.exceptions{
+	padding-left:20px;
+	margin-top:0.5rem;
+}
+
+#tabs-container{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	background-color: white;
+	position: relative;
+}
+
+#loading{
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
 }
 
 @import 'responsive-google-calendar';

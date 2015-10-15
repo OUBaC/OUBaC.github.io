@@ -4,36 +4,9 @@ title: Sessions
 stylesheets:
 - /styles/sessions-styles.css
 ---
-<style>
-.day{
-	margin-bottom:0px;
-}
-
-.exceptions{
-	padding-left:20px;
-	margin-top:0px;
-}
-
-#tabs-container{
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	background-color: white;
-	position: relative;
-}
-
-#loading{
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	    -ms-transform: translateY(-50%);
-	        transform: translateY(-50%);
-}
-
-</style>
 <div>
 	<h2>Sessions -  Trinity Term</h2>
-	All sessions are at Iffley Road Sports Centre.
+	All sessions are at Iffley Road Sports Centre unless otherwise stated.
 	<h3>Clubnight:</h3>
 	<p class="day">
 		<b>Sunday:</b> 15:30-17:00
@@ -43,26 +16,38 @@ stylesheets:
 		Sunday 11th October - Not on due to trials
 	</p>
 	<p class="day">
-		<b>Tuesday:</b> 10:00-13:00
-	</p>
-	<p class="day">
 		<b>Thursday:</b> 20:00-22:30
+	</p>
+	<h3>Clubnight and Squad</h3>
+	<p class="day">
+		<b>Tuesday:</b> 10:00-13:00
 	</p>
 	<p class="day">
 		<b>Friday:</b> 11:00-14:00
 	</p>
+	<h3>Squad</h3>
+	<p class="day">
+		<b>Tuesday:</b> (M1, M2 and W1) 19:00 - 22:00 at Virgin Active
+	</p>
+	<p class="day">
+		<b>Wednesday:</b> (W2 and M3) 19:00 - 22:00 at Virgin Active
+	</p>
+	<p class="day">
+		<b>Saturday:</b>  14:00 - 16:00
+		<p class="exceptions">
+			M1, M2 and W1 in weeks 1,3,5,7<br>
+			M3 and W2 in weeks 2,4,6,8
+		</p>
+	</p>
+	<p class="day">
+		<b>Saturday:</b>  20:00 - 22:00 at Headington School
+		<p class="exceptions">
+			M1, M2 and W1 in weeks 2,4,6,8<br>
+			M3 and W2 in weeks 1,3,5,7
+		</p>
+	</p>
 </div>
 <div>
-	<h2>Sessions - Squad Trials</h2>
-	All sessions are at Iffley Road Sports Centre.
-	<p class="day">
-		<b>Men:</b> 15:00-16:30 Saturday 10th October<br>
-	</p>
-	<p class="day">
-		<b>Women:</b> 15:30-17:00 Sunday 11th October
-	</p>
-	<p>Please bring your racket if you have one, but there will be some provided if not. Also, make sure that you arrive before the session begins, as we have a limited amount of time available!</p>
-</div>
 
 <script>
 
@@ -103,6 +88,7 @@ function changeSource(elem,newSource){
 			<div id="indicator"></div>
 			<h3 id="initialSelector" class="location-option selected" onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=Oxford%20University%20Sports%2C%20Oxford%2C%20United%20Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15')">Iffley Road</h3>
 			<h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=Virgin+Active+Oxfordshire,+Woodstock+Road,+Oxford,+Oxfordshire,+United+Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15')">Virgin Active</h3>
+			<h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJLVEqn2DBdkgRNYui8vjnazI&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15')">Headington School</h3>
 		</div>
 		<div id="map-container">
 			<div id="loading" class="loading"></div>
