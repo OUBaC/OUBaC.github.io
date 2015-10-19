@@ -1,0 +1,88 @@
+$checkbox-color: #033;
+$check-color: #fff;
+$checkbox-border-color: #5a5a5a;
+$tick-width: 4px;
+$tick-height: 8px;
+$tick-line-width: 2px;
+$box-height: 18px;
+$border-width: 2px;
+$angle: 37deg;
+$sin-of-angle: 0.6018150232;
+
+/* Remove default checkbox */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  left: -9999px;
+  position: absolute;
+  visibility: hidden;
+}
+
+
+// Checkbox Styles
+[type="checkbox"]{
+  padding: 20px;
+}
+
+[type="checkbox"] {
+
+  + label {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    height: $box-height;
+    line-height: $box-height;
+    padding-left: $box-height + 10px;
+    margin: 10px 10px 10px 0;
+    position: relative;
+
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+  }
+
+  + label:before {
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid $check-color;
+    border-bottom: 2px solid $check-color;
+    border-radius: 1px;
+    bottom: ($box-height - $tick-height*$sin-of-angle)/2 - $border-width;
+    content: '';
+    height: 0;
+    left: ($box-height - $tick-width)/2 - $border-width;
+    position: absolute;
+    transform: rotateZ($angle);
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    width: 0;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+  }
+
+  + label:after{
+    background-color: transparent;
+    border: 2px solid $checkbox-border-color;
+    border-radius: 2px;
+    content: '';
+    height: $box-height - 2 * $border-width;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: border .25s, background-color .25s;
+    width: $box-height - 2 * $border-width;
+    z-index: 0;
+  }
+
+  &:checked {
+    + label:before {
+      height: $tick-height;
+      width: $tick-width;
+    }
+    + label:after {
+      border-color: $checkbox-color;
+      background-color: $checkbox-color;
+    }
+  }
+
+}
