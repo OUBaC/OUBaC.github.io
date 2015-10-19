@@ -2,6 +2,8 @@
 ---
 @import 'variables';
 
+@import 'checkbox';
+
 $tabs-animation-duration: 0.3s;
 
 .location-option{
@@ -76,6 +78,63 @@ $tabs-animation-duration: 0.3s;
 	-webkit-transform: translateY(-50%);
 	    -ms-transform: translateY(-50%);
 	        transform: translateY(-50%);
+}
+
+
+.session-profile{
+  border-collapse: collapse;
+  padding: 0;
+  padding-top: 20px;
+  margin: 0;
+  width: 100%;
+}
+
+
+.session-profile td{
+  box-sizing: border-box;
+  padding: 5px 0;
+  text-align: left;
+  vertical-align: top;
+}
+
+.session-profile td:first-child{
+  color: rgba(0,0,0,0.7);
+}
+
+.session-graphic-container{
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: -20px;
+  background-color: #033;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.session-graphic{
+  height:150%;position: absolute; right: 0; bottom: 0;transform: translateX(40%) translateY(50%);
+}
+
+.session-title{
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 1.5rem;
+  margin: 0;
+  padding:0;
+  position: absolute;
+  color: #fff;
+  z-index: 2;
+}
+#sessions-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#checkboxes{
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 @import 'responsive-google-calendar';

@@ -3,103 +3,196 @@ title: Sessions
 
 stylesheets:
 - /styles/sessions-styles.css
----
-<div>
-	<h2>Sessions -  Trinity Term</h2>
-	All sessions are at Iffley Road Sports Centre unless otherwise stated.
-	<h3>Clubnight:</h3>
-	<p class="day">
-		<b>Sunday:</b> 15:30-17:00
-	</p>
-	<p class="exceptions">
-		Exceptions:<br>
-		Sunday 11th October - Not on due to trials
-	</p>
-	<p class="day">
-		<b>Thursday:</b> 20:00-22:30
-	</p>
-	<h3>Clubnight and Squad</h3>
-	<p class="day">
-		<b>Tuesday:</b> 10:00-13:00
-	</p>
-	<p class="day">
-		<b>Friday:</b> 11:00-14:00
-	</p>
-	<h3>Squad</h3>
-	<p class="day">
-		<b>Tuesday:</b> (M1, M2 and W1) 19:00 - 22:00 at Virgin Active
-	</p>
-	<p class="day">
-		<b>Wednesday:</b> (W2 and M3) 20:00 - 22:00 at Virgin Active
-	</p>
-	<p class="day">
-		<b>Saturday:</b>  14:00 - 16:00
-		<p class="exceptions">
-			M1, M2 and W1 in weeks 3,5,7<br>
-			M3 and W2 in weeks 2,4,6,8
-		</p>
-	</p>
-	<p class="day">
-		<b>Saturday:</b>  20:00 - 22:00 at Headington School
-		<p class="exceptions">
-			M1, M2 and W1 in weeks 2,4,6,8<br>
-			M3 and W2 in weeks 3,5,7
-		</p>
-	</p>
-</div>
-<div>
 
+sessions:
+- day: Sunday
+  time: "15:30-17:00"
+  location: Iffley Road
+  exceptions:
+  participants:
+  - Clubnight
+- day: Tuesday
+  time: "10:00-13:00"
+  location: Iffley Road
+  exceptions:
+  participants:
+  - Clubnight
+  - M1
+  - M2
+  - M3
+  - W1
+  - W2
+- day: Tuesday
+  time: "19:00-22:00"
+  location: Virgin Active
+  exceptions:
+  participants:
+  - M1
+  - M2
+  - W1
+- day: Wednesday
+  time: "20:00-22:00"
+  location: Virgin Active
+  exceptions:
+  participants:
+  - M3
+  - W2
+- day: Thursday
+  time: "20:00-22:30"
+  location: Iffley Road
+  exceptions:
+  participants:
+  - Clubnight
+- day: Friday
+  time: "11:00-14:00"
+  location: Iffley Road
+  exceptions:
+  participants:
+  - Clubnight
+  - M1
+  - M2
+  - M3
+  - W1
+  - W2
+- day: Saturday
+  time: "14:00-16:00"
+  location: Iffley Road
+  exceptions: "M1 M2 W1 in weeks 3,5 and 7 <br> M3 W2 in weeks 2,4,6 and 8"
+  participants:
+  - M1
+  - M2
+  - M3
+  - W1
+  - W2
+- day: Saturday
+  time: "20:00-22:00"
+  location: Headington School
+  exceptions: "M1 M2 W1 in weeks 2,4,6 and 8 <br> M3 W2 in weeks 3,5 and 7"
+  participants:
+  - M1
+  - M2
+  - M3
+  - W1
+  - W2
+---
 <script>
 
-var oldElement;
-var indicator;
-var iFrame;
+var sessionsToShow = ['Clubnight','M1','M2','M3','W1','W2','placeholder'];
 
-function changeSource(elem,newSource){
-	if(!indicator){
-		indicator = document.getElementById('indicator');
-	}
-	if(!oldElement){
-			oldElement = document.getElementById("initialSelector");
-		}
-	if(!iFrame){
-		iFrame = document.getElementById("map");
-	}
-	while (iFrame.firstChild) {
-    iFrame.removeChild(iFrame.firstChild);
-	}
-	iFrame.src = newSource;
-	oldElement.classList.remove("selected");
-	elem.classList.add("selected");
-
-	indicator.style.transform = "translateX("+ (elem.getBoundingClientRect().left - elem.parentNode.getBoundingClientRect().left)+"px)";
-	indicator.style.webkitTransform = "translateX("+ (elem.getBoundingClientRect().left - elem.parentNode.getBoundingClientRect().left)+"px)";
-	oldElement = elem;
-
+function toggleSessions(team, checked){
+  var potentialElementsToToggle = document.getElementsByClassName('session');
+  if(checked){
+    sessionsToShow.push(team);
+  }else{
+    sessionsToShow.splice(sessionsToShow.indexOf(team),1);
+  }
+  for(var i =0;i<potentialElementsToToggle.length;i++){
+    if (new RegExp(sessionsToShow.join("|")).test(potentialElementsToToggle[i].dataset.type)) {
+      potentialElementsToToggle[i].style.display= "block";
+    }else{
+      potentialElementsToToggle[i].style.display= "none"
+    }
+  }
 
 }
 </script>
 
-
-<div>
-	<h2>Maps</h2>
-	<div style="padding: 0;" class="card">
-		<div id="tabs-container">
-			<div id="indicator"></div>
-			<h3 id="initialSelector" class="location-option selected" onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=Oxford%20University%20Sports%2C%20Oxford%2C%20United%20Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15')">Iffley Road</h3>
-			<h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=Virgin+Active+Oxfordshire,+Woodstock+Road,+Oxford,+Oxfordshire,+United+Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15')">Virgin Active</h3>
-			<h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJLVEqn2DBdkgRNYui8vjnazI&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15')">Headington School</h3>
-		</div>
-		<div id="map-container">
-			<div id="loading" class="loading"></div>
-			<iframe id="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Oxford%20University%20Sports%2C%20Oxford%2C%20United%20Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15" allowfullscreen></iframe>
-		</div>
-	</div>
+<h2>Sessions -  Trinity Term</h2>
+<div id="checkboxes">
+  <input type="checkbox" id="clubnight-checkbox" onchange="toggleSessions('Clubnight',this.checked)" checked="checked" />
+  <label for="clubnight-checkbox">Clubnight</label>
+  <input type="checkbox" id="m1-checkbox" onchange="toggleSessions('M1',this.checked)" checked="checked"/>
+  <label for="m1-checkbox">M1</label>
+  <input type="checkbox" id="m2-checkbox" onchange="toggleSessions('M2',this.checked)" checked="checked"/>
+  <label for="m2-checkbox">M2</label>
+  <input type="checkbox" id="m3-checkbox" onchange="toggleSessions('M3',this.checked)"checked="checked"/>
+  <label for="m3-checkbox">M3</label>
+  <input type="checkbox" id="w1-checkbox" onchange="toggleSessions('W1',this.checked)"checked="checked"/>
+  <label for="w1-checkbox">W1</label>
+  <input type="checkbox" id="w2-checkbox" onchange="toggleSessions('W2',this.checked)"checked="checked"/>
+  <label for="w2-checkbox">W2</label>
 </div>
+<div id="sessions-container" style="display: flex;">
+  {% for session in page.sessions %}
+  <div class="card session" data-type="{{session.participants}}" style="width: 380px;">
+    <h3 class="session-title" >{{session.day}}</h3>
+    <div class="session-graphic-container">
+      <img src="/assets/logo/logo-white.svg" class="session-graphic">
+    </div>
+    <table class="session-profile">
+      <tr>
+        <td>Type:</td>
+        <td>
+          {% for participant in session.participants %}
+          {{participant}}
+          {% endfor %}
+        </td>
+      </tr>
+      <tr>
+        <td>Time:</td><td>{{session.time}}</td>
+      </tr>
+      <tr>
+        <td>Location:</td><td> {{session.location}}</td>
+      </tr>
+      <tr>
+        <td>Exceptions:</td><td>{{session.exceptions}}</td>
+      </table>
+    </div>
+    {% endfor %}
+  </div>
 
-<div>
-	<h2>Calendar</h2>
-	<div class="responsive-iframe-container">
-		<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=ebij6s0ooplap10pv6gdccchqg%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=Europe%2FLondon" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
-	</div>
-</div>
+
+  <script>
+
+  var oldElement;
+  var indicator;
+  var iFrame;
+
+  function changeSource(elem,newSource){
+    if(!indicator){
+      indicator = document.getElementById('indicator');
+    }
+    if(!oldElement){
+      oldElement = document.getElementById("initialSelector");
+    }
+    if(!iFrame){
+      iFrame = document.getElementById("map");
+    }
+    while (iFrame.firstChild) {
+      iFrame.removeChild(iFrame.firstChild);
+    }
+    iFrame.src = newSource;
+    oldElement.classList.remove("selected");
+    elem.classList.add("selected");
+
+    indicator.style.transform = "translateX("+ (elem.getBoundingClientRect().left - elem.parentNode.getBoundingClientRect().left)+"px)";
+    indicator.style.webkitTransform = "translateX("+ (elem.getBoundingClientRect().left - elem.parentNode.getBoundingClientRect().left)+"px)";
+    oldElement = elem;
+
+
+  }
+  </script>
+
+
+  <div>
+    <h2>Maps</h2>
+    <div style="padding: 0;" class="card">
+      <div id="tabs-container">
+        <div id="indicator"></div>
+        <h3 id="initialSelector" class="location-option selected" onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=Oxford%20University%20Sports%2C%20Oxford%2C%20United%20Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15')">Iffley Road</h3>
+        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=Virgin+Active+Oxfordshire,+Woodstock+Road,+Oxford,+Oxfordshire,+United+Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15')">Virgin Active</h3>
+        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJLVEqn2DBdkgRNYui8vjnazI&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15')">Headington School</h3>
+      </div>
+      <div id="map-container">
+        <div id="loading" class="loading"></div>
+        <iframe id="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Oxford%20University%20Sports%2C%20Oxford%2C%20United%20Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h2>Calendar</h2>
+    <div class="responsive-iframe-container">
+      <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=ebij6s0ooplap10pv6gdccchqg%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=Europe%2FLondon" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+  </div>
