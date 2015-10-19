@@ -1,5 +1,5 @@
 $slider-background-colour: #ccc;
-$track-height: 10px;
+$track-height: 6px;
 $thumb-height: 20px;
 
 .input-range {
@@ -11,6 +11,7 @@ $thumb-height: 20px;
   background-color: rgba(33,33,33,0.12);
   z-index: 3;
   position: relative;
+  border-radius: $track-height/2;
 
   // Slider Handle
   &::-webkit-slider-thumb {
@@ -69,14 +70,14 @@ input::-moz-focus-inner {
 }
 
 .track-highlighter{
+  border-radius: $track-height/2;
   left: 0;
   right: 0;
-  height: 10px;
+  height: $track-height;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
-  //border-radius: 5px 0 0 5px;
   z-index: 2;
   background-color: $button-colour;
 }
