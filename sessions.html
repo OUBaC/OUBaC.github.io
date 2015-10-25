@@ -136,42 +136,13 @@ function toggleSessions(team, checked){
       </tr>
       <tr>
         <td>Exceptions:</td><td>{{session.exceptions}}</td>
-      </table>
-    </div>
-    {% endfor %}
+    </table>
   </div>
+    {% endfor %}
+</div>
 
 
-  <script>
 
-  var oldElement;
-  var indicator;
-  var iFrame;
-
-  function changeSource(elem,newSource){
-    if(!indicator){
-      indicator = document.getElementById('indicator');
-    }
-    if(!oldElement){
-      oldElement = document.getElementById("initialSelector");
-    }
-    if(!iFrame){
-      iFrame = document.getElementById("map");
-    }
-    while (iFrame.firstChild) {
-      iFrame.removeChild(iFrame.firstChild);
-    }
-    iFrame.src = newSource;
-    oldElement.classList.remove("selected");
-    elem.classList.add("selected");
-
-    indicator.style.transform = "translateX("+ (elem.getBoundingClientRect().left - elem.parentNode.getBoundingClientRect().left)+"px)";
-    indicator.style.webkitTransform = "translateX("+ (elem.getBoundingClientRect().left - elem.parentNode.getBoundingClientRect().left)+"px)";
-    oldElement = elem;
-
-
-  }
-  </script>
 
 
   <div>
@@ -179,9 +150,9 @@ function toggleSessions(team, checked){
     <div style="padding: 0;" class="card">
       <div id="tabs-container">
         <div id="indicator"></div>
-        <h3 id="initialSelector" class="location-option selected" onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=Oxford%20University%20Sports%2C%20Oxford%2C%20United%20Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15')">Iffley Road</h3>
-        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=Virgin+Active+Oxfordshire,+Woodstock+Road,+Oxford,+Oxfordshire,+United+Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15')">Virgin Active</h3>
-        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJLVEqn2DBdkgRNYui8vjnazI&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15')">Headington School</h3>
+        <h3 id="initialSelector" class="location-option selected" onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=Oxford%20University%20Sports%2C%20Oxford%2C%20United%20Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',1)">Iffley Road</h3>
+        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=Virgin+Active+Oxfordshire,+Woodstock+Road,+Oxford,+Oxfordshire,+United+Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',2)">Virgin Active</h3>
+        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJLVEqn2DBdkgRNYui8vjnazI&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',3)">Headington School</h3>
       </div>
       <div id="map-container">
         <div id="loading" class="loading"></div>
@@ -189,6 +160,29 @@ function toggleSessions(team, checked){
       </div>
     </div>
   </div>
+
+  <script>
+
+  var oldElement = document.getElementById("initialSelector");
+  var indicator = document.getElementById('indicator');;
+  var iFrame = document.getElementById("map");
+  var numberOfElements = document.getElementById('tabs-container').children.length -1;
+
+  function changeSource(elem,newSource,position){
+    while (iFrame.firstChild) {
+      iFrame.removeChild(iFrame.firstChild);
+    }
+    iFrame.src = newSource;
+    oldElement.classList.remove("selected");
+    elem.classList.add("selected");
+
+    indicator.style.transform = "translateX("+100*(position-1)+"%)";
+    indicator.style.webkitTransform = "translateX("+100*(position-1)+"%)";
+    oldElement = elem;
+
+
+  }
+  </script>
 
   <div>
     <h2>Calendar</h2>
