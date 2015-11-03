@@ -10,7 +10,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.8)
     blankslate (2.1.2.4)
-    classifier-reborn (2.0.3)
+    classifier-reborn (2.0.4)
       fast-stemmer (~> 1.0)
     coffee-script (2.4.1)
       coffee-script-source
@@ -104,7 +104,7 @@ GEM
     parslet (1.5.0)
       blankslate (~> 2.0)
     posix-spawn (0.3.11)
-    public_suffix (1.5.1)
+    public_suffix (1.5.2)
     pygments.rb (0.6.3)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.2.0)
