@@ -9,6 +9,15 @@ sessions:
   time: "15:30-17:00"
   location: Iffley Road
   exceptions:
+  - "8th November - Not on"
+  - "15th November - 3 courts - 18:00-19:30"
+  - "22nd November - Not on"
+  participants:
+  - Clubnight
+- day: Monday 9th November
+  time: "19:30-21:00"
+  location: Iffley Road
+  exceptions:
   participants:
   - Clubnight
 - day: Tuesday
@@ -57,7 +66,11 @@ sessions:
 - day: Saturday
   time: "14:00-16:00"
   location: Iffley Road
-  exceptions: "M1 W1 W2 in weeks 3,5 and 7 <br> M2 M3 in weeks 2,4,6 and 8 <br> Saturday 7th November - Not on <br> Saturday 28th November - Not on"
+  exceptions:
+  - "M1 W1 W2 in weeks 3,5 and 7"
+  - "M2 M3 in weeks 2,4,6 and 8"
+  - "Saturday 7th November - Not on"
+  - "Saturday 28th November - Not on"
   participants:
   - M1
   - M2
@@ -67,7 +80,9 @@ sessions:
 - day: Saturday
   time: "20:00-22:00"
   location: Headington School
-  exceptions: "M1 W1 W2 in weeks 2,4,6 and 8 <br> M2 M3 in weeks 3,5 and 7"
+  exceptions:
+  - "M1 W1 W2 in weeks 2,4,6 and 8"
+  - "M2 M3 in weeks 3,5 and 7"
   participants:
   - M1
   - M2
@@ -135,8 +150,13 @@ function toggleSessions(team, checked){
         <td>Location:</td><td> {{session.location}}</td>
       </tr>
       <tr>
-        <td>Exceptions:</td><td>{{session.exceptions}}</td>
+        <td>Exceptions:</td><td></td>
     </table>
+    <ul class="sessions-exceptions-list">
+      {% for exception in session.exceptions %}
+      <li>{{exception}}</li>
+      {% endfor %}
+    </ul>
   </div>
     {% endfor %}
 </div>
