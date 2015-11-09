@@ -3,10 +3,10 @@
 - Sponsors in [`the-club.html`](the-club.html)
 - Cuppers draw in [`cuppers.html`](cuppers.html)
 - Cuppers 'Hall of Fame' in [`cuppers.html`](cuppers.html)
-- List of college captins in [`college-captains`](college-captatins.html)
+- List of college captains in [`college-captains`](college-captatins.html)
 - Current prices in [`clubnight.html`](clubnight.html)
-- Leagues the teams play in and the links to the current standinds in [`squad.html`](squad.html)
-- Session times and the locations available in the map in [`sessions.html`](sessions.html)
+- Leagues the teams play in and the links to the current standings in [`squad.html`](squad.html)
+- Session times and the locations available on the map in [`sessions.html`](sessions.html)
 - The current committee and the various references throughout the website. See below.
 
 ####Updating The Committee
