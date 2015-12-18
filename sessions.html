@@ -6,15 +6,22 @@ stylesheets:
 
 sessions:
 - day: Sunday
-  time: "15:30-17:00"
+  time: "14:00-16:00"
   location: Iffley Road
-  exceptions:
+  participantString: Clubnight and Squad
   participants:
   - Clubnight
+  - M1
+  - M2
+  - M3
+  - W1
+  - W2
+  exceptions:
+  - "3rd January Only (3 Courts)"
 - day: Tuesday
   time: "10:00-13:00"
   location: Iffley Road
-  exceptions:
+  participantString: Clubnight and Squad
   participants:
   - Clubnight
   - M1
@@ -22,16 +29,24 @@ sessions:
   - M3
   - W1
   - W2
+  exceptions:
+  - "5th January Only"
+- day: Wednesday
+  time: "17:30-19:00"
+  location: Iffley Road
+  participantString: Squad
+  participants:
+  - M1
+  - M2
+  - M3
+  - W1
+  - W2
+  exceptions:
+  - "6th January Only (2 Courts)"
 - day: Thursday
   time: "20:00-22:30"
   location: Iffley Road
-  exceptions:
-  participants:
-  - Clubnight
-- day: Friday
-  time: "11:00-14:00"
-  location: Iffley Road
-  exceptions:
+  participantString: Clubnight and Squad
   participants:
   - Clubnight
   - M1
@@ -39,24 +54,21 @@ sessions:
   - M3
   - W1
   - W2
-- day: Friday
-  time: "19:00-21:00"
-  location: Virgin Active
   exceptions:
-  - "11th December - Not on"
-  participants:
-  - M3
-  - W2
+  - "7th January Only (3 Courts)"
 - day: Saturday
-  time: "14:00-16:00"
+  time: "14:30-17:00"
   location: Iffley Road
-  exceptions:
+  participantString: Clubnight and Squad
   participants:
+  - Clubnight
   - M1
   - M2
   - M3
   - W1
   - W2
+  exceptions:
+  - "26th December - Not on"
 ---
 <script>
 
@@ -80,7 +92,7 @@ function toggleSessions(team, checked){
 }
 </script>
 
-<h2>Sessions -  4th December to 12th December</h2>
+<h2>Sessions -  18th December to 9th January</h2>
 <div id="checkboxes">
   <input type="checkbox" id="clubnight-checkbox" onchange="toggleSessions('Clubnight',this.checked)" checked="checked" />
   <label for="clubnight-checkbox">Clubnight</label>
@@ -106,9 +118,7 @@ function toggleSessions(team, checked){
       <tr>
         <td>Type:</td>
         <td>
-          {% for participant in session.participants %}
-          {{participant}}
-          {% endfor %}
+          {{session.participantString}}
         </td>
       </tr>
       <tr>
