@@ -6,69 +6,40 @@ stylesheets:
 
 sessions:
 - day: Sunday
-  time: "14:00-16:00"
+  time: "15:30-17:00"
   location: Iffley Road
-  participantString: Clubnight and Squad
+  participantString: Clubnight
   participants:
   - Clubnight
-  - M1
-  - M2
-  - M3
-  - W1
-  - W2
   exceptions:
-  - "3rd January Only (3 Courts)"
+  - "17th January - Moved to 18th 19:30 - 21:00"
+  - "14th Febuary - 16:30 - 18:00"
+  - "21st Febuary - Not on"
+  - "28th Febuary - Not on"
+  - "6th March - Not on"
 - day: Tuesday
   time: "10:00-13:00"
   location: Iffley Road
-  participantString: Clubnight and Squad
+  participantString: Clubnight
   participants:
   - Clubnight
-  - M1
-  - M2
-  - M3
-  - W1
-  - W2
   exceptions:
-  - "5th January Only"
-- day: Wednesday
-  time: "17:30-19:00"
-  location: Iffley Road
-  participantString: Squad
-  participants:
-  - M1
-  - M2
-  - M3
-  - W1
-  - W2
-  exceptions:
-  - "6th January Only (2 Courts)"
+  - "Only 2 courts"
 - day: Thursday
   time: "20:00-22:30"
   location: Iffley Road
-  participantString: Clubnight and Squad
+  participantString: Clubnight
   participants:
   - Clubnight
-  - M1
-  - M2
-  - M3
-  - W1
-  - W2
   exceptions:
-  - "7th January Only (3 Courts)"
-- day: Saturday
-  time: "14:30-17:00"
+- day: Friday
+  time: "11:00-14:00"
   location: Iffley Road
-  participantString: Clubnight and Squad
+  participantString: Clubnight
   participants:
   - Clubnight
-  - M1
-  - M2
-  - M3
-  - W1
-  - W2
   exceptions:
-  - "26th December - Not on"
+  - "4th March - Not on"
 ---
 <script>
 
@@ -92,7 +63,8 @@ function toggleSessions(team, checked){
 }
 </script>
 
-<h2>Sessions -  18th December to 9th January</h2>
+<h2>Sessions - Hilary Term</h2>
+<p> These run from Sunday 10th January to Saturday 19th March.</p>
 <div id="checkboxes">
   <input type="checkbox" id="clubnight-checkbox" onchange="toggleSessions('Clubnight',this.checked)" checked="checked" />
   <label for="clubnight-checkbox">Clubnight</label>
