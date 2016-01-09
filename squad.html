@@ -250,8 +250,6 @@ function updateSizes(){
   if(!factHeight){
     factHeight = document.getElementById('games-won').clientHeight;
   }
-  console.log(factHeight);
-  console.log(document.getElementById('oxford').clientHeight +"aaa!" + document.getElementById('cambridge').clientHeight);
   var targetSize = Math.max(document.getElementById('oxford').clientHeight + document.getElementById('cambridge').clientHeight,factHeight);
   var facts = document.getElementsByClassName('fact');
   for( var i = 0; i < facts.length; i++ ){
