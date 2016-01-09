@@ -4,78 +4,74 @@ layout : null
 ---
 <!DOCTYPE html>
 <html>
-	<head>
-		{% include head-inner.html %}
-		<title>{{page.title}} - OUBaC</title>
-	</head>
-	<style>
-		svg{
-		width:100%;
-		height:100%;
-		}
+<head>
+	{% include head-inner-no-js.html %}
+	<title>{{page.title}} - OUBaC</title>
+</head>
+<style>
 
-		body{
-		background-color: #002147;
-		}
+body{
+	background-color: #002147;
+}
 
-		span{
-		color: #fff;
-		font-size:25vw;
-		}
+span{
+	color: #fff;
+	font-size:25vw;
+}
 
-		.right4{
-			margin-left: 25vw;
-		}
+.right4{
+	margin-left: 25vw;
+}
 
-		iframe{
-		border: none;
-		bottom: 0;
-		height:25vw;
-		position: absolute;
-		visibility: hidden;
-		width:25vw;
-		}
+iframe{
+	border: none;
+	bottom: 0;
+	height:25vw;
+	position: absolute;
+	visibility: hidden;
+	width:25vw;
+}
 
-		html,
-		body{
-		font-family: RobotoDraft, Roboto, sans-serif;
-		height: 100%;
-		margin: 0;
-		}
+html,
+body{
+	font-family: RobotoDraft, Roboto, sans-serif;
+	height: 100%;
+	margin: 0;
+}
 
-		a{
-		color: #fff;
-		}
+a{
+	color: #fff;
+}
 
-		ul{
-		list-style-type: none;
-		}
+ul{
+	list-style-type: none;
+}
 
-		p{
-		color: #fff;
-		font-size: 19px;
-		padding-left: 20px;
-		padding-right: 10px;
-		text-align: center;
-		}
+p{
+	color: #fff;
+	font-size: 19px;
+	padding-left: 20px;
+	padding-right: 10px;
+	text-align: center;
+}
 
-	@media all and (min-width:1200px){
-		span{
-			font-size: 300px
-		}
-
-		.right4{
-			margin-left: 300px;
-		}
-
-		iframe{
-			height: 300px;
-			width: 300px;
-		}
+@media all and (min-width:1200px){
+	span{
+		font-size: 300px
 	}
 
-	</style>
-	<div style="display:flex; justify-content:center; height:100%; flex-direction: column">
+	.right4{
+		margin-left: 300px;
+	}
+
+	iframe{
+		height: 300px;
+		width: 300px;
+	}
+}
+
+</style>
+<div style="display:flex; justify-content:center; height:100%; flex-direction: column">
 	<div style="position:relative; margin: 0 auto; text-align: center;">
 		<span>4</span>
 		<iframe src="/assets/logo/logo-oxford-blue-white-background.svg" id="svg" onload="run()" seamless></iframe>
@@ -89,116 +85,108 @@ layout : null
 		<br/>
 		If you followed a link or are sure the URL is correct then send an email to <a href="mailto:{{site.data.variables.IT.email}}">{{site.data.variables.IT.email}}</a>
 	</p>
-	</div>
+</div>
 
 
-	<script>
+<script>
+//Constants
+var allBreaks = ['m','l','c','z','h','v','s','q','t','a',',',' ','-','.'];
+var types = ['m','l','c','z','h','v','s','q','t','a'];
+var lengths = [2,2,6,0,1,1,4,4,2,7];
 
-		var nodeIndex =0;
-		var index = 0;
-		var length = 0;
-		var test;
-		var d;
-		var breakpoints =[];
-		var nodes =[];
-		var allBreaks = ['m','l','c','z','h','v','s','q','t','a',',',' ','-','.'];
-		var types = ['m','l','c','z','h','v','s','q','t','a'];
+var nodes;
+var nodeIndex;
 
-		function run(){
-			nodeIndex =0;
-			var iframe = document.getElementById("svg");
-			var svg = iframe.contentDocument.childNodes[0];
-			svg.style.height = '100%';
-			svg.style.width = '100%';
-			nodes = svg.getElementsByTagName("*");
-			length = nodes.length;
-			for( var i=0; i< length; i++ ){
-				nodes[i].style.visibility = 'hidden';
-			}
-			iframe.style.visibility =  'visible';
-			showNext();
-		}
+function run(){
+	'use strict';
+	var iframe = document.getElementById("svg");
+	var svg = iframe.contentDocument.childNodes[0];
+	svg.style.height = "100%";
+	svg.style.width = "100%";
+	nodes = svg.getElementsByTagName("*");
+	for( var i = 0; i < nodes.length; i++ ){
+		nodes[i].style.visibility = 'hidden';
+	}
+	iframe.style.visibility =  'visible';
+	nodeIndex = 0;
+	showNext();
+}
 
 
-		function addPoint(){
-			test.setAttribute('d',d.substring(0,breakpoints[index+1]));
-			index++;
-			if(index< breakpoints.length){
-				setTimeout(addPoint, 10);
-				}else{
-				showNext();
-			}
-		}
+function addPoint(node,index,d,breakpoints){
+	'use strict';
+	node.setAttribute('d',d.substring(0,breakpoints[index+1]));
+	index++;
+	if(index< breakpoints.length){
+		setTimeout(addPoint, 10, node, index, d, breakpoints);
+	}else{
+		showNext();
+	}
+}
 
-		function showNext(){
-			if(nodeIndex==length){
-				return;
-			}
-			test = nodes[nodeIndex];
-			nodeIndex++;
-			test.style.visibility = 'visible';
-			if(test.tagName != 'path'){
-				showNext();
-				return;
-			}
-			d = test.getAttribute('d');
-			test.setAttribute('d','');
-			breakpoints =[];
-			var breakpoints2 = [];
-			var char;
-			var numberUntilEndOfCommand;
-			var currentNumberInCommand = 0;
-			var numberOfNodes = 0;
-			var types = ['m','l','c','z','h','v','s','q','t','a'];
-			var allBreaks = ['m','l','c','z','h','v','s','q','t','a',',',' ','-','.'];
-			var currentlyDecimal = false;
-			var currentlyInaNumber = false;
-			var lengths = [2,2,6,0,1,1,4,4,2,7];
-			for( i=0; i< d.length; i++){
-				char = d.charAt(i).toLowerCase();
+function showNext(){
+	'use strict';
+	if(nodeIndex === nodes.length){
+		return;
+	}
+	var node = nodes[nodeIndex];
+	nodeIndex++;
+	node.style.visibility = 'visible';
+	if(node.tagName != 'path'){
+		showNext();
+		return;
+	}
+	var d = node.getAttribute('d');
+	node.setAttribute('d','');
 
-				if(char != ' ' && types.indexOf(char) == -1){
-					//Then we are a number?
-					i = findEndOfNumber(d,i);
-					currentNumberInCommand++;
-					if(numberUntilEndOfCommand == currentNumberInCommand){
-						numberOfNodes++;
-						currentNumberInCommand = 0;
-						breakpoints.push(i+1);
-					}
+	var breakpoints =[];
+	var char;
+	var numberUntilEndOfCommand;
+	var currentNumberInCommand = 0;
 
-				}
+	for (var i = 0; i < d.length; i++){
+		char = d.charAt(i).toLowerCase();
 
-				if(types.indexOf(char) != -1){
-					numberUntilEndOfCommand = lengths[types.indexOf(char)];
-					currentNumberInCommand = 0;
-				}
-
-			}
-
-			//console.log(numberOfNodes);
-			index = 0;
-			addPoint();
-
-
-		}
-
-
-		function findEndOfNumber(string, startOfNumber){
-
-			var currentlyDecimal = false;
-			if(d.charAt(startOfNumber)=='.'){
-				currentlyDecimal = true;
-			}
-			for( var j = startOfNumber+1; j<string.length; j++){
-				char = d.charAt(j).toLowerCase();
-				if(char == '.' && currentlyDecimal == false){
-					currentlyDecimal = true;
-				}else if(allBreaks.indexOf(char)!=-1){
-					return j-1;
-				}
+		if(char != ' ' && char !== ',' && types.indexOf(char) == -1){
+			//Then we are a number?
+			i = findEndOfNumber(d,i);
+			currentNumberInCommand++;
+			if(numberUntilEndOfCommand === currentNumberInCommand){
+				currentNumberInCommand = 0;
+				breakpoints.push(i+1);
 			}
 		}
-	</script>
+		if(types.indexOf(char) != -1){
+			numberUntilEndOfCommand = lengths[types.indexOf(char)];
+			currentNumberInCommand = 0;
+		}
+	}
+	addPoint(node,0,d,breakpoints);
+}
+
+
+function findEndOfNumber(string, startOfNumber){
+	'use strict';
+	var currentlyDecimal = false;
+	if (string.charAt(startOfNumber) === '.') {
+		currentlyDecimal = true;
+	} else if (['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '-', 'e'].indexOf(string.charAt(startOfNumber)) === -1) {
+		throw ('Not a Number');
+	}
+	var char;
+	for (var j = startOfNumber + 1; j < string.length; j++) {
+		char = string.charAt(j).toLowerCase();
+		if (char === 'e') {
+			currentlyDecimal = false;
+			j++; //Skip the first number
+		}if (char === '.' && currentlyDecimal === false) {
+			currentlyDecimal = true;
+		} else if (allBreaks.indexOf(char) !== -1) {
+			return j - 1;
+		}
+	}
+	return string.length;
+};
+</script>
 </body>
 </html>
