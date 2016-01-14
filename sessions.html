@@ -20,11 +20,24 @@ sessions:
 - day: Tuesday
   time: "10:00-13:00"
   location: Iffley Road
-  participantString: Clubnight
+  participantString: Clubnight and Squad
   participants:
   - Clubnight
+  - M1
+  - W1
+  - M2
+  - W2
+  - M3
   exceptions:
   - "Only 2 courts"
+- day: Tuesday
+  time: "19:00-22:00"
+  location: "Virgin Active"
+  participantString: M1, M2 and W1
+  partcipants:
+  - M1
+  - M2
+  - W1
 - day: Thursday
   time: "20:00-22:30"
   location: Iffley Road
@@ -35,11 +48,52 @@ sessions:
 - day: Friday
   time: "11:00-14:00"
   location: Iffley Road
-  participantString: Clubnight
+  participantString: Clubnight and Squad
   participants:
   - Clubnight
+  - M1
+  - W1
+  - M2
+  - W2
+  - M3
   exceptions:
+  - "Only 2 courts"
   - "4th March - Not on"
+- day: Friday
+  time: "19:00-21:00"
+  location: Virgin Active
+  participantString: M3 and W2
+  participants:
+  - W2
+  - M3
+  exceptions:
+- day: Saturday
+  time: "14:00-16:00"
+  location: Iffley Road
+  participantString: Squad
+  participants:
+  - M1
+  - M2
+  - M3
+  - W1
+  - W2
+  exceptions:
+  - "23rd Jan, 6th Feb - M1, W1, M2"
+  - "30th Jan, 13th Feb (2 courts) - M3, W2"
+- day: Saturday
+  time: "20:00-22:00"
+  location: Headington School
+  participantString: Squad
+  participants:
+  - M1
+  - M2
+  - M3
+  - W1
+  - W2
+  exceptions:
+  - "27th Feb - 20:15-22:15"
+  - "30th Jan, 13th Feb, 27th Feb - M1, W1, M2"
+  - "23rd Jan (2 courts), 6th Feb, 20th Feb - M3, W2"
 ---
 <script>
 
@@ -81,7 +135,7 @@ function toggleSessions(team, checked){
 </div>
 <div id="sessions-container" style="display: flex;">
   {% for session in page.sessions %}
-  <div class="card session" data-type="{{session.participants}}" style="width: 380px;">
+  <div class="card session" data-type="{{session.participants}}" style="width: 390px;">
     <h3 class="session-title" >{{session.day}}</h3>
     <div class="session-graphic-container">
       <img src="/assets/logo/logo-white.svg" class="session-graphic">
