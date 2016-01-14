@@ -135,7 +135,8 @@ function dragSideNav(evt){
 
 window.onload = function() {
     initialiseSideNav();
-
+    scrollAdjuster();
+    
     window.addEventListener('scroll', function() {
         scrollAdjuster();
     });
