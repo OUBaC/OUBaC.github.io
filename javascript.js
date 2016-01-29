@@ -133,10 +133,9 @@ function dragSideNav(evt){
 
   }
 
-window.onload = function() {
+window.addEventListener("DOMContentLoaded", function() {
     initialiseSideNav();
-    scrollAdjuster();
-    
+
     window.addEventListener('scroll', function() {
         scrollAdjuster();
     });
@@ -148,4 +147,4 @@ window.onload = function() {
 	document.getElementById('small-grey-out').addEventListener('click', function() {
 		hideSideNav();
 	});
-}
+});
