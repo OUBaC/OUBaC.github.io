@@ -7,7 +7,7 @@ $print-critical-value: 360px;
 
 $animation-delay: 0.5s;
 $animation-duration: 1s;
-$number-of-animations: 4;
+$number-of-animations: 5;
 $lines-animation-delay: ($number-of-animations - 1) * $animation-delay + $animation-duration;
 
 #versus{
@@ -21,16 +21,17 @@ $lines-animation-delay: ($number-of-animations - 1) * $animation-delay + $animat
           transform: translateZ(0); //This is to force webkit to use the GPU.
 }
 
-#cuppers-container{
+.cuppers-container{
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin: 10px;
   overflow-x: auto;
+  white-space: nowrap;
 }
 
-#show-names-container{
+.show-names-container{
   display: none;
 }
 
@@ -58,6 +59,11 @@ $lines-animation-delay: ($number-of-animations - 1) * $animation-delay + $animat
           animation-delay: 3 * $animation-delay;
 }
 
+.five{
+  -webkit-animation-delay: 4 * $animation-delay;
+          animation-delay: 4 * $animation-delay;
+}
+
 .blank{
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -75,6 +81,7 @@ $lines-animation-delay: ($number-of-animations - 1) * $animation-delay + $animat
   display: inline-block;
   font-weight: normal;
   padding: 0 0.5em;
+  text-align: center;
   text-overflow: ellipsis;
 }
 
@@ -250,7 +257,7 @@ $lines-animation-delay: ($number-of-animations - 1) * $animation-delay + $animat
   to{ opacity: 1;}
 }
 
-@media all and (max-width: 1200px){
+@media all and (max-width: 1300px){
 
 .flex .college-name{
   display: none;
@@ -265,7 +272,7 @@ $lines-animation-delay: ($number-of-animations - 1) * $animation-delay + $animat
   margin: 0;
   text-align: center;
 }
-#show-names-container{
+.show-names-container{
   display: block;
 }
 }
