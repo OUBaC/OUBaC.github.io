@@ -39,6 +39,36 @@ td {
 	vertical-align: middle;
 }
 
+.sortable {
+	cursor: pointer;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+.up::after {
+		content: ' \25B2';
+		display: inline-block;
+		font-size: 15px;
+		padding-left: 5px;
+		position: absolute;
+		transform: scale(1,0.5);
+		transform-origin: top;
+}
+
+.down::after {
+	content: ' \25BC';
+	display: inline-block;
+	font-size: 15px;
+	padding-left: 5px;
+	position: absolute;
+	transform: scale(1,0.5);
+	transform-origin: bottom;
+}
+
+
+
 td[data-title]:before {
 	content: none;
 	float: left;

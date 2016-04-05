@@ -2,286 +2,394 @@
 title: Squad
 
 stylesheets:
- - /styles/squad-styles.css
+- /styles/squad-styles.css
 ---
 <h2>Squad</h2>
 <p>
-The Squad is the competitive aspect of Oxford University Badminton Club. The squad selects players from the University Trials in Michaelmas Term. Whilst the trials tend to be dominated by incoming Freshers, O.U.Ba.C. encourages people from all years to try out.
+  The Squad is the competitive aspect of Oxford University Badminton Club. The squad selects players from the University Trials in Michaelmas Term. Whilst the trials tend to be dominated by incoming Freshers, O.U.Ba.C. encourages people from all years to try out.
 </p>
 <p>
-The squad competes in the BUCS league, and enters pairings into the BUCS individual tournament in November. If you are selected to represent O.U.Ba.C. in the BUCS individual tournaments, and succesfully reach the quarter-finals or further, you will be awarded a full Blue. Players who represent the O.U.Ba.C. 1st team in the annual Varsity match gain a half-Blue.
+  The squad competes in the BUCS league, and enters pairings into the BUCS individual tournament in November. If you are selected to represent O.U.Ba.C. in the BUCS individual tournaments, and succesfully reach the quarter-finals or further, you will be awarded a full Blue. Players who represent the O.U.Ba.C. 1st team in the annual Varsity match gain a half-Blue.
 </p>
 <p>
-	To see how the Oxford teams are doing this year, simply check out the links below. Men's 1st play in the Premier Men's South, Men's 2nd play in the Midlands Conference Men's 2B, and Women's 1st play in the Midlands Conference Women's 1A.
+  To see how the Oxford teams are doing this year, simply check out the links below. Men's 1st play in the Premier Men's South, Men's 2nd play in the Midlands Conference Men's 2B, and Women's 1st play in the Midlands Conference Women's 1A.
 </p>
 <ul>
-	<li><a href="http://bucs.org.uk/BucsCore/TeamProfile.aspx?id=415&sport=Badminton&institution=Oxford+University" target="_blank">Men's 1st Team</a></li>
-	<li><a href="http://bucs.org.uk/BucsCore/TeamProfile.aspx?id=416&sport=Badminton&institution=Oxford+University" target="_blank">Men's 2nd Team</a></li>
-	<li><a href="http://bucs.org.uk/BucsCore/TeamProfile.aspx?id=414&sport=Badminton&institution=Oxford+University" target="_blank">Women's 1st Team</a></li>
+  <li><a href="http://bucs.org.uk/BucsCore/TeamProfile.aspx?id=415&sport=Badminton&institution=Oxford+University" target="_blank">Men's 1st Team</a></li>
+  <li><a href="http://bucs.org.uk/BucsCore/TeamProfile.aspx?id=416&sport=Badminton&institution=Oxford+University" target="_blank">Men's 2nd Team</a></li>
+  <li><a href="http://bucs.org.uk/BucsCore/TeamProfile.aspx?id=414&sport=Badminton&institution=Oxford+University" target="_blank">Women's 1st Team</a></li>
 </ul>
 <p> The Men's 3rd Team, the Women's 2nd Team and a Mixed Team compete in the Oxfordshire Badminton League. You can see how they are doing this year with the links below</P>
-<ul>
-	<li><a href="http://www.oxfordshirebadmintonleague.co.uk/Tables.aspx?League=1#ctl00_ContentPlaceHolder1_rptAllDivisions_ctl00_leaguename" target="_blank">Men's 3rd Team</a></li>
-	<li><a href="http://www.oxfordshirebadmintonleague.co.uk/Tables.aspx?League=1#ctl00_ContentPlaceHolder1_rptAllDivisions_ctl09_leaguename"target="_blank">Women's 2nd Team</a></li>
-	<li><a href="http://www.oxfordshirebadmintonleague.co.uk/Tables.aspx?League=1#ctl00_ContentPlaceHolder1_rptAllDivisions_ctl05_leaguename" target="_blank">Mixed Team</a></li>
-</ul>
+  <ul>
+    <li><a href="http://www.oxfordshirebadmintonleague.co.uk/Tables.aspx?League=1#ctl00_ContentPlaceHolder1_rptAllDivisions_ctl00_leaguename" target="_blank">Men's 3rd Team</a></li>
+    <li><a href="http://www.oxfordshirebadmintonleague.co.uk/Tables.aspx?League=1#ctl00_ContentPlaceHolder1_rptAllDivisions_ctl09_leaguename"target="_blank">Women's 2nd Team</a></li>
+    <li><a href="http://www.oxfordshirebadmintonleague.co.uk/Tables.aspx?League=1#ctl00_ContentPlaceHolder1_rptAllDivisions_ctl05_leaguename" target="_blank">Mixed Team</a></li>
+  </ul>
 
-<h2>Fixtures</h2>
-<p>This year's fixtures can be seen on the calendar below or in the <a href="https://docs.google.com/spreadsheets/d/1xoiJ0MuF24DZYbJRYDFonAyHJmswIoAevNsG2-7IKAU/edit#gid=0" target="_blank">fixtures spreadsheet</a>.</p>
+  <h2>Fixtures</h2>
+  <p>This year's fixtures can be seen on the calendar below or in the <a href="https://docs.google.com/spreadsheets/d/1xoiJ0MuF24DZYbJRYDFonAyHJmswIoAevNsG2-7IKAU/edit#gid=0" target="_blank">fixtures spreadsheet</a>.</p>
 
-<div class="responsive-iframe-container">
-  <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=nu7ktulmfc8l6itsv9b9fs7dik@group.calendar.google.com&amp;color=%232952A3&amp;ctz=Europe%2FLondon" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
-</div>
-
-<h2>Varsity</h2>
-<p>
-Every year all five squads of the Oxford University Badminton Club face off against their old rivals from Cambridge University in the Varsity match. Oxford has been in the ascendancy in recent years.
-</p>
-{% assign first_year = 1994 %}
-{% assign last_year = 2016 %}
-
-<h3 id="stats-title">Stats <span id="starting-year">{{first_year}}</span> - {{last_year}}</h3>
-<div style="width: 100%; position: relative; font-size: 0; margin: 10px 0;">
-  <input id="input" class="input-range" type="range" value="{{first_year}}" min="{{first_year}}" max="{{last_year}}" oninput="sliderMoved(this.value)">
-  <div id="track-highlighter" class="track-highlighter"></div>
-</div>
-<div id="stats-container" style="position: relative; text-align: center;">
-  <div class="fact">
-    <div id="victory-container">
-      <div id="oxford"></div>
-      <div id="cambridge"></div>
-    </div>
-    <p id="victories-text"></p>
+  <div class="responsive-iframe-container">
+    <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=nu7ktulmfc8l6itsv9b9fs7dik@group.calendar.google.com&amp;color=%232952A3&amp;ctz=Europe%2FLondon" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
   </div>
-  <div class="fact">
-    <div id="games-won"></div>
-    <p>The proportion of games Oxford has won.
+
+  <h2>Varsity</h2>
+  <p>
+    Every year all five squads of the Oxford University Badminton Club face off against their old rivals from Cambridge University in the Varsity match. Oxford has been in the ascendancy in recent years.
+  </p>
+
+  {% assign results  = site.data.varsity | sort: year %}
+
+  {% assign first_year_hash = results | first %}
+  {% assign first_year = first_year_hash[0] %}
+  {% assign last_year_hash = results | last %}
+  {% assign last_year = last_year_hash[0] %}
+
+  <h3 id="stats-title">Stats <span id="starting-year">{{first_year}}</span> - {{last_year}}</h3>
+  <div style="width: 100%; position: relative; font-size: 0; margin: 10px 0;">
+    <input id="input" class="input-range" type="range" value="{{first_year}}" min="{{first_year}}" max="{{last_year}}" oninput="sliderMoved(this.value)">
+    <div id="track-highlighter" class="track-highlighter"></div>
   </div>
-  <div class="fact">
-      <div id="longest-streak"></div>
-      <p id="longest-streak-text"></p>
-  </div>
-  <div class="fact">
-      <div id="most-crushing-victory"></div>
-      <p id="most-crushing-victory-text"></p>
+  <div id="stats-container" style="position: relative; text-align: center;">
+    <div class="fact">
+      <div id="victory-container">
+        <div id="oxford"></div>
+        <div id="cambridge"></div>
       </div>
-</div>
+      <p id="victories-text"></p>
+    </div>
+    <div class="fact">
+      <div id="games-won"></div>
+      <p>The proportion of games Oxford has won.
+      </div>
+      <div class="fact">
+        <div id="longest-streak"></div>
+        <p id="longest-streak-text"></p>
+      </div>
+      <div class="fact">
+        <div id="most-crushing-victory"></div>
+        <p id="most-crushing-victory-text"></p>
+      </div>
+    </div>
 
-<h3>Table of Results</h3>
+    <h3>Table of Results</h3>
 
-<table cellspacing="0" cellpadding="0" class="responsive-table">
-	<thead>
-		<th scope="col">Year</th>
-		<th scope="col">Overall Winner</th>
-		<th scope="col">Overall Score</th>
-		<th scope="col">Men's Blues</th>
-		<th scope="col">Women's Blues</th>
-		<th scope="col">Men's Seconds</th>
-		<th scope="col">Women's Seconds</th>
-		<th scope="col">Men's Thirds</th>
-	</thead>
-	{% for index in ({{first_year}}...{{last_year}}) reversed %}
-  {% assign index_string = index | downcase %}
-	{% assign year = site.data.varsity[index_string] %}
-	<tr>
-		<th scope="row">{{year.year}}</th>
-		{% if year.winner %}
-		<td data-title="Overall Winner">{{year.winner}}</td>
-		{% else %}
-		<td data-title="Overall Winner">--</td>
-		{% endif %}
-		{% if year.oxford %}
-		<td data-title="Overall Score">{{year.oxford}} - {{year.cambridge}}</td>
-		{% else %}
-		<td data-title="Overall Score">--</td>
-		{% endif %}
-		{% if year.oxford-mens-1 %}
-		<td data-title="Men's Blues">{{year.oxford-mens-1}} - {{year.cambridge-mens-1}}</td>
-		{% else %}
-		<td data-title="Men's Blues">--</td>
-		{% endif %}
-		{% if year.oxford-ladies-1 %}
-		<td data-title="Women's Blues">{{year.oxford-ladies-1}} - {{year.cambridge-ladies-1}}</td>
-		{% else %}
-		<td data-title="Women's Blues">--</td>
-		{% endif %}
-		{% if year.oxford-mens-2 %}
-		<td data-title="Men's Seconds">{{year.oxford-mens-2}} - {{year.cambridge-mens-2}}</td>
-		{% else %}
-		<td data-title="Men's Seconds">--</td>
-		{% endif %}
-		{% if year.oxford-ladies-2 %}
-		<td data-title="Women's Seconds">{{year.oxford-ladies-2}} - {{year.cambridge-ladies-2}}</td>
-		{% else %}
-		<td data-title="Women's Seconds">--</td>
-		{% endif %}
-		{% if year.oxford-mens-3 %}
-		<td data-title="Men's Thirds">{{year.oxford-mens-3}} - {{year.cambridge-mens-3}}</td>
-		{% else %}
-		<td data-title="Men's Thirds">--</td>
-		{% endif %}
-	</tr>
-	{% endfor %}
-</table>
+    <table cellspacing="0" cellpadding="0" class="responsive-table">
+      <thead>
+        <th scope="col" class="sortable" onclick="sortTableByProperty(this, 'year')">Year</th>
+        <th scope="col" class="sortable" onclick="sortTableByProperty(this, 'winner')">Overall Winner</th>
+        <th scope="col" class="sortable" onclick="sortTableByProperty(this, 'oxford')">Overall Score</th>
+        <th scope="col" class="sortable" onclick="sortTableByProperty(this, 'oxford-mens-1')">Men's Blues</th>
+        <th scope="col" class="sortable" onclick="sortTableByProperty(this, 'oxford-ladies-1')">Women's Blues</th>
+        <th scope="col" class="sortable" onclick="sortTableByProperty(this, 'oxford-mens-2')">Men's Seconds</th>
+        <th scope="col" class="sortable" onclick="sortTableByProperty(this, 'oxford-ladies-2')">Women's Seconds</th>
+        <th scope="col" class="sortable" onclick="sortTableByProperty(this, 'oxford-mens-3')">Men's Thirds</th>
+      </thead>
 
-<script>
-{% for starting_year in ({{first_year}}...{{last_year}}) reversed %}
-// <!-- Number of Victories -->
-{% assign oxford_victories = 0 %}
-{% assign cambridge_victories =0 %}
-// <!-- Total games won -->
-{% assign oxford_total = 0 %}
-{% assign cambridge_total = 0 %}
-// <!-- Longest Winning Streak -->
-{% assign longest_oxford_streak = 0 %}
-{% assign longest_cambridge_streak = 0 %}
-{% assign current_streak = 0 %}
-{% assign current_streak_holder = "Nobody" %}
-// <!-- Most Crushing Victory -->
-{% assign most_crushing_oxford_victory = 0 %}
-{% assign most_crushing_cambridge_victory = 0 %}
-{% assign most_crushing_oxford_year = 0 %}
-{% assign most_crushing_cambridge_year = 0 %}
+      <tbody id="varsity-scores">
+        {% for result_hash in results reversed %}
+        {% assign result = result_hash[1] %}
+        <tr>
+          <th scope="row">{{result.year}}</th>
+          {% if result.winner %}
+          <td data-title="Overall Winner">{{result.winner}}</td>
+          {% else %}
+          <td data-title="Overall Winner">--</td>
+          {% endif %}
+          {% if result.oxford %}
+          <td data-title="Overall Score">{{result.oxford}} - {{result.cambridge}}</td>
+          {% else %}
+          <td data-title="Overall Score">--</td>
+          {% endif %}
+          {% if result.oxford-mens-1 %}
+          <td data-title="Men's Blues">{{result.oxford-mens-1}} - {{result.cambridge-mens-1}}</td>
+          {% else %}
+          <td data-title="Men's Blues">--</td>
+          {% endif %}
+          {% if result.oxford-ladies-1 %}
+          <td data-title="Women's Blues">{{result.oxford-ladies-1}} - {{result.cambridge-ladies-1}}</td>
+          {% else %}
+          <td data-title="Women's Blues">--</td>
+          {% endif %}
+          {% if result.oxford-mens-2 %}
+          <td data-title="Men's Seconds">{{result.oxford-mens-2}} - {{result.cambridge-mens-2}}</td>
+          {% else %}
+          <td data-title="Men's Seconds">--</td>
+          {% endif %}
+          {% if result.oxford-ladies-2 %}
+          <td data-title="Women's Seconds">{{result.oxford-ladies-2}} - {{result.cambridge-ladies-2}}</td>
+          {% else %}
+          <td data-title="Women's Seconds">--</td>
+          {% endif %}
+          {% if result.oxford-mens-3 %}
+          <td data-title="Men's Thirds">{{result.oxford-mens-3}} - {{result.cambridge-mens-3}}</td>
+          {% else %}
+          <td data-title="Men's Thirds">--</td>
+          {% endif %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <script>
+
+    var results = {
+      {% for result_hash in results %}
+      {{result_hash[0] | jsonify}} : {{result_hash[1] | jsonify}},
+      {% endfor %}
+    };
+
+    function sortResults(property, descending) {
+      var resultsArray = [
+        {% for result_hash in results %}
+        {{result_hash[1] | jsonify}},
+        {% endfor %}
+      ];
+      var sortFunction = function(a,b){
+        if (a[property] === b[property]){
+          return a.year - b.year;
+        }
+        if (a[property] < b[property]) {
+          return -1
+        }
+        return 1;
+      };
+      return (descending ? resultsArray.sort(sortFunction).reverse() : resultsArray.sort(sortFunction)) ;
+    }
+
+    function createTableRow(result){
+      var html = 	'<tr>';
+      html += '<th scope="row">' + result.year + '</th>';
+      html += '<td data-title="Overall Winner">' + (result.winner || '--') + '</td>';
+      if (result.oxford === undefined || result.oxford === null) {
+        html += '<td data-title="Overall Score">--</td>';
+      }else {
+        html += '<td data-title="Overall Score">' + result.oxford + '-' + result.cambridge + '</td>';
+      }
+      if (result['oxford-mens-1'] === undefined || result['oxford-mens-1'] === null) {
+        html += '<td data-title="Men\'s Blues">--</td>';
+      }else {
+        html += '<td data-title="Men\'s Blues">' + result['oxford-mens-1'] + '-' + result['cambridge-mens-1'] + '</td>';
+      }
+      if (result['oxford-ladies-1'] === undefined || result['oxford-ladies-1'] === null) {
+        html += '<td data-title="Women\'s Blues">--</td>';
+      }else {
+        html += '<td data-title="Women\'s Blues">' + result['oxford-ladies-1'] + '-' + result['cambridge-ladies-1'] + '</td>';
+      }
+      if (result['oxford-mens-2'] === undefined || result['oxford-mens-2'] === null) {
+        html += '<td data-title="Men\'s Seconds">--</td>';
+      }else {
+        html += '<td data-title="Men\'s Seconds">' + result['oxford-mens-2'] + '-' + result['cambridge-mens-2'] + '</td>';
+      }
+      if (result['oxford-ladies-2'] === undefined || result['oxford-ladies-2'] === null) {
+        html += '<td data-title="Women\'s Seconds">--</td>';
+      }else {
+        html += '<td data-title="Women\'s Seconds">' + result['oxford-ladies-2'] + '-' + result['cambridge-ladies-2'] + '</td>';
+      }
+      if (result['oxford-mens-3'] === undefined || result['oxford-mens-3'] === null) {
+        html += '<td data-title="Men\'s Thirds">--</td>';
+      }else {
+        html += '<td data-title="Men\'s Thirds">' + result['oxford-mens-3'] + '-' + result['cambridge-mens-3'] + '</td>';
+      }
+      html += '<tr>';
+      return html;
+    }
+
+    function createTable(orderedResults) {
+      var tbodyHTML = "";
+      for(var i = 0; i < orderedResults.length; i++){
+        tbodyHTML = tbodyHTML + createTableRow(orderedResults[i]);
+      }
+      document.getElementById('varsity-scores').innerHTML = tbodyHTML;
+    }
+
+    var currentSortedProperty = null;
 
 
-{% for index in (starting_year...{{last_year}}) %}
-{% assign index_string = index | downcase %}
-{% assign year = site.data.varsity[index_string] %}
 
-{% if year.winner == "Oxford" %}
-  {% assign oxford_victories = oxford_victories |plus: 1 %}
-{% else %}
-  {% assign cambridge_victories = cambridge_victories |plus: 1 %}
-{% endif %}
+    function sortTableByProperty(th, property){
+      var f = function(){
+        var elems = document.getElementsByClassName('up');
+        for (var i = 0; i < elems.length; i++){
+          elems[i].classList.remove('up');
+        }
+        elems = document.getElementsByClassName('down');
+        for (i = 0; i < elems.length; i++){
+          elems[i].classList.remove('down');
+        }
+      };
+      if (property === currentSortedProperty) {
+          currentSortedProperty = null;
+          createTable(sortResults(property, false));
+          f();
+          th.classList.add('down');
 
-{% assign oxford_total = oxford_total |plus: year.oxford %}
-{% assign cambridge_total = cambridge_total |plus: year.cambridge %}
+      }else {
+        currentSortedProperty = property;
+        createTable(sortResults(property, true));
+        f();
+        th.classList.add('up');
 
-{% if current_streak_holder == "Nobody" %}
-  {% assign current_streak_holder = year.winner %}
-{% endif %}
+      }
+    }
 
-{% if year.winner == current_streak_holder %}
-  {% assign current_streak = current_streak |plus: 1 %}
-  {% if current_streak_holder == "Oxford" and current_streak > longest_oxford_streak %}
+    {% for starting_year in ({{first_year}}...{{last_year}}) reversed %}
+    // <!-- Number of Victories -->
+    {% assign oxford_victories = 0 %}
+    {% assign cambridge_victories =0 %}
+    // <!-- Total games won -->
+    {% assign oxford_total = 0 %}
+    {% assign cambridge_total = 0 %}
+    // <!-- Longest Winning Streak -->
+    {% assign longest_oxford_streak = 0 %}
+    {% assign longest_cambridge_streak = 0 %}
+    {% assign current_streak = 0 %}
+    {% assign current_streak_holder = "Nobody" %}
+    // <!-- Most Crushing Victory -->
+    {% assign most_crushing_oxford_victory = 0 %}
+    {% assign most_crushing_cambridge_victory = 0 %}
+    {% assign most_crushing_oxford_year = 0 %}
+    {% assign most_crushing_cambridge_year = 0 %}
+
+
+    {% for index in (starting_year...{{last_year}}) %}
+    {% assign index_string = index | downcase %}
+    {% assign year = site.data.varsity[index_string] %}
+
+    {% if year.winner == "Oxford" %}
+    {% assign oxford_victories = oxford_victories |plus: 1 %}
+    {% else %}
+    {% assign cambridge_victories = cambridge_victories |plus: 1 %}
+    {% endif %}
+
+    {% assign oxford_total = oxford_total |plus: year.oxford %}
+    {% assign cambridge_total = cambridge_total |plus: year.cambridge %}
+
+    {% if current_streak_holder == "Nobody" %}
+    {% assign current_streak_holder = year.winner %}
+    {% endif %}
+
+    {% if year.winner == current_streak_holder %}
+    {% assign current_streak = current_streak |plus: 1 %}
+    {% if current_streak_holder == "Oxford" and current_streak > longest_oxford_streak %}
     {% assign longest_oxford_streak = current_streak %}
-  {% elsif current_streak_holder == "Cambridge" and current_streak > longest_cambridge_streak %}
+    {% elsif current_streak_holder == "Cambridge" and current_streak > longest_cambridge_streak %}
     {% assign longest_cambridge_streak = current_streak %}
-  {% endif %}
-{% else %}
-  {% assign current_streak_holder = year.winner %}
-  {% assign current_streak = 1 %}
-{% endif %}
+    {% endif %}
+    {% else %}
+    {% assign current_streak_holder = year.winner %}
+    {% assign current_streak = 1 %}
+    {% endif %}
 
-{% assign oxford_minus_cambridge = year.oxford |minus: year.cambridge %}
-{% assign cambridge_minus_oxford = year.cambridge |minus: year.oxford %}
-{% if oxford_minus_cambridge > most_crushing_oxford_victory %}
-  {% assign most_crushing_oxford_victory = year.oxford |minus: year.cambridge %}
-  {% assign most_crushing_oxford_year = year.year %}
-{% elsif cambridge_minus_oxford > most_crushing_cambridge_victory %}
-  {% assign most_crushing_cambridge_victory = year.cambridge |minus: year.oxford %}
-  {% assign most_crushing_cambridge_year = year.year %}
-{% endif %}
-{% endfor %}
+    {% assign oxford_minus_cambridge = year.oxford |minus: year.cambridge %}
+    {% assign cambridge_minus_oxford = year.cambridge |minus: year.oxford %}
+    {% if oxford_minus_cambridge > most_crushing_oxford_victory %}
+    {% assign most_crushing_oxford_victory = year.oxford |minus: year.cambridge %}
+    {% assign most_crushing_oxford_year = year.year %}
+    {% elsif cambridge_minus_oxford > most_crushing_cambridge_victory %}
+    {% assign most_crushing_cambridge_victory = year.cambridge |minus: year.oxford %}
+    {% assign most_crushing_cambridge_year = year.year %}
+    {% endif %}
+    {% endfor %}
 
-var starting{{starting_year}} = Object.create(null);
-starting{{starting_year}}.oxfordVictories = {{oxford_victories}};
-starting{{starting_year}}.cambridgeVictories = {{cambridge_victories}};
-starting{{starting_year}}.oxfordTotal = {{oxford_total}};
-starting{{starting_year}}.cambridgeTotal = {{cambridge_total}};
-starting{{starting_year}}.longestOxfordStreak = {{longest_oxford_streak}};
-starting{{starting_year}}.longestCambridgeStreak = {{longest_cambridge_streak}};
-starting{{starting_year}}.mostCrushingOxfordVictory = {{most_crushing_oxford_victory}};
-starting{{starting_year}}.mostCrushingOxfordYear = {{most_crushing_oxford_year}};
-starting{{starting_year}}.mostCrushingCambridgeVictory = {{most_crushing_cambridge_victory}};
-starting{{starting_year}}.mostCrushingCambridgeYear = {{most_crushing_cambridge_year}};
-{% endfor %}
+    var starting{{starting_year}} = Object.create(null);
+    starting{{starting_year}}.oxfordVictories = {{oxford_victories}};
+    starting{{starting_year}}.cambridgeVictories = {{cambridge_victories}};
+    starting{{starting_year}}.oxfordTotal = {{oxford_total}};
+    starting{{starting_year}}.cambridgeTotal = {{cambridge_total}};
+    starting{{starting_year}}.longestOxfordStreak = {{longest_oxford_streak}};
+    starting{{starting_year}}.longestCambridgeStreak = {{longest_cambridge_streak}};
+    starting{{starting_year}}.mostCrushingOxfordVictory = {{most_crushing_oxford_victory}};
+    starting{{starting_year}}.mostCrushingOxfordYear = {{most_crushing_oxford_year}};
+    starting{{starting_year}}.mostCrushingCambridgeVictory = {{most_crushing_cambridge_victory}};
+    starting{{starting_year}}.mostCrushingCambridgeYear = {{most_crushing_cambridge_year}};
+    {% endfor %}
 
-function repeat(pattern, count) {
-    if (count < 1) return '';
-    var result = '';
-    while (count > 1) {
+    function repeat(pattern, count) {
+      if (count < 1) return '';
+      var result = '';
+      while (count > 1) {
         if (count & 1) result += pattern;
         count >>= 1, pattern += pattern;
+      }
+      return result + pattern;
     }
-    return result + pattern;
-}
 
 
-function updateVictories(year){
-  document.getElementById('oxford').innerHTML = repeat("<span>O</span>",window["starting"+year]["oxfordVictories"]);
-  document.getElementById('cambridge').innerHTML = repeat("<span>C</span>",window["starting"+year]["cambridgeVictories"]);
-  document.getElementById('victories-text').innerHTML = "Oxford have won " + window["starting"+year]["oxfordVictories"] + " of the last " + (window["starting"+year]["oxfordVictories"] + window["starting"+year]["cambridgeVictories"]) + " meetings.";
-}
-
-function updateGamesWon(year){
-  document.getElementById('games-won').innerHTML = Math.round( 100 * window["starting"+year]["oxfordTotal"] / (window["starting"+year]["oxfordTotal"] + window["starting"+year]["cambridgeTotal"])) + "%";
-}
-
-function updateLongestStreak(year){
-   if( window["starting"+year]["longestOxfordStreak"] >  window["starting"+year]["longestCambridgeStreak"]){
-     document.getElementById("longest-streak").innerHTML = window["starting"+year]["longestOxfordStreak"];
-     document.getElementById("longest-streak-text").innerHTML = "Oxford have been on the longest winning streak with " + window["starting"+year]["longestOxfordStreak"] + " back-to-back wins.";
-   }else if(window["starting"+year]["longestOxfordStreak"] <  window["starting"+year]["longestCambridgeStreak"]){
-     document.getElementById("longest-streak").innerHTML = window["starting"+year]["longestCambridgeStreak"];
-     document.getElementById("longest-streak-text").innerHTML = "Cambridge have been on the longest winning streak with " + window["starting"+year]["longestCambridgeStreak"] + " back-to-back wins.";
-   }else{
-    document.getElementById("longest-streak").innerHTML = window["starting"+year]["longestCambridgeStreak"];
-    document.getElementById("longest-streak-text").innerHTML = "Both teams are tied for the longest winning streak with " + window["starting"+year]["longestCambridgeStreak"] +".";
-   }
-}
-
-function updateMostCrushingVictory(year){
-  if ( window["starting"+year]["mostCrushingOxfordVictory"] > window["starting"+year]["mostCrushingCambridgeVictory"] ){
-    document.getElementById('most-crushing-victory').innerHTML = window["starting"+year]["mostCrushingOxfordVictory"];
-    document.getElementById('most-crushing-victory-text').innerHTML = "The greatest margin of victory was " + window["starting"+year]["mostCrushingOxfordVictory"] + ", achieved by Oxford in " + window["starting"+year]["mostCrushingOxfordYear"] + ".";
-  }else if(window["starting"+year]["mostCrushingOxfordVictory"] < window["starting"+year]["mostCrushingCambridgeVictory"]){
-    document.getElementById('most-crushing-victory').innerHTML = window["starting"+year]["mostCrushingCambridgeVictory"];
-    document.getElementById('most-crushing-victory-text').innerHTML = "The greatest margin of victory was " + window["starting"+year]["mostCrushingCambridgeVictory"] + ", achieved by Cambridge in " + window["starting"+year]["mostCrushingCambridgeYear"] + ".";
-  }else{
-    document.getElementById('most-crushing-victory').innerHTML = window["starting"+year]["mostCrushingCambridgeVictory"];
-    document.getElementById('most-crushing-victory-text').innerHTML = "The greatest margin of victory is " + window["starting"+year]["mostCrushingCambridgeVictory"] +". Oxford achieved this in " + window["starting"+year]["mostCrushingOxfordYear"] + " and Cambrigde achieved this in " + window["starting"+year]["mostCrushingCambridgeYear"] + ".";
-  }
-}
-
-var factHeight;
-
-function updateSizes(){
-  if(!factHeight){
-    factHeight = document.getElementById('games-won').clientHeight;
-  }
-  var targetSize = Math.max(document.getElementById('oxford').clientHeight + document.getElementById('cambridge').clientHeight,factHeight);
-  var facts = document.getElementsByClassName('fact');
-  for( var i = 0; i < facts.length; i++ ){
-    facts[i].childNodes[1].style.height = targetSize + "px";
-  }
-  for( var i = 1; i < facts.length; i++ ){
-    facts[i].childNodes[1].style.lineHeight = targetSize + "px";
-  }
-}
-
-function update(year){
-  updateVictories(year);
-  updateGamesWon(year);
-  updateLongestStreak(year);
-  updateMostCrushingVictory(year);
-  updateSizes();
-  document.getElementById('starting-year').innerHTML  = year;
-}
-
-var trackHighlighter = document.getElementById('track-highlighter');
-var input = document.getElementById('input');
-
-  function sliderMoved(e){
-    var percentage = 100 *  (e - input.min)/(input.max - input.min);
-    if(percentage > 60){
-      trackHighlighter.style.left = "calc(" + percentage + "% - 10px )";
-    }else if(percentage <  40){
-      trackHighlighter.style.left = "calc(" + percentage + "% + 10px )";
-    }else{
-      trackHighlighter.style.left = percentage + "%";
+    function updateVictories(year){
+      document.getElementById('oxford').innerHTML = repeat("<span>O</span>",window["starting"+year]["oxfordVictories"]);
+      document.getElementById('cambridge').innerHTML = repeat("<span>C</span>",window["starting"+year]["cambridgeVictories"]);
+      document.getElementById('victories-text').innerHTML = "Oxford have won " + window["starting"+year]["oxfordVictories"] + " of the last " + (window["starting"+year]["oxfordVictories"] + window["starting"+year]["cambridgeVictories"]) + " meetings.";
     }
-    update(e);
-  }
-  document.addEventListener('load', sliderMoved({{first_year}}))
-</script>
+
+    function updateGamesWon(year){
+      document.getElementById('games-won').innerHTML = Math.round( 100 * window["starting"+year]["oxfordTotal"] / (window["starting"+year]["oxfordTotal"] + window["starting"+year]["cambridgeTotal"])) + "%";
+    }
+
+    function updateLongestStreak(year){
+      if( window["starting"+year]["longestOxfordStreak"] >  window["starting"+year]["longestCambridgeStreak"]){
+        document.getElementById("longest-streak").innerHTML = window["starting"+year]["longestOxfordStreak"];
+        document.getElementById("longest-streak-text").innerHTML = "Oxford have been on the longest winning streak with " + window["starting"+year]["longestOxfordStreak"] + " back-to-back wins.";
+      }else if(window["starting"+year]["longestOxfordStreak"] <  window["starting"+year]["longestCambridgeStreak"]){
+        document.getElementById("longest-streak").innerHTML = window["starting"+year]["longestCambridgeStreak"];
+        document.getElementById("longest-streak-text").innerHTML = "Cambridge have been on the longest winning streak with " + window["starting"+year]["longestCambridgeStreak"] + " back-to-back wins.";
+      }else{
+        document.getElementById("longest-streak").innerHTML = window["starting"+year]["longestCambridgeStreak"];
+        document.getElementById("longest-streak-text").innerHTML = "Both teams are tied for the longest winning streak with " + window["starting"+year]["longestCambridgeStreak"] +".";
+      }
+    }
+
+    function updateMostCrushingVictory(year){
+      if ( window["starting"+year]["mostCrushingOxfordVictory"] > window["starting"+year]["mostCrushingCambridgeVictory"] ){
+        document.getElementById('most-crushing-victory').innerHTML = window["starting"+year]["mostCrushingOxfordVictory"];
+        document.getElementById('most-crushing-victory-text').innerHTML = "The greatest margin of victory was " + window["starting"+year]["mostCrushingOxfordVictory"] + ", achieved by Oxford in " + window["starting"+year]["mostCrushingOxfordYear"] + ".";
+      }else if(window["starting"+year]["mostCrushingOxfordVictory"] < window["starting"+year]["mostCrushingCambridgeVictory"]){
+        document.getElementById('most-crushing-victory').innerHTML = window["starting"+year]["mostCrushingCambridgeVictory"];
+        document.getElementById('most-crushing-victory-text').innerHTML = "The greatest margin of victory was " + window["starting"+year]["mostCrushingCambridgeVictory"] + ", achieved by Cambridge in " + window["starting"+year]["mostCrushingCambridgeYear"] + ".";
+      }else{
+        document.getElementById('most-crushing-victory').innerHTML = window["starting"+year]["mostCrushingCambridgeVictory"];
+        document.getElementById('most-crushing-victory-text').innerHTML = "The greatest margin of victory is " + window["starting"+year]["mostCrushingCambridgeVictory"] +". Oxford achieved this in " + window["starting"+year]["mostCrushingOxfordYear"] + " and Cambrigde achieved this in " + window["starting"+year]["mostCrushingCambridgeYear"] + ".";
+      }
+    }
+
+    var factHeight;
+
+    function updateSizes(){
+      if(!factHeight){
+        factHeight = document.getElementById('games-won').clientHeight;
+      }
+      var targetSize = Math.max(document.getElementById('oxford').clientHeight + document.getElementById('cambridge').clientHeight,factHeight);
+      var facts = document.getElementsByClassName('fact');
+      for( var i = 0; i < facts.length; i++ ){
+        facts[i].childNodes[1].style.height = targetSize + "px";
+      }
+      for( var i = 1; i < facts.length; i++ ){
+        facts[i].childNodes[1].style.lineHeight = targetSize + "px";
+      }
+    }
+
+    function update(year){
+      updateVictories(year);
+      updateGamesWon(year);
+      updateLongestStreak(year);
+      updateMostCrushingVictory(year);
+      updateSizes();
+      document.getElementById('starting-year').innerHTML  = year;
+    }
+
+    var trackHighlighter = document.getElementById('track-highlighter');
+    var input = document.getElementById('input');
+
+    function sliderMoved(e){
+      var percentage = 100 *  (e - input.min)/(input.max - input.min);
+      if(percentage > 60){
+        trackHighlighter.style.left = "calc(" + percentage + "% - 10px )";
+      }else if(percentage <  40){
+        trackHighlighter.style.left = "calc(" + percentage + "% + 10px )";
+      }else{
+        trackHighlighter.style.left = percentage + "%";
+      }
+      update(e);
+    }
+    document.addEventListener('load', sliderMoved({{first_year}}))
+    </script>
