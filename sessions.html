@@ -6,17 +6,13 @@ stylesheets:
 
 sessions:
 - day: Sunday
-  time: "15:30-17:00"
+  time: "14:00-15:30"
   location: Iffley Road
   participantString: Clubnight
   participants:
   - Clubnight
   exceptions:
-  - "17th January - Moved to 18th 19:30 - 21:00"
-  - "14th Febuary - 16:30 - 18:00"
-  - "21st Febuary - Not on"
-  - "28th Febuary - Not on"
-  - "6th March - Not on"
+  - 17th April - 18:00-19:30
 - day: Tuesday
   time: "10:00-13:00"
   location: Iffley Road
@@ -29,31 +25,15 @@ sessions:
   - W2
   - M3
   exceptions:
-  - "Only 2 courts"
 - day: Tuesday
   time: "19:00-22:00"
   location: "Virgin Active"
-  participantString: M1, M2 and W1
+  participantString: Squad
   partcipants:
   - M1
   - M2
-  - W1
-- day: Wednesday 24th Febuary
-  time: "20:30-22:30"
-  location: "Headington"
-  participantString: "Varsity Players"
-  particiants:
-  - M1
-  - M2
   - M3
   - W1
-  - W2
-- day: Wednesday 2nd March
-  time: "20:00-22:00"
-  location: "Ferry Road Leisure Centre"
-  participantString: "W2 and M3 Varsity Players"
-  particiants:
-  - M3
   - W2
 - day: Thursday
   time: "20:00-22:30"
@@ -62,8 +42,9 @@ sessions:
   participants:
   - Clubnight
   exceptions:
+  - "5th May - Only 2 courts initially"
 - day: Friday
-  time: "11:00-14:00"
+  time: "12:00-16:00"
   location: Iffley Road
   participantString: Clubnight and Squad
   participants:
@@ -74,19 +55,8 @@ sessions:
   - W2
   - M3
   exceptions:
-  - "Only 2 courts"
-  - "4th March - Not on"
-- day: Friday
-  time: "19:00-21:00"
-  location: Virgin Active
-  participantString: M3 and W2
-  participants:
-  - W2
-  - M3
-  exceptions:
-  - "26th Feb - Not on"
 - day: Saturday
-  time: "14:00-16:00"
+  time: "Variable"
   location: Iffley Road
   participantString: Squad
   participants:
@@ -96,23 +66,16 @@ sessions:
   - W1
   - W2
   exceptions:
-  - "16th Jan - All Squad"
-  - "23rd Jan, 6th Feb - M1, W1, W2"
-  - "30th Jan, 13th Feb (3 courts) - M2, M3"
-- day: Saturday
-  time: "20:00-22:00"
-  location: Headington School
-  participantString: Squad
-  participants:
-  - M1
-  - M2
-  - M3
-  - W1
-  - W2
-  exceptions:
-  - "13th Feb - 20:15-22:15"
-  - "30th Jan, 13th Feb, 27th Feb - M1, W1, W2"
-  - "23rd Jan (2 courts), 6th Feb - M2, M3"
+  - "23rd April - 14:00-16:30"
+  - "30th April - 15:00-16:30"
+  - "7th May - 12:00-17:00"
+  - "14th May - 14:00-16:00 - Oxford Spires Academy"
+  - "21st May - 14:00-16:00 - Oxford Spires Academy"
+  - "28th May - 14:00-16:30"
+  - "4th June - 14:00-16:30"
+  - "11th June - 14:00-16:30"
+  - "18th June- 14:00-16:30"
+  - "25th June - 14:00-16:30"
 ---
 <script>
 
@@ -195,7 +158,7 @@ function toggleSessions(team, checked){
         <div id="indicator"></div>
         <h3 id="initialSelector" class="location-option selected" onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=Oxford%20University%20Sports%2C%20Oxford%2C%20United%20Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',1)">Iffley Road</h3>
         <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=Virgin+Active+Oxfordshire,+Woodstock+Road,+Oxford,+Oxfordshire,+United+Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',2)">Virgin Active</h3>
-        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJLVEqn2DBdkgRNYui8vjnazI&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',3)">Headington School</h3>
+        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJzX_QUDBdkgR2b5dJjIhGr4&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',3)">Oxford Spires Academy</h3>
       </div>
       <div id="map-container">
         <div id="loading" class="loading"></div>
