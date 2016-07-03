@@ -6,13 +6,17 @@ stylesheets:
 
 sessions:
 - day: Sunday
-  time: "14:00-15:30"
+  time: "15:30-17:00"
   location: Iffley Road
-  participantString: Clubnight
+  participantString: Clubnight and Squad
   participants:
   - Clubnight
+  - M1
+  - W1
+  - M2
+  - W2
+  - M3
   exceptions:
-  - 17th April - 18:00-19:30
 - day: Tuesday
   time: "10:00-13:00"
   location: Iffley Road
@@ -25,26 +29,9 @@ sessions:
   - W2
   - M3
   exceptions:
-- day: Tuesday
-  time: "19:00-22:00"
-  location: "Virgin Active"
-  participantString: Squad
-  partcipants:
-  - M1
-  - M2
-  - M3
-  - W1
-  - W2
+  - Only 3 courts
 - day: Thursday
-  time: "20:00-22:30"
-  location: Iffley Road
-  participantString: Clubnight
-  participants:
-  - Clubnight
-  exceptions:
-  - "5th May - Only 2 courts initially"
-- day: Friday
-  time: "12:00-16:00"
+  time: "21:00-22:30"
   location: Iffley Road
   participantString: Clubnight and Squad
   participants:
@@ -56,26 +43,21 @@ sessions:
   - M3
   exceptions:
 - day: Saturday
-  time: "Variable"
+  time: "13:30-15:30"
   location: Iffley Road
-  participantString: Squad
+  participantString: Clubnight and Squad
   participants:
+  - Clubnight
   - M1
-  - M2
-  - M3
   - W1
+  - M2
   - W2
+  - M3
   exceptions:
-  - "23rd April - 14:00-16:30"
-  - "30th April - 15:00-16:30"
-  - "7th May - 12:00-17:00"
-  - "14th May - 14:00-16:00 - Oxford Spires Academy"
-  - "21st May - 14:00-16:00 - Oxford Spires Academy"
-  - "28th May - 14:00-16:30"
-  - "4th June - 14:00-16:30"
-  - "11th June - 14:00-16:30"
-  - "18th June- 14:00-16:30"
-  - "25th June - 14:00-16:30"
+  - "13th August - Not on"
+  - "27th August - Not on"
+  - "3rd September - Not on"
+  - "17th September - Not on"
 ---
 <script>
 
@@ -99,8 +81,8 @@ function toggleSessions(team, checked){
 }
 </script>
 
-<h2>Sessions - Trinity Term</h2>
-<p> These run from Sunday 17th April to Saturday 25th June.</p>
+<h2>Sessions - Summer 2016</h2>
+<p> These sessions run from Sunday 3rd July to Sunday 1st October. Over the summer external bookings take priority and these times may be subject to last minute changes/cancellations.</p>
 <div id="checkboxes">
   <input type="checkbox" id="clubnight-checkbox" onchange="toggleSessions('Clubnight',this.checked)" checked="checked" />
   <label for="clubnight-checkbox">Clubnight</label>
