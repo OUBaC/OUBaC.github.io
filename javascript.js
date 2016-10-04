@@ -2,6 +2,10 @@ var startHeight;
 var changeHeight = 100;
 var stopHeight = 70;
 
+function hideElement(element){
+  element.style.visibility = "hidden"
+}
+
 function getSupportedPropertyName(properties) {
     for (var i = 0; i < properties.length; i++) {
         if (typeof document.body.style[properties[i]] != "undefined") {

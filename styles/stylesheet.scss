@@ -716,3 +716,35 @@ li:hover > .drop-down-menu{
 		overflow: initial !important;
 	}
 }
+
+@keyframes pop{
+	0% {transform: scale(0) translateX(-50%) translateY(-50%)}
+	90% {transform: scale(1.1) translateX(-50%) translateY(-50%)}
+	100% {transform: scale(1) translateX(-50%) translateY(-50%)}
+}
+
+.popup{
+	animation-name: pop;
+	animation-duration: .8s;
+	animation-timing-function: ease-in-out;
+	cursor: default;
+	position: fixed;
+	margin-top: 50vh;
+	margin-left: 50vw;
+	max-width: 500px;
+	transform: translateX(-50%) translateY(-50%);
+	transform-origin: left top;
+	width: 90vw;
+	z-index: 500;
+}
+
+.close{
+	color: $error-colour;
+	font-size: 30px;
+	height: 30px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top : 0;
+	width: 30px;
+}
