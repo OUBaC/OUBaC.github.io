@@ -170,6 +170,7 @@ function toggleSessions(team, checked){
       </div>
       <div id="map-container">
         <div id="loading" class="loading"></div>
+        <iframe id="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJa__vp0zBdkgRtBpLdcJmdHQ&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -178,8 +179,8 @@ function toggleSessions(team, checked){
 
   var oldElement = document.getElementById("initialSelector");
   var indicator = document.getElementById('indicator');;
-  var iFrame = document.getElementById("map");
   var numberOfElements = document.getElementById('tabs-container').children.length -1;
+  var iFrame = document.getElementById("map");
 
   function changeSource(elem,newSource,position){
     while (iFrame.firstChild) {
