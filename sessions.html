@@ -6,59 +6,84 @@ stylesheets:
 
 sessions:
 - day: Sunday
-  time: "15:30-17:00"
+  time: "14:00-15:30"
   location: Iffley Road
-  participantString: Clubnight and Squad
+  participantString: Clubnight
   participants:
   - Clubnight
-  - M1
-  - W1
-  - M2
-  - W2
-  - M3
   exceptions:
-  - "14th August - Not on"
+- day: Monday
+  time: "19:00-21:00"
+  location: Magdalen College School
+  participantString: M1, M2 and W1
+  participants:
+  - M1
+  - M2
+  - W1
 - day: Tuesday
   time: "10:00-13:00"
   location: Iffley Road
-  participantString: Clubnight and Squad
+  participantString: Clubnight
   participants:
   - Clubnight
-  - M1
-  - W1
-  - M2
-  - W2
-  - M3
   exceptions:
-  - Only 3 courts
+- day: Tuesday
+  time: "19:00 - 21:00"
+  location: Virgin Active
+  participantString: Local league matches
+  participants:
+  - M1
+  - M2
+  - M3
+  - W1
+  - W2
 - day: Thursday
-  time: "21:00-22:30"
+  time: "20:00-22:30"
   location: Iffley Road
-  participantString: Clubnight and Squad
+  participantString: Clubnight
   participants:
   - Clubnight
-  - M1
-  - W1
-  - M2
-  - W2
-  - M3
   exceptions:
+- day: Friday
+  time: "14:00-15:30"
+  location: Iffley Road
+  participantString: Clubnight
+  participants:
+  - Clubnight
+  exceptions:
+- day: Friday
+  time: "19:00-21:00"
+  location: ???
+  participantString: M3 and W2
+  participants:
+  - M3
+  - W2
 - day: Saturday
-  time: "13:30-15:30"
+  time: "14:00-16:00"
   location: Iffley Road
-  participantString: Clubnight and Squad
+  participantString: Squad
   participants:
-  - Clubnight
   - M1
-  - W1
   - M2
-  - W2
   - M3
+  - W1
+  - W2
   exceptions:
-  - "13th August - Not on"
-  - "27th August - Not on"
-  - "3rd September - Not on"
-  - "17th September - Not on"
+  - "Odd weeks: M1, W1 and W2 only"
+  - "Even weeks: M2 and M3 only"
+- day: Saturday
+  time: "18:30-20:30"
+  location: Magdalen College Sport
+  participantString: Squad
+  participants:
+  - M1
+  - M2
+  - M3
+  - W1
+  - W2
+  exceptions:
+  - "Even weeks: M1, W1 and W2 only"
+  - "Odd weeks: M2 and M3 only"
 ---
 <script>
 
@@ -82,8 +107,8 @@ function toggleSessions(team, checked){
 }
 </script>
 
-<h2>Sessions - Summer 2016</h2>
-<p> These sessions run from Sunday 3rd July to Sunday 1st October. Over the summer external bookings take priority and these times may be subject to last minute changes/cancellations.</p>
+<h2>Sessions - Michaelmas Term 2016</h2>
+<p> </p>
 <div id="checkboxes">
   <input type="checkbox" id="clubnight-checkbox" onchange="toggleSessions('Clubnight',this.checked)" checked="checked" />
   <label for="clubnight-checkbox">Clubnight</label>
@@ -139,13 +164,12 @@ function toggleSessions(team, checked){
     <div style="padding: 0;" class="card">
       <div id="tabs-container">
         <div id="indicator"></div>
-        <h3 id="initialSelector" class="location-option selected" onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=Oxford%20University%20Sports%2C%20Oxford%2C%20United%20Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',1)">Iffley Road</h3>
-        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=Virgin+Active+Oxfordshire,+Woodstock+Road,+Oxford,+Oxfordshire,+United+Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',2)">Virgin Active</h3>
-        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJzX_QUDBdkgR2b5dJjIhGr4&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',3)">Oxford Spires Academy</h3>
+        <h3 id="initialSelector" class="location-option selected" onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJa__vp0zBdkgRtBpLdcJmdHQ&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',1)">Iffley Road</h3>
+        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJi8_mhxXEdkgRpuPfhApKQJ0&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',2)">Virgin Active</h3>
+        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJFcgu6rLGdkgRpnOlZeXjFyo&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',3)">Magdalen College School</h3>
       </div>
       <div id="map-container">
         <div id="loading" class="loading"></div>
-        <iframe id="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Oxford%20University%20Sports%2C%20Oxford%2C%20United%20Kingdom&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15" allowfullscreen></iframe>
       </div>
     </div>
   </div>
