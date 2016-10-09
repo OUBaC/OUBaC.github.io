@@ -233,7 +233,7 @@ stylesheets:
       }
     }
 
-    {% for starting_year in ({{first_year}}...{{last_year}}) reversed %}
+    {% for starting_year in (first_year..last_year) reversed %}
     // <!-- Number of Victories -->
     {% assign oxford_victories = 0 %}
     {% assign cambridge_victories =0 %}
@@ -252,7 +252,7 @@ stylesheets:
     {% assign most_crushing_cambridge_year = 0 %}
 
 
-    {% for index in (starting_year...{{last_year}}) %}
+    {% for index in (starting_year..last_year) %}
     {% assign index_string = index | downcase %}
     {% assign year = site.data.varsity[index_string] %}
 
