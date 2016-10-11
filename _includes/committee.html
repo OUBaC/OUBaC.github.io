@@ -12,7 +12,15 @@
   </div>
     <h2 class="role-name">{{member.name}}</h2>
     <h3>{{member.role}}</h3>
-    <a href="mailto:{{member.email}}">{{member.email}}</a>
+    {% if member.email %}
+      <a href="mailto:{{member.email}}">{{member.email}}</a>
+    {% endif %}
+
+    {% if member.emails %}
+      {% for email in  member.emails %}
+        <a href="mailto:{{email}}">{{email}}</a>
+      {% endfor %}
+    {% endif %}
   </div>
 {% endfor %}
 </div>
