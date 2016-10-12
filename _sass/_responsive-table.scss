@@ -109,8 +109,9 @@ td[data-title]:before {
 	}
 
 	td{
-		border: 1px solid $primary-colour;
+		border: 1px solid $primary-colour !important;
 	}
+	
 	td:hover{
 		background-color: #EEEEEE;
 	}
