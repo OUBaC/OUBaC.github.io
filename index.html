@@ -6,11 +6,19 @@ stylesheets:
 ---
 <div id="title-and-logo-container">
 	<div id='container'>
-		<div id='containerForRotation'  style=""></div>
+		<img src="/assets/logo/logo-white-grouped.svg"/>
 	</div>
 	<div style="-webkit-box-flex: 1;-webkit-flex-grow: 1;-ms-flex-positive: 1;flex-grow: 1; z-index:1"></div>
 	<div>
-		<h2 id="home-title">O.U.Ba.C</h2>
+		<svg class="svg-title" viewBox= " 0 0 250 50">
+			<defs>
+				<path d={% include logo-text-path %} id="text-def"/>
+				<clipPath id="clip">
+					<use xlink:href="#text-def"/>
+				</clipPath>
+			</defs>
+		  <path d="" id="text" stroke="white" fill="white" fill-opacity="1" clippath="url(#clip)" />
+		</svg>
 		<h3 class="home-title-caption full-justify"><span class="canterbury">O</span>xford <span class="canterbury">U</span>niversity <span class="canterbury">Ba</span>dminton <span class="canterbury">C</span>lub</h3>
 	</div>
 	<div style="-webkit-box-flex: 2;-webkit-flex-grow: 2;-ms-flex-positive: 2;flex-grow: 2; z-index:1"></div>
@@ -57,173 +65,58 @@ stylesheets:
 </div>
 </div>
 <script>
+var d = {% include logo-text-path %}
+var p = new Path(d);
+var arrayOfSegments = p.getCanonicalForm();
+var lengths = p.createArrayOfLengths();
+var currentString = "";
+var startLooking = 0;
+var startTime;
+var animationDuration = 3000;
+var targetElement = document.getElementById('text');
 
-var rotateToPositionTime = 2; //Seconds;
-var targetMatrix = [0.722194997242236, 0.111347787760592, 0.682668335371656, 0, -0.407952325294303, 0.865591767448551, 0.290389036315536, 0, -0.558577914211848, -0.488213644100733, 0.670550633038719, 0, 0, 0, 0, 1];
-var expandTime = 1; //Seconds
-
-var index =0;
-var length = 0;
-var nodes =[];
-var container = document.getElementById('container');
-var containerForRotation = document.getElementById('containerForRotation');
-var offset =0;
-var divs;
-var layerDiff = 2;
-var styleSheet = document.styleSheets[0];
-
-function run(){
-	var iframe = document.getElementById("svg");
-	var svg = iframe.contentDocument.childNodes[0];
-	nodes = svg.childNodes;
-	length = nodes.length;
-	create();
-}
-
-function create(){
-	for(index = 0; index<length;index++){
-		var newDiv = document.createElement('div');
-		newDiv.classList.add('svg-layer');
-		newDiv.addEventListener("animationend",function (){this.style.animationName = "";});
-		var newSVG = document.createElementNS('http://www.w3.org/2000/svg','svg');
-		newSVG.setAttribute("viewBox", "0 0 1357 1357");
-		newSVG.style.position="absolute"
-		newSVG.appendChild(nodes[index].cloneNode(true));
-		var newNode;
-		for( var i=index; i < length; i++){
-			newNode = nodes[i].cloneNode(true);
-			newNode.style.opacity = "0.05"
-			newSVG.appendChild(newNode);
+function animationStepOutline(){
+	var stepStartTime = performance.now();
+	var proportionOfAnimation = (stepStartTime - startTime) / animationDuration;
+	if(proportionOfAnimation >= 1){
+		targetElement.setAttribute('d', d);
+		startTime  = performance.now();
+		animationDuration = 2000;
+		animationStepFill();
+		return
+	}
+	var newArray = [];
+	var targetLength = proportionOfAnimation*lengths[lengths.length - 1];
+	for(var i = startLooking; i < lengths.length; i++){
+		if(lengths[i] > targetLength){
+			startLooking = i;
+			currentString = currentString + Path.convertArrayToString(newArray);
+      var t = Path.getTValueAtLength(arrayOfSegments[i],(targetLength-lengths[i-1])/lengths[i],1e-6);
+      var splitSegments = Path.splitRelativeSegment(arrayOfSegments[i], t);
+      newArray = [splitSegments[0]];
+      break
+    }else{
+			newArray.push(arrayOfSegments[i]);
 		}
-		newDiv.appendChild(newSVG);
-		containerForRotation.appendChild(newDiv);
 	}
-	var rotateToPosition = "@keyframes rotateToPosition{from{transform: rotateX(0deg);}to{transform:matrix3d("+targetMatrix+")}}";
-	styleSheet.insertRule(rotateToPosition,0);
-	container.style.animationName = "rotateToPosition";
-	container.style.animationDuration = rotateToPositionTime +"s";
-	container.addEventListener("animationend",function (){this.style.animationName = "";});
-	container.style.transform = "matrix3d("+targetMatrix+")"
-	currentMatrix = targetMatrix;
-	setTimeout(addDepth,rotateToPositionTime*1000);
+	targetElement.setAttribute('d', currentString + Path.convertArrayToString(newArray));
+	setTimeout(animationStepOutline,Math.max(16 + stepStartTime - performance.now(),0))
 }
 
-function addDepth(){
-	var divs = containerForRotation.childNodes;
-	for ( var i =1; i< divs.length; i++){
-		var depth = layerDiff*i + offset;
-		var newDiv = containerForRotation.childNodes[i];
-		var scale = (200-depth)/200;
-		//newDiv.animate([  {transform: "translateZ(0) scale(1,1)"},  {transform: "translateZ("+depth+"px) scale("+scale+","+scale+")"}], 1000); Unfortunately this is only supported on Chrome :(
-		var keyframes ="@keyframes translateZ"+i+"{				from{transform: translateZ(0) scale(1,1);}				to{transform: translateZ("+depth+"px) scale("+scale+","+scale+");}			}";
-		styleSheet.insertRule(keyframes,0);
-		newDiv.style.animationDirection = "normal";
-		newDiv.style.animationDuration = expandTime +"s";
-		newDiv.style.animationName = "translateZ"+i;
-		newDiv.style.transform="translateZ("+depth+"px) scale("+scale+","+scale+")";
+function animationStepFill(){
+	var stepStartTime = performance.now();
+	var proportionOfAnimation = (stepStartTime - startTime) / animationDuration;
+	if(proportionOfAnimation >= 1){
+		targetElement.setAttribute('fill-opacity',1);
+		return
 	}
-	setTimeout(startSpin,expandTime*1000);
+	targetElement.setAttribute('fill-opacity',proportionOfAnimation);
+	setTimeout(animationStepFill,Math.max(16 + stepStartTime - performance.now(),0))
 }
 
-function startSpin(){
-	containerForRotation.style.animationName = "spin";
-	addListeners();
-}
-
-function removeDepth(){
-	var divs =  containerForRotation.childNodes;
-	for ( var i =1; i< divs.length; i++){
-		var newDiv = containerForRotation.childNodes[i];
-		newDiv.style.animationDirection = "reverse";
-		newDiv.style.animationName = "translateZ"+i;
-		newDiv.style.transform="translateZ(0) scale(1,1)";
-	}
-}
-
-function removeRotation(){
-	var keyframes ="@keyframes removeRotation{				from{transform: matrix3d("+currentMatrix+")}				to{transform: rotateX(0)}			}";
-	styleSheet.insertRule(keyframes,0);
-	container.style.animationName="removeRotation";
-	container.style.transform = "rotateX(0)";
-	currentMatrix = [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1];
-}
-
-var mouseDownVect = [];
-var mouseMoveVect = [];
-var rotationAxis = [];
-var angle;
-var currentMatrix;
-var boundingRect = container.getBoundingClientRect();
-var center = [(boundingRect.left+boundingRect.right)/2,(boundingRect.top+boundingRect.bottom)/2] ;
-var radius = Math.min(boundingRect.height, boundingRect.width)/2;
-
-function addListeners(){
-	document.getElementById('container').addEventListener('mousedown', mouseDown, false);
-	window.addEventListener('mouseup', mouseUp, false);
-	window.addEventListener('resize', updateBoundingRect);
-}
-function updateBoundingRect(){
-	boundingRect = container.getBoundingClientRect();
-	center = [(boundingRect.left+boundingRect.right)/2,(boundingRect.top+boundingRect.bottom)/2] ;
-	radius = Math.min(boundingRect.height, boundingRect.width)/2;
-}
-
-function mouseUp(){
-	window.removeEventListener('mousemove', rotate, true);
-	var values = window.getComputedStyle(container,null).getPropertyValue("transform").split('(')[1].split(')')[0].split(',');
-	currentMatrix = values;
-	container.style.transform = "matrix3d("+currentMatrix+")";
-}
-
-function mouseDown(e){
-	mouseDownVect[0] = e.clientX - center[0];
-	mouseDownVect[1] = e.clientY - center[1];
-	zsq = radius*radius - mouseDownVect[0]*mouseDownVect[0] - mouseDownVect[1]*mouseDownVect[1];
-	if(zsq > 0){
-		mouseDownVect[2] = Math.sqrt(zsq);
-	}else{
-		mouseDownVect[2]=0;
-	}
-	window.addEventListener('mousemove', rotate, true);
-}
-
-function rotate(e){
-	e.preventDefault();
-	mouseMoveVect[0] = e.clientX - center[0];
-	mouseMoveVect[1] = e.clientY - center[1];
-	zsq = radius*radius - mouseMoveVect[0]*mouseMoveVect[0] - mouseMoveVect[1]*mouseMoveVect[1];
-	if(zsq > 0){
-		mouseMoveVect[2] = Math.sqrt(zsq);
-	}else{
-		mouseMoveVect[2]=0;
-	}
-	rotationAxis[0] = mouseDownVect[1]*mouseMoveVect[2]-mouseDownVect[2]*mouseMoveVect[1];
-	rotationAxis[1] = mouseDownVect[2]*mouseMoveVect[0]-mouseDownVect[0]*mouseMoveVect[2];
-	rotationAxis[2] = mouseDownVect[0]*mouseMoveVect[1]-mouseDownVect[1]*mouseMoveVect[0];
-	angle = calcAngle(mouseDownVect, mouseMoveVect);
-	container.style.transform = "rotate3d("+ rotationAxis+","+angle+"rad) matrix3d("+currentMatrix+")";
-
-	return false;
-}
-
-function calcAngle(vect_1, vect_2){
-	var numerator   =   vect_1[0]*vect_2[0] + vect_1[1]*vect_2[1] + vect_1[2]*vect_2[2],
-	denominator =   Math.sqrt(vect_1[0]*vect_1[0] + vect_1[1]*vect_1[1] + vect_1[2]*vect_1[2])*
-	Math.sqrt(vect_2[0]*vect_2[0] + vect_2[1]*vect_2[1] + vect_2[2]*vect_2[2]),
-	angle       =   Math.acos(numerator/denominator);
-
-	return angle;
-}
-
-function remove(){
-	if(index!=0){
-		index--;
-		container.removeChild(container.lastChild);
-		setTimeout(remove, 20);
-	};
-
-
-}
-
+window.addEventListener("DOMContentLoaded", function() {
+	targetElement.setAttribute('fill-opacity',0);
+	startTime = performance.now()
+	animationStepOutline()
+})
 </script>
-<iframe src="/assets/logo/logo-white-grouped.svg" style="display: none;" id="svg" onload="run()" seamless></iframe>

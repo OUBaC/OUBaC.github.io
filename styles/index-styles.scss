@@ -92,19 +92,6 @@ svg{
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-#home-title{
-  color: #fff;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: Canterbury;
-  font-size: 10vw;
-  font-weight: normal;
-  margin: 0px;
-  text-align: center;
-  z-index: 1
-}
 
 .home-title-caption{
   color: #fff;
@@ -148,34 +135,15 @@ svg{
 #container{
   height: 50vw;
   opacity: 0.5;
-  -webkit-perspective: 200px;
-          perspective: 200px;
   position: absolute;
   right: 0;
-  -webkit-transform: rotateX(0deg);
-          transform: rotateX(0deg);
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
   width: 50vw;
   top: calc(50% + #{$large-header-height} / 2 - 25vw);
   z-index: 0;
 }
 
-#containerForRotation{
-  -webkit-animation-duration:30s;
-          animation-duration:30s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  height: 100%;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
-
-#containerForRotation:hover {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+.svg-title{
+  width: 40vw;
 }
 
 #key-point-container{
@@ -210,26 +178,6 @@ svg{
           justify-content: center;
 }
 
-@-webkit-keyframes translateZ1{
-  from{-webkit-transform: translateZ(0) scale(1,1);transform: translateZ(0) scale(1,1);}
-  to{-webkit-transform: translateZ(2px) scale(0.99,0.99);transform: translateZ(2px) scale(0.99,0.99);}
-}
-
-@keyframes translateZ1{
-  from{-webkit-transform: translateZ(0) scale(1,1);transform: translateZ(0) scale(1,1);}
-  to{-webkit-transform: translateZ(2px) scale(0.99,0.99);transform: translateZ(2px) scale(0.99,0.99);}
-}
-
-@-webkit-keyframes spin{
-  from{-webkit-transform: rotate(0deg);transform: rotate(0deg);}
-  to{-webkit-transform: rotate(360deg);transform: rotate(360deg);}
-}
-
-@keyframes spin{
-  from{-webkit-transform: rotate(0deg);transform: rotate(0deg);}
-  to{-webkit-transform: rotate(360deg);transform: rotate(360deg);}
-}
-
 @font-face {
   font-family: Canterbury;
   src: url('/assets/Canterbury.ttf');
@@ -240,4 +188,13 @@ svg{
     display: block;
     width: 100%;
   }
+
+  .svg-title{
+    width: 60vw;
+  }
+
+  .home-title-caption{
+    font-size: 3.75vw;
+  }
+
 }
