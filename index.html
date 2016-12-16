@@ -67,7 +67,7 @@ stylesheets:
 <script>
 var d = {% include logo-text-path %}
 var p = new Path(d);
-var arrayOfSegments = p.getCanonicalForm();
+var arrayOfSegments = p.canonicalForm;
 var lengths = p.createArrayOfLengths();
 var currentString = "";
 var startLooking = 0;
