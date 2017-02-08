@@ -11,7 +11,7 @@ layout : null
 <style>
 
 body{
-	background-color: #002147;
+	background-color: #033;
 }
 
 span{
@@ -105,7 +105,9 @@ function run(){
 	svg.style.width = "100%";
 	nodes = svg.getElementsByTagName("*");
 	for( var i = 0; i < nodes.length; i++ ){
-		nodes[i].style.visibility = 'hidden';
+		if( nodes[i].tagName === 'g' || nodes[i].tagName === 'circle' || nodes[i].tagName === 'path'){
+			nodes[i].style.visibility = 'hidden';
+		}
 	}
 	iframe.style.visibility =  'visible';
 	nodeIndex = 0;
@@ -131,7 +133,9 @@ function showNext(){
 	}
 	var node = nodes[nodeIndex];
 	nodeIndex++;
-	node.style.visibility = 'visible';
+	if( node.tagName === 'g' || node.tagName === 'circle' || node.tagName === 'path'){
+		node.style.visibility = 'visible';
+	}
 	if(node.tagName != 'path'){
 		showNext();
 		return;
