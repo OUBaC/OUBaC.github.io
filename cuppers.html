@@ -444,48 +444,25 @@ function toggle(toSwitch){
 <div class="show-names-container" style="text-align:center">
   <div class="button" style="font-size: 80%; margin: 0 auto;" onclick="toggle(1)">Show college names</div>
 </div>
-<h2>Men's Hall of Fame</h2>
+<h2>Hall of Fame</h2>
 <table cellspacing="0" cellpadding="0" class="responsive-table">
   <thead>
     <th scope="col">Year</th>
-    <th scope="col">College</th>
-    <th scope="col">Team</th>
+    <th scope="col">Men</th>
+    <th scope="col">Women</th>
   </thead>
   {% for year in site.data.winners %}
   <tr>
     <th scope="row">{{year.year}}</th>
     {% if year.mens-cuppers %}
-    <td data-title="College">{{year.mens-cuppers}}</td>
+    <td data-title="Men">{{year.mens-cuppers}}</td>
     {% else %}
-    <td data-title="College">--</td>
+    <td data-title="Men">--</td>
     {% endif %}
-    {% if year.mens-cuppers-team %}
-    <td data-title="Team">{{year.mens-cuppers-team}}</td>
-    {% else %}
-    <td data-title="Team">--</td>
-    {% endif %}
-  </tr>
-  {% endfor %}
-</table>
-<h2>Women's Hall of Fame</h2>
-<table cellspacing="0" cellpadding="0" class="responsive-table">
-  <thead>
-    <th scope="col">Year</th>
-    <th scope="col">College</th>
-    <th scope="col">Team</th>
-  </thead>
-  {% for year in site.data.winners %}
-  <tr>
-    <th scope="row">{{year.year}}</th>
     {% if year.womens-cuppers %}
-    <td data-title="College">{{year.womens-cuppers}}</td>
+    <td data-title="Women">{{year.womens-cuppers}}</td>
     {% else %}
-    <td data-title="College">--</td>
-    {% endif %}
-    {% if year.womens-cuppers-team %}
-    <td data-title="Team">{{year.womens-cuppers-team}}</td>
-    {% else %}
-    <td data-title="Team">--</td>
+    <td data-title="Women">--</td>
     {% endif %}
   </tr>
   {% endfor %}
