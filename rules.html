@@ -8,53 +8,64 @@ title: Rules
 	margin: 0;
 	padding: 0;
 	}
-	
+
 	ol > li {
 	display: table;
 	counter-increment: item;
 	margin-bottom: 0.6em;
 	}
-	
+
 	ol > li:before {
 	content: counters(item, ".") ". ";
 	display: table-cell;
-	padding-right: 0.6em;    
+	padding-right: 0.6em;
 	}
-	
+
 	li ol > li {
 	margin: 0;
 	}
-	
+
 	li ol > li:before {
 	content: counters(item, ".") " ";
 	}
-	
+
 	h3{
 	margin: 5px 0;
 	padding: 0;
 	}
-	
+
+	.second-counter{
+		counter-reset: item2;
+	}
+
+	.second-counter > li{
+	counter-increment: item2;
+	}
+
+	.second-counter > li:before{
+	content: "("counter(item2, lower-roman)")";
+	}
+
 	.appendices{
 	counter-reset: appendix;
 	}
-	
+
 	.appendices > li{
 	counter-increment: appendix;
-	
 	}
-	
+
 	.appendices > li:before{
 	content: counter(item)"."counter(appendix, upper-alpha)" ";
 	}
-	
+
 	.appendices > li > ol{
 	counter-reset: sub;
 	}
-	
+
 	.appendices > li > ol >li{
 	counter-increment: sub;
 	}
-	
+
 	.appendices > li > ol >li:before{
 	content: counter(item)"."counter(appendix, upper-alpha)"."counter(sub,lower-alpha)" ";
 	}
@@ -67,47 +78,45 @@ title: Rules
 			<li>
 				A season starts on Sunday of Week 2 in Michaelmas term (MT) and finishes on Saturday of Week 8 in Trinity term (TT), with the pre-season during 1st week of MT when the play-off matches shall be played.
 			</li>
-			<li>In the 2012/13 season, there will be two competitions: the Leagues and the Cuppers, as described below.</li> 
+			<li>In each season, there will be two competitions: the Leagues and Cuppers, as described below.</li>
 			<li>
 				<h3> Leagues</h3>
 				<ol>
 					<li>The Leagues will take place throughout Michaelmas, Hilary and Trinity terms.</li>
-					<li>There will be three Team Events: Men's, Women's and Mixed.</li>
+					<li>There will be three team events: Men's, Women's and Mixed.</li>
 					<li>The Leagues shall be conducted as a group tournament, with the structure described in Appendix A.</li>
-					<li>Each team shall play the other teams in their division once, except those in the 4-team division shall meet each other twice.</li>
+					<li>Each team shall play the other teams in their division once, except those in a 4-team division shall meet each other twice.</li>
 					<li>The rules regarding promotion and relegation are stated in Appendix B.</li>
 				</ol>
 			</li>
 			<li>
 				<h3>Cuppers</h3>
 				<ol>
-					<li>The Cuppers will be held during Michaelmas and Hilary terms. If necessary, it shall be completed at the beginning of Trinity term.</li>
-					<li>There will be two Team Events: Men's and Women's (no Mixed).</li>
-					<li>The Cuppers shall be conducted as a single-elimination (knockout) tournament.</li>
-					<li>The semi-finalists from the previous season shall be seeded and will be placed in the different quarters of the draw.</li>
+					<li>Cuppers will be held during Michaelmas and Hilary terms. If necessary, it shall be completed at the beginning of Trinity term.</li>
+					<li>There will be two team events: Men's and Women's (no Mixed).</li>
+					<li>Cuppers shall be conducted as a single-elimination (knockout) tournament.</li>
+					<li>The semi-finalists from the previous season shall be seeded and will be placed in different quarters of the draw.</li>
 				</ol>
-				
 			</li>
 		</ol>
 	</li>
 	<li><h3>Entries</h3>
 		<ol>
-			<li>Entries shall be made to the Leagues & Cuppers (L&C) Secretary by College Captains before Friday of Week 1 in MT for the Leagues and Cuppers.</li>
-			<li>In 2012/13 season, the entry fees are set to be &pound;10 per team for the Leagues and Cuppers. The entry may not be successful unless the fee has been paid.</li>
-			<li>Only ONE team may be entered in each Event in the Cuppers, whereas more than one is possible in the Leagues although only one is guaranteed. If more than one team is entered, they must be ranked ('A', 'B', ... ) according to their playing strength.</li>
-			<li>The L&C Secretary may limit the number of entries, depending on the number of fixtures that can be accommodated. In that case, the A-teams take priority to the B-teams, etc., with those in the higher Divisions are favoured.</li>
-			<li>New teams entering the Leagues must start in the lowest Division, except those re-entered.
-				<li>No more than two colleges may combine to form a coalition. The same combination must remain for the whole season, i.e. for both Leagues and Cuppers. Please note that new partnership or separation may lose the relevant teams their current positions.</li>
-				<li>College Captains must provide a list of players in their college. The best 4 players shall be nominated for every team which is not its weakest. Plus, at least 3 names must be given for the lowest team.</li>
+			<li>Entries shall be made to the Leagues &amp; Cuppers (L&amp;C) Secretary by College Captains before Friday of Week 1 in MT for the Leagues and Cuppers.</li>
+			<li>Entry may not be successful unless the fee has been paid.</li>
+			<li>Only <strong>one</strong> team may be entered in each event in the Cuppers, whereas more than one is possible in the Leagues although only one is guaranteed. If more than one team is entered, they must be ranked ('A', 'B', ... ) according to their playing strength.</li>
+			<li>The L&amp;C Secretary may limit the number of entries, depending on the number of fixtures that can be accommodated. In that case, the A-teams take priority to the B-teams, etc., with those in the higher divisions favoured.</li>
+			<li>New teams entering the Leagues must start in the lowest division, except those re-entered.
+			<li>No more than two colleges may combine to form a coalition. The same combination must remain for the whole season, i.e. for both Leagues and Cuppers. Please note that new partnerships or separation may lose the relevant teams their current positions.</li>
 			</ol>
 		</li>
 		<li>
 			<h3>Teams/Players</h3>
 			<ol>
 				<li>A team shall consist of at least four players; however, only four are required in a particular match - 4 male in the Men's, 4 female in the Women's, and 2 male + 2 female in the Mixed.</li>
-				<li>The four players shall form 2 doubles pairs, ranked '1' and '2' in order of playing strength. Any two of them shall further play as 2 singles players, also ranked '1' and '2'. Additional player(s) may be brought in to play these singles instead. No individual can play in both doubles pairs and/or as both singles players at a match. NB In the Mixed Event: (i) a doubles pair shall be formed by a male and a female player (ii) one of the singles players shall be male and the other female.</li>
-				<li>Players are expected to represent their own college. Those who have no college affiliated must choose to join a particular team as an 'associated member' for a complete season. The latter case also applies to those whose college enters no team. Only ONE associated member is allowed to play at a single match.</li>
-				<li>Players who have been awarded any of the Blues Status in Badminton are NOT eligible to play in the Leagues, but may compete in the Cuppers.</li>
+				<li>The four players shall form 2 doubles pairs, ranked '1' and '2' in order of playing strength. Any two of them shall further play as 2 singles players, also ranked '1' and '2'. Additional player(s) may be brought in to play these singles instead. No individual can play in both doubles pairs and/or as both singles players in a match. N.B. In the Mixed Event: (i) a doubles pair shall be formed by a male and a female player (ii) one of the singles players shall be male and the other female.</li>
+				<li>Players are expected to represent their own college. Those who have no college affiliated must choose to join a particular team as an 'associated member' for a complete season. The latter case also applies to those whose college enters no team. Only <strong>one</strong> associated member is allowed to play in a single match.</li>
+				<li>Players who have been awarded any form of Blues Status in Badminton are <strong>not</strong> eligible to play in the Leagues, but may compete in the Cuppers.</li>
 				<li>Women can be members of a Men's team if their college has entered no Women's team.</li>
 				<li>Substitution of players may be done according to the rules stated in Appendix C.</li>
 			</ol>
@@ -115,12 +124,20 @@ title: Rules
 		<li>
 			<h3>Matches</h3>
 			<ol>
-				<li>College Captains shall be informed of the fixtures by the L&C Secretary via e-mail at least 3 days before their scheduled matches.</li>
-				<li>All matches are scheduled to be played at Iffley Road Sports Complex at EITHER 10:00-11:30 on Tuesday OR 12:00-13:30 on Friday . However, they can be done at different places/times if agreed by BOTH captains. The rules regarding match postponement are stated in Appendix D.</li>
+				<li>College Captains shall be informed of the fixtures by the L&amp;C Secretary via e-mail at least 3 days before their scheduled matches.</li>
+				<li>All matches will be scheduled to be played at Iffley Road Sports Complex during a Clubnight session. However, they can be done at different places/times if agreed by <strong>both</strong> captains. The rules regarding match postponement are stated in Appendix D.</li>
 				<li>The Laws of Badminton as introduced by the BWF (approved at the May 2010 AGM) shall be used, unless stated otherwise.</li>
-				<li>A fixture/match contains 6 rubbers (4 doubles & 2 singles), each of which is a single game of 21 (rally-) points. If the score reaches 20-all, the winner is the first pair/player to 2 clear points or whose score reaches 30 first.</li>
-				<li>The order of play is as follows (Home team placing first): 
-				Doubles 1 vs 2	Doubles 2 vs 1	Doubles 1 vs 1	Doubles 2 vs 2	Singles 1 vs 1	Singles 2 vs 2	This may be altered under the agreement of both captains. If a team is found to deliberately order their pairs/players incorrectly, it shall forfeit the match.</li>
+				<li>A fixture/match contains 6 rubbers (4 doubles &amp; 2 singles), each of which is a single game of 21 (rally-) points. If the score reaches 20-all, the winner is the first pair/player to 2 clear points or whose score reaches 30 first.</li>
+				<li>The order of play is as follows (home team placing first):
+					<ol class="second-counter">
+						<li>Doubles 1 vs 2</li>
+						<li>Doubles 2 vs 1</li>
+						<li>Doubles 1 vs 1</li>
+						<li>Doubles 2 vs 2</li>
+						<li>Singles 1 vs 1</li>
+						<li>Singles 2 vs 2</li>
+					</ol>
+							This may be altered under the agreement of both captains. If a team is found to deliberately order their pairs/players incorrectly, it shall forfeit the match.</li>
 				<li>The teams shall provide their own shuttlecocks: feather or synthetic may be used. If there is any disagreement, the default shall be plastic for the Leagues and feather for the Cuppers.</li>
 				<li>Please refer to Appendix E for unplayed or incomplete matches.</li>
 			</ol>
@@ -128,37 +145,38 @@ title: Rules
 		<li>
 			<h3>Results</h3>
 			<ol>
-				<li>College Captains are expected to maintain accurate records of the matches played by their team(s) in case of a tie on points within a League. This should include the number of games and points won and lost, and the list of players involved. Click here for a sample of Score Sheet.</li>
-				<li>Please send a copy of results to the L&C Secretary via internal mail, e-mail or online submission as soon as possible so that the updated and accurate results may be published.</li>
-				<li>The team who wins most rubbers is the winner of the match, and the other loser. A match can be a draw in the Leagues, but not in the Cuppers nor the play-offs. In which case, the winner is determined by:			
+				<li>College Captains are expected to maintain accurate records of the matches played by their team(s) in case of a tie on points within a League. This should include the number of games and points won and lost, and the list of players involved.</li>
+				<li>Please send a copy of results to the L&amp;C Secretary via internal mail or e-mail as soon as possible so that the updated and accurate results may be published.</li>
+				<li>The team who wins most rubbers is the winner of the match, and the other loser. A match can be a draw in the Leagues, but not in the Cuppers nor the play-offs. In which case, the winner is determined by:
 					<ul>
 						<li>Points difference (won-lost).</li>
 						<li>If equal, the winner of the Doubles 1 vs 1 shall be the winner of the match.</li>
 					</ul>
-				</li>	
-				<li>In the Leagues, one point is awarded for each rubber won.</li>		
+				</li>
+				<li>In the Leagues, one point is awarded for each rubber won.</li>
 			</ol>
 		</li>
-		SHOULD THERE BE ANY DISPUTES REGARDING THE RULES STATED ABOVE AND BELOW, THE LEAGUES & CUPPERS SECRETARY SHALL RESOLVE THE ISSUES AND HIS/HER DECISION IS FINAL.
+		SHOULD THERE BE ANY DISPUTES REGARDING THE RULES STATED ABOVE AND BELOW, THE LEAGUES &amp; CUPPERS SECRETARY SHALL RESOLVE THE ISSUES AND HIS/HER DECISION IS FINAL.
 		<li><h3>Appendices</h3>
 			<ol class="appendices">
 				<li><h3>League Structure</h3>
 					<ol>
-						<li>A League contains an appropriate number of divisions, determined by the Leagues & Cuppers Secretary, in order to accommodate the maximum number of teams entered in that particular year.</li>
+						<li>A League contains an appropriate number of divisions, determined by the Leagues &amp; Cuppers Secretary, in order to accommodate the maximum number of teams entered in that particular year.</li>
 						<li>Each Division shall consist of six teams, but may vary between four and seven for the bottom two divisions.</li>
 					</ol>
 				</li>
-				<li><h3>Promotion & Relegation</h3>
+				<li><h3>Promotion &amp; Relegation</h3>
 					<ol>
 						<li>At the end of season, the teams shall be ranked in descending order, within their division, by:
-							The number of points awarded within the season
-							Then, the number of matches won
-						Then, the number of rubbers won</li>
+							<ol class="second-counter">
+								<li>the number of points awarded within the season</li>
+								<li>the number of matches won</li>
+								<li>the number of rubbers won</li>
+							</ol>
 						<li>If tied, the winner of the match between them shall be ranked higher.</li>
-						<li>If the match is a draw, the winner of the Doubles 1 vs 1 rubber is favoured.</li>
 						<li>The top two teams in each Division are promoted, while the bottom two are relegated.</li>
 						<li>The team finishing top of their Division may challenge the team who came second in the upper Division to play off a match during the pre-season. If the higher placed team wins, both teams are promoted as normal. If the challenging team wins, the challenger is promoted in place of the higher team. The higher team then remains in the same Division and is leapfrogged by the challenging team.</li>
-						<li>There may be extra promotion in case that a team in higher Division pulls out.</li>
+						<li>There may be extra promotion in case that a team in a higher Division pulls out.</li>
 						<li>Likewise, extra relegation may happen in the case of re-entries. However, the promotion of the top team and the relegation of the bottom team are always guaranteed.</li>
 						<li>The re-entry team shall be placed where they left the competition, but one Division lower for each season not participating.</li>
 					</ol>
@@ -166,9 +184,9 @@ title: Rules
 				<li><h3>Substitution</h3>
 					<ol>
 						<li>No substitution is allowed in the Cuppers.</li>
-						<li>In the Leagues, substitution can only be made by a player (of same sex) from a weaker team. Nevertheless, a maximum of ONE woman is allowed to substitute a man in a Men's match, without precluding her from playing in the Women's team.</li>
+						<li>In the Leagues, substitution can only be made by a player (of same sex) from a weaker team. Nevertheless, a maximum of <strong>one</strong> woman is allowed to substitute a man in a Men's match, without precluding her from playing in the Women's team.</li>
 						<li>Once a player has played for a stronger team more than once, they may not play for a weaker team. However, they may be promoted from a weaker to a stronger team.</li>
-						<li>Breaking the above rules may result in the point penalties determined by the L&C Secretary.</li>
+						<li>Breaking the above rules may result in point penalties as determined by the L&C Secretary.</li>
 					</ol>
 					<li><h3>Postponement</h3>
 						<ol>
@@ -184,6 +202,6 @@ title: Rules
 							<li>In the event of a fixture being incomplete due to a late start, with a team at fault, their opposition may claim any rubbers not completed or unplayed. This is also true in the case of injuries.</li>
 							<li>If less than four players are present for a team, they shall play the maximum number of rubbers possible and forfeit the rest.</li>
 							<li>If neither teams can make the scheduled time and no reschedule is possible, the result shall be read 0-0 for the Leagues, and no winner for the Cuppers.</li>
-						</ol>		
+						</ol>
 					</li>
-				</ol>								
+				</ol>
