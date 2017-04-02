@@ -1,9 +1,32 @@
-var startHeight;
-var changeHeight = 100;
-var stopHeight = 70;
+
 
 function hideElement(element){
   element.style.visibility = "hidden"
+}
+
+var startHeight;
+var stopHeight = 70;
+
+var header;
+var topNavContainer;
+
+function initialiseScrollAdjuster(){
+  header = document.getElementById('header');
+  startHeight = header.offsetHeight;
+  topNavContainer = document.getElementById('top-nav-container');
+  scrollAdjuster();
+}
+
+function scrollAdjuster(){
+  var scrollDistance = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+  if(scrollDistance>=startHeight-stopHeight && scrollDistance !== 0){
+    header.classList.add('box-shadow');
+    header.style.height = stopHeight+"px";
+  }else{
+    header.classList.remove('box-shadow');
+    header.style.height = startHeight - scrollDistance + "px";
+  }
+
 }
 
 function getSupportedPropertyName(properties) {
@@ -18,28 +41,6 @@ function getSupportedPropertyName(properties) {
 var transform = ["transform", "msTransform", "webkitTransform", "mozTransform", "oTransform"];
 
 var transformProperty;
-
-function scrollAdjuster(){
-  if(!startHeight){
-    startHeight = document.getElementById('header').offsetHeight;
-  }
-  var scrollDistance = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-  if(scrollDistance>=startHeight-changeHeight){
-    document.getElementById('header').classList.add('smaller');
-    document.getElementById('top-nav-container').classList.add('smaller-top-nav-container');
-  }else{
-    document.getElementById('header').classList.remove('smaller');
-    document.getElementById('top-nav-container').classList.remove('smaller-top-nav-container');
-  }
-  if(scrollDistance>=startHeight-stopHeight){
-    document.getElementById('header').classList.add('box-shadow');
-    document.getElementById('header').style.height = stopHeight+"px";
-  }else{
-    document.getElementById('header').classList.remove('box-shadow');
-    document.getElementById('header').style.height = startHeight - scrollDistance + "px";
-  }
-
-}
 
 var dragMarginSize;
 var width;
@@ -134,11 +135,11 @@ function dragSideNav(evt){
       }else{
         hideSideNav();
       }
-
   }
 
 window.addEventListener("DOMContentLoaded", function() {
     initialiseSideNav();
+    initialiseScrollAdjuster();
 
     window.addEventListener('scroll', function() {
         scrollAdjuster();

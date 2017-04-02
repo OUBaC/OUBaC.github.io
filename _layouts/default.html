@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		{% include google-analytics-code.html %}
-		<title>{{page.title}} - O.U.Ba.C.</title>
-		<link rel="stylesheet" type="text/css" href="/styles/stylesheet.css"/>
-		<link rel="stylesheet" type="text/css" media="print" href="/styles/print-styles.css"/>
-		{% for stylesheet in page.stylesheets %}
-		<link rel="stylesheet" type="text/css" href="{{stylesheet}}"/>
-		{% endfor %}
-		{% include head-inner.html %}
-	</head>
-	<body>
-		{% include top-nav.html %}
-		{% include side-nav.html %}
-		<div class="content">
-		{{content}}
-		</div>
-	</body>
-</html>
+---
+layout: layout
+---
+<div class="content">
+{{content}}
+</div>

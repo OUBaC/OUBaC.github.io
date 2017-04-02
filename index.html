@@ -1,8 +1,10 @@
 ---
 title: O.U.Ba.C
-layout: home-layout
+layout: layout
 stylesheets:
 - /styles/index-styles.css
+javascript:
+- /path.js
 ---
 <div id="title-and-logo-container">
 	<div id='container'>
@@ -17,7 +19,7 @@ stylesheets:
 					<use xlink:href="#text-def"/>
 				</clipPath>
 			</defs>
-		  <path d="" id="text" stroke="white" fill="white" fill-opacity="1" clippath="url(#clip)" />
+		  <path d="" id="text" stroke="white" fill="white" fill-opacity="0" clippath="url(#clip)" />
 		</svg>
 		<h3 class="home-title-caption full-justify"><span class="canterbury">O</span>xford <span class="canterbury">U</span>niversity <span class="canterbury">Ba</span>dminton <span class="canterbury">C</span>lub</h3>
 	</div>
@@ -66,9 +68,9 @@ stylesheets:
 </div>
 <script>
 var d = {% include logo-text-path %}
-var p = new Path(d);
-var arrayOfSegments = p.canonicalForm;
-var lengths = p.createArrayOfLengths();
+var p;
+var arrayOfSegments;
+var lengths;
 var currentString = "";
 var startLooking = 0;
 var startTime;
@@ -114,9 +116,11 @@ function animationStepFill(){
 	setTimeout(animationStepFill,Math.max(16 + stepStartTime - performance.now(),0))
 }
 
-window.addEventListener("DOMContentLoaded", function() {
-	targetElement.setAttribute('fill-opacity',0);
+window.addEventListener("load", function() {
 	startTime = performance.now()
+	p = new Path(d);
+	arrayOfSegments = p.canonicalForm;
+	lengths = p.createArrayOfLengths();
 	animationStepOutline()
 })
 </script>

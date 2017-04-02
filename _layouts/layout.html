@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% include google-analytics-code.html %}
+		{% if page.title %}
+		<title>{{page.title}} - O.U.Ba.C.</title>
+		{% else %}
+		<title>O.U.Ba.C.</title>
+		{% endif %}
+		<link rel="stylesheet" type="text/css" href="/styles/stylesheet.css"/>
+		<link rel="stylesheet" type="text/css" media="print" href="/styles/print-styles.css" async/>
+		hello
+		{% for stylesheet in page.stylesheets %}
+			<link rel="stylesheet" type="text/css" href="{{stylesheet}}"/>
+		{% endfor %}
+		{% for javascript in page.javascript %}
+			<script type="text/javascript" src="{{javascript}}" async></script>
+		{% endfor %}
+		{% include head-inner.html %}
+	</head>
+	<body>
+		{% include top-nav.html %}
+		{% include side-nav.html %}
+		{{content}}
+	</body>
+</html>
