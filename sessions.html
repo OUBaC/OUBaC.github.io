@@ -12,15 +12,6 @@ sessions:
   participants:
   - Clubnight
   exceptions:
-  - Sunday 12th March - 16:30-18:00
-- day: Monday
-  time: "19:00-21:00"
-  location: Magdalen College School
-  participantString: M1, M2 and W1
-  participants:
-  - M1
-  - M2
-  - W1
 - day: Tuesday
   time: "10:00-13:00"
   location: Iffley Road
@@ -28,17 +19,28 @@ sessions:
   participants:
   - Clubnight
   exceptions:
-  - 2 courts
 - day: Tuesday
-  time: "19:00 - 21:00"
+  time: "19:00 - 22:00"
   location: Virgin Active
-  participantString: Local league matches
+  participantString: Squad
   participants:
   - M1
   - M2
   - M3
   - W1
   - W2
+- day: Thursday
+  time: "18:00-19:00"
+  location: University Parks
+  participantString: Squad
+  participants:
+  - M1
+  - M2
+  - M3
+  - W1
+  - W2
+  exceptions:
+  - Fitness Session
 - day: Thursday
   time: "20:00-22:30"
   location: Iffley Road
@@ -53,16 +55,18 @@ sessions:
   participants:
   - Clubnight
   exceptions:
-  - 2 courts
 - day: Friday
   time: "19:00-21:00"
   location: Virgin Active
-  participantString: M3 and W2
+  participantString: Squad
   participants:
+  - M1
+  - M2
   - M3
+  - W1
   - W2
 - day: Saturday
-  time: "14:00-16:00"
+  time: "14:00-16:30"
   location: Iffley Road
   participantString: Squad
   participants:
@@ -72,21 +76,6 @@ sessions:
   - W1
   - W2
   exceptions:
-  - "Odd weeks: M1, W1 and W2 only"
-  - "Even weeks: M2 and M3 only"
-- day: Saturday
-  time: "18:30-20:30"
-  location: Magdalen College Sport
-  participantString: Squad
-  participants:
-  - M1
-  - M2
-  - M3
-  - W1
-  - W2
-  exceptions:
-  - "Even weeks: M1, W1 and W2 only"
-  - "Odd weeks: M2 and M3 only"
 ---
 <script>
 
@@ -110,7 +99,7 @@ function toggleSessions(team, checked){
 }
 </script>
 
-<h2>Sessions - Hilary Term 2016</h2>
+<h2>Sessions - Trinity Term 2017</h2>
 <p> </p>
 <div id="checkboxes">
   <input type="checkbox" id="clubnight-checkbox" onchange="toggleSessions('Clubnight',this.checked)" checked="checked" />
