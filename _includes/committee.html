@@ -11,7 +11,17 @@
     </div>
   </div>
     <h2 class="role-name">{{member.name}}</h2>
+    {% if member.role %}
     <h3>{{member.role}}</h3>
+    {% elsif member.roles %}
+      {% for role in member.roles %}
+        {% if forloop.last == false %}
+          <h3 style="margin-bottom: 0px">{{role}}</h3>
+        {% else %}
+          <h3>{{role}}</h3>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
     {% if member.email %}
       <a href="mailto:{{member.email}}">{{member.email}}</a>
     {% endif %}
