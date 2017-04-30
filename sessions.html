@@ -12,6 +12,9 @@ sessions:
   participants:
   - Clubnight
   exceptions:
+  - "Sunday 7th May: 17:30 - 19:30"
+  - "Sunday 11th May: 14:30 - 16:00"
+  - "Sunday 4th June: Not on"
 - day: Tuesday
   time: "10:00-13:00"
   location: Iffley Road
@@ -21,7 +24,7 @@ sessions:
   exceptions:
 - day: Tuesday
   time: "19:00 - 22:00"
-  location: Virgin Active
+  location: Nuffield Health
   participantString: Squad
   participants:
   - M1
@@ -57,7 +60,7 @@ sessions:
   exceptions:
 - day: Friday
   time: "19:00-21:00"
-  location: Virgin Active
+  location: Nuffield Health
   participantString: Squad
   participants:
   - M1
@@ -76,6 +79,10 @@ sessions:
   - W1
   - W2
   exceptions:
+  - "Saturday 6th May: 11:00 - 18:00"
+  - "Saturday 20th May: Not on"
+  - "Saturday 27th May: 13:00 - 15:00"
+  - "Saturday 3rd June: 14:00 - 18:00"
 ---
 <script>
 
@@ -157,7 +164,7 @@ function toggleSessions(team, checked){
       <div id="tabs-container">
         <div id="indicator"></div>
         <h3 id="initialSelector" class="location-option selected" onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJa__vp0zBdkgRtBpLdcJmdHQ&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',1)">Iffley Road</h3>
-        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJi8_mhxXEdkgRpuPfhApKQJ0&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',2)">Virgin Active</h3>
+        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJi8_mhxXEdkgRpuPfhApKQJ0&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',2)">Nuffield Health</h3>
         <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJFcgu6rLGdkgRpnOlZeXjFyo&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',3)">Magdalen College School</h3>
       </div>
       <div id="map-container">
