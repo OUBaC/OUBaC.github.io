@@ -6,7 +6,7 @@ url: "localhost:4000"
 paginate: 5
 paginate_path: "/latest-news/page:num/"
 
-gems:
+plugins:
  - jekyll-sitemap
  - jekyll-paginate
 
