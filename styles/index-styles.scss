@@ -70,6 +70,33 @@ svg{
   position: absolute;
 }
 
+#yonex-banner{
+  height: 70px;
+  position: relative;
+}
+
+#yonex-banner-blue{
+  background-color: #0b50a1;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+#yonex-banner-green{
+  background-color: #1d9533;
+  bottom: 0;
+  height: 50%;
+  position: absolute;
+  width: 100%;
+}
+
+#yonex-banner-logo{
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
 .key-point{
   box-sizing: border-box;
   padding: 20px;
