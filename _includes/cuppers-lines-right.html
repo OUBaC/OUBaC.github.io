@@ -1,13 +1,13 @@
 {% assign hnum = include.num |divided_by: 2 %}
 <div class="horizontal-lines">
-  {% for i in (1...hnum) %}
+  {% for i in (1 ... hnum) %}
   <div class="horizontal-line"></div>
   {% endfor %}
 </div>
 <div class="vertical-lines">
   <div class="blank"></div>
   {% assign blank_num = hnum |minus: 1 %}
-  {% for i in (1...blank_num) %}
+  {% for i in (1 ... blank_num) %}
   <div class="vertical-line"></div>
   <div class="double-blank"></div>
   {% endfor %}
@@ -15,7 +15,7 @@
   <div class="blank"></div>
 </div>
 <div class="horizontal-lines">
-  {% for i in (1...include.num) %}
+  {% for i in (1 ... include.num) %}
   <div class="horizontal-line"></div>
   {% endfor %}
 </div>
