@@ -6,7 +6,8 @@ stylesheets:
 
 sessions:
 - day: Sunday
-  time: "Various"
+  time: "14:00-16:30"
+  numberOfCourts: 3
   location: Iffley Road
   participantString: Clubnight
   participants:
@@ -17,14 +18,11 @@ sessions:
   - W2 
   - Clubnight
   exceptions:
-  - "Sunday 9th July: 16:00 - 17:30"
-  - "Sunday 16th July: 15:00 - 17:00"
-  - "Sunday 23rd July: 16:00 - 17:30"
-  - "Sunday 30th July: 14:00 - 15:30"
 - day: Tuesday
   time: "10:00-13:00"
+  numberOfCourts: "3"
   location: Iffley Road
-  participantString: Clubnight
+  participantString: Clubnight and Squad
   participants:
   - Clubnight
   - M1
@@ -35,6 +33,7 @@ sessions:
   exceptions:
 - day: Thursday
   time: "21:00 - 22:30"
+  numberOfCourts: "3 + 1 Squad"
   location: Iffley Road
   participantString: Clubnight
   participants:
@@ -44,8 +43,24 @@ sessions:
   - W1
   - W2
   - Clubnight
+  exceptions:
+  - "17th September - Not on"
+- day: Friday
+  time: "11:00 - 14:00"
+  numberOfCourts: 3
+  location: Iffley Road
+  participantString: Clubnight
+  participants:
+  - M1
+  - M2
+  - M3
+  - W1
+  - W2
+  - Clubnight
+  exceptions:
 - day: Saturday
-  time: "Various"
+  time: "14:00 - 16:30"
+  numberOfCourts: "2 + 1 Squad"
   location: Iffley Road
   participantString: Clubnight
   participants:
@@ -56,10 +71,6 @@ sessions:
   - W1
   - W2
   exceptions:
-  - "Saturday 8th July: 14:00 - 16:30"
-  - "Saturday 15th July: 14:00 - 15:30"
-  - "Saturday 22nd July: 14:00 - 16:00"
-  - "Saturday 29th July: 14:00 - 16:30"
 ---
 <script>
 
@@ -83,8 +94,8 @@ function toggleSessions(team, checked){
 }
 </script>
 
-<h2>Sessions - July 2017</h2>
-<p>These sessions will run from July 4th to August 1st (both inclusive).</p>
+<h2>Sessions - August 2017</h2>
+<p>These sessions will run from August 8th to September 3rd (both inclusive).</p>
 <div id="checkboxes">
   <input type="checkbox" id="clubnight-checkbox" onchange="toggleSessions('Clubnight',this.checked)" checked="checked" />
   <label for="clubnight-checkbox">Clubnight</label>
