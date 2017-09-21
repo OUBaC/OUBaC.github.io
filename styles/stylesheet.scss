@@ -270,6 +270,7 @@ input:checked + ul{
 	height: 100%;
 	display: flex;
 	align-items: flex-end;
+	pointer-events: none;
 	position: relative;
 }
 
@@ -279,6 +280,7 @@ input:checked + ul{
 	display: flex;
 	justify-content: space-between;
 	height: $small-header-height;
+	pointer-events: all;
 	width:100%;
 }
 
