@@ -6,59 +6,86 @@ stylesheets:
 
 sessions:
 - day: Sunday
-  time: "14:00-16:30"
-  numberOfCourts: 3
+  time: "13:30 - 15:30"
+  numberOfCourts: 4
   location: Iffley Road
   participantString: Clubnight
   participants:
-  - M1 
-  - M2 
-  - M3 
-  - W1 
-  - W2 
   - Clubnight
   exceptions:
-- day: Tuesday
-  time: "10:00-13:00"
-  numberOfCourts: "3"
-  location: Iffley Road
-  participantString: Clubnight and Squad
+- day: Monday
+  time: "19:00 - 21:00"
+  numberOfCourts: 4
+  location: MCS
+  participantString: M1, W1 and M2
   participants:
-  - Clubnight
   - M1
   - M2
-  - M3
   - W1
-  - W2
   exceptions:
-- day: Thursday
-  time: "21:00 - 22:30"
+- day: Tuesday
+  time: "10:00 - 13:00"
   numberOfCourts: "4"
   location: Iffley Road
   participantString: Clubnight
   participants:
-  - M1
-  - M2
-  - M3
-  - W1
-  - W2
   - Clubnight
   exceptions:
-- day: Saturday
-  time: "14:00 - 16:30"
-  numberOfCourts: "2 + 1 Squad"
+- day: Tuesday
+  time: "19:45 - 22:15"
+  numberOfCourts: "4"
+  location: Nuffield Health
+  participantString: Mixed Squad
+  participants:
+  - M1
+  - W1
+  - M2
+  exceptions:
+- day: Thursday
+  time: "20:00 - 22:30"
+  numberOfCourts: "4"
   location: Iffley Road
   participantString: Clubnight
   participants:
   - Clubnight
+  exceptions:
+- day: Friday
+  time: "19:00 - 21:00"
+  numberOfCourts: "4"
+  location: Nuffield Health
+  participantString: W2 and M3
+  participants:
+  - W2
+  - M3
+  exceptions:
+- day: Saturday
+  time: "14:00 - 16:00"
+  numberOfCourts: "4"
+  location: Iffley Road
+  participantString: Squad
+  participants:
   - M1
   - M2
   - M3
   - W1
   - W2
   exceptions:
-   - "16th September: 14:00-15:30"
-   - "23rd September: Not on" 
+   - "Odd weeks - M1, W1 and W2"
+   - "Even weeks - M2 and M3"
+- day: Saturday
+  time: "18:30 - 20:30"
+  numberOfCourts: "4"
+  location: MCS
+  participantString: Squad
+  participants:
+  - M1
+  - M2
+  - M3
+  - W1
+  - W2
+  exceptions:
+  - "Odd weeks - M2 and M3"
+  - "Even weeks - M1, W1 and W2"
 ---
 <script>
 
@@ -82,8 +109,8 @@ function toggleSessions(team, checked){
 }
 </script>
 
-<h2>Sessions - September 2017</h2>
-<p>These sessions will run from September 14th to September 30th</p>
+<h2>Sessions - Michaelmas 2017</h2>
+<p>These sessions will run from Monday 9th October to Saturday 2nd December.</p>
 <div id="checkboxes">
   <input type="checkbox" id="clubnight-checkbox" onchange="toggleSessions('Clubnight',this.checked)" checked="checked" />
   <label for="clubnight-checkbox">Clubnight</label>
