@@ -6,42 +6,57 @@ stylesheets:
 
 sessions:
 - day: Sunday
-  time: "13:30 - 15:30"
+  time: "13:30 - 15:00"
   numberOfCourts: 4
   location: Iffley Road
   participantString: Clubnight
   participants:
   - Clubnight
   exceptions:
+  - "14th January - Not on"
+  - "28th January - Not on"
+  - "4th February - Additional court 15:00-17:00"
+  - "25th February - TBC"
+  - "4th March - TBC"
+  - "11th March - 16:00-17:30"
 - day: Monday
   time: "19:00 - 20:30"
   numberOfCourts: 4
   location: MCS
-  participantString: M1, W1 and M2
+  participantString: Squad
   participants:
   - M1
   - M2
+  - M3
   - W1
+  - W2
   exceptions:
+  - M1, M2 and W1 on odd weeks
+  - M3 and W2 on even weeks
 - day: Monday
   time: "20:30 - 22:00"
   numberOfCourts: 4
   location: MCS
-  participantString: W2 and M3
+  participantString: Squad
   participants:
-  - W2
+  - M1
+  - M2
   - M3
+  - W1
+  - W2
   exceptions:
+  - M1, M2 and W1 on even weeks
+  - M3 and W2 on odd weeks
 - day: Tuesday
   time: "10:00 - 13:00"
-  numberOfCourts: "4"
+  numberOfCourts: "3"
   location: Iffley Road
   participantString: Clubnight
   participants:
   - Clubnight
   exceptions:
 - day: Wednesday
-  time: "19:00 - 21:00"
+  time: "19:00 - 22:30"
   numberOfCourts: "4"
   location: MCS
   participantString: Squad
@@ -53,6 +68,7 @@ sessions:
   - M3
   - W3
   exceptions:
+  - "19:30-22:30 on odd weeks"
 - day: Thursday
   time: "20:30 - 22:30"
   numberOfCourts: "4"
@@ -62,13 +78,16 @@ sessions:
   - Clubnight
   exceptions:
 - day: Friday
-  time: "11:00 - 14:00"
+  time: "10:30 - 14:00"
   numberOfCourts: "4"
   location: Iffley Road
   participantString: Clubnight
   participants:
   - Clubnight
   exceptions:
+  - "2nd March - Not on"
+  - "9th March - 10:30-13:30 - 3 courts"
+  - "16th March - 10:30-13:30"
 - day: Saturday
   time: "14:00 - 16:00"
   numberOfCourts: "4"
@@ -83,6 +102,9 @@ sessions:
   exceptions:
    - "Odd weeks - M1, W1 and W2"
    - "Even weeks - M2 and M3"
+   - "27th January - 11:00-13:00"
+   - "3rd March - Varsity"
+   - "10th March - Not on"
 - day: Saturday
   time: "18:30 - 20:30"
   numberOfCourts: "4"
@@ -97,6 +119,7 @@ sessions:
   exceptions:
   - "Odd weeks - M2 and M3"
   - "Even weeks - M1, W1 and W2"
+  - "3rd March - Varsity"
 ---
 <script>
 
@@ -120,8 +143,8 @@ function toggleSessions(team, checked){
 }
 </script>
 
-<h2>Sessions - Michaelmas 2017</h2>
-<p>These sessions will run from Monday 9th October to Saturday 2nd December.</p>
+<h2>Sessions - Hilary 2017</h2>
+<p>These sessions will run from Sunday 14th January to Saturday 17th March except Squad sessions which will end on Saturday 10th March.</p>
 <div id="checkboxes">
   <input type="checkbox" id="clubnight-checkbox" onchange="toggleSessions('Clubnight',this.checked)" checked="checked" />
   <label for="clubnight-checkbox">Clubnight</label>
