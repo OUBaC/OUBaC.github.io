@@ -6,59 +6,77 @@ stylesheets:
 
 sessions:
 - day: Sunday
-  time: "14:30 - 16:30"
+  time: "13:30 - 15:30"
   numberOfCourts: 4
-  location: Iffley Road
+  location: "Iffley Road - Old Hall"
   participantString: Clubnight
   participants:
   - Clubnight
   exceptions:
-  - 18th March and 8th April only
-- day: Wednesday
-  time: "19:00 - 21:00"
-  numberOfCourts: "3 - 1 reserved for Squad"
-  location: Iffley Road
-  participantString: Clubnight and Squad
+  - "13th May - 11:30-13:30 - 3 courts only"
+  - "20th May - Not on"
+- day: Monday
+  time: "20:30 - 22:30"
+  numberOfCourts: "4"
+  location: "Iffley Road - New Hall"
+  participantString: M1, W1 and W2
   participants:
-  - Clubnight
   - M1
   - W1
-  - M2
   - W2
+  exceptions:
+- day: Tuesday
+  time: "20:30 - 22:30"
+  numberOfCourts: "4"
+  location: "Iffley Road - New Hall"
+  participantString: M2 and M3
+  participants:
+  - M2
   - M3
   exceptions:
-  - 4th April only
 - day: Thursday
-  time: "20:00 - 22:30"
-  numberOfCourts: "3 - 1 reserved for Squad"
-  location: Iffley Road
-  participantString: Clubnight and Squad
+  time: "12:30 - 16:30"
+  numberOfCourts: "4"
+  location: "Iffley Road - Old Hall"
+  participantString: Clubnight
   participants:
   - Clubnight
+  exceptions:
+- day: Friday
+  time: "20:30 - 22:30"
+  numberOfCourts: "4"
+  location: "Iffley Road - New Hall"
+  participantString: M1, W1 and M2
+  participants:
   - M1
   - W1
   - M2
-  - W2
-  - M3
   exceptions:
 - day: Saturday
-  time: "--"
+  time: "13:30 - 15:30"
   numberOfCourts: "4"
-  location: Iffley Road
-  participantString: Clubnight and Squad
+  location: "Iffley Road - Old Hall"
+  participantString: W2 and M3
+  participants:
+  - W2
+  - M3
+  exceptions:
+  - "28th April - 15:30-17:30 - New Hall"
+  - "12th May - Not on"
+  - "19th May - 11:30-13:30 - New Hall"
+  - "2nd June - 15:30-17:30 - Old Hall"
+- day: Saturday
+  time: "15:30-17:30"
+  numberOfCourts: "4"
+  location: "Iffley Road - Old Hall"
+  participantString: Clubnight
   participants:
   - Clubnight
-  - M1
-  - M2
-  - M3
-  - W1
-  - W2
   exceptions:
-  - "17th March - 18:30 - 19:30"
-  - "24th March - Not on"
-  - "31st March - Not on"
-  - "7th April - 16:00 - 17:30"
-  - "14th April - 12:00 - 13:00"
+  - "28th April - Not on"
+  - "12th May - Not on"
+  - "19th May - Not on"
+  - "2nd June - 07:30-09:30"
 ---
 <script>
 
@@ -82,8 +100,8 @@ function toggleSessions(team, checked){
 }
 </script>
 
-<h2>Sessions - Hilary 2017</h2>
-<p>These sessions will run from Sunday 14th January to Saturday 17th March except Squad sessions which will end on Saturday 10th March.</p>
+<h2>Sessions - Trinity 2017</h2>
+<p>These sessions will run from Sunday 15th April to Saturday 23rd June.</p>
 <div id="checkboxes">
   <input type="checkbox" id="clubnight-checkbox" onchange="toggleSessions('Clubnight',this.checked)" checked="checked" />
   <label for="clubnight-checkbox">Clubnight</label>
@@ -143,8 +161,7 @@ function toggleSessions(team, checked){
       <div id="tabs-container">
         <div id="indicator"></div>
         <h3 id="initialSelector" class="location-option selected" onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJa__vp0zBdkgRtBpLdcJmdHQ&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',1)">Iffley Road</h3>
-        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJi8_mhxXEdkgRpuPfhApKQJ0&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',2)">Nuffield Health</h3>
-        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJFcgu6rLGdkgRpnOlZeXjFyo&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',3)">Magdalen College School</h3>
+        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJFcgu6rLGdkgRpnOlZeXjFyo&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',2)">Magdalen College School</h3>
       </div>
       <div id="map-container">
         <div id="loading" class="loading"></div>
