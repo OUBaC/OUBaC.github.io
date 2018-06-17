@@ -5,276 +5,54 @@
 $critical-value: 450px;
 $print-critical-value: 360px;
 
-$animation-delay: 0.5s;
-$animation-duration: 1s;
-$number-of-animations: 5;
-$lines-animation-delay: ($number-of-animations - 1) * $animation-delay + $animation-duration;
+.match{
+  display: block;
+  margin: 10px 0;
 
-#versus{
-  -webkit-animation-delay: $lines-animation-delay;
-          animation-delay: $lines-animation-delay;
-  -webkit-animation-duration: $animation-duration;
-          animation-duration: $animation-duration;
-  -webkit-animation-name: appear;
-          animation-name: appear;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0); //This is to force webkit to use the GPU.
 }
 
-.cuppers-container{
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 10px;
-  overflow-x: auto;
-  white-space: nowrap;
+.team{
+  border: solid 2px $primary-colour;
+  line-height: 2rem;
+  padding-left: 1rem;
+  position: relative;
 }
 
-.show-names-container{
-  display: none;
-}
-
-.flex{
-  overflow-x: hidden !important;
-}
-
-.one{
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
-}
-
-.two{
-  -webkit-animation-delay: $animation-delay;
-          animation-delay: $animation-delay;
-}
-
-.three{
-  -webkit-animation-delay: 2 * $animation-delay;
-          animation-delay: 2 * $animation-delay;
-}
-
-.four{
-  -webkit-animation-delay: 3 * $animation-delay;
-          animation-delay: 3 * $animation-delay;
-}
-
-.five{
-  -webkit-animation-delay: 4 * $animation-delay;
-          animation-delay: 4 * $animation-delay;
-}
-
-.blank{
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-.double-blank{
-  -webkit-box-flex: 2;
-  -webkit-flex-grow: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
-}
-
-.college-name{
-  display: inline-block;
-  font-weight: normal;
-  padding: 0 0.5em;
+.score{
+  background-color: $primary-colour;
+  color: white;
   text-align: center;
-  text-overflow: ellipsis;
-}
-
-.cuppers-card{
-  box-sizing: border-box;
-  margin: 10px 5px;
-  margin-left: 0;
-  padding: 7.5px;
-  width: 100%;
-}
-
-.inline-college-logo{
-  height: 1.5em;
-  vertical-align: middle;
-}
-
-.left{
-  clip-path: inset(0 50% 0 0);
-  -webkit-clip-path: inset(0 50% 0 0);
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 2rem;
 }
 
 .loser{
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
-  opacity: 0.5;
+  color: grey;
 }
 
-
-.right{
-  clip-path: inset(0 0 0 50%);
-  -webkit-clip-path: inset(0 0 0 50%);
-  position: absolute;
-  -webkit-transform:translateX(-100%);
-      -ms-transform:translateX(-100%);
-          transform:translateX(-100%);
+.loser .score{
+  background-color: grey;
 }
 
 .round{
-  -webkit-animation-duration: $animation-duration;
-          animation-duration: $animation-duration;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-name: slideRight;
-          animation-name: slideRight;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-  max-width: 200px;
-  overflow: visible;
-  position: relative;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0); //This is to force webkit to use the GPU.
-}
-
-//Note that .rightCard needs to be after .round as it needs to override the value of animation-name set in .round
-.rightCard{
-  -webkit-animation-name: slideLeft;
-          animation-name: slideLeft;
-}
-
-.versus{
-  color: rgba(0,0,0,0.5);
-  padding: 0 0.5em;
-}
-
-//Lines
-.horizontal-lines{
-  -webkit-animation-delay: $lines-animation-delay;
-          animation-delay: $lines-animation-delay;
-  -webkit-animation-duration: $animation-duration;
-          animation-duration: $animation-duration;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-name: appear;
-          animation-name: appear;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-  position: relative;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0); //This is to force webkit to use the GPU.
-}
-
-
-.horizontal-line{
-  background-color: rgba(0,0,0,0.12);
-  height:2px;
-  min-width: 4px;
-  width:100%;
-}
-
-.vertical-lines{
-  -webkit-animation-delay: $lines-animation-delay;
-          animation-delay: $lines-animation-delay;
-  -webkit-animation-duration: $animation-duration;
-          animation-duration: $animation-duration;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-name: appear;
-          animation-name: appear;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-  position: relative;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0); //This is to force webkit to use the GPU.
-}
-
-.vertical-line{
-  background-color: rgba(0,0,0,0.12);
-  -webkit-box-flex:2;
-  -webkit-flex-grow:2;
-      -ms-flex-positive:2;
-          flex-grow:2;
-  padding: 2px 0;
-  width:2px;
-}
-
-//Animations
-@keyframes slideRight{
-  from{-webkit-transform: translateX(-50vw);-ms-transform: translateX(-50vw);transform: translateX(-50vw); opacity: 0;}
-  to{-webkit-transform: translateX(0);-ms-transform: translateX(0);transform: translateX(0); opacity: 1;}
-}
-
-@-webkit-keyframes slideLeft{
-  from{-webkit-transform: translateX(+50vw);transform: translateX(+50vw); opacity: 0;}
-  to{-webkit-transform: translateX(0);transform: translateX(0); opacity: 1;}
-}
-
-@keyframes slideLeft{
-  from{-webkit-transform: translateX(+50vw);transform: translateX(+50vw); opacity: 0;}
-  to{-webkit-transform: translateX(0);transform: translateX(0); opacity: 1;}
-}
-
-@-webkit-keyframes appear{
-  from{ opacity: 0;}
-  to{ opacity: 1;}
-}
-
-@keyframes appear{
-  from{ opacity: 0;}
-  to{ opacity: 1;}
-}
-
-@media all and (max-width: 1300px){
-
-.flex .college-name{
-  display: none;
-}
-.flex .inline-college-logo{
-  height: 2em;
-}
-.flex .cuppers-card{
-  background-color: rgba(0,0,0,0);
-  box-shadow: none;
-  padding: 5px 0;
   margin: 0;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-.show-names-container{
-  display: block;
+
+.college{
+  padding-right: 3rem;
+  white-space: nowrap;
 }
+
+.cuppers-container{
+  display: flex;
+  overflow: auto;
+  overflow-y: hidden;
 }
 
 @import 'responsive-table';

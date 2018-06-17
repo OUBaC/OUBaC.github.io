@@ -1,0 +1,70 @@
+- matches:
+  - home: Somerville
+    away: Worcester
+    homeScore: 6
+    awayScore: 0
+  - home: Lady Margaret Hall
+    away: St Edmund Hall
+    homeScore: 4
+    awayScore: 2
+  - home: Magdalen
+    away: Jesus
+    homeScore: 6
+    awayScore: 0
+  - home: St Catherine's
+    away: Pembroke
+    homeScore: 0
+    awayScore: 6
+  - home: Wadham
+    away: Exeter
+    homeScore: 0
+    awayScore: 6
+  - home: Wolfson
+    away: Queen's
+    homeScore: 0
+    awayScore: 6
+  - home: Keble
+    away: St John's/Mansfield
+    homeScore: 3
+    homePoints: 1
+    awayScore: 3
+    awayPoints: 0
+  - home: Merton
+    away: Brasenose
+    homeScore: 0
+    awayScore: 6
+- matches:
+  - home: Somerville
+    away: Lady Margaret Hall
+    homeScore: 1
+    awayScore: 2
+  - home: Magdalen
+    away: Pembroke
+    homeScore: "-"
+    awayScore: "-"
+  - home: Exeter
+    away: Queen's
+    homeScore: 5
+    awayScore: 1
+  - home: Keble
+    away: Brasenose
+    homeScore: "?"
+    homePoints: 0
+    awayScore: "?"
+    awayPoints: 1
+- matches:
+    - home: Lady Margaret Hall
+      away: "--"
+      homeScore: 6
+      awayScore: 0
+    - home: Exeter
+      away: Brasenose
+      homeScore: 6
+      awayScore: 0
+- matches:
+  - home: Lady Margaret Hall
+    away: Exeter
+    homeScore: 3
+    homePoints: 98
+    awayScore: 3
+    awayPoints: 99
