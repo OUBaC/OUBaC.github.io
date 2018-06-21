@@ -1,0 +1,37 @@
+- matches:
+  - home: Jesus
+    away: St Anne's/Wolfson
+    homeScore: 2
+    awayScore: 4
+  - home: St Peter's
+    away: Christ Church
+    homeScore: 6
+    awayScore: 0
+  - home: Lady Margaret Hall
+    away: St Catherine's
+    homeScore: 6
+    awayScore: 0
+  - home: Queen's
+    away: Brasenose
+    homeScore: 3
+    awayScore: 4
+- matches:
+    - home: St Anne's/Wolfson
+      away: St Peter's
+      homeScore: "?"
+      homePoints: 1
+      awayScore: "?"
+      awayPoints: 0
+    - home: "Lady Margaret Hall"
+      away: Brasenose
+      homeScore: "?"
+      homePoints: 1
+      awayScore: "?"
+      awayPoints: 0
+- matches:
+  - home: St Anne's/Wolfson
+    away: Lady Margaret Hall
+    homeScore: "-"
+    homePoints: 1
+    awayScore: "-"
+    awayPoints: 0

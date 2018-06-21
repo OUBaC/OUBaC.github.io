@@ -1,0 +1,64 @@
+- matches:
+  - home: St Anne's/Wolfson
+    away: Pembroke
+    homeScore: 6
+    awayScore: 0
+  - home: Somerville
+    away: Christ Church
+    homeScore: 6
+    awayScore: 0
+  - home: Oriel
+    away: St Catherine's
+    homeScore: 1
+    awayScore: 5
+  - home: St Edmund Hall
+    away: Merton
+    homeScore: 3
+    awayScore: 4
+  - home: Lady Margaret Hall
+    away: Jesus
+    homeScore: 4
+    awayScore: 2
+  - home: Wadham
+    away: St Peter's
+    homeScore: 4
+    awayScore: 2
+  - home: Magdalen
+    away: Queen's
+    homeScore: 5
+    awayScore: 1
+  - home: Keble
+    away: St John's/Mansfield
+    homeScore: 6
+    awayScore: 0
+- matches:
+  - home: St Anne's/Wolfson
+    away: Somerville
+    homeScore: 0
+    awayScore: 6
+  - home: St Catherine's
+    away: Merton
+    homeScore: 6
+    awayScore: 0
+  - home: Lady Margaret Hall
+    away: Wadham
+    homeScore: 4
+    awayScore: 2
+  - home: Magadalen
+    away: Keble
+    homeScore: 6
+    awayScore: 0
+- matches:
+    - home: Somerville
+      away: St Catherine's
+      homeScore: 6
+      awayScore: 0
+    - home: Lady Margaret Hall
+      away: Magdalen
+      homeScore: 4
+      awayScore: 2
+- matches:
+  - home: Somerville
+    away: Lady Margaret Hall
+    homeScore: 5
+    awayScore: 1
