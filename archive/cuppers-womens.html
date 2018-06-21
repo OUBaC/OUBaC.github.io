@@ -1,0 +1,43 @@
+---
+title: Cuppers Womens
+stylesheets:
+- /styles/cuppers-styles.css
+---
+{% assign draws = site.data.cuppers.womens | sort  %}
+{% for draw_hash in draws reversed %}
+<h2>Women's Cuppers - {{draw_hash[0]}}</h2>
+<div class="cuppers-container">
+{% assign draw = draw_hash[1] %}
+{% for round in draw %}
+<div class="round">
+  {% for match in round.matches %}
+  <div class="match">
+    {% if match.homeScore > match.awayScore or match.homeScore == match.awayScore and match.homePoints > match.awayPoints %}
+    <div class="team winner"><span class="college">{{match.home}}</span><span class="score">{{match.homeScore}}</span></div>
+    <div class="team loser" style="border-top: 0"><span class="college">{{match.away}}</span><span class="score">{{match.awayScore}}</span></div>
+    {% elsif match.homeScore < match.awayScore or match.homeScore == match.awayScore and match.homePoints < match.awayPoints %}
+    <div class="team loser"><span class="college">{{match.home}}</span><span class="score">{{match.homeScore}}</span></div>
+    <div class="team winner" style="border-top: 0"><span class="college">{{match.away}}</span><span class="score">{{match.awayScore}}</span></div>
+    {% elsif match.homePoints < 0 and match.awayPoints < 0 %}
+    <div class="team loser"><span class="college">{{match.home}}</span><span class="score">{{match.homeScore}}</span></div>
+    <div class="team loser" style="border-top: 0"><span class="college">{{match.away}}</span><span class="score">{{match.awayScore}}</span></div>
+    {% else %}
+    <div class="team"><span class="college">{{match.home}}</span><span class="score">{{match.homeScore}}</span></div>
+    <div class="team" style="border-top: 0"><span class="college">{{match.away}}</span><span class="score">{{match.awayScore}}</span></div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% if forloop.last != true %}
+{% assign numberOfTeams = round.matches | size %}
+<div>
+  <svg viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg" height="100%" width="40px" preserveAspectRatio="none">
+    {% for i in (1..numberOfTeams) %}
+    <line x1="0" y1="{{ i | minus: 0.5 | divided_by: numberOfTeams}}" x2="1" y2="{{i | minus: 1 |divided_by: 2 | floor |plus: 0.5 |divided_by: numberOfTeams| times: 2}}" stroke="grey" stroke-width="2px" vector-effect="non-scaling-stroke"/>
+    {% endfor %}
+  </svg>
+</div>
+{% endif %}
+{% endfor %}
+</div>
+{% endfor %}
