@@ -2,7 +2,9 @@
   - home: St Anne's/Wolfson
     away: Queen's
     homeScore: "-"
+    homePoints: -1
     awayScore: "-"
+    awayPoints: -1
   - home: Lady Margaret Hall
     away: Wadham
     homeScore: 2
@@ -14,7 +16,9 @@
   - home: Hertford
     away: Christ Church
     homeScore: "-"
+    homePoints: -1
     awayScore: "-"
+    awayPoints: -1
 - matches:
     - home: "--"
       away: "Lady Margaret Hall"
@@ -27,7 +31,7 @@
 - matches:
   - home: Lady Margaret Hall
     away: Brasenose
-    homeScore: "-"
-    homePoints:
-    awayScore: "-"
-    awayPoints:
+    homeScore: "?"
+    homePoints: 0
+    awayScore: "?"
+    awayPoints: 1

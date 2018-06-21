@@ -41,7 +41,9 @@
   - home: Magdalen
     away: Pembroke
     homeScore: "-"
+    homePoints: -1
     awayScore: "-"
+    awayPoints: -1
   - home: Exeter
     away: Queen's
     homeScore: 5

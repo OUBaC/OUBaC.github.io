@@ -51,6 +51,9 @@ stylesheets:
     {% elsif match.homeScore < match.awayScore or match.homeScore == match.awayScore and match.homePoints < match.awayPoints %}
     <div class="team loser"><span class="college">{{match.home}}</span><span class="score">{{match.homeScore}}</span></div>
     <div class="team winner" style="border-top: 0"><span class="college">{{match.away}}</span><span class="score">{{match.awayScore}}</span></div>
+    {% elsif match.homePoints < 0 and match.awayPoints < 0 %}
+    <div class="team loser"><span class="college">{{match.home}}</span><span class="score">{{match.homeScore}}</span></div>
+    <div class="team loser" style="border-top: 0"><span class="college">{{match.away}}</span><span class="score">{{match.awayScore}}</span></div>
     {% else %}
     <div class="team"><span class="college">{{match.home}}</span><span class="score">{{match.homeScore}}</span></div>
     <div class="team" style="border-top: 0"><span class="college">{{match.away}}</span><span class="score">{{match.awayScore}}</span></div>
@@ -84,6 +87,9 @@ stylesheets:
     {% elsif match.homeScore < match.awayScore or match.homeScore == match.awayScore and match.homePoints < match.awayPoints %}
     <div class="team loser"><span class="college">{{match.home}}</span><span class="score">{{match.homeScore}}</span></div>
     <div class="team winner" style="border-top: 0"><span class="college">{{match.away}}</span><span class="score">{{match.awayScore}}</span></div>
+    {% elsif match.homePoints < 0 and match.awayPoints < 0 %}
+    <div class="team loser"><span class="college">{{match.home}}</span><span class="score">{{match.homeScore}}</span></div>
+    <div class="team loser" style="border-top: 0"><span class="college">{{match.away}}</span><span class="score">{{match.awayScore}}</span></div>
     {% else %}
     <div class="team"><span class="college">{{match.home}}</span><span class="score">{{match.homeScore}}</span></div>
     <div class="team" style="border-top: 0"><span class="college">{{match.away}}</span><span class="score">{{match.awayScore}}</span></div>
