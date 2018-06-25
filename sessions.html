@@ -6,53 +6,40 @@ stylesheets:
 
 sessions:
 - day: Sunday
-  time: "13:30 - 15:30"
+  time: "13:00 - 15:00"
   numberOfCourts: 4
   location: "Iffley Road - Old Hall"
   participantString: Clubnight
   participants:
   - Clubnight
-  exceptions:
-  - "13th May - 11:30-13:30 - 3 courts only"
-  - "20th May - Not on"
-- day: Monday
-  time: "20:30 - 22:30"
-  numberOfCourts: "4"
-  location: "Iffley Road - New Hall"
-  participantString: "Squad - Training"
-  participants:
   - M1
   - M2
   - M3
   - W1
   - W2
   exceptions:
+  - "8th July - Not on"
 - day: Tuesday
-  time: "20:30 - 22:30"
+  time: "20:00 - 22:00"
   numberOfCourts: "4"
   location: "Iffley Road - New Hall"
-  participantString: "Squad - Games"
+  participantString: "Clubnight and Squad"
   participants:
+  - Clubnight
   - M1
   - M2
   - M3
   - W1
   - W2
   exceptions:
-- day: Friday
-  time: "12:30 - 16:30"
+  - "One court reserved for squad"
+- day: Thursday
+  time: "20:00 - 22:00"
   numberOfCourts: "4"
-  location: "Iffley Road - Old Hall"
+  location: "Iffley Road - New Hall"
   participantString: Clubnight
   participants:
   - Clubnight
-  exceptions:
-- day: Friday
-  time: "20:30 - 22:30"
-  numberOfCourts: "4"
-  location: "Iffley Road - New Hall"
-  participantString: "Squad - Games"
-  participants:
   - M1
   - M2
   - M3
@@ -60,34 +47,20 @@ sessions:
   - W2
   exceptions:
 - day: Saturday
-  time: "13:30 - 15:30"
+  time: "13:00 - 15:00"
   numberOfCourts: "4"
   location: "Iffley Road - Old Hall"
-  participantString: "Squad - Games"
+  participantString: "Clubnight and Squad"
   participants:
+  - Clubnight
   - M1
   - M2
   - M3
   - W1
   - W2
   exceptions:
-  - "28th April - 15:30-17:30 - New Hall"
-  - "12th May - Not on"
-  - "19th May - 11:30-13:30 - New Hall"
-  - "2nd June - 15:30-17:30 - Old Hall"
-- day: Saturday
-  time: "15:30-17:30"
-  numberOfCourts: "4"
-  location: "Iffley Road - Old Hall"
-  participantString: Clubnight
-  participants:
-  - Clubnight
-  exceptions:
-  - "28th April - Not on"
-  - "12th May - Not on"
-  - "19th May - Not on"
-  - "26th May - Not on due to tournament"
-  - "2nd June - 07:30-09:30"
+  - "One court reserved for squad"
+  - "7th July - Not on"
 ---
 <script>
 
@@ -111,8 +84,8 @@ function toggleSessions(team, checked){
 }
 </script>
 
-<h2>Sessions - Trinity 2017</h2>
-<p>These sessions will run from Sunday 15th April to Saturday 23rd June.</p>
+<h2>Sessions - Summer Vacation 2018</h2>
+<p>These sessions will run from Sunday 24th June to Saturday 29th September.</p>
 <div id="checkboxes">
   <input type="checkbox" id="clubnight-checkbox" onchange="toggleSessions('Clubnight',this.checked)" checked="checked" />
   <label for="clubnight-checkbox">Clubnight</label>
