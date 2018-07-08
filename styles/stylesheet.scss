@@ -32,7 +32,7 @@ $side-nav-drag-width: 5vw;
 
 html,
 body{
-	background: #f9f9f9;
+	background: $background-colour;
 	font-family: RobotoDraft, Roboto, sans-serif;
 	height: 100%;
 	width: 100%;
@@ -167,6 +167,31 @@ input:checked + ul{
 	&:hover {
 		background-color: $button-hover-colour;
 		box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+	}
+}
+
+.button-small{
+	background-color: $background-colour;
+	border: solid 1px;
+	border-color: $button-colour;
+	border-radius: 2px;
+	cursor: pointer;
+	color: $button-colour;
+	display: inline-block;
+	letter-spacing: 0.5px;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	vertical-align: middle;
+	-webkit-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+	-webkit-tap-highlight-color: transparent;
+
+	&:hover {
+		background-color: white;
+		color: $button-hover-colour;
+		border-color: $button-hover-colour;
 	}
 }
 
