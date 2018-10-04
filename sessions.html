@@ -6,61 +6,111 @@ stylesheets:
 
 sessions:
 - day: Sunday
-  time: "13:00 - 15:00"
+  time: "13:30 - 15:30"
   numberOfCourts: 4
   location: "Iffley Road - Old Hall"
   participantString: Clubnight
   participants:
   - Clubnight
-  - M1
-  - M2
-  - M3
-  - W1
-  - W2
   exceptions:
-  - "8th July - Not on"
-- day: Tuesday
-  time: "20:00 - 22:00"
+  - "7th October - Not on"
+  - "2nd December - Not on"
+- day: Monday
+  time: "14:00 - 16:00"
   numberOfCourts: "4"
   location: "Iffley Road - New Hall"
-  participantString: "Clubnight and Squad"
+  participantString: "Clubnight"
   participants:
   - Clubnight
+  exceptions:
+- day: Monday
+  time: "18:30 - 20:30"
+  numberOfCourts: "4"
+  location: "MCS"
+  participantString: "Matches"
+  participants:
   - M1
   - M2
   - M3
   - W1
   - W2
   exceptions:
-  - "One court reserved for squad"
-- day: Thursday
-  time: "20:00 - 22:00"
+- day: Monday
+  time: "21:00 - 22:30"
   numberOfCourts: "4"
   location: "Iffley Road - New Hall"
+  participantString: "BUCS Prep"
+  participants:
+  - M1
+  - M2
+  - M3
+  - W1
+  - W2
+  exceptions:
+- day: Tuesday
+  time: "14:00 - 16:00"
+  numberOfCourts: "4"
+  location: "Iffley Road - New Hall"
+  participantString: "Clubnight"
+  participants:
+  - Clubnight
+  exceptions:
+- day: Wednesday
+  time: "18:30 - 20:30"
+  numberOfCourts: "4"
+  location: "MCS"
+  participantString: "Development Squad"
+  participants:
+  - M1
+  - M2
+  - M3
+  - W1
+  - W2
+  exceptions:
+- day: Thursday
+  time: "14:00 - 16:00"
+  numberOfCourts: "4"
+  location: "Iffley Road - New Hall"
+  participantString: "Clubnight"
+  participants:
+  - Clubnight
+  exceptions:
+- day: Thursday
+  time: "20:30 - 22:30"
+  numberOfCourts: "3"
+  location: "Iffley Road - Old Hall"
   participantString: Clubnight
   participants:
   - Clubnight
-  - M1
-  - M2
+  exceptions:
+- day: Friday
+  time: "20:30 - 22:30"
+  numberOfCourts: "4"
+  location: "Iffley Road - Old Hall"
+  participantString: "W2 and M3"
+  participants:
   - M3
-  - W1
   - W2
   exceptions:
 - day: Saturday
-  time: "13:00 - 15:00"
+  time: "11:30 - 13:30"
   numberOfCourts: "4"
   location: "Iffley Road - Old Hall"
-  participantString: "Clubnight and Squad"
+  participantString: "M2 and M3"
   participants:
-  - Clubnight
-  - M1
   - M2
   - M3
+  exceptions:
+- day: Saturday
+  time: "17:30 - 19:30"
+  numberOfCourts: "4"
+  location: "MCS"
+  participantString: "M1, W1 and W2"
+  participants:
+  - M1
   - W1
   - W2
   exceptions:
-  - "One court reserved for squad"
-  - "7th July - Not on"
 ---
 <script>
 
@@ -130,8 +180,8 @@ function toggleSessions(team, checked){
 }
 </script>
 
-<h2>Sessions - Summer Vacation 2018</h2>
-<p>These sessions will run from Sunday 24th June to Saturday 29th September.</p>
+<h2>Sessions - Michaelmas Term 2018</h2>
+<p>These sessions will run from Monday 8th October to Saturday 8th December.</p>
 <div id="checkboxes">
   <input type="checkbox" id="clubnight-checkbox" onchange="toggleSessions('Clubnight',this.checked)" checked="checked" />
   <label for="clubnight-checkbox">Clubnight</label>
