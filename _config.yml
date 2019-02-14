@@ -1,7 +1,5 @@
-name: "OUBaC"
-description: "Description"
-
-url: "localhost:4000"
+name: "O.U.Ba.C."
+description: "Website for Oxford University Badminton Club"
 
 paginate: 5
 paginate_path: "/latest-news/page:num/"
