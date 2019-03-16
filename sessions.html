@@ -12,68 +12,29 @@ sessions:
   participantString: Clubnight
   participants:
   - Clubnight
-  exceptions:
-  - "6th January - 14:30-16:30"
-  - "3rd February - Not on"
-  - "10th March - Reduced to 2/3s of the hall"
-- day: Monday
-  time: "14:00 - 16:00"
-  numberOfCourts: "4"
-  location: "Iffley Road - New Hall"
-  participantString: "Clubnight"
-  participants:
-  - Clubnight
-  exceptions:
-- day: Monday
-  time: "19:30 - 21:30"
-  numberOfCourts: "4"
-  location: "MCS"
-  participantString: "Matches"
-  participants:
   - M1
   - M2
   - M3
   - W1
   - W2
   exceptions:
-- day: Monday
-  time: "21:00 - 22:30"
-  numberOfCourts: "4"
-  location: "Iffley Road - New Hall"
-  participantString: "M1, M2 and W1"
-  participants:
-  - M1
-  - M2
-  - W1
-  exceptions:
-  - "21st January - 20:00-22:30"
+  - "31st March - Not on"
+  - "7th April - Not on"
 - day: Tuesday
-  time: "14:00 - 16:00"
-  numberOfCourts: "4"
+  time: "18:30 - 20:30"
+  numberOfCourts: "3"
   location: "Iffley Road - New Hall"
   participantString: "Clubnight"
   participants:
   - Clubnight
-  exceptions:
-- day: Wednesday
-  time: "19:30 - 21:30"
-  numberOfCourts: "4"
-  location: "MCS"
-  participantString: "M3 and W2"
-  participants:
+  - M1
+  - M2
   - M3
+  - W1
   - W2
   exceptions:
-  - "6th Feb - M3 only"
-  - "20th Feb - Not on"
-- day: Thursday
-  time: "14:00 - 16:00"
-  numberOfCourts: "4"
-  location: "Iffley Road - New Hall"
-  participantString: "Clubnight"
-  participants:
-  - Clubnight
-  exceptions:
+  - "19th March - Not on"
+  - "26th March - Not on"
 - day: Thursday
   time: "20:30 - 22:30"
   numberOfCourts: "3"
@@ -81,25 +42,13 @@ sessions:
   participantString: Clubnight
   participants:
   - Clubnight
-  exceptions:
-  - "7th February - 1 court"
-  - "14th March - Reduced to 1/3 of the hall"
-- day: Friday
-  time: "20:30 - 22:30"
-  numberOfCourts: "3"
-  location: "Iffley Road - Old Hall"
-  participantString: "Development Squad"
-  participants:
   - M1
   - M2
   - M3
   - W1
   - W2
   exceptions:
-  - "8th February - W2 and Development Squad only"
-  - "22nd February - M3, W2 and Development Squad only"
-  - "8th March - 18:30 - 20:30"
-  - "15th March - Reduced to 1/3 of the hall"
+  - "21st March - 19:00-22:00 in the New Hall"
 - day: Saturday
   time: "11:30 - 13:30"
   numberOfCourts: "4"
@@ -112,25 +61,8 @@ sessions:
   - W1
   - W2
   exceptions:
-  - "Even weeks: M1, W1 and W2"
-  - "Odd weeks: M2 and M3"
-  - "23rd February - Moved to MCS 19:30-21:30"
-  - "9th March - Not on"
-  - "16th March - Reduced to 2/3s of the hall"
-- day: Saturday
-  time: "17:30 - 19:30"
-  numberOfCourts: "4"
-  location: "MCS"
-  participantString: "Squad"
-  participants:
-  - M1
-  - M2
-  - M3
-  - W1
-  - W2
-  exceptions:
-  - "Even weeks: M2 and M3"
-  - "Odd weeks: M1, W1 and W2"
+  - "30th March - Not on"
+  - "6th April - Not on"
 ---
 <script>
 
@@ -200,8 +132,8 @@ function toggleSessions(team, checked){
 }
 </script>
 
-<h2>Sessions - Hilary Term 2019</h2>
-<p>These sessions will run from Sunday 6th January to Saturday 16th March.</p>
+<h2>Sessions - Vacation</h2>
+<p>These sessions will run from Sunday 17th March to Saturday 27th April.</p>
 <div id="checkboxes">
   <input type="checkbox" id="clubnight-checkbox" onchange="toggleSessions('Clubnight',this.checked)" checked="checked" />
   <label for="clubnight-checkbox">Clubnight</label>
