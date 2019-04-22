@@ -4,6 +4,11 @@ title: Sessions
 stylesheets:
 - /styles/sessions-styles.css
 
+term: Trinity Term
+
+startDate: Sunday 21st April
+endDate:  Saturday 29th June
+
 sessions:
 - day: Sunday
   time: "13:30 - 15:30"
@@ -12,46 +17,50 @@ sessions:
   participantString: Clubnight
   participants:
   - Clubnight
+  exceptions:
+- day: Monday
+  time: "21:00 - 22:30"
+  numberOfCourts: "4"
+  location: "Iffley Road - New Hall"
+  participantString: "Squad"
+  participants:
   - M1
   - M2
   - M3
   - W1
   - W2
   exceptions:
-  - "31st March - Not on"
-  - "7th April - Not on"
 - day: Tuesday
-  time: "18:30 - 20:30"
+  time: "18:00 - 20:00"
+  numberOfCourts: "3"
+  location: "Iffley Road - New Hall"
+  participantString: "Squad"
+  participants:
+  - M1
+  - M2
+  - M3
+  - W1
+  - W2
+  exceptions:
+- day: Tuesday
+  time: "20:00 - 22:00"
   numberOfCourts: "3"
   location: "Iffley Road - New Hall"
   participantString: "Clubnight"
   participants:
   - Clubnight
-  - M1
-  - M2
-  - M3
-  - W1
-  - W2
   exceptions:
-  - "19th March - Not on"
-  - "26th March - Not on"
-- day: Thursday
-  time: "20:30 - 22:30"
-  numberOfCourts: "3"
+- day: Wednesday
+  time: "16:30 - 18:30"
+  numberOfCourts: "1"
   location: "Iffley Road - Old Hall"
-  participantString: Clubnight
+  participantString: "Clubnight"
   participants:
   - Clubnight
-  - M1
-  - M2
-  - M3
-  - W1
-  - W2
   exceptions:
-  - "21st March - 19:00-22:00 in the New Hall"
-- day: Saturday
-  time: "11:30 - 13:30"
-  numberOfCourts: "4"
+- day: Wednesday
+  time: "18:30 - 20:30"
+  numberOfCourts: "1"
   location: "Iffley Road - Old Hall"
   participantString: "Squad"
   participants:
@@ -61,8 +70,38 @@ sessions:
   - W1
   - W2
   exceptions:
-  - "30th March - Not on"
-  - "6th April - Not on"
+- day: Thursday
+  time: "20:00 - 22:00"
+  numberOfCourts: "3"
+  location: "Iffley Road - New Hall"
+  participantString: Clubnight
+  participants:
+  - Clubnight
+  exceptions:
+- day: Friday
+  time: "20:30 - 22:30"
+  numberOfCourts: "3"
+  location: "Iffley Road - Old Hall"
+  participantString: Squad
+  participants:
+  - M1
+  - M2
+  - M3
+  - W1
+  - W2
+  exceptions:
+- day: Saturday
+  time: "14:00 - 17:00"
+  numberOfCourts: "4"
+  location: "Iffley Road - New Hall"
+  participantString: "Squad"
+  participants:
+  - M1
+  - M2
+  - M3
+  - W1
+  - W2
+  exceptions:
 ---
 <script>
 
@@ -132,8 +171,8 @@ function toggleSessions(team, checked){
 }
 </script>
 
-<h2>Sessions - Vacation</h2>
-<p>These sessions will run from Sunday 17th March to Saturday 27th April.</p>
+<h2>Sessions - {{page.term}}</h2>
+<p>These sessions will run from {{page.startDate}} to {{page.endDate}}.</p>
 <div id="checkboxes">
   <input type="checkbox" id="clubnight-checkbox" onchange="toggleSessions('Clubnight',this.checked)" checked="checked" />
   <label for="clubnight-checkbox">Clubnight</label>
