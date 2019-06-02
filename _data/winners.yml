@@ -1,10 +1,18 @@
+- year: 2019
+  mens-league: St John's/Mansfield
+  womens-league: Somerville
+  mixed-league: St Catherine's
+  mens-cuppers: St Anne's/Wolfson
+  mens-cuppers-team:
+  womens-cuppers: Brasenose
+  womens-cuppers-team:
 - year: 2018
   mens-league:
   womens-league:
   mixed-league:
   mens-cuppers: Exeter
   mens-cuppers-team: --
-  womens-cuppers: ---
+  womens-cuppers: Brasenose
   womens-cuppers-team:
 - year: 2017
   mens-league:

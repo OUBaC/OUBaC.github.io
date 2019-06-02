@@ -1,0 +1,15 @@
+- matches:
+    - home: "St Hilda's"
+      away: "Lady Margaret Hall"
+      homeScore: 6
+      awayScore: 0
+    - home: "Jesus"
+      away: "Brasenose"
+      homeScore: 1
+      awayScore: 5
+- matches:
+  - home: St Hilda's
+    away: Brasenose
+    homeScore: 0
+    homePoints: 0
+    awayScore: 6

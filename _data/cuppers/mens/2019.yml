@@ -1,0 +1,68 @@
+- matches:
+  - home: Somerville
+    away: St Edmund Hall
+    homeScore: 1
+    awayScore: 5
+  - home: Harris Manchester College
+    away: Hertford
+    homeScore: 2
+    awayScore: 4
+  - home: St John's/Mansfield
+    away: Pembroke
+    homeScore: 6
+    awayScore: 0
+  - home: Brasenose
+    away: Jesus
+    homeScore: 0
+    awayScore: 6
+  - home: Lady Margaret Hall
+    away: St Anne's/Wolfson
+    homeScore: 0
+    awayScore: 6
+  - home: St Catherine's
+    away: Christchurch
+    homeScore: 6
+    awayScore: 0
+  - home: Exeter
+    away: New
+    homeScore: 5
+    awayScore: 1
+  - home: Worcester
+    away: Queen's
+    homeScore: 1
+    awayScore: 5
+- matches:
+  - home: St Edmund Hall
+    away: Hertford
+    homeScore: 5
+    awayScore: 1
+  - home: St John's/Mansfield
+    away: Jesus
+    homeScore: 0
+    awayScore: 6
+  - home: St Anne's/Wolfson
+    away: St Catherine's
+    homeScore: 3
+    homePoints: 1
+    awayScore: 3
+    awayPoints: 0
+  - home: Exeter
+    away: Queens
+    homeScore: 4
+    awayScore: 2
+- matches:
+    - home: St Edmund Hall
+      away: Jesus
+      homeScore: 6
+      awayScore: 0
+    - home: St Anne's/Wolfson
+      away: Exeter
+      homeScore: 4
+      awayScore: 2
+- matches:
+  - home: St Edmund Hall
+    away: St Anne's/Wolfson
+    homeScore: 3
+    homePoints: 0
+    awayScore: 3
+    awayPoints: 1
