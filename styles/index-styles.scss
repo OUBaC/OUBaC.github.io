@@ -63,30 +63,17 @@ svg{
   height:100%;
 }
 
-#yonex-banner{
+#ashaway-banner{
   height: 70px;
+  border-top: #002147 solid 10px;
   position: relative;
+  border-bottom: #002147 solid 10px;
 }
 
-#yonex-banner-blue{
-  background-color: #0b50a1;
-  height: 50%;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-#yonex-banner-green{
-  background-color: #1d9533;
-  bottom: 0;
-  height: 50%;
-  position: absolute;
-  width: 100%;
-}
-
-#yonex-banner-logo{
+#ashaway-banner-logo{
   height: 100%;
   position: absolute;
+  padding: 10px;
   width: 100%;
 }
 
@@ -224,6 +211,14 @@ svg{
 
   .home-title-caption{
     font-size: 3.75vw;
+  }
+
+  #ashaway-banner{
+    height: 50px;
+  }
+
+  #ashaway-banner-logo{
+    padding: 5px 0;
   }
 
 }
