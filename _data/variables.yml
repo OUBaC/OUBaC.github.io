@@ -4,3 +4,7 @@ President:
 IT:
  name: Tom Johnston
  email: thomas.johnston@lmh.ox.ac.uk
+clubnight:
+ single: 5
+ term: 15
+ year: 40
