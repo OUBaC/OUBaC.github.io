@@ -1,7 +1,7 @@
 ---
 ---
 @import 'variables';
-$critical-value: 1149px;
+$critical-value: 600px;
 $print-critical-value: 360px; //This number has been chosen such that the table looks fine across most of the paper sizes in Chrome's print preview.
 
 .left{
@@ -25,6 +25,15 @@ $print-critical-value: 360px; //This number has been chosen such that the table 
 	border-left-width: 1px;
 	border-style: solid;
 	border-color: rgba($primary-colour,0.5)
+}
+
+.captain{
+	display: block;
+}
+
+.captains-table{
+	max-width: 900px;
+	white-space: nowrap;
 }
 
 @import 'responsive-table'

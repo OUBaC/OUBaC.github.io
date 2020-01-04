@@ -102,12 +102,11 @@ Colleges:
    img: worcester
    Captain: molly.willars@worc.ox.ac.uk
 ---
-<table cellspacing="0" cellpadding="0" class="responsive-table">
+<div class="centering">
+<table cellspacing="0" cellpadding="0" class="responsive-table captains-table">
 	<thead>
 		<th scope="col">College</th>
-		<th scope="col">Men's Team Captain</th>
-		<th scope="col">Ladies' Team Captain</th>
-    <th scope="col">Mixed Team Captain</th>
+		<th scope="col">Captains</th>
 	</thead>
 	{% for college in page.Colleges %}
 	<tr>
@@ -121,31 +120,13 @@ Colleges:
       {% if college.Captains %}
       <td data-title="Captains" colspan="3">
         {% for captain in college.Captains %}
-        <a href="mailto:{{captain}}">{{captain}}</a>
-          {% if forloop.last != true %}
-            <br>
-          {% endif %}
+        <a class="captain" href="mailto:{{captain}}">{{captain}}</a>
         {% endfor %}
         </td>
       {% elsif college.Captain %}
-      <td data-title="Captain" colspan="3"><a href="mailto:{{college.Captain}}">{{college.Captain}}</td>
-      {% else %}
-		{% if college.M == '--' %}
-			<td data-title="Men's Team Captain">--</td>
-		{% else %}
-		  <td data-title="Men's Team Captain"><a href="mailto:{{college.M}}">{{college.M}}</td>
-		{% endif %}
-		{% if college.W == '--' %}
-			<td data-title="Ladies' Team Captain" class="border">--</td>
-		{% else %}
-			<td data-title="Ladies' Team Captain" class="border"><a href="mailto:{{college.W}}">{{college.W}}</td>
-		{% endif %}
-    {% if college.X %}
-      <td data-title="Mixed Team Captain" class="border"><a href="mailto:{{college.X}}">{{college.X}}</td>
-    {% else %}
-      <td data-title="Mixed Team Captain" class="border">--</td>
-    {% endif %}
+        <td data-title="Captain" colspan="3"><a class="captain" href="mailto:{{college.Captain}}">{{college.Captain}}</td>
     {% endif %}
 	</tr>
 	{% endfor %}
 </table>
+</div>
