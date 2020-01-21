@@ -4,25 +4,56 @@ title: Sessions
 stylesheets:
 - /styles/sessions-styles.css
 
-term: Christmas Vacation 2019/2020 
+term: Hilary Term 2020 
 
-startDate: Thursday 2nd January
-endDate: Saturday 18th January
+startDate: Sunday 19th January
+endDate: Saturday 14th March
 
 sessions:
 - day: Monday
-  time: "21:00 - 22:30"
-  numberOfCourts: "4"
+  time: "13:30 - 15:00"
+  numberOfCourts: "2-4"
   location: "Iffley Road - Acer Nethercott"
   participantString: "Clubnight"
   participants:
   - Clubnight
+  exceptions:
+  - "College matches may take up to 2 courts."
+- day: Monday
+  time: "21:00 - 22:30"
+  numberOfCourts: "4"
+  location: "Iffley Road - Acer Nethercott"
+  participantString: "Squad"
+  participants:
   - M1
   - M2
   - M3
   - W1
   - W2
   exceptions:
+  - "See timetable"
+- day: Tuesday
+  time: "13:30 - 16:00"
+  numberOfCourts: "2-4"
+  location: "Iffley Road - Acer Nethercott"
+  participantString: "Clubnight"
+  participants:
+  - Clubnight
+  exceptions:
+  - "College matches may take up to 2 courts."
+- day: Tuesday
+  time: "18:30 - 20:30"
+  numberOfCourts: "4"
+  location: "Oxford Spires Academy"
+  participantString: "Squad"
+  participants:
+  - M1
+  - M2
+  - M3
+  - W1
+  - W2
+  exceptions:
+  - "See timetable"  
 - day: Wednesday
   time: "07:00 - 09:00"
   numberOfCourts: "4"
@@ -36,33 +67,104 @@ sessions:
   - W2
   - M3
 - day: Thursday
-  time: "21:00 - 22:30"
+  time: "06:30 - 08:30"
   numberOfCourts: "4"
-  location: "Iffley Road - Acer Nethercott"
-  participantString: "Clubnight"
+  location: "Iffley Road - Old Hall"
+  participantString: "Squad and Development Squad"
   participants:
-  - Clubnight
   - M1
   - M2
   - M3
   - W1
   - W2
   exceptions:
+  - "See timetable"
+- day: Thursday
+  time: "20:30 - 22:30"
+  numberOfCourts: "3"
+  location: "Iffley Road - Old Hall"
+  participantString: "Clubnight"
+  participants:
+  - Clubnight
+  exceptions:
+- day: Friday
+  time: "19:00 - 21:00"
+  numberOfCourts: "4"
+  location: "St Gregory the Great School"
+  participantString: "Squad"
+  participants:
+  - M1
+  - M2
+  - M3
+  - W1
+  - W2
+  exceptions:
+  - "See timetable"
+- day: Friday
+  time: "21:00 - 22:30"
+  numberOfCourts: "3"
+  location: "Iffley Road - Old Hall"
+  participantString: "Squad"
+  participants:
+  - M1
+  - M2
+  - M3
+  - W1
+  - W2
+  exceptions:
+  - "See timetable"
 - day: Saturday
-  time: "15:30 - 17:30"
+  time: "07:00 - 08:30"
+  numberOfCourts: 4
+  location: "Iffley Road - Old Nethercott"
+  participantString: "M1"
+  participants:
+  - M1
+  exceptions:
+  - "See timetable"
+- day: Saturday
+  time: "14:00 - 15:30"
   numberOfCourts: 4
   location: "Iffley Road - Acer Nethercott"
   participantString: "Clubnight"
   participants:
   - Clubnight
-  - M1
+  exceptions:
+  - "Only on 25th January, 8th February, 7th March"
+- day: Saturday
+  time: "18:30 - 20:00"
+  numberOfCourts: 4
+  location: "Magdalen College School"
+  participantString: "W1 and W2"
+  participants:
   - W1
-  - M2
   - W2
+  exceptions:
+  - "29th February - Squad"
+  - "14th March - Not on"
+- day: Saturday
+  time: "20:00 - 21:30"
+  numberOfCourts: 4
+  location: "Magdalen College School"
+  participantString: "M2 and M3"
+  participants:
+  - M2
   - M3
   exceptions:
-  - "11th January - Not on"
-  - "18th January - Additional session - 13:00 - 15:30 - Old Hall"
+  - "29th February - Squad"
+  - "14th March - Not on"
+- day: Sunday
+  time: "12:30 - 14:30"
+  numberOfCourts: 4
+  location: "Iffley Road - Old Hall"
+  participantString: "Clubnight"
+  participants:
+  - Clubnight
+  exceptions:
+  - "2nd February - 12:00-13:30"
+  - "9th February - Not on"
+  - "1st March - Not on"
+  - "8th March - Not on"
 ---
 <script>
 
@@ -195,6 +297,8 @@ function toggleSessions(team, checked){
         <div id="indicator"></div>
         <h3 id="initialSelector" class="location-option selected" onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJa__vp0zBdkgRtBpLdcJmdHQ&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',1)">Iffley Road</h3>
         <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJFcgu6rLGdkgRpnOlZeXjFyo&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',2)">Magdalen College School</h3>
+        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJudv5UD_BdkgR7EXDP25ZylE&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',3)">St Gregory the Great Catholic School</h3>
+        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJzX_QUDBdkgR2b5dJjIhGr4&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',4)">Oxford Spires Academy</h3>
       </div>
       <div id="map-container">
         <div id="loading" class="loading"></div>
@@ -202,7 +306,7 @@ function toggleSessions(team, checked){
       </div>
     </div>
   </div>
-
+  <iframe src="" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
   <script>
 
   var oldElement = document.getElementById("initialSelector");
