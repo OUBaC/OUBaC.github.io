@@ -45,9 +45,9 @@ stylesheets:
   {% assign last_year_hash = results | last %}
   {% assign last_year = last_year_hash[0] %}
 
-  <h3 id="stats-title">Stats <span id="starting-year">{{first_year}}</span> - {{last_year}}</h3>
+  <h3 id="stats-title">Stats <span id="starting-year">1994</span> - {{last_year}}</h3>
   <div style="width: 100%; position: relative; font-size: 0; margin: 10px 0;">
-    <input id="input" class="input-range" type="range" value="{{first_year}}" min="{{first_year}}" max="{{last_year}}" oninput="sliderMoved(this.value)">
+    <input id="input" class="input-range" type="range" value="1994" min="{{first_year}}" max="{{last_year}}" oninput="sliderMoved(this.value)">
     <div id="track-highlighter" class="track-highlighter"></div>
   </div>
   <div id="stats-container" style="position: relative; text-align: center;">
@@ -391,5 +391,5 @@ stylesheets:
       }
       update(e);
     }
-    document.addEventListener('load', sliderMoved({{first_year}}))
+    document.addEventListener('DOMContentLoaded', sliderMoved(1994))
     </script>
