@@ -1,8 +1,3 @@
----
-title: The Committee 2018-2019
-
-stylesheets:
- - /styles/committee-styles.css
 members:
  - role: President
    name: Michelle Luo
@@ -90,7 +85,3 @@ I think I speak for the club when I say I love Tom Hadfield."
    email: michael.platt@jesus.ox.ac.uk
    comment: "Fresh off completing an open water charity swimathon, Michael will be looking to put those skills to good use to avoid drowning in paperwork as the new L&C Secretary! A third year chemist at Jesus College, Michael's duties include nagging college captains to get their league matches played and conducting the draws for the cuppers competitions."
    photo: "/assets/the-committee/2018-2019/michael.jpg"
-
-
----
-{% include committee.html %}

@@ -1,8 +1,3 @@
----
-title: The Committee 2015-2016
-
-stylesheets:
- - /styles/committee-styles.css
 members:
  - role: President
    name: Joe Skornia
@@ -94,6 +89,3 @@ members:
    comment: Looking for something to do between playing badminton and trips to the pub, Tom, a 3rd year mathematician at LMH, has taken up the role of IT Officer.  A strong critic of websites cutting corners and missing the small details, it will be interesting to see how he fares when he has to maintain one himself.
    photo: /assets/the-committee/2015-2016/Tom.png
    alt: Tom Johnston
-
----
-{% include committee.html %}

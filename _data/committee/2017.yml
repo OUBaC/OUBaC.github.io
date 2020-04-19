@@ -1,8 +1,3 @@
----
-title: The Committee 2017-2018
-
-stylesheets:
- - /styles/committee-styles.css
 members:
  - role: President
    name: Jun-An Tan
@@ -88,7 +83,3 @@ members:
    email: scott.frazer@some.ox.ac.uk
    comment:
    photo: "/assets/the-committee/2017-2018/scott.jpg"
-
-
----
-{% include committee.html %}

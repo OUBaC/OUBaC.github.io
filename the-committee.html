@@ -3,94 +3,43 @@ title: The Committee
 
 stylesheets:
  - /styles/committee-styles.css
-
-members:
- - role: President
-   name: Andrew Zhu
-   email: andrew.zhu@magd.ox.ac.uk
-   comment: "After narrowly missing out on the title of OUBaC’s biggest liability, Andrew, a third year chemist, is taking on the role of OUBaC’s most liable. Known on-court for his reverse-slice-dropshots and off-court for talking about his reverse-slice-dropshots, Andrew will be working hard as President to help the club excel, and to pilfer some of whatever you are eating."
-   photo: "/assets/the-committee/2019-2020/andrew.jpg"
-
- - roles:
-     - Vice President
-     - League and Cupper Secretary
-   name: Anuj Doshi
-   email: anuj.doshi@exeter.ox.ac.uk
-   comment: ""
-   photo: "/assets/the-committee/2019-2020/anuj.jpg"
-
- - roles:
-    - Treasurer
-    - IT Officer
-   name: Tom Johnston
-   email: thomas.johnston@lmh.ox.ac.uk
-   comment: "With his 7th (yes, 7th) year at Oxford now well underway, Tom is continuing his quest to occupy every OUBaC committee position before he heads off into the real world. As a Maths DPhil student, and therefore presumably the owner of a calculator, the club can have confidence that the accounts will prosper under his watchful eye. On court, Tom employs a cautious style which is as effective as it is tedious, whilst off court he can usually be found using yeast to make his two favourite things: Bread and Beer."
-   photo: ""
-
- - role: Secretary
-   name: Matt Brint
-   email: matthew.brint@st-annes.ox.ac.uk
-   comment: ""
-   photo: ""
-
- - role: Men's 1st Team Captain
-   name: Sam Wilson
-   email: samuel.wilson@spc.ox.ac.uk
-   comment: "Sam Wilson, a 2nd year physicist at Peter’s, is the M1 captain this year. Sam immediately gained popularity within OUBaC in his first year when he showed us his dedication, his grit, and most importantly, his abdominal muscles. Sam will attempt to lead M1 through the minefield that this the BUCS Southern Prem, as he seeks victories against other against Universities, and moral victories against Bath. A genuinely lovely guy, he can always be relied on for a good chat. Just be careful to not get him started on talking about his favourite food: eggs! He sometimes even brings them on nights out with him."
-   photo: "/assets/the-committee/2019-2020/sam.jpg"
-
- - role: Women's 1st Team Captain
-   name: Eugenia Yeo
-   email: eugenia.yeo@balliol.ox.ac.uk
-   comment: "Coming to the club from Singapore via California and Minnesota is Eugenia, a second year MPhil student in International Relations. Following on from W1’s league-and-cup-and-varsity winning campaign last year, she faces a greater challenge this term than has ever been faced by an Oxford captain: Persuading W1 to turn up to 06:30AM training sessions. Nevertheless, armed with superb organisational skills and a bewilderingly fast net game, we can have confidence that Eugenia will do a stellar job of leading W1 (those of them who turn up, at least) this season."
-   photo: "/assets/the-committee/2019-2020/eugenia.jpg"
-
- - role: Men's 2nd team Captain
-   name: Josh McColgan
-   email: joshua.mccolgan@seh.ox.ac.uk
-   comment: "A third year Biomed student at Teddy Hall and the youngest member of last year's M2 squad, Josh will no doubt be well placed to advise his experienced (read: geriatric) charges on how to best recover from the succession of injuries which are waiting for them. Mortally allergic to emails, facebook messages and written communications of any kind, it will be interesting to see how he handles the greatest opponent of any BUCS captain: a moderate amount of paperwork. Apart from trivial administrative concerns, Josh, equipped with the best backhand in Oxford and a serve which could scarcely be less legal, is ideally placed to lead M2 to great things this season (just so long as he doesn't get us promoted!)."
-   photo: "/assets/the-committee/2019-2020/josh.jpg"
-
- - role: Women's 2nd Team Captain
-   name: Wendy Tsai
-   email: chia-hsin.tsai@univ.ox.ac.uk
-   comment: ""
-   photo: "/assets/the-committee/2019-2020/wendy.jpg"
-
- - role: Men's 3rd Team Captain
-   name: Hugo Carranza Singleton
-   email: victor.carranzasingleton@oriel.ox.ac.uk
-   comment: "Hugo, a 2nd year Medic from Oriel, is a strong and stable character who faces the daunting task of whipping M3 into shape ahead of next year. His undeniable endurance both on and off-court is sure to set a sound example for all members of the squad to follow. Having as much success in Varsity as the local league matches, Hugo has only one task on his mind: win a rubber! Let’s hope he manages this and much more in the year to come..."
-   photo: "/assets/the-committee/2019-2020/hugo.jpg"
-
- - role: Mixed Team Captain
-   name: Pippa Sinclair
-   email: philippa.sinclair@wadham.ox.ac.uk
-   comment: ""
-   photo: "/assets/the-committee/2019-2020/pippa.jpg"
-
- - role: Alumni Rep
-   name: Sabrina Wang
-   email: yue.wang@mansfield.ox.ac.uk
-   comment: "After sitting on a table with basically no alumni and leaving the Annual Dinner early, Sabrina, a second year DPhil student, is the perfect candidate for Alumni Rep. Her main challenges this year will be organising the Annual Dinner and keeping the alumni informed of the club’s victories (and maybe occasionally our losses as well)."
-   photo: "/assets/the-committee/2019-2020/sabrina.jpg"
-
- - role: Entz Reps
-   name: Tom Hadfield, Pippa Sinclair &amp; Eugenia Yeo
-   emails:
-   - thomas.hadfield@exeter.ox.ac.uk
-   - philippa.sinclair@wadham.ox.ac.uk
-   - eugenia.yeo@balliol.ox.ac.uk
-   comment: ""
-   photo: ""
-
- - role: Clubnight Directors
-   name: Michael Platt &amp; Diarmid Xu
-   emails:
-   - michael.platt@jesus.ox.ac.uk
-   - diarmid2008@hotmail.com
-   comment: ""
-   photo: ""
-
 ---
-{% include committee.html %}
+{% assign committee_hash = site.data.committee | sort | last %}
+{% assign committee = committee_hash[1] %}
+<div id="committee-cards-container">
+  {% for member in committee.members %}
+  <div class="card role-container-new">
+    <div class="photo-section-container">
+      <div class="photo-container" style="background-image: url({{member.photo}});">
+      </div>
+      <div class="comment-container" >
+        <p class="comment">
+        {{member.comment}}
+        </p>
+      </div>
+    </div>
+      <h2 class="role-name">{{member.name}}</h2>
+      {% if member.role %}
+      <h3>{{member.role}}</h3>
+      {% elsif member.roles %}
+        {% for role in member.roles %}
+          {% if forloop.last == false %}
+            <h3 style="margin-bottom: 0px">{{role}}</h3>
+          {% else %}
+            <h3>{{role}}</h3>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      {% if member.email %}
+        <a href="mailto:{{member.email}}">{{member.email}}</a>
+      {% endif %}
+  
+      {% if member.emails %}
+        {% for email in  member.emails %}
+          <a href="mailto:{{email}}">{{email}}</a>
+        {% endfor %}
+      {% endif %}
+    </div>
+  {% endfor %}
+  </div>
+  

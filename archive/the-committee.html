@@ -1,0 +1,48 @@
+---
+title: The Previous Committees
+
+stylesheets:
+ - /styles/committee-styles.css
+---
+{% assign committees = site.data.committee | sort  %}
+{% for committee_hash in committees reversed %}
+{% assign committee = committee_hash[1] %}
+<h2>The Committee {{committee_hash[0]}}-{{committee_hash[0] | plus: 1}}</h2>
+<div id="committee-cards-container">
+  {% for member in committee.members %}
+  <div class="card role-container-new">
+    <div class="photo-section-container">
+      <div class="photo-container" style="background-image: url({{member.photo}});">
+      </div>
+      <div class="comment-container" >
+        <p class="comment">
+        {{member.comment}}
+        </p>
+      </div>
+    </div>
+      <h2 class="role-name">{{member.name}}</h2>
+      {% if member.role %}
+      <h3>{{member.role}}</h3>
+      {% elsif member.roles %}
+        {% for role in member.roles %}
+          {% if forloop.last == false %}
+            <h3 style="margin-bottom: 0px">{{role}}</h3>
+          {% else %}
+            <h3>{{role}}</h3>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      {% if member.email %}
+        <a href="mailto:{{member.email}}">{{member.email}}</a>
+      {% endif %}
+  
+      {% if member.emails %}
+        {% for email in  member.emails %}
+          <a href="mailto:{{email}}">{{email}}</a>
+        {% endfor %}
+      {% endif %}
+    </div>
+  {% endfor %}
+  </div>
+  {% endfor %}
+  
