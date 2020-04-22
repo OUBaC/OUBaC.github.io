@@ -40,7 +40,7 @@ javascript:
 				<h2 style="color: #002147; font-size:40px;">Latest <br> News</h3>
 				</div>
 				<div id="latest-news-card-container">
-					{% for post in site.posts limit: 3 %}
+					{% for post in site.posts limit: 1 %}
 					<a href="{{post.url}}" class="card latest-news-card"><div>
 						<h3>{{post.title}}</h3>
 						<p>{{post.excerpt}}</p>
