@@ -1,0 +1,95 @@
+members:
+ - role: President
+   name: Freya Lambert
+   email: freya.lambert@univ.ox.ac.uk
+   comment: "Freya, a second year classicist at Univ, has the all consuming task of leading O.U.Ba.C to greater successes this year. She has had a very busy first year with the club, throwing herself into training , social events and leading baking sessions for the squad; all of which has culminated in a bitter, bitter rivalry with Pippa for 'best mum' of the club. With a steely attention to detail and excellent organisational skills, I'm sure she'll thrive in her new role, whilst ensuring she still has time to bake chocolate brownies for me to pilfer."
+   photo: "/assets/the-committee/2020-2021/freya1.jpg"
+
+ - roles:
+     - Vice President
+     - Alumni Rep
+   name: Tom Hadfield
+   email: thomas.hadfield@exeter.ox.ac.uk
+   comment: ""
+   photo: "/assets/the-committee/2019-2020/anuj.jpg"
+
+ - role: Treasurer 
+   name: Alex Liu
+   email: 	alexander.liu@wadham.ox.ac.uk
+   comment: "With his 7th (yes, 7th) year at Oxford now well underway, Tom is continuing his quest to occupy every OUBaC committee position before he heads off into the real world. As a Maths DPhil student, and therefore presumably the owner of a calculator, the club can have confidence that the accounts will prosper under his watchful eye. On court, Tom employs a cautious style which is as effective as it is tedious, whilst off court he can usually be found using yeast to make his two favourite things: Bread and Beer."
+   photo: ""
+
+ - role: Secretary
+   name: Matt Brint
+   email: matthew.brint@st-annes.ox.ac.uk
+   comment: ""
+   photo: ""
+
+ - role: Men's 1st Team Captain
+   name: Sam Wilson
+   email: samuel.wilson@spc.ox.ac.uk
+   comment: "Sam is a third year physicist at St Peter's (I'd never heard of it either) who enjoyed being M1 captain so much that he decided to reprise his role for a second year. A skilled man-manager, minibus driver and the only living person who knows how to operate the BUCS Play App, Sam is the man tasked with leading M1 to BUCS Premier glory (read: mid table mediocrity) and retaining the varsity trophy in 2021. Having recently become vegan, he will be working to ensure that both his diet and score sheets are devoid of eggs for the foreseeable future; experience shows that can be easier said than done!"
+   photo: "/assets/the-committee/2020-2021/sam.jpg"
+
+ - role: Women's 1st Team Captain
+   name: Sophie Taylor
+   email: sophie.taylor2@worc.ox.ac.uk
+   comment: "Coming to the club from Singapore via California and Minnesota is Eugenia, a second year MPhil student in International Relations. Following on from W1’s league-and-cup-and-varsity winning campaign last year, she faces a greater challenge this term than has ever been faced by an Oxford captain: Persuading W1 to turn up to 06:30AM training sessions. Nevertheless, armed with superb organisational skills and a bewilderingly fast net game, we can have confidence that Eugenia will do a stellar job of leading W1 (those of them who turn up, at least) this season."
+   photo: "/assets/the-committee/2019-2020/eugenia.jpg"
+
+ - role: Men's 2nd team Captain
+   name: Josh McColgan
+   email: joshua.mccolgan@seh.ox.ac.uk
+   comment: "A third year Biomed student at Teddy Hall and the youngest member of last year's M2 squad, Josh will no doubt be well placed to advise his experienced (read: geriatric) charges on how to best recover from the succession of injuries which are waiting for them. Mortally allergic to emails, facebook messages and written communications of any kind, it will be interesting to see how he handles the greatest opponent of any BUCS captain: a moderate amount of paperwork. Apart from trivial administrative concerns, Josh, equipped with the best backhand in Oxford and a serve which could scarcely be less legal, is ideally placed to lead M2 to great things this season (just so long as he doesn't get us promoted!)."
+   photo: "/assets/the-committee/2019-2020/josh.jpg"
+
+ - role: Women's 2nd Team Captain
+   name: Sampada Venkatesh
+   email: sampada.venkatesh@ccc.ox.ac.uk
+   comment: ""
+   photo: "/assets/the-committee/2020-2021/sampada2.jpeg"
+
+ - role: Men's 3rd Team Captain
+   name: Yuhang Song
+   email: yuhang.song@some.ox.ac.uk
+   comment: "Hugo, a 2nd year Medic from Oriel, is a strong and stable character who faces the daunting task of whipping M3 into shape ahead of next year. His undeniable endurance both on and off-court is sure to set a sound example for all members of the squad to follow. Having as much success in Varsity as the local league matches, Hugo has only one task on his mind: win a rubber! Let’s hope he manages this and much more in the year to come..."
+   photo: "/assets/the-committee/2019-2020/hugo.jpg"
+
+ - role: Mixed Team Captain
+   name: Pippa Sinclair
+   email: philippa.sinclair@wadham.ox.ac.uk
+   comment: ""
+   photo: "/assets/the-committee/2019-2020/pippa.jpg"
+
+ - role: IT Officer
+   name: Lucien Mulberg
+   email: lucien.mulberg@spc.ok.ac.uk
+   comment: "An absolutely amazing guy"
+   photo: "/assets/the-committee/2019-2020/sabrina.jpg"
+
+ - role: Entz Reps
+   name: Becky Xia & Lucien Mulberg
+   emails:
+   - rebecca.xia@new.ox.ac.uk
+   - lucien.mulberg@spc.ox.ac.uk
+   comment: "Taking the helm as purveyors of organised fun, Becky and Lucien are both second years who can boast an excellent, and mostly incident free, record at socials throughout their first year. Their election marks a dramatic (and welcome) reduction in the average age of the Entz team, prompting speculation that the club will be transitioning from Brunch to Bridge for its staple social activities! Their main duties this year are to help ensure that the club remains a welcoming and friendly place to be and organise the Annual and Varsity Dinners. Pizza Express, anyone?!"
+   photo: "/assets/the-committee/2020-2021/entz.jpg"
+  
+ - role: Welfare reps 
+   name: Pippa Sinclair & Siam Rahman
+   emails:
+    - philippa.sinclair@wadham.ox.ac.uk
+    - siam.rahman@trinity.ox.ac.uk 
+   comment: ""
+   photo: ""
+
+ 
+ - role: Clubnight Director
+   name: Michael Platt 
+   email: michael.platt@jesus.ox.ac.uk
+   comment: ""
+   photo: "/assets/the-committee/2020-2021/michael.jpeg"
+
+
+
+
