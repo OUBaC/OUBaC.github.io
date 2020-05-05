@@ -76,13 +76,6 @@ ul{
 
 li{
 	padding: 5px;
-
-	a{
-		box-sizing: border-box;
-		display: block;
-		height: 100%;
-		width: 100%;
-	}
 }
 
 h1{
@@ -561,6 +554,10 @@ li:hover > .drop-down-menu{
 
 	a{
 		color: inherit;
+		box-sizing: border-box;
+		display: block;
+		height: 100%;
+		width: 100%;
 		padding: $side-nav-vertical-padding $side-nav-horizontal-padding;
 	}
 }
