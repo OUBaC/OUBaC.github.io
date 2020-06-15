@@ -85,14 +85,18 @@
   width: 390px;
 }
 
-
+.committee-description-toggle{
+  position: absolute;
+  left: -9999px;
+  visibility: hidden;
+}
 
 .role-container-new:hover{
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
-.role-container-new:hover .comment-container{
+.role-container-new:hover .comment-container, input:checked ~ .photo-section-container .comment-container{
   visibility: visible;
 }
-.role-container-new:hover .photo-container{
+.role-container-new:hover .photo-container,  input:checked ~ .photo-section-container .photo-container{
   opacity: 0.5;
 }
