@@ -1,0 +1,23 @@
+---
+---
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+.custom-list li {
+    position: relative;
+    padding-left: 30px;
+}
+.custom-list li:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-image: url('/assets/shuttle-black.svg');
+    background-size: cover;
+    background-position: center;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
