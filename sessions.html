@@ -4,14 +4,83 @@ title: Sessions
 stylesheets:
 - /styles/sessions-styles.css
 
-term: Easter Vacation 2020 
+term: Michelmas 2020
 
-startDate: Sunday 15th March
-endDate: Saturday 25th March
+startDate: Sunday 11th October
+endDate: Saturday 5th December
 
-pleaseNote: "Please note the sports is centre is closed from Friday 10th April to Monday 13th April."
+pleaseNote: "Please note that each team will be allocated specific Squad sessions soon."
 
 sessions:
+- day: Monday
+  time: "17:45-18:45" 
+  location: "Iffley Road - Acer Nethercott"
+  participantString: "Clubnight"
+  participants:
+  - Clubnight
+
+- day: Monday
+  time: "18:00-19:30"
+  location: "St Gregory the Great Catholic School"
+  participantString: "Squad"
+
+- day: Monday
+  time: "19:30-21:00"
+  location: "St Gregory the Great Catholic School"
+  participantString: "Squad"
+
+- day: Tuesday
+  time: "11:30-13:15"
+  location: "Iffley Road - Acer Nethercott"
+  participantString: "Squad"
+
+- day: Tuesday
+  time: "17:30-19:30"
+  location: "St Gregory the Great Catholic School"
+  participantString: "Squad"
+ 
+- day: Wednesday
+  time: "19:00-20:00"
+  location: "Iffley Road - Acer Nethercott"
+  participantString: "Squad"
+
+- day: Wednesday
+  time: "19:00-20:00"
+  location: "Iffley Road - Acer Nethercott"
+  participantString: "Clubnight"
+  participants:
+  - Clubnight
+
+- day: Friday
+  time: "16:45-15:45"
+  location: "Iffley Road - Acer Nethercott"
+  participantString: "Squad"
+
+- day: Saturday
+  time: "11:15-12:15"
+  location: "Iffley Road - Acer Nethercott"
+  participantString: "Clubnight"
+  participants:
+  - Clubnight
+  
+- day: Saturday
+  time: "15:00-16:30"
+  location: "St Gregory the Great Catholic School"
+  participantString: "Squad"
+
+- day: Saturday 
+  time: "16:30-18:00"
+  location: "St Greogry the Great Catholic School"
+  participantString: "Squad"
+
+
+
+
+
+
+
+
+
 ---
 <script>
 
@@ -118,11 +187,11 @@ function toggleSessions(team, checked){
       <tr>
         <td>Location:</td><td> {{session.location}}</td>
       </tr>
-      <tr>
+     <!--  <tr>
         <td>Number of Courts:</td><td>{{session.numberOfCourts}}</td>
-      </tr>
-      <tr>
-        <td>Notes:</td><td></td>
+      </tr> -->
+      <!-- <tr>
+        <td>Notes:</td><td></td> -->
     </table>
     <ul class="sessions-exceptions-list">
       {% for exception in session.exceptions %}
@@ -143,9 +212,7 @@ function toggleSessions(team, checked){
       <div id="tabs-container">
         <div id="indicator"></div>
         <h3 id="initialSelector" class="location-option selected" onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJa__vp0zBdkgRtBpLdcJmdHQ&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',1)">Iffley Road</h3>
-        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJFcgu6rLGdkgRpnOlZeXjFyo&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',2)">Magdalen College School</h3>
-        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJudv5UD_BdkgR7EXDP25ZylE&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',3)">St Gregory the Great Catholic School</h3>
-        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJzX_QUDBdkgR2b5dJjIhGr4&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',4)">Oxford Spires Academy</h3>
+        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJudv5UD_BdkgR7EXDP25ZylE&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',2)">St Gregory the Great Catholic School</h3>
       </div>
       <div id="map-container">
         <div id="loading" class="loading"></div>
