@@ -107,17 +107,18 @@ sessions:
 ---
 <script>
 
-var sessionsToShow = ['Clubnight','M1','M2','M3','W1','W2','placeholder'];
+var sessionsToShow = ['Clubnight','M1','M2','M3','W1','W2','Dev','placeholder'];
 
 function toggleAllSessions(){
   var toggles = [];
-  var options = ['Clubnight','M1','M2','M3','W1','W2'];
+  var options = ['Clubnight','M1','M2','M3','W1','W2','Dev'];
   toggles.push(document.getElementById("clubnight-checkbox"));
   toggles.push(document.getElementById("m1-checkbox"));
   toggles.push(document.getElementById("m2-checkbox"));
   toggles.push(document.getElementById("m3-checkbox"));
   toggles.push(document.getElementById("w1-checkbox"));
   toggles.push(document.getElementById("w2-checkbox"));
+  toggles.push(document.getElementById("dev-checkbox"))
   var elem = document.getElementById("toggle-all");
   var i;
   if (sessionsToShow.length > 1){
@@ -188,8 +189,8 @@ function toggleSessions(team, checked){
   <label for="w1-checkbox">W1</label>
   <input type="checkbox" id="w2-checkbox" onchange="toggleSessions('W2',this.checked)"checked="checked"/>
   <label for="w2-checkbox">W2</label>
-  <input type="checkbox" id="w2-checkbox" onchange="toggleSessions('W2',this.checked)"checked="checked"/>
-  <label for="w2-checkbox">Dev</label>
+  <input type="checkbox" id="dev-checkbox" onchange="toggleSessions('Dev',this.checked)"checked="checked"/>
+  <label for="dev-checkbox">Dev</label>
   <button id="toggle-all" class="button-small" onclick="toggleAllSessions(this)">HIDE ALL</button>
 </div>
 <div id="sessions-container" style="display: flex;">
