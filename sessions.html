@@ -23,21 +23,36 @@ sessions:
   time: "18:00-19:30"
   location: "St Gregory the Great Catholic School"
   participantString: "Squad"
+  participants:
+  - M2
+  - M3
 
 - day: Monday
   time: "19:30-21:00"
   location: "St Gregory the Great Catholic School"
   participantString: "Squad"
+  participant:
+  - M1
+  - W1
 
 - day: Tuesday
   time: "11:45-13:30"
   location: "Iffley Road - Acer Nethercott"
   participantString: "Squad"
+  participants:
+  - M1
+  - W1
+  - M2
+  - W2
+  - M3
 
 - day: Tuesday
   time: "17:30-19:30"
   location: "St Gregory the Great Catholic School"
   participantString: "Squad"
+  participants:
+  - W2
+  - M3
  
 - day: Wednesday
   time: "19:15-20:15"
@@ -50,6 +65,12 @@ sessions:
   time: "17:00-18:00"
   location: "Iffley Road - Acer Nethercott"
   participantString: "Squad"
+  participants:
+  - M1
+  - W1
+  - M2
+  - W2
+  - M3
 
 - day: Saturday
   time: "11:30-12:30"
@@ -62,11 +83,17 @@ sessions:
   time: "15:00-16:30"
   location: "St Gregory the Great Catholic School"
   participantString: "Squad"
+  participants:
+  - W1
+  - W2
 
 - day: Saturday 
   time: "16:30-18:00"
   location: "St Greogry the Great Catholic School"
   participantString: "Squad"
+  participants:
+  - M1
+  - M2
 
 
 
@@ -146,7 +173,7 @@ function toggleSessions(team, checked){
 </script>
 
 <h2>Sessions - {{page.term}}</h2>
-<p>Please note that each team will be allocated specific Squad sessions soon.</p>
+<p><strong>Please note that to attend any session you must have previsouly booked.</strong> For Clubnight please book through <a href="https://www.teamapp.com/clubs/540849?_webpage=v1">Team App</a>. For Squad players please put your name on the spreadsheet that has been shared.</p>
 <div id="checkboxes">
   <input type="checkbox" id="clubnight-checkbox" onchange="toggleSessions('Clubnight',this.checked)" checked="checked" />
   <label for="clubnight-checkbox">Clubnight</label>
