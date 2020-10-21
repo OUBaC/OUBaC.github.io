@@ -71,6 +71,7 @@ sessions:
   - M2
   - W2
   - M3
+  - Dev
 
 - day: Saturday
   time: "11:30-12:30"
@@ -187,6 +188,8 @@ function toggleSessions(team, checked){
   <label for="w1-checkbox">W1</label>
   <input type="checkbox" id="w2-checkbox" onchange="toggleSessions('W2',this.checked)"checked="checked"/>
   <label for="w2-checkbox">W2</label>
+  <input type="checkbox" id="w2-checkbox" onchange="toggleSessions('W2',this.checked)"checked="checked"/>
+  <label for="w2-checkbox">Dev</label>
   <button id="toggle-all" class="button-small" onclick="toggleAllSessions(this)">HIDE ALL</button>
 </div>
 <div id="sessions-container" style="display: flex;">
