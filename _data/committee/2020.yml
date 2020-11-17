@@ -7,11 +7,11 @@ members:
 
  - roles:
      - Vice President
-     - Alumni Rep
-   name: Tom Hadfield
-   email: thomas.hadfield@exeter.ox.ac.uk
-   comment: "Tom is a 3rd Year DPhil Statistician, and our resident fact checker. Be it the constitution, BWF regulations, or who won the Thomas Cup in 2002, Tom’s got you covered. Hailing from Bath University (I presume), Tom is known to always give it his all, whether it is on court, on the bevs, or on the post night out chips. Armed with the experience of the MCRs political drama, and plenty of ideas for the coming year; the squad is sure to prosper under his watchful eye."
-   photo: "/assets/the-committee/2020-2021/tomh.jpg"
+     - IT Officer
+   name: Lucien Mulberg
+   email: lucien.mulberg@spc.ox.ac.uk
+   comment: "Equalling the club record of 3 concurrently held committee positions, Lucien, a second year Physicist, has wasted little time in concentrating power in his youthful hands. Such an agglomeration of responsibilities has led some in the club to question how exactly he will find time to focus on his problem sheets, and more importantly, his doubles serve! A keen Arsenal supporter, Lucien presumably came to terms long ago with the fact that he might never again celebrate clinching a Premiership title. While that looks unlikely to change for the time being, in both Football and Badminton, his strong BUCS performances for M1 last season helped the team finish comfortably inside the top 4, highly unfamiliar territory indeed for a Gooner!"
+   photo: "/assets/the-committee/2020-2021/lucien.jpg"
 
  - role: Treasurer 
    name: Alex Liu
@@ -60,12 +60,6 @@ members:
    email: ian.ho@wadham.ox.ac.uk
    comment: "As unconventional as it might be, it's hard to argue with Ian's patented 'you only have to start trying in February' philosophy, as he backed up a Full Blue-earning run at BUCS Individuals with a dominant performance in the varsity match, winning all four of his matches. Ian's penchant for last-minute preparation won fewer admirers in the club when it came to organising matches in his first season in charge of the mixed team, with the words 'I forgot we had a mixed match tonight, who can play?' appearing in group chats on a fortnightly basis. His agreement to return to the role sparked confusion in many quarters, with some commentators pointing to blackmail as the likely cause."
    photo: "/assets/the-committee/2020-2021/ian.jpg"
-
- - role: IT Officer
-   name: Lucien Mulberg
-   email: lucien.mulberg@spc.ox.ac.uk
-   comment: "Keen to learn the ways of the web, Lucien, a 2nd year physicist, has become OUBaC’s latest IT Officer. His main objectives this year are to grow OUBaC’s loyal social media fan base, keep the club connected in lockdown and win a game of doubles at Varsity. When he isn’t playing badminton, Lucien can be found trying (in vain) to convince the porters to let the club into St Peter’s bar. "
-   photo: "/assets/the-committee/2020-2021/lucien.jpg"
 
  - role: Entz Reps
    name: Becky Xia & Lucien Mulberg
