@@ -588,13 +588,18 @@ li:hover > .drop-down-menu{
 	color: #fff;
 }
 
-#side-nav-social-links{
+.side-nav-social-links{
 	-webkit-align-self: flex-end;
 	-ms-flex-item-align: end;
 	align-self: flex-end;
 	padding: $side-nav-vertical-padding 0;
 	text-align: center;
 	width: 100%;
+}
+
+.side-nav-social-links .social-logo{
+	padding-left: 7.5px;
+	padding-right: 7.5px;
 }
 
 #small-grey-out	{

@@ -4,28 +4,121 @@ title: Sessions
 stylesheets:
 - /styles/sessions-styles.css
 
-term: Easter Vacation 2020 
+term: Michelmas 2020
 
-startDate: Sunday 15th March
-endDate: Saturday 25th March
+startDate: Sunday 11th October
+endDate: Saturday 5th December
 
-pleaseNote: "Please note the sports is centre is closed from Friday 10th April to Monday 13th April."
+
 
 sessions:
+- day: Monday
+  time: "17:45-18:45" 
+  location: "Iffley Road - Acer Nethercott"
+  participantString: "Clubnight"
+  participants:
+  - Clubnight
+
+- day: Monday
+  time: "18:00-19:30"
+  location: "St Gregory the Great Catholic School"
+  participantString: "Squad"
+  participants:
+  - M2
+  - M3
+
+- day: Monday
+  time: "19:30-21:00"
+  location: "St Gregory the Great Catholic School"
+  participantString: "Squad"
+  participant:
+  - M1
+  - W1
+
+- day: Tuesday
+  time: "11:45-13:30"
+  location: "Iffley Road - Acer Nethercott"
+  participantString: "Squad"
+  participants:
+  - M1
+  - W1
+  - M2
+  - W2
+  - M3
+
+- day: Tuesday
+  time: "17:30-19:30"
+  location: "St Gregory the Great Catholic School"
+  participantString: "Squad"
+  participants:
+  - W2
+  - M3
+ 
+- day: Wednesday
+  time: "19:15-20:15"
+  location: "Iffley Road - Acer Nethercott"
+  participantString: "Clubnight"
+  participants:
+  - Clubnight
+
+- day: Friday
+  time: "17:00-18:00"
+  location: "Iffley Road - Acer Nethercott"
+  participantString: "Squad"
+  participants:
+  - M1
+  - W1
+  - M2
+  - W2
+  - M3
+  - Dev
+
+- day: Saturday
+  time: "11:30-12:30"
+  location: "Iffley Road - Acer Nethercott"
+  participantString: "Clubnight"
+  participants:
+  - Clubnight
+  
+- day: Saturday
+  time: "15:00-16:30"
+  location: "St Gregory the Great Catholic School"
+  participantString: "Squad"
+  participants:
+  - W1
+  - W2
+
+- day: Saturday 
+  time: "16:30-18:00"
+  location: "St Greogry the Great Catholic School"
+  participantString: "Squad"
+  participants:
+  - M1
+  - M2
+
+
+
+
+
+
+
+
+
 ---
 <script>
 
-var sessionsToShow = ['Clubnight','M1','M2','M3','W1','W2','placeholder'];
+var sessionsToShow = ['Clubnight','M1','M2','M3','W1','W2','Dev','placeholder'];
 
 function toggleAllSessions(){
   var toggles = [];
-  var options = ['Clubnight','M1','M2','M3','W1','W2'];
+  var options = ['Clubnight','M1','M2','M3','W1','W2','Dev'];
   toggles.push(document.getElementById("clubnight-checkbox"));
   toggles.push(document.getElementById("m1-checkbox"));
   toggles.push(document.getElementById("m2-checkbox"));
   toggles.push(document.getElementById("m3-checkbox"));
   toggles.push(document.getElementById("w1-checkbox"));
   toggles.push(document.getElementById("w2-checkbox"));
+  toggles.push(document.getElementById("dev-checkbox"))
   var elem = document.getElementById("toggle-all");
   var i;
   if (sessionsToShow.length > 1){
@@ -82,7 +175,7 @@ function toggleSessions(team, checked){
 </script>
 
 <h2>Sessions - {{page.term}}</h2>
-<p>All badminton sessions are cancelled until further notice.</p>
+<p><strong>Please note that to attend any session you must have previsouly booked.</strong> For Clubnight please book through <a href="https://www.teamapp.com/clubs/540849?_webpage=v1">Team App</a>. For Squad players please put your name on the spreadsheet that has been shared.</p>
 <div id="checkboxes">
   <input type="checkbox" id="clubnight-checkbox" onchange="toggleSessions('Clubnight',this.checked)" checked="checked" />
   <label for="clubnight-checkbox">Clubnight</label>
@@ -96,6 +189,8 @@ function toggleSessions(team, checked){
   <label for="w1-checkbox">W1</label>
   <input type="checkbox" id="w2-checkbox" onchange="toggleSessions('W2',this.checked)"checked="checked"/>
   <label for="w2-checkbox">W2</label>
+  <input type="checkbox" id="dev-checkbox" onchange="toggleSessions('Dev',this.checked)"checked="checked"/>
+  <label for="dev-checkbox">Dev</label>
   <button id="toggle-all" class="button-small" onclick="toggleAllSessions(this)">HIDE ALL</button>
 </div>
 <div id="sessions-container" style="display: flex;">
@@ -118,11 +213,11 @@ function toggleSessions(team, checked){
       <tr>
         <td>Location:</td><td> {{session.location}}</td>
       </tr>
-      <tr>
+     <!--  <tr>
         <td>Number of Courts:</td><td>{{session.numberOfCourts}}</td>
-      </tr>
-      <tr>
-        <td>Notes:</td><td></td>
+      </tr> -->
+      <!-- <tr>
+        <td>Notes:</td><td></td> -->
     </table>
     <ul class="sessions-exceptions-list">
       {% for exception in session.exceptions %}
@@ -143,9 +238,7 @@ function toggleSessions(team, checked){
       <div id="tabs-container">
         <div id="indicator"></div>
         <h3 id="initialSelector" class="location-option selected" onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJa__vp0zBdkgRtBpLdcJmdHQ&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',1)">Iffley Road</h3>
-        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJFcgu6rLGdkgRpnOlZeXjFyo&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',2)">Magdalen College School</h3>
-        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJudv5UD_BdkgR7EXDP25ZylE&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',3)">St Gregory the Great Catholic School</h3>
-        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJzX_QUDBdkgR2b5dJjIhGr4&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',4)">Oxford Spires Academy</h3>
+        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJudv5UD_BdkgR7EXDP25ZylE&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',2)">St Gregory the Great Catholic School</h3>
       </div>
       <div id="map-container">
         <div id="loading" class="loading"></div>

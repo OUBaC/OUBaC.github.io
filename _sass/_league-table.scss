@@ -1,0 +1,28 @@
+table {
+	border-collapse: collapse;
+	box-sizing: border-box;
+	margin: 20px 0;
+	width: 100%;
+}
+
+tr{
+	border: 2px solid $primary-colour;
+	overflow: hidden;
+}
+
+tr:hover{
+	background-color:#EEEEEE;
+}
+
+th {
+	background-color: #002147;
+	color: white;
+	font-weight: normal;
+	padding: 15px;
+	text-align: center;
+	vertical-align: middle;
+
+	&:first-of-type {
+		text-align: left;
+	}
+}
