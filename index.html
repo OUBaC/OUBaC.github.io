@@ -6,6 +6,21 @@ stylesheets:
 javascript:
 - /path.js
 ---
+<script>
+	(function (s, e, n, d, er) {
+	  s['Sender'] = er;
+	  s[er] = s[er] || function () {
+		(s[er].q = s[er].q || []).push(arguments)
+	  }, s[er].l = 1 * new Date();
+	  var a = e.createElement(n),
+		  m = e.getElementsByTagName(n)[0];
+	  a.async = 1;
+	  a.src = d;
+	  m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+	sender('d85dd5c61f5577')
+  </script>
+
 <div id="title-and-logo-container">
 	<div id='container'>
 		<img src="/assets/logo/logo-white-grouped.svg"/>
@@ -52,7 +67,7 @@ javascript:
 </div>
 <div style="background-color: #033;text-align:center; padding: 10px; position: relative;" >
 	<h2 style="color: #fff; font-size: 25px; display: inline;vertical-align: middle; z-index: 2;font-weight: normal;">Join the Mailing List</h2>
-	<a href="http://groupspaces.com/oubac/join" class="button" style="color:#fff; z-index:2; position: relative; margin: 10px;">Sign Up</a>
+	<a href="/email-signup.html" class="button" style="color:#fff; z-index:2; position: relative; margin: 10px;">Sign Up</a>
 </div>
 </div>
 <div id="key-point-container" class="content">
