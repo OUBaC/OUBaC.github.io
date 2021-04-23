@@ -1,0 +1,97 @@
+members:
+ - role: President
+   name: Lucien Mulberg
+   email: lucien.mulberg@spc.ox.ac.uk
+   comment: ""
+   photo: ""
+
+ - roles:
+     - Vice President
+     - Alumni Rep
+   name: Sophie Taylor
+   email: sophie.taylor2@worc.ox.ac.uk
+   comment: ""
+   photo: ""
+
+ - role: Treasurer
+   name: Alex Liu
+   email: 	alexander.liu@wadham.ox.ac.uk
+   comment: ""
+   photo: ""
+
+ - role: Secretary
+   name: Pippa Sinclair
+   email: philippa.sinclair@wadham.ox.ac.uk
+   comment: ""
+   photo: ""
+
+ - role: Men's 1st Team Captain
+   name: James Lin
+   email: james.lin@st-annes.ox.ac.uk
+   comment: ""
+   photo: ""
+
+ - role: Women's 1st Team Captain
+   name: Hannah Warren
+   email: hannah.warren@st-hughs.ox.ac.uk
+   comment: ""
+   photo: ""
+
+ - role: Men's 2nd Team Captain
+   name: Luca Geary
+   email: luca.geary@magd.ox.ac.uk
+   comment: ""
+   photo: ""
+
+ - role: Women's 2nd Team Captain
+   name: Dhitee Goel
+   email: dhitee.goel@stcatz.ox.ac.uk
+   comment: ""
+   photo: ""
+
+ - role: Men's 3rd Team Captain
+   name: Yuhang Song
+   email: yuhang.song@some.ox.ac.uk
+   comment: ""
+   photo: ""
+
+ - role: Mixed Team Captain
+   name: Ian Ho
+   email: ian.ho@wadham.ox.ac.uk
+   comment: ""
+   photo: ""
+
+ - role: Entz Reps
+   name: Becky Xia & Andrew Zhu
+   emails:
+   - rebecca.xia@new.ox.ac.uk
+   - andrew.zhu@magd.ox.ac.uk
+   comment: ""
+   photo: ""
+
+ - role: Welfare Reps
+   name: Freya Lambert & Andrew Zhu
+   emails:
+    - freya.lambert@univ.ox.ac.uk
+    - andrew.zhu@magd.ox.ac.uk
+   comment: ""
+   photo: ""
+
+
+ - role: Clubnight Director
+   name: Michael Platt
+   email: michael.platt@worc.ox.ac.uk
+   comment: ""
+   photo: ""
+
+ - role: League and Cuppers Rep
+   name: Griselda Revia
+   email: griselda.revia@queens.ox.ac.uk
+   comment: ""
+   photo: ""
+
+ - role: IT Rep
+   name: Andrew Zhu
+   email: andrew.zhu@magd.ox.ac.uk
+   comment: ""
+   photo: ""
