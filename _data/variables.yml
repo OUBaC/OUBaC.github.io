@@ -1,16 +1,17 @@
 President:
- name: Lucien Mulberg
+ name: Hannah Warren
  email: oubac.president@gmail.com
 IT:
- name: Andrew Zhu
- email: andrew.zhu@magd.ox.ac.uk
+ name: Matthew Cotton
+ email: oubac.it.rep@gmail.com
 Welfare:
-  name: Freya and Andrew
-  email1: freya.lambert@univ.ox.ac.uk
-  email2: andrew.zhu@magd.ox.ac.uk
+  name: Samvida, Siam and Freya
+  email1: samvida@well.ox.ac.uk
+  email2: siam.rahman@trinity.ox.ac.uk
+  email3: freya.lambert@univ.ox.ac.uk
 Secretary:
-  name: Philippa Sinclair
-  email: philippa.sinclair@wadham.ox.ac.uk
+  name: Freya Lambert
+  email: freya.lambert@univ.ox.ac.uk
 clubnight:
  single: 5
  term: 15
