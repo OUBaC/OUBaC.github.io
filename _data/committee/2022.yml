@@ -71,9 +71,8 @@ members:
   - role: Clubnight Rep
     name: Max Harper
     email: max.harper@st-hildas.ox.ac.uk
-    comment: ""
-    photo: "/assets/the-committee/2022-2023/log.png"
-    # photo: "/assets/the-committee/2022-2023/max.jpg"
+    comment: "Max is an all around athlete who is  instantly recognisable for his trademark flannel shirt. Over the last year, Max' s new found passion for badminton has made quite the impression in clubnight as he is willing to always  bring a competitive spirit as well as the attitude to improve.  Undoubtedly, he will be an invaluable member of the clubnight reps!"
+    photo: "/assets/the-committee/2022-2023/max.jpg"
 
   - role: Entz Reps
     name: Sophie, Lucien & James
@@ -109,12 +108,3 @@ Being entz rep in his 2nd year before OUBaC presidency, Lucien is sure to bring 
     email: oubac.it.rep@gmail.com
     comment: "Matthew, a third year DPhil Student in the BioDTP, comes ably prepared to take on the strenuous role of IT rep. Coming right off a busy season where he played important roles in M1 and M2's BUCS success, Matthew will aim to build on this upcoming season by ensuring our website remains intact and our insta content is frequent. Let's hope he can extend the use of his magical left (and maybe right) hand off court, as he proves his GitHub game is as underrated as his singles."
     photo: "/assets/the-committee/2022-2023/mat.jpg"
-
-  # - roles:
-  #     - Mascot
-  #     - OUBaC Nice Guy
-  #   name: Max Harper
-  #   email: max.harper@st-hildas.ox.ac.uk
-  #   comment: ""
-  #   photo: "/assets/the-committee/2022-2023/log.png"
-  #   # photo: "/assets/the-committee/2022-2023/max.jpg"
