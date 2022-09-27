@@ -4,3 +4,6 @@ _site/
 
 # Windows thumbnail cache
 Thumbs.db
+
+#macos DS_store
+.DS_Store
