@@ -4,34 +4,17 @@ title: Sessions
 stylesheets:
 - /styles/sessions-styles.css
 
-term: Hilary Term 2022
+term: Michaelmas Term 2023
 
-startDate: Sunday 16th January
-endDate: Saturday 12th March
+startDate: Sunday 9th October
+endDate: Saturday 3rd December
 
 
 
 sessions:
-- day: Monday
-  time: "13:30-15:00"
-  location: "Iffley Road - Acer Nethercott"
-  participantString: "Clubnight"
-  participants:
-  - Clubnight
 
 - day: Monday
-  time: "13:30-15:00"
-  location: "Iffley Road - Acer Nethercott"
-  participantString: "Squad"
-  participants:
-  - M1
-  - M2
-  - M3
-  - W1
-  - W2
-
-- day: Monday
-  time: "18:30-20:00"
+  time: "18:30-20:15"
   location: "Magdalen College School"
   participantString: "Squad"
   participants:
@@ -39,7 +22,7 @@ sessions:
   - M2
 
 - day: Monday
-  time: "20:00-21:30"
+  time: "20:15-22:00"
   location: "Magdalen College School"
   participantString: "Squad"
   participants:
@@ -53,8 +36,8 @@ sessions:
   participants:
   - Clubnight
 
-- day: Thursday
-  time: "6:30-8:00"
+- day: Tuesday
+  time: "10:30-12:30"
   location: "Iffley Road - Acer Nethercott"
   participantString: "Squad"
   participants:
@@ -64,6 +47,13 @@ sessions:
   - W1
   - W2
   - Dev
+
+- day: Wednesday
+  time: "10:30-12:30" 
+  location: "Iffley Road - Acer Nethercott"
+  participantString: "Clubnight"
+  participants:
+  - Clubnight
 
 - day: Thursday
   time: "21:00-22:30"
@@ -72,18 +62,6 @@ sessions:
   participants:
   - M3
   - W2
-
-- day: Friday
-  time: "6:30-8:00"
-  location: "Iffley Road - Acer Nethercott"
-  participantString: "Squad"
-  participants:
-  - M1
-  - M2
-  - M3
-  - W1
-  - W2
-  - Dev
 
 - day: Friday
   time: "12:30-14:00"
@@ -111,8 +89,15 @@ sessions:
   - Clubnight
 
 - day: Saturday
-  time: "7:00-9:00"
-  location: "Iffley Road - Acer Nethercott"
+  time: "14:00-15:30"
+  location: "Iffley Road - Main Hall"
+  participantString: "Clubnight"
+  participants:
+  - Clubnight
+
+- day: Saturday
+  time: "15:30-17:30"
+  location: "Iffley Road - Main Hall"
   participantString: "Squad"
   participants:
   - Dev
@@ -120,39 +105,31 @@ sessions:
 - day: Saturday
   time: "17:30-19:30"
   location: "Iffley Road - Main Hall"
-  participantString: "Clubnight"
-  participants:
-  - Clubnight
-
-- day: Saturday
-  time: "18:00-19:30"
-  location: "Iffley Road - Acer Nethercott"
   participantString: "Squad"
   participants:
-  - M1
-  - W1
+  - M3
+  - W2
 
-- day: Sunday
-  time: "11:00-13:00"
-  location: "Iffley Road - Acer Nethercott"
+- day: Saturday
+  time: "19:30-21:30"
+  location: "Magdalen College School"
   participantString: "Squad"
   participants:
   - M1
   - M2
+
+
+- day: Sunday
+  time: "08:30-10:30"
+  location: "Iffley Road - Acer Nethercott"
+  participantString: "Squad"
+  participants:
   - M3
-  - W1
   - W2
 
 - day: Sunday
-  time: "12:30-15:00"
+  time: "15:30-17:00"
   location: "Iffley Road - Acer Nethercott"
-  participantString: "Clubnight"
-  participants:
-  - Clubnight
-
-- day: Sunday
-  time: "12:30-14:30"
-  location: "Iffley Road - Main Hall"
   participantString: "Clubnight"
   participants:
   - Clubnight
@@ -229,6 +206,7 @@ function toggleSessions(team, checked){
 
 <h2>Sessions - {{page.term}}</h2>
 <p><strong>Please note that to attend any session you must have previously booked.</strong> For Clubnight please book through <a href="https://badmintonengland.playwaze.com/ConfirmInvitation?token=oxfo8009">Playwaze</a>. For Squad players please put your name on the spreadsheet that has been shared.</p>
+<p>This term we will be hosting <strong>This Girl Can</strong> sessions on Saturday Week 2 (22nd Oct), Sunday Week 5 (6th Nov) and Friday Week 8 (2nd Dec). Exceptionally, the Saturday Clubnight sessions Week 4 and Week 6 (5th and 19th Nov) will be held at MCS. The <a href="https://badmintonengland.playwaze.com/ConfirmInvitation?token=oxfo8009">Playwaze</a> booking system will reflect upto date session times including these changes. </p>
 <div id="checkboxes">
   <input type="checkbox" id="clubnight-checkbox" onchange="toggleSessions('Clubnight',this.checked)" checked="checked" />
   <label for="clubnight-checkbox">Clubnight</label>
@@ -291,7 +269,9 @@ function toggleSessions(team, checked){
       <div id="tabs-container">
         <div id="indicator"></div>
         <h3 id="initialSelector" class="location-option selected" onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJa__vp0zBdkgRtBpLdcJmdHQ&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',1)">Iffley Road</h3>
-        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJudv5UD_BdkgR7EXDP25ZylE&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',2)">St Gregory the Great Catholic School</h3>
+        <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2470.0904721394872!2d-1.2464714842211275!3d51.749669179675664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876c6b2ea2ec815%3A0x2a17e3e565a573a6!2sMagdalen%20College%20School!5e0!3m2!1sen!2suk!4v1665389679454!5m2!1sen!2suk',2)">Magdalen College School</h3>
+        <!-- <h3 class="location-option"  onclick="changeSource(this,'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJudv5UD_BdkgR7EXDP25ZylE&key=AIzaSyBbP4-PatrW0kkOAeEgmK1OaOscrpbmmC4&zoom=15',2)">Magdalen College School</h3> -->
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2470.0904721394872!2d-1.2464714842211275!3d51.749669179675664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876c6b2ea2ec815%3A0x2a17e3e565a573a6!2sMagdalen%20College%20School!5e0!3m2!1sen!2suk!4v1665389679454!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
       </div>
       <div id="map-container">
         <div id="loading" class="loading"></div>
@@ -323,9 +303,9 @@ function toggleSessions(team, checked){
   }
   </script>
 
-  <div>
+  <!-- <div>
     <h2>Calendar</h2>
     <div class="responsive-iframe-container">
       <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=ebij6s0ooplap10pv6gdccchqg%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=Europe%2FLondon" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
     </div>
-  </div>
+  </div> -->
