@@ -8,7 +8,7 @@ stylesheets:
 {% assign committee = committee_hash[1] %}
 <div id="committee-cards-container">
   {% for member in committee.members %}
-  <div class="card role-container-new">
+  <div class="card role-container-new" id="card-{{member.name}}">
     <label>
       <input class="committee-description-toggle" type="checkbox">
       <div class="photo-section-container">
