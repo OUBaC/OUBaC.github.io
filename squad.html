@@ -16,10 +16,14 @@ stylesheets:
     <li>W2 – Women’s Midlands 3B</li>
 
   </ul>
-  <li>We also have teams in the Oxfordshire Badminton League:</li>
+  <li>
+    We also have teams in the Oxfordshire Badminton League:
+    <a href="http://www.oxfordshirebadmintonleague.co.uk/AzolveTables.aspx" target="_blank" rel="noopener">[Results]</a>
+    <a href="http://www.oxfordshirebadmintonleague.co.uk/history.aspx" target="_blank" rel="noopener">[History]</a>
+  </li>
   <ul>
-    <li><a href="https://badmintonengland.azolve.com/beleagues.htm?standing&categoryId=58&tournamentId=79" target="_blank" rel="noopener">M3 – Men's Division 2</a></li>
-    <li><a href="https://badmintonengland.azolve.com/beleagues.htm?standing&categoryId=58&tournamentId=77" target="_blank" rel="noopener">Mixed – Mixed Division 1</a></li>
+    <li><a href="https://badmintonengland.azolve.com/beleagues.htm?standing&categoryId=58&tournamentId=321" target="_blank" rel="noopener">M3 – Men's Division 2</a></li>
+    <li><a href="http://www.oxfordshirebadmintonleague.co.uk/img/badminton.jpg" target="_blank" rel="noopener">W2 – Women's Division 2</a></li>
   </ul>
   <li>Both men’s and women’s badminton have Oxford University Discretionary Full Blue status! For more information click <a href="https://www.sport.ox.ac.uk/blues-awards" target="_blank" rel="noopener">here</a>.</li>
 </ul>
@@ -244,7 +248,7 @@ stylesheets:
     {% for starting_year in (first_year..last_year) reversed %}
     // <!-- Number of Victories -->
     {% assign oxford_victories = 0 %}
-    {% assign cambridge_victories =0 %}
+    {% assign cambridge_victories = 0 %}
     // <!-- Total games won -->
     {% assign oxford_total = 0 %}
     {% assign cambridge_total = 0 %}
@@ -266,7 +270,7 @@ stylesheets:
 
     {% if year.winner == "Oxford" %}
     {% assign oxford_victories = oxford_victories |plus: 1 %}
-    {% else %}
+    {% elsif year.winner == "Cambridge" %}
     {% assign cambridge_victories = cambridge_victories |plus: 1 %}
     {% endif %}
 
