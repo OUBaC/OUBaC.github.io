@@ -1,17 +1,17 @@
 members:
-  - role: President
+  - role: Co-President
     name: Hannah Warren
     email: oubac.president@gmail.com
-    comment: "After having to travel from outside of Oxford (St Hugh’s) to get to training, we are confident Hannah has the dedication to take up the helm of OUBaC president. Despite having suffered a dislocated shoulder, a concussion and a member of OUBaC running her over, Hannah has not been deterred from playing badminton - it is no accident she has got to where she is. A third year chemistry student, Hannah always knows to produce a solution to any problems she may encounter. Aided by an excellent relationship with her VP, Hannah will lead OUBaC to an even better season than the last!"
+    comment: "After having to travel from outside of Oxford (St Hugh’s) to get to training, we are confident Hannah has the dedication to take up the helm of OUBaC president. Despite having suffered a dislocated shoulder, a concussion and a member of OUBaC running her over, Hannah has not been deterred from playing badminton - it is no accident she has got to where she is. A third year chemistry student, Hannah always knows to produce a solution to any problems she may encounter. Aided by an excellent relationship with her co-President, Hannah will lead OUBaC to an even better season than the last!"
     photo: "/assets/the-committee/2022-2023/han.jpg"
 
   - roles:
-      - Vice President
+      - Co-President
       - Mixed Team Captain
       - League and Cuppers Rep
     name: Ian Ho
     email: ian.ho@wadham.ox.ac.uk
-    comment: "Science fans will be excited to hear of the discovery of a new universal constant; the OUBaC mixed captain. As he embarks on his 4th year in the role, Ian will also turn his hand to a broader role within the club - that of Vice President. His experiences as club coach, key M1 player and head barbecue chef provide equal contributions to his eligibility for the job, as he helps Hannah steer the club to success."
+    comment: "Science fans will be excited to hear of the discovery of a new universal constant; the OUBaC mixed captain. As he embarks on his 4th year in the role, Ian will also turn his hand to a broader role within the club - that of co-president. His experiences as club coach, key M1 player and head barbecue chef provide equal contributions to his eligibility for the job, as he helps Hannah steer the club to success."
     photo: "/assets/the-committee/2022-2023/ian.jpg"
 
   - role: Treasurer
@@ -32,17 +32,31 @@ members:
     comment: "James received exactly zero votes in his bid to be this season's M1 captain. However, due to a technicality - the requirement for M1 captain to have two working ACLs - James is back and ready to do it all over again... even if the men's squad aren't."
     photo: "/assets/the-committee/2022-2023/jam.jpg"
 
+  - role: Men's 1st Team Captain
+    name: Andrew Zhu
+    email: andrew.zhu@magd.ox.ac.uk
+    comment: "Andrew Zhu (2nd year chemistry DPhil) surely now enters the OUBaC Hall of fame. Previously M1 captain (2018-19), president (2019-20), entz, welfare and IT rep (2021-22), he now returns as M1 captain - albeit unwillingly whip sounds - to do it all again. <br /><br />
+
+    Unlike his previous tenure as M1 captain though, days of back to back binge drinking have been replaced with 2 day long hangovers, bittter self loathing and a vow to never drink again (a vow he breaks within a week usually). Hopefully with this new found age and wisdom he can lead M1 and manage to not get severely injured (rip Allen and James)."
+    photo: "/assets/the-committee/2021-2022/Andrew_Z.jpg"
+
   - role: Women's 1st Team Captain
     name: Mar Umbert Kimura
     email: maria.umbertkimura@some.ox.ac.uk
     comment: "Mar is one of the biggest BNOCs you’ll ever meet; the sheer number of people she knows should guarantee that she can always get enough players for W1 matches (even if it involves stealing people from the Somerville music society). However, more famous than Mar and her musical talent is her alter ego- ‘singles Mar’. Although she claimed to be solely a doubles player, several times this year Mar has been forced to reawaken her inner singles player and to our surprise she is unbeatable on the singles court- despite the fact she stands at a mere 2 rackets tall. No doubt Mar will take this winning mentality (and many memes) into her season as W1 captain."
     photo: "/assets/the-committee/2022-2023/mar.jpg"
 
+  # - role: Men's 2nd Team Captain
+  #   name: Atithya Maheshwari
+  #   email: atithya.maheshwari@st-hildas.ox.ac.uk
+  #   comment: "Despite questionable commitment in his 1st year due to alleged 'big tendencies' for a night out, Ati (2nd year physics and philsophy) has heroically pledged unwavering commitment in his role as M2 captain for the upcoming year. A highlight of his drunken antics includes trying to chat up a French Badminton Player at the European Univeristy Games by shadowing his favourite shot she plays and slurring the words 'the way you arch your back on the around the head is so cool'. With this in mind, we are confident Ati's game both on and off the court will remain exemplary for M2 as he leads them to victory in the forthcoming year."
+  #   photo: "/assets/the-committee/2022-2023/ati.jpg"
+
   - role: Men's 2nd Team Captain
-    name: Atithya Maheshwari
-    email: atithya.maheshwari@st-hildas.ox.ac.uk
-    comment: "Despite questionable commitment in his 1st year due to alleged 'big tendencies' for a night out, Ati (2nd year physics and philsophy) has heroically pledged unwavering commitment in his role as M2 captain for the upcoming year. A highlight of his drunken antics includes trying to chat up a French Badminton Player at the European Univeristy Games by shadowing his favourite shot she plays and slurring the words 'the way you arch your back on the around the head is so cool'. With this in mind, we are confident Ati's game both on and off the court will remain exemplary for M2 as he leads them to victory in the forthcoming year."
-    photo: "/assets/the-committee/2022-2023/ati.jpg"
+    name: Scott Haysom
+    email: scott.haysom@univ.ox.ac.uk
+    comment: "While only being an OUBaC foetus, Scott Hayson (1st year PPE) has already made big waves in the squad. As only a fresher, he was thrown into the deep end, having to spend 10+ hours on the road shuttling makeshift M2 teams all across the midlands. Indeed, his commitment to M2 may only be rivalled by his commitment to having one drink at OUBaC socials before becoming near paralytically drunk(, going home to sleep, then being spotted at Parkend later in the night). With all this in mind, we are sure Scott can take the helm of M2 midway through the season."
+    photo: "/assets/the-committee/2022-2023/sco.png"
 
   - role: Women's 2nd Team Captain
     name: Eliza Chapple
@@ -51,10 +65,16 @@ members:
     photo: "/assets/the-committee/2022-2023/eli.jpg"
 
   - role: Men's 3rd Team Captain
-    name: David Guo
-    email: zonghao.guo@stx.ox.ac.uk
-    comment: "Drive, commitment, teamwork? David has it all. If you’re not seeing David on the court he’s probably at the side calling your name or shouting in support. The badminton veteran has seen it all, having played local matches and university league match ups. Aside from being a supportive teammate and friend on the court, David has some serious technique, especially with his drive doubles defence. It’s fair to say that M3 is in safe hands with David at the helm."
-    photo: "/assets/the-committee/2022-2023/dav.jpg"
+    name: Stuart Simms
+    email: stuart.simms@stcatz.ox.ac.uk
+    comment: ""
+    photo: "/assets/the-committee/2022-2023/stu.jpg"
+
+  # - role: Men's 3rd Team Captain
+  #   name: David Guo
+  #   email: zonghao.guo@stx.ox.ac.uk
+  #   comment: "Drive, commitment, teamwork? David has it all. If you’re not seeing David on the court he’s probably at the side calling your name or shouting in support. The badminton veteran has seen it all, having played local matches and university league match ups. Aside from being a supportive teammate and friend on the court, David has some serious technique, especially with his drive doubles defence. It’s fair to say that M3 is in safe hands with David at the helm."
+  #   photo: "/assets/the-committee/2022-2023/dav.jpg"
 
   - role: Clubnight Rep
     name: Ashley Wong
