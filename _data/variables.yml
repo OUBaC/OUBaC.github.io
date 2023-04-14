@@ -1,18 +1,20 @@
 President:
- name: Hannah Warren
+ name: Nathan Schofield
  email: oubac.president@gmail.com
 IT:
- name: Matthew Cotton
+ name: Richie Yeung
  email: oubac.it.rep@gmail.com
 Welfare:
-  name: Samvida, Siam and Freya
-  email1: samvida@well.ox.ac.uk
-  email2: siam.rahman@trinity.ox.ac.uk
-  email3: freya.lambert@univ.ox.ac.uk
+  name: My and Rob
+  email1: my.pham@wolfson.ox.ac.uk
+  email2: robert.sabovcik@sjc.ox.ac.uk
 Secretary:
-  name: Freya Lambert
-  email: freya.lambert@univ.ox.ac.uk
+  name: My Pham
+  email: oubac.secretary@gmail.com
 clubnight:
  single: 5
- term: 15
- year: 40
+ short-vac: 15
+ long-vac: 30
+ term: 30
+ year-term: 70
+ year-term-vac: 85
