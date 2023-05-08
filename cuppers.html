@@ -6,13 +6,16 @@ stylesheets:
 <h2>Cuppers</h2>
 <p>The men's and women's cuppers tournaments is an college knouckout tournament usually played in Hilary and Trinity term. If you wish to play in Cuppers email your <a href="/college-captains.html">college captain</a> or someone on the committee.</p>
 
-<h2>Men's Cuppers 2019</h2>
+The draws from previous years can be found <a href="/archive/cuppers-mens.html">here</a> and <a href="/archive/cuppers-womens.html">here</a>.
+
+<h2>Men's Cuppers 2023</h2>
 <div class="cuppers-container">
 {% assign draw_hash = site.data.cuppers.mens | sort | last %}
 {% assign draw = draw_hash[1] %}
 {% for round in draw %}
 <div class="round">
   {% for match in round.matches %}
+  {% if match.home != null or match.away != null %}
   <div class="match">
     {% if match.homeScore > match.awayScore or match.homeScore == match.awayScore and match.homePoints > match.awayPoints %}
     <div class="team winner"><span class="college">{{match.home}}</span><span class="score">{{match.homeScore}}</span></div>
@@ -28,27 +31,38 @@ stylesheets:
     <div class="team" style="border-top: 0"><span class="college">{{match.away}}</span><span class="score">{{match.awayScore}}</span></div>
     {% endif %}
   </div>
+  {% else %}
+    <div class="match" style="opacity: 0">
+      <div class="team"><span class="college"></span><span class="score"></span></div>
+      <div class="team"><span class="college"></span><span class="score"></span></div>
+    </div>
+  {% endif %}
   {% endfor %}
 </div>
 {% if forloop.last != true %}
 {% assign numberOfTeams = round.matches | size %}
 <div>
   <svg viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg" height="100%" width="40px" preserveAspectRatio="none">
-    {% for i in (1..numberOfTeams) %}
+    {% assign i = 0 %}
+    {% for match in round.matches %}
+    {% assign i = i | plus: 1 %}
+    {% if match.home != null or match.away != null %}
     <line x1="0" y1="{{ i | minus: 0.5 | divided_by: numberOfTeams}}" x2="1" y2="{{i | minus: 1 |divided_by: 2 | floor |plus: 0.5 |divided_by: numberOfTeams| times: 2}}" stroke="grey" stroke-width="2px" vector-effect="non-scaling-stroke"/>
+    {% endif %}
     {% endfor %}
   </svg>
 </div>
 {% endif %}
 {% endfor %}
 </div>
-<h2>Women's Cuppers 2019</h2>
+<h2>Women's Cuppers 2023</h2>
 <div class="cuppers-container">
 {% assign draw_hash = site.data.cuppers.womens | sort | last %}
 {% assign draw = draw_hash[1] %}
 {% for round in draw %}
 <div class="round">
   {% for match in round.matches %}
+  {% if match.home != null or match.away != null %}
   <div class="match">
     {% if match.homeScore > match.awayScore or match.homeScore == match.awayScore and match.homePoints > match.awayPoints %}
     <div class="team winner"><span class="college">{{match.home}}</span><span class="score">{{match.homeScore}}</span></div>
@@ -64,14 +78,24 @@ stylesheets:
     <div class="team" style="border-top: 0"><span class="college">{{match.away}}</span><span class="score">{{match.awayScore}}</span></div>
     {% endif %}
   </div>
+  {% else %}
+    <div class="match" style="opacity: 0">
+      <div class="team"><span class="college"></span><span class="score"></span></div>
+      <div class="team"><span class="college"></span><span class="score"></span></div>
+    </div>
+  {% endif %}
   {% endfor %}
 </div>
 {% if forloop.last != true %}
 {% assign numberOfTeams = round.matches | size %}
 <div>
   <svg viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg" height="100%" width="40px" preserveAspectRatio="none">
-    {% for i in (1..numberOfTeams) %}
+    {% assign i = 0 %}
+    {% for match in round.matches %}
+    {% assign i = i | plus: 1 %}
+    {% if match.home != null or match.away != null %}
     <line x1="0" y1="{{ i | minus: 0.5 | divided_by: numberOfTeams}}" x2="1" y2="{{i | minus: 1 |divided_by: 2 | floor |plus: 0.5 |divided_by: numberOfTeams| times: 2}}" stroke="grey" stroke-width="2px" vector-effect="non-scaling-stroke"/>
+    {% endif %}
     {% endfor %}
   </svg>
 </div>
