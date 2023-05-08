@@ -1,0 +1,64 @@
+- matches:
+  - home: St Anne's
+    away: Hertford
+    homeScore: 4
+    awayScore: 2
+  - home: Brasenose
+    away: Christ Church
+    homeScore: 0
+    awayScore: 3
+  - home: Harris Manchester
+    away: Lady Margaret Hall
+    homeScore: 2
+    awayScore: 4
+  - home: New
+    away: Jesus
+    homeScore: 2
+    awayScore: 4
+  - home: Exeter
+    away: Queens
+    homeScore: 5
+    awayScore: 1
+  - home: Balliol
+    away: University College
+    homeScore: 0
+    awayScore: 1
+  - home: Magdalen
+    away: St Catz
+    homeScore: 1
+    awayScore: 5
+  - home: Merton / Mansfield
+    away: St Edmund Hall
+    homeScore: 1
+    awayScore: 0
+- matches:
+  - home: St Anne's
+    away: Christ Church
+    homeScore: 5
+    awayScore: 1
+  - home: Lady Margaret Hall
+    away: Jesus
+    homeScore: 2
+    awayScore: 4
+  - home: Exeter
+    away: University College
+    homeScore: 5
+    awayScore: 1
+  - home: St Catherine's
+    away: Merton / Mansfield
+    homeScore: 0
+    awayScore: 0
+- matches:
+  - home: St Anne's
+    away: Jesus
+    homeScore:
+    awayScore:
+  - home: Exeter
+    away:
+    homeScore:
+    awayScore:
+- matches:
+  - home: COVID
+    away:
+    homeScore: 19
+    awayScore:

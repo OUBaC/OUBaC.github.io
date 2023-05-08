@@ -1,0 +1,74 @@
+- matches:
+  - home: St Edmund Hall / St Peter's
+    away: Mansfield / Merton
+    homeScore: 5
+    awayScore: 1
+  - home: St Anne's / Wolfson
+    away: Lady Margaret Hall
+    homeScore: 4
+    awayScore: 1
+  - home: Exeter / Queen's
+    away: Sommerville
+    homeScore: 3
+    awayScore: 3
+    homePoints: 0
+    awayPoints: 1
+  - home: University College
+    away: Christ Church
+    homePoints: 1
+    awayPoints: 0
+  - home: Balliol / Worcester
+    away: St John's
+    homeScore: 3
+    awayScore: 3
+    homePoints: 0
+    awayPoints: 1
+  - home: Pembroke
+    away: Hertford
+    homeScore: 3
+    awayScore: 3
+    homePoints: 1
+    awayPoints: 0
+  - home: Keble
+    away: New
+    homePoints: 1
+    awayPoints: 0
+  - home: St Hilda's / Wadham
+    away: Trinity
+    homeScore: 6
+    awayScore: 0
+- matches:
+  - home: St Edmund Hall / St Peter's
+    away: St Anne's / Wolfson
+    homeScore: 5
+    awayScore: 1
+  - home: Somerville
+    away: University College
+    homePoints: 0
+    awayPoints: 1
+  - home: St John's
+    away: Pembroke
+    homeScore: 3
+    awayScore: 3
+    homePoints: 1
+    awayPoints: 0
+  - home: Keble
+    away: St Hilda's / Wadham
+    homeScore: 4
+    awayScore: 2
+- matches:
+  - home: St Edmund Hall / St Peter's
+    away: University College
+    homeScore: 5
+    awayScore: 1
+  - home: St John's
+    away: Keble
+    homeScore: 3
+    awayScore: 3
+    homePoints: 0
+    awayPoints: 1
+- matches:
+  - home: St Edmund Hall / St Peter's
+    away: Keble
+    homeScore:
+    awayScore:

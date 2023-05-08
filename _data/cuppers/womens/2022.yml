@@ -1,0 +1,49 @@
+- matches:
+  - home: Exeter
+    away: Balliol / Worcester
+    homeScore: 5
+    awayScore: 1
+  - home:
+  - home: St Hilda's
+    away: Pembroke
+    homeScore: 6
+    awayScore: 0
+  - home: St John's
+    away: Christ Church / Queen's
+    homeScore: 0
+    awayScore: 6
+  - home:
+  - home:
+  - home:
+  - home:
+- matches:
+  - home: Exeter
+    away: Wadham
+    homeScore: 6
+    awayScore: 0
+  - home: St Hilda's
+    away: Christ Church / Queen's
+    homeScore: 2
+    awayScore: 4
+  - home: St Anne's / Wolfson
+    away: Lady Margaret Hall
+    homeScore: 2
+    awayScore: 4
+  - home: Keble / St Hugh's
+    away: Somerville
+    homeScore: 0
+    awayScore: 1
+- matches:
+  - home: Exeter
+    away: Christ Church / Queen's
+    homeScore: 0
+    awayScore: 6
+  - home: Lady Margaret Hall
+    away: Somerville
+    homeScore: 0
+    awayScore: 6
+- matches:
+  - home: Christ Church / Queen's
+    away: Somerville
+    awayScore: 2
+    homeScore: 4

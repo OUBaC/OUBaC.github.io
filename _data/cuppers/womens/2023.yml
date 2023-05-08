@@ -1,0 +1,46 @@
+- matches:
+  - home:
+  - home: University College
+    away: St John's
+    homePoints: 1
+    awayPoints: 0
+  - home:
+  - home:
+  - home:
+  - home:
+  - home: St Anne's / Wolfson
+    away: St Hilda's / Wadham
+    homeScore: 0
+    awayScore: 6
+  - home:
+- matches:
+  - home: St Edmund Hall / St Peter's
+    away: University College
+    homeScore:
+    awayScore:
+  - home: Lady Margaret Hall
+    away: Balliol / Worcester
+    homePoints: 0
+    awayPoints: 1
+  - home: Christ Church
+    away: Pembroke
+    homeScore: 0
+    awayScore: 6
+  - home: St Hilda's / Wadham
+    away: Somerville
+    homeScore:
+    awayScore:
+- matches:
+  - home: TBD
+    away: Balliol / Worcester
+    homeScore:
+    awayScore:
+  - home: Pembroke
+    away: TBD
+    homeScore:
+    awayScore:
+- matches:
+  - home: TBD
+    away: TBD
+    homeScore:
+    awayScore:

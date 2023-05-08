@@ -1,0 +1,88 @@
+- matches:
+  - home:
+  - home:
+  - home:
+  - home:
+  - home:
+  - home:
+  - home:
+  - home:
+  - home:
+  - home:
+  - home:
+  - home:
+  - home:
+  - home:
+  - home: 
+  - home: Lady Margaret Hall
+    away: Wadham
+    homeScore: 0
+    awayScore: 6
+- matches:
+  - home: Pembroke
+    away: Mansfield / Merton
+    homeScore: 1
+    awayScore: 5
+  - home: St Hilda's
+    away: Somerville
+    homeScore: 6
+    awayScore: 0
+  - home: Christ Church / Queen's
+    away: St Anne's / Wolfson
+    homeScore: 2
+    awayScore: 4
+  - home: St John's
+    away: St Peter's
+    homeScore: 2
+    awayScore: 4
+  - home: Balliol / Worcester
+    away: New
+    homeScore: 1
+    awayScore: 5
+  - home: St Edmund Hall
+    away: Jesus / Magdalen
+    homeScore: 3
+    awayScore: 3
+    homePoints: 1
+    awayPoints: 0
+  - home: Keble
+    away: Exeter
+    homeScore: 4
+    awayScore: 2
+  - home: Hertford
+    away: Wadham
+    homeScore: 1
+    awayScore: 5
+- matches:
+  - home: Mansfield / Merton
+    away: St Hilda's
+    homeScore: 0
+    awayScore: 6
+  - home: St Anne's / Wolfson
+    away: St Peter's
+    homeScore: 1
+    awayScore: 5
+  - home: New
+    away: St Edmund Hall
+    homeScore: 1
+    awayScore: 5
+  - home: Keble
+    away: Wadham
+    homeScore:
+    awayScore:
+    homePoints: 0
+    awayPoints: 1
+- matches:
+  - home: St Hilda's
+    away: St Peter's
+    homeScore: 2
+    awayScore: 4
+  - home: St Edmund Hall
+    away: Wadham
+    homeScore: 2
+    awayScore: 4
+- matches:
+  - home: St Peter's
+    away: Wadham
+    homeScore: 4
+    awayScore: 2

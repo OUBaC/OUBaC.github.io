@@ -1,0 +1,31 @@
+- matches:
+  - home: University College
+    away: Balliol
+    homeScore: 6
+    awayScore: 0
+  - home: St Hilda's
+    away: Lady Margaret Hall
+    homeScore:
+    awayScore:
+  - home: Exeter
+    away: Queen's
+    homeScore: 1
+    awayScore: 5
+  - home: Brasenose
+    away: St Edmund Hall
+    homeScore:
+    awayScore:
+- matches:
+  - home: University College
+    away:
+    homeScore:
+    awayScore:
+  - home: Queen's
+    away:
+    homeScore:
+    awayScore:
+- matches:
+  - home: COVID
+    away:
+    homeScore: 19
+    awayScore:
