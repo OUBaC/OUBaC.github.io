@@ -313,6 +313,7 @@ input:checked + ul{
 	font-size: 0;
 	height: 1.15 * $top-nav-text-height + 2 * $top-nav-text-padding;
 	white-space: nowrap;
+    margin-right: 10px;
 }
 
 .top-nav-logo{
