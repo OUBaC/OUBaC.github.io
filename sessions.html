@@ -11,7 +11,7 @@ endDate: Saturday 3rd December
 
 
 
-sessions:
+disabled-sessions:
 
 - day: Monday
   time: "18:30-20:15"
@@ -206,8 +206,7 @@ function toggleSessions(team, checked){
 
 <h2>Sessions - {{page.term}}</h2>
 <p><strong>Please note that to attend any session you must have previously booked.</strong> For Clubnight please book through <a href="https://badmintonengland.playwaze.com/ConfirmInvitation?token=oxfo8009">Playwaze</a>. For Squad players please put your name on the spreadsheet that has been shared.</p>
-<p>This term we will be hosting <strong>This Girl Can</strong> sessions on Saturday Week 2 (22nd Oct), Sunday Week 5 (6th Nov) and Friday Week 8 (2nd Dec). Exceptionally, the Saturday Clubnight sessions Week 4 and Week 6 (5th and 19th Nov) will be held at MCS. The <a href="https://badmintonengland.playwaze.com/ConfirmInvitation?token=oxfo8009">Playwaze</a> booking system will reflect upto date session times including these changes. </p>
-<div id="checkboxes">
+<!-- <div id="checkboxes">
   <input type="checkbox" id="clubnight-checkbox" onchange="toggleSessions('Clubnight',this.checked)" checked="checked" />
   <label for="clubnight-checkbox">Clubnight</label>
   <input type="checkbox" id="m1-checkbox" onchange="toggleSessions('M1',this.checked)" checked="checked"/>
@@ -223,7 +222,7 @@ function toggleSessions(team, checked){
   <input type="checkbox" id="dev-checkbox" onchange="toggleSessions('Dev',this.checked)"checked="checked"/>
   <label for="dev-checkbox">Dev</label>
   <button id="toggle-all" class="button-small" onclick="toggleAllSessions(this)">HIDE ALL</button>
-</div>
+</div> -->
 <div id="sessions-container" style="display: flex;">
   {% for session in page.sessions %}
   <div class="card session" data-type="{{session.participants}}" style="width: 390px;">
