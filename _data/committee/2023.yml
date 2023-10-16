@@ -46,7 +46,9 @@ members:
     <marquee>📈📈📈 📈📈📈 📈📈📈</marquee><br /><br /><br />"
     photo: "/assets/the-committee/2023-2024/rob.jpg"
 
-  - role: Secretary
+  - roles:
+    - Secretary
+    - Welfare Rep
     name: My Pham
     email: oubac.secretary@gmail.com
     comment: "Having joined OUBaC just last year, My has taken on the fiercely contested position of Mum of the Club...I mean Secretary. My has had a thorough induction to the Oxfordshire Local League by playing more matches than all of M3 combined, and with powers of organisation beyond any of our understanding, My is sure to tackle any paperwork well in advance, and act as a force to be reckoned with against the <b>ahem</b> 'eager' secretaries of the other clubs."
