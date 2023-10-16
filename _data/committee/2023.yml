@@ -1,7 +1,12 @@
 members:
-  - role: President
-    name: Nathan Schofield
+  - role: President (Michaelmas and Hilary)
+    name: James Lin
     email: oubac.president@gmail.com
+    photo: "/assets/the-committee/2023-2024/jam.jpg"
+    comment: "Having been absent for most of the year, James has decided to return to Oxford for a 4th year to take on the role of President. He has been a committed member of OUBaC since his first year, and has been a regular at BUCS matches, clubnights, and socials. He has also been a key member of the M1 team, and has been instrumental in the team's success over the past few years. James is looking forward to leading OUBaC to another successful year, and is excited to be working with the rest of the committee to make this happen."
+  - role: President (Trinity and Long-Vac)
+    name: Nathan Schofield
+    email:
     comment: "Yes he may be studying for a DPhil in SABS R^3 CDT. Yes he may have experience training in the M1 squad of one of the best sports unis in the country. Yes he may have a passed his minibus test and can now transport OUBaC across the globe. But Nathan holds a far more important qualification for President…. he has a spy on the inside. Hopefully, gaining information on CUBaC through his brother will allow him to lead us to yet another Varsity stomping. We all anticipate with bated breath for the rematch of Schofield v. Schofield."
     photo: "/assets/the-committee/2023-2024/nat.jpg"
 
@@ -78,6 +83,19 @@ members:
     photo: "/assets/the-committee/2023-2024/ana.jpg"
 
   - roles:
+    - Men's 3rd Team Captain
+    - IT Rep
+    name: Richie Yeung
+    email: oubac.it.rep@gmail.com
+    comment: "Well, it looks like Richie is more than just a computer science student who makes memes, he's also the hottest thing to hit the badminton scene since the invention of the shuttlecock! With famous badminton players tagging him left and right, Richie is clearly a certified influencer. Richie will bring a fun and lighthearted energy to the committee while also effortlessly fixing any IT issues that come his way."
+    photo: "/assets/the-committee/2023-2024/ric.jpg"
+
+  - role: Women's 3rd Team Captain
+    name: Hui Min Tay
+    email: hui.tay@some.ox.ac.uk
+    comment: "As W3 joins the local league, Hui Min has stepped up to be the inaugural W3 captain. A committed member of OUBaC, Hui Min can boast one of the best attendences to squad sessions last season. As a DPhil Chemist she is also the most qualified to deal with the toxic environment of the local league. We are sure she will lead W3 to a successful season."
+
+  - roles:
       - League and Cuppers Secretary
       - Clubnight Rep
     name: Rashadul Alam
@@ -122,8 +140,3 @@ members:
     comment: "This year Samvida has gone a step further than any of her predecessors by actually becoming an alumna. Having won the award for adult #1 of the club at the end of year awards she has chosen to remind people of her wisdom by representing OUBaC’s graduated members. In her wisest move so far, she has managed to negotiate that she doesn’t have to attend committee meetings, we should all learn from her. This decision is surely motivated by the need to fully focus on the usual packed OUBaC alumni calendar."
     photo: "/assets/the-committee/2023-2024/sam.jpg"
 
-  - role: IT Rep
-    name: Richie Yeung
-    email: oubac.it.rep@gmail.com
-    comment: "Well, it looks like Richie is more than just a computer science student who makes memes, he's also the hottest thing to hit the badminton scene since the invention of the shuttlecock! With famous badminton players tagging him left and right, Richie is clearly a certified influencer. Richie will bring a fun and lighthearted energy to the committee while also effortlessly fixing any IT issues that come his way."
-    photo: "/assets/the-committee/2023-2024/ric.jpg"
