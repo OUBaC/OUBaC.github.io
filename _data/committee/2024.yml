@@ -1,0 +1,115 @@
+members:
+
+  - role: President 
+    name: Richie Yeung
+    email: oubac.president@gmail.com
+    comment: ""
+    photo: "/assets/the-committee/2024-2025/ric.jpeg"
+
+
+  - roles:
+      - Vice President 
+      - Tournament Rep
+    name: Rob Sabovcik
+    email: robert.sabovcik@reuben.ox.ac.uk
+    comment: ""
+
+  - roles:
+    - Secretary
+    name: Ananya Kannan
+    email: oubac.secretary@gmail.com
+    comment: ""
+
+  - role:
+      - Treasurer
+    name: James Lin
+    email: james.lin@st-annes.ox.ac.uk
+    comment: "
+    <br /><br />
+    <marquee>💰💰💰 💰💰💰 💰💰💰</marquee><br /><br /><br />
+    <marquee>💸💸💸 💸💸💸 💸💸💸</marquee><br /><br /><br />
+    <marquee>📈📈📈 📈📈📈 📈📈📈</marquee><br /><br /><br />"
+
+
+  - role: Men's 1st Team Captain
+    name: Varad Puntambekar
+    email: varad.puntambekar@jesus.ox.ac.uk
+    comment: ""
+    photo: "/assets/the-committee/2024-2025/Varad.jpeg"
+
+  - role: Women's 1st Team Captain
+    name: To be confirmed later
+    
+
+  - role: Men's 2nd Team Captain
+    name: Ayman Ahmad
+    email: ayman.ahmad@univ.ox.ac.uk
+    comment: "Armed with a new headband, Ayman is ready to lead M2 to a comeback Cobra Kai style. A dedicated cricket player, his backhand serves occasionally serves as a strong reminder of his passion for cricket – high and out of bounds. Jokes aside, Ayman likes to bring his Ay-game to the court when he needs to, much to the surprise and admiration of his fans. It is only natural that he becomes the Lisan Ay Gaib of M2.
+            <br /><br />
+            P.S You can find SpongeBob living in his hair when he uses a hair tie."
+
+  - role: Women's 2nd Team Captain
+    name: Cayen Wang
+    email: cayen.wang@worc.ox.ac.uk
+    comment: ""
+
+  - role:
+    - Men's 3rd Team Captain
+    name: Jeremy Liu
+    email: jeremy.liu@univ.ox.ac.uk
+    comment: ""
+
+  - role: Women's 3rd Team Captain
+    name: Yuying Ding
+    email: yuying.ding@chem.ox.ac.uk
+    comment: ""
+    photo: "/assets/the-committee/2024-2025/Yuying.jpg"
+
+  - roles: 
+      - Social Media Officer
+      - IT Officer
+    name: Amy Feng
+    email: oubac.it.rep@gmail.com
+    comment: ""
+
+  - roles: 
+      - Social Media Officer
+      - IT Officer
+    name: Shuborno Das
+    email: oubac.it.rep@gmail.com
+    comment: ""
+
+  - roles:
+      - League and Cuppers Secretary
+      - Clubnight Rep
+    name: Rashadul Alam
+    email: md.alam@jesus.ox.ac.uk
+    comment: "The Mdan, the Mdyth, the Mdlegend himself returns for yet another year! Fuelled by fried chicken, this powerhouse of recreational badminton organisation is back for more clubnight coordination. With his ever-expanding database of clubnight players and their skill levels, we have no doubt that everyone will have the best time playing varied and evenly-balanced matches. <br /><br />
+    
+    In addition, Rash is taking on the challenges of becoming the new L&C Secretary. Having represented for 4 different colleges in these tournaments (only one of them Jesus), there is no one more qualified to organise the matches and make sure teams turn up on time. Returning members of OUBaC will be comforted by his familiar presence; new joiners will soon discover that he practically lives at Iffley. Just be careful if you happen to face him on the singles’ court: you might just tear your ACL (but it’s ok he’s a medic)."
+    photo: "/assets/the-committee/2023-2024/ras.jpg"
+
+  - role: Clubnight Rep
+    name: Hussain Mussa
+    email: hussain.mussa@univ.ox.ac.uk
+    comment: "Hussain has joined Clubnight as a fresher and since then he has been a regular member who has gotten quite familiar with the inner workings of OUBaC. He has shown great sportsmanship and always has been a friendly face to every member of Clubnight. Fortunately, Hussain has volunteered to help us with day-to-day operations of OUBaC this year and we are happy to welcome him as our new Clubnight Rep!"
+    photo: "/assets/the-committee/2023-2024/hus.jpg"
+
+  - role: Entz Reps
+    name: Aky and Benjamin
+    emails:
+      - akshima.ghosh@chch.ox.ac.uk
+      - benjamin.li@keble.ox.ac.uk
+    comment: ""
+
+  - role: Welfare Reps
+    name: Allen and Ananya
+    emails:
+      - ping-yuan.lee@materials.ox.ac.uk
+      - ananya.kannan@worc.ox.ac.uk
+    comment: ""
+
+  - role: Alumni Rep
+    name: Andrew Zhu
+    email: andrew.zhu@magd.ox.ac.uk
+    comment: ""
