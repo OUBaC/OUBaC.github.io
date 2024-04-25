@@ -84,7 +84,48 @@ members:
       - IT Officer
     name: Shuborno Das
     email: oubac.it.rep@gmail.com
-    comment: ""
+    comment: "<pre id='game-of-life'>
+      ....................\n
+      .....@@@...@@@......\n
+      ....................\n
+      ...@....@.@....@....\n
+      ...@....@.@....@....\n
+      ...@....@.@....@....\n
+      .....@@@...@@@......\n
+      ....................\n
+      .....@@@...@@@......\n
+      ...@....@.@....@....\n
+      ...@....@.@....@....\n
+      ...@....@.@....@....\n
+      ....................\n
+      .....@@@...@@@......\n
+      ....................</pre>
+      <script>
+      function nextGeneration() {
+        var g = document.querySelector('#game-of-life');
+        var cells = g.innerHTML.split('\\n').map(function(row) {
+          return row.split('');
+        });
+        var newCells = cells.map(function(row, y) {
+          return row.map(function(cell, x) {
+            var n = 0;
+            for (dy of [-1, 0, 1]) {
+              for (dx of [-1, 0, 1]) {
+                if (dx == 0 && dy == 0) continue;
+                if (cells[y + dy] && cells[y + dy][x + dx] == '@') n++;
+              }
+            }
+            return (n == 3 || (n == 2 && cell == '@')) ? '@' : '.';
+          });
+        });
+        g.innerHTML = newCells.map(function(row) {
+          return row.join('');
+        }).join('\\n');
+      }
+
+      var g = document.querySelector('#game-of-life');
+      setInterval(nextGeneration, 300);
+      </script>"
     photo: "/assets/the-committee/2024-2025/shub.jpeg"
 
   - roles:
