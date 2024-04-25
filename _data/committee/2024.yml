@@ -4,7 +4,7 @@ members:
     name: Richie Yeung
     email: oubac.president@gmail.com
     comment: ""
-    photo: "/assets/the-committee/2024-2025/ric.jpeg"
+    photo: "/assets/the-committee/2024-2025/ric.jpg"
 
 
   - roles:
@@ -20,7 +20,7 @@ members:
     name: Ananya Kannan
     email: oubac.secretary@gmail.com
     comment: "Being W2 captain last season, Ananya has shown her capability to take on responsible roles in the club while staying on top of her academics. Her commitment towards the members and club was proven through undefeatable attendance at social events and local league matches (despite the long commute on dark roads and late nights). Ananya will surely be able to challenge the unpredictable local league schedule and questionable demands from other clubs."
-    photo: "/assets/the-committee/2024-2025/ananya.jpg"
+    photo: "/assets/the-committee/2024-2025/ana.jpg"
 
   - role:
       - Treasurer
@@ -38,7 +38,7 @@ members:
     name: Varad Puntambekar
     email: varad.puntambekar@jesus.ox.ac.uk
     comment: ""
-    photo: "/assets/the-committee/2024-2025/Varad.jpeg"
+    photo: "/assets/the-committee/2024-2025/var.jpg"
 
 
   - role: Men's 2nd Team Captain
@@ -47,7 +47,7 @@ members:
     comment: "Armed with a new headband, Ayman is ready to lead M2 to a comeback Cobra Kai style. A dedicated cricket player, his backhand serves occasionally serves as a strong reminder of his passion for cricket – high and out of bounds. Jokes aside, Ayman likes to bring his Ay-game to the court when he needs to, much to the surprise and admiration of his fans. It is only natural that he becomes the Lisan Ay Gaib of M2.
             <br /><br />
             P.S You can find SpongeBob living in his hair when he uses a hair tie."
-    photo: "/assets/the-committee/2024-2025/ayman.jpeg"
+    photo: "/assets/the-committee/2024-2025/aym.jpg"
     
   - role: Women's 2nd Team Captain
     name: Cayen Wang
@@ -60,13 +60,13 @@ members:
     name: Jeremy Liu
     email: jeremy.liu@univ.ox.ac.uk
     comment: "Having played every single match last season (except that time when it clashed with 'Maths formal'), Jeremy (3rd year maths) is the obvious choice to lead M3 for the upcoming local league season. Diving and jump smashing his way through his opponents, there is no questioning Jeremy's passion and commitment to badminton. Jeremy is friendly and chatty off court, but avoid mentioning his 27-25 third set at last year's varsity!"
-    photo: "/assets/the-committee/2024-2025/jeremy.jpeg"
+    photo: "/assets/the-committee/2024-2025/jer.jpg"
 
   - role: Women's 3rd Team Captain
     name: Yuying Ding
     email: yuying.ding@chem.ox.ac.uk
     comment: ""
-    photo: "/assets/the-committee/2024-2025/Yuying.jpg"
+    photo: "/assets/the-committee/2024-2025/yuy.jpg"
 
   - roles: 
       - Social Media Officer
@@ -123,7 +123,7 @@ members:
       var g = document.querySelector('#game-of-life');
       setInterval(nextGeneration, 300);
       </script>"
-    photo: "/assets/the-committee/2024-2025/shub.jpeg"
+    photo: "/assets/the-committee/2024-2025/shu.jpg"
 
   - roles:
       - League and Cuppers Secretary
@@ -154,7 +154,7 @@ members:
       - ping-yuan.lee@materials.ox.ac.uk
       - ananya.kannan@worc.ox.ac.uk
     comment: "As W2 captain, Ananya has shown her members constant support and care. By making sure the team has a fair amount of training and recognition, W2 went through the season with a great mentality and finished 2nd in the league. Ananya's ability to befriend everyone and put them at ease positioned her as a perfect Welfare Rep. The club members will undoubtedly be in good hands in the next season."
-    photo: "/assets/the-committee/2024-2025/ananya.jpg"
+    photo: "/assets/the-committee/2024-2025/ana.jpg"
 
   - role: Alumni Rep
     name: Andrew Zhu
