@@ -267,6 +267,12 @@ stylesheets:
     {% for index in (starting_year..last_year) %}
     {% assign index_string = index | downcase %}
     {% assign year = site.data.varsity[index_string] %}
+    {% if year.winner == "COVID-19"%}
+    {% continue %}
+    {% endif %}
+    {% if year.winner == "No match"%}
+    {% continue %}
+    {% endif %}
 
     {% if year.winner == "Oxford" %}
     {% assign oxford_victories = oxford_victories |plus: 1 %}
