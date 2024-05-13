@@ -3,17 +3,9 @@ members:
   - role: President 
     name: Richie Yeung
     email: oubac.president@gmail.com
-    comment: ""
+    comment: "After 3 degrees, an actual job, and a brief stint as a world renowned tetris player, Richie is ready to take on his hardest challenge yet... taking the helm of OUBaC as president.  Despite joining the Tabs for a couple (treacherous) years, he soon and righteously realised that he belonged to daddy OUBaC. With his wealth of knowledge about the highs that OUBaC can offer (and the devastating lows that come with CUBaC), we are sure he will be more than ready to steer us to a brighter future."
     photo: "/assets/the-committee/2024-2025/ric.jpg"
 
-
-  - roles:
-      - Vice President 
-      - Tournament Rep
-    name: Rob Sabovcik
-    email: robert.sabovcik@reuben.ox.ac.uk
-    comment: ""
-    photo: "/assets/the-committee/2024-2025/rob.jpg"
 
   - roles:
     - Secretary
@@ -21,6 +13,14 @@ members:
     email: oubac.secretary@gmail.com
     comment: "Being W2 captain last season, Ananya has shown her capability to take on responsible roles in the club while staying on top of her academics. Her commitment towards the members and club was proven through undefeatable attendance at social events and local league matches (despite the long commute on dark roads and late nights). Ananya will surely be able to challenge the unpredictable local league schedule and questionable demands from other clubs."
     photo: "/assets/the-committee/2024-2025/ana.jpg"
+
+  - roles:
+    - Vice President 
+    - Tournament Rep
+    name: Robo Sabovcik
+    email: robert.sabovcik@reuben.ox.ac.uk
+    comment: "Having served as treasurer, welfare Rep, and honorary ENTZ Rep during his undergrad, Robo is more than qualified to assist Richie as the VP this forthcoming year. While attempting to keep a cool exterior, Rob's intense love for the club becomes painfully evident after a couple of drinks as he allegedly accepted this role 8 pints deep, and famously practiced recruiting freshers to 'BbwaDdminTon sOcieTeee' while on death's door with his head in the toilet. Hopefully the lessons learned from his many shenanigans can be applied for the better of the club!"
+    photo: "/assets/the-committee/2024-2025/rob.jpg"
 
   - role:
       - Treasurer
@@ -31,7 +31,7 @@ members:
     <marquee>💰💰💰 💰💰💰 💰💰💰</marquee><br /><br /><br />
     <marquee>💸💸💸 💸💸💸 💸💸💸</marquee><br /><br /><br />
     <marquee>📈📈📈 📈📈📈 📈📈📈</marquee><br /><br /><br />"
-    photo: "/assets/the-committee/2023-2024/jam.jpg"
+    photo: "/assets/the-committee/2024-2025/jam.jpg"
 
 
   - role: Men's 1st Team Captain
