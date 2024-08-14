@@ -37,8 +37,15 @@ members:
   - role: Men's 1st Team Captain
     name: Varad Puntambekar
     email: varad.puntambekar@jesus.ox.ac.uk
-    comment: ""
+    comment: "Varad, wise beyond his years (or perhaps appropriately for his years...) has stepped up to take leadership of M1. As both a fully qualified doctor and a front court demon, we hope Varad can carry (and fix up) our ever ageing M1 population. "
     photo: "/assets/the-committee/2024-2025/var.jpg"
+
+
+  - role: Women's 1st Team Captain
+    name: Zheqing Zhang 
+    email: zheqing.zhang@medschool.ox.ac.uk
+    comment: "Zheqing, 5th year medic and youtube sensation, has heroically stepped up to take over leadership of W1. We are sure that both her fitness and sharp mind, exemplified by her morning 6am HIIT vlogs or her StudyTube material, can propel W1 forward in their uber competitive league. "
+    photo: "/assets/the-committee/2024-2025/zq.jpg"
 
 
   - role: Men's 2nd Team Captain
@@ -53,7 +60,7 @@ members:
     name: Cayen Wang
     email: cayen.wang@worc.ox.ac.uk
     comment: After rising through the ranks of clubnight to go straight to W2, the only next natural step is for Cay to be the captain of W2!! His sporting talents range from athletics, swimming and of course badminton (hopefully his favourite!!). Although his smash is scary on coart, he is always smiley and cheery - hailing from Worcester college just like his predecessor, he is sure to take W2 to even greater Local League glory next season!!!
-    
+    photo: "/assets/the-committee/2024-2025/cay.jpg"
 
   - role:
     - Men's 3rd Team Captain
@@ -65,7 +72,7 @@ members:
   - role: Women's 3rd Team Captain
     name: Yuying Ding
     email: yuying.ding@chem.ox.ac.uk
-    comment: ""
+    comment: "A founding member and seasoned W3 veteran, Yuying is living proof that not even three years in a Chemistry DPhil can extinguish her love for badminton. She is best known on court for her nasty flick serve (typically followed by a not-entirely-sincere apology), which proved critical to the 2023-2024 local league campaign, coming in clutch during many tough matches. A committed player and encouraging doubles partner, there is no one better to lead the team to another successful year of badminton and hotpot."
     photo: "/assets/the-committee/2024-2025/yuy.jpg"
 
   - roles: 
@@ -146,7 +153,7 @@ members:
     emails:
       - akshima.ghosh@chch.ox.ac.uk
       - benjamin.li@keble.ox.ac.uk
-    comment: ""
+    comment: "In a desparate attempt to keep ENTZ trendy and alive (aka out of James and Rob's hands) Aky and Benjy form this year's dynamic ENTZ duo, promising lots of fun events for the forthcoming year. Their trendiness can be seen by the funkY way they both abbreviate their names with a Y (how very 'hip'). Both boast impressive (and embarrassing) stories from previous ENTZ events, for example [REDACTED]. "
     photo: "/assets/the-committee/2024-2025/aky.jpg"
 
   - role: Welfare Reps
@@ -160,5 +167,5 @@ members:
   - role: Alumni Rep
     name: Andrew Zhu
     email: andrew.zhu@magd.ox.ac.uk
-    comment: ""
+    comment: "Currently in his 7th (yes 7th!) year here at Oxford, Andrew is more than qualified to act as the bridge between the current squad and alumni (most of whom he knew from 'back in the day' as he tells freshers who are literally 7 years his junior)."
     photo: "/assets/the-committee/2021-2022/Andrew_Z.jpg"
