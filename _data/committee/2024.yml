@@ -40,8 +40,16 @@ members:
     comment: "Varad, wise beyond his years (or perhaps appropriately for his years...) has stepped up to take leadership of M1. As both a fully qualified doctor and a front court demon, we hope Varad can carry (and fix up) our ever ageing M1 population. "
     photo: "/assets/the-committee/2024-2025/var.jpg"
 
+  - roles:
+      - Social Media Officer
+      - IT Officer
+      - Women's 1st Team Captain (Michaelmas and Hilary)
+    name: Amy Feng
+    email: oubac.it.rep@gmail.com
+    photo: "/assets/the-committee/2024-2025/amy.jpg"
+    comment: "With Amy (2nd year Maths) stepping up to the role of IT officer, the responsibility of running the OUBaC Instagram has been passed on to a teenager for the very first time 🤯. Having spent her formative years in Australia 🇦🇺, legend has it when Amy is not eating Vegemite 🫙, she is in her backyard racing kangaroos 🦘. Amy's artistic skills and outgoing personality bring a new aesthetic and good vibes to our club."
 
-  - role: Women's 1st Team Captain
+  - role: Women's 1st Team Captain (Trinity and Easter)
     name: Zheqing Zhang 
     email: zheqing.zhang@medschool.ox.ac.uk
     comment: "Zheqing, 5th year medic and youtube sensation, has heroically stepped up to take over leadership of W1. We are sure that both her fitness and sharp mind, exemplified by her morning 6am HIIT vlogs or her StudyTube material, can propel W1 forward in their uber competitive league. "
@@ -76,16 +84,7 @@ members:
     photo: "/assets/the-committee/2024-2025/yuy.jpg"
 
   - roles: 
-      - Social Media Officer
-      - IT Officer
-    name: Amy Feng
-    email: oubac.it.rep@gmail.com
-    photo: "/assets/the-committee/2024-2025/amy.jpg"
-    comment: "With Amy (2nd year Maths) stepping up to the role of IT officer, the responsibility of running the OUBaC Instagram has been passed on to a teenager for the very first time 🤯. Having spent her formative years in Australia 🇦🇺, legend has it when Amy is not eating Vegemite 🫙, she is in her backyard racing kangaroos 🦘. Amy's artistic skills and outgoing personality bring a new aesthetic and good vibes to our club."
-
-  - roles: 
-      - Social Media Officer
-      - IT Officer
+      - IT Officer (Trinity and Easter)
     name: Shuborno Das
     email: oubac.it.rep@gmail.com
     comment: "<pre id='game-of-life'>
