@@ -1,21 +1,22 @@
 President:
- name: Richie Yeung
+ name: Ayman Ahmad
  email: oubac.president@gmail.com
 IT:
- name: Shuborno Das
+ name: Jonathan Hau
  email: oubac.it.rep@gmail.com
 Welfare:
-  name: Ananya and Allen
-  email1: ananya.kannan@worc.ox.ac.uk
-  email2: ping-yuan.lee@materials.ox.ac.uk
+  name: Lydia Marchbank and James Lin
+  email1: lydia.marchbank@merton.ox.ac.uk
+  email2: james.lin@st-annes.ox.ac.uk
 Secretary:
-  name: Ananya Kannan
+  name: Cayen Wang
   email: oubac.secretary@gmail.com
 clubnight:
  single: 2
- short-vac: 7.5
+ short-vac: 7.50
  long-vac: 15
- term: £19.5 (Michaelmas, Hilary), £15 (Trinity) 
- year-term: 39.5
- year-term-vac: 47.5
- email: md.alam@jesus.ox.ac.uk
+ term: £19.50 (Michaelmas, Hilary), £15 (Trinity)
+ year-term: 39.50
+ year-term-vac: 47.50
+ email1: crystal.huang@bnc.ox.ac.uk
+ email2: linfei.gan@st-annes.ox.ac.uk
