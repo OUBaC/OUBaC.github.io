@@ -1,0 +1,117 @@
+members:
+
+  - role: President 
+    name: Ayman Ahmad
+    email: oubac.president@gmail.com
+    comment: "After leading M2 through a yet another successful BUCS season,  Ayman has stepped up to be the next Lisan AY Gaib of OUBaC. Known for his love for Badminton and Cricket, Ayman is now constitutionally required to prioritise OUBaC over any other club, at least for a year. Donning his iconic headband, his work ethic on and off court combined with his CLUTCH Multi-Purpose Vehicle driving skills will surely steer OUBaC in the right direction."
+    photo: "/assets/the-committee/2025-2026/ayma.jpg"
+
+  - roles:
+      - Vice President
+      - League and Cuppers Rep
+    name: Hussain Mussa
+    email: hussain.mussa@univ.ox.ac.uk
+    comment: "Hussain has joined Clubnight as a fresher and since then he has been a regular member who has gotten quite familiar with the inner workings of OUBaC. He has shown great sportsmanship and always has been a friendly face to every member of Clubnight. Fortunately, Hussain has volunteered to help us with day-to-day operations of OUBaC this year and we are happy to welcome him as the new Vice President and League & Cuppers Rep!"
+    photo: "/assets/the-committee/2025-2026/hus.jpg"
+
+  - role:
+        - Treasurer
+    name: Zishu Zu
+    email: zishu.xu@oriel.ox.ac.uk
+    comment: "Hello Everybody! His name is Zishu Xu and he is the OUBAC treasurer for the forthcoming 25-26 calendar year. When asked to describe himself in three words... he would say: Committed, Big Smash, Singles Specialist (whoops that's five!). Nevertheless, I'm sure his passion on court, blended with his mathematical genius, will help him navigate the finances and battle against that pesky inflation!"
+    photo: "/assets/the-committee/2025-2026/zishu_zu.jpg"
+
+  - roles:
+      - Secretary
+    name: Cayen Wang
+    email: oubac.secretary@gmail.com
+    comment: "After rising through the ranks of clubnight and having led the W2 charge last year, the only next natural step is for Cay to be the secretary of the club!! His sporting talents range from athletics, swimming and of course badminton (hopefully his favourite!!). Although his smash is scary on coart, he is always smiley and cheery - hailing from Worcester college just like his predecessor, he is sure to help manage the club to a brighter and better future!!!"
+    photo: "/assets/the-committee/2025-2026/cayen_wang.jpg"
+
+  - role: Men's 1st Team Captain
+    name: Leo Bai
+    email: yunxuan.bai@jesus.ox.ac.uk
+    comment: "Stepping up to lead M1 this year is the one and only BLeo!<br /><br />
+
+              Strengths: Being our (not so) humble singles GOAT; torturing the M2 squad during training; rolling up his t-shirt sleeves for no reason.<br /><br />
+              
+              Weaknesses: Unable to bribe the IT rep to write a nice description."
+    photo: "/assets/the-committee/2025-2026/bleo.jpg"
+
+  - roles:
+        - Social Media Officer
+        - IT Officer
+        - Women's 1st Team Captain
+    name: Amy Feng
+    email: oubac.it.rep@gmail.com
+    comment: "Having mastered the art of studying maths by day and posting memes by night, Amy continues her position as the Social Media Rep. Not only this, but to achieve her dream to conquer the club, she has also taken the position of W1 captain (with this much free time, do maths students even work?).  Be it at the club, during training, or even suffering during S&C, Amy is always there to provide the good vibes that every club needs! "
+    photo: "/assets/the-committee/2025-2026/amy.jpg"
+
+  - role: Women's 2nd Team Captain
+    name: Lily Yang
+    email: lily.yang@queens.ox.ac.uk
+    comment: "Lily is the pinnacle of commitment to badminton, missing two (or was it three?) of her friends’ birthday parties just to play in the Local League.
+              Her ankles might be weak, but her smashes definitely aren't. Still, she insists on playing front court, allowing her to ping opponents from point-blank range. Truly versatile ;)
+              That said, there’s no denying her friendliness on court and if anyone can finally manifest the W2 hotpot social, it’s her <3"
+    photo: "/assets/the-committee/2025-2026/lily_yang.jpg"
+
+  - role:
+    - Men's 3rd Team Captain
+    name: Sam Charles
+    email: samuel.charles@lincoln.ox.ac.uk
+    comment: "Having played for M3 for two seasons now, Sam is more than ready to take over the mantle as M3 captain! He is a friendly and outgoing person, who can often be seen at one of the many famous OuBac food socials. We are sure that he will be able to propel M3 to even more local league success!"
+    photo: "/assets/the-committee/2025-2026/sam_charles.jpg"
+
+  - roles:
+    - Women's 3rd Team Captain
+    - Entz Rep
+    name: Darcey Sutcliffe
+    email: darcey.sutcliffe@mansfield.ox.ac.uk
+    comment: "Darcey and James are bringing the premium entz this season! Pair the social finesse of an engineering undergrad with the youthful energy of a 6th year medic and you’ve got some major events to look forward to😮‍💨 Their common strength? Dedication. Darcey, one of W3’s most committed, pulled up to Cambridge for the sole purpose of bringing the vibes to Varsity (and not because she lives there). James returns to this prestigious role as perhaps the oldest entz rep in the club’s history (involuntarily). His experience across almost all of the club’s roles puts him in the same league as Johnny sins (the fireman/doctor/astronaut/etc). You can be sure this year’s gonna be packed with non stop fun🤠🤠🤠"
+    photo: "/assets/the-committee/2025-2026/darcey_sutcliffe.jpg"
+
+  - role: Clubnight Rep
+    name: Crystal Huang
+    emails: oubac.clubnight@gmail.com
+    comment: "Famous for attending every single session (except when it interferes with brunch), Crystal has now decided she'd like to subject herself to responding to hundreds of emails, chasing rogue shuttles, and sitting through truly thrilling committee meetings.
+              If she's not showing off a new tattoo, she's either making sure you know she's five foot SIX or complaining about her degree (she only does classics....).<br /><br />
+              
+              Despite these obvious red flags, we somehow decided she was the perfect person to take over clubnight.<br /><br />
+              
+              Crystal’s ready to make clubnight even more fun - and maybe even slightly more organized (no promises). Please be nice to her. Or at least bring her brunch."
+    photo: "/assets/the-committee/2025-2026/crystal_huang.jpg"
+
+#  - role: Clubnight Rep
+#    name: Linfei Gan
+#    emails: oubac.clubnight@gmail.com
+#    comment: ""
+#    photo: "/assets/the-committee/2025-2026/linfei_gan.jpg"
+
+  - role: Alumni Rep
+    name: Sophie Taylor
+    email: sophie.taylor2@balliol.ox.ac.uk
+    comment: "Since OUBaC was founded in the 1950s, there are three pillars of the club that have withstood the test of time: good vibes, competitive spirit, and Sophie Taylor. Today, instead of joining her fellow alumni, she is somehow still at the club and has taken over the position of Alumni Rep! Always willing to bring the positive vibes and juicy gossip, we're sure that the Alumni rep position is in good hands!"
+    photo: "/assets/the-committee/2025-2026/sophie_taylor.jpg"
+
+  - role: IT Rep
+    name: Jonathan Hau
+    email: oubac.it.rep@gmail.com
+    comment: "Having been strong-armed into the position, Johnny now holds the highly coveted position of IT Rep (against his will). While we're not sure how good of an IT rep he'll be, there are 3 things we do know about him:<br /><br />
+              1. He'll never show up to socials.<br /><br />
+              2. He can always choke away games, no matter how much he leads by.<br /><br />
+              3. Never let him play singles.<br /><br />"
+    photo: "/assets/the-committee/2025-2026/jon_hau.jpg"
+
+  - roles:
+    - Entz Rep
+    - Welfare Rep
+    name: James Lin
+    email: james.lin@st-annes.ox.ac.uk
+    comment: "Darcey and James are bringing the premium entz this season! Pair the social finesse of an engineering undergrad with the youthful energy of a 6th year medic and you’ve got some major events to look forward to😮‍💨 Their common strength? Dedication. Darcey, one of W3’s most committed, pulled up to Cambridge for the sole purpose of bringing the vibes to Varsity (and not because she lives there). James returns to this prestigious role as perhaps the oldest entz rep in the club’s history (involuntarily). His experience across almost all of the club’s roles puts him in the same league as Johnny sins (the fireman/doctor/astronaut/etc). You can be sure this year’s gonna be packed with non stop fun🤠🤠🤠"
+    photo: "/assets/the-committee/2025-2026/james_lin.jpg"
+
+  - role: Welfare Rep
+    name: Lydia Marchbank
+    email: lydia.marchbank@merton.ox.ac.uk
+    comment: "Hi! I’m Lydia and I will be one of your welfare reps for this next year along with James! I am reading Biochemistry at Merton college and I am about to finish my first year. I would describe myself as caring, approachable and empathetic. I am always available for a chat or to approach with any concerns and I am looking forward to collaborating with the ENTZ reps for lots of events for everyone this year!"
+    photo: "/assets/the-committee/2025-2026/lydia_marchbank.jpg"
