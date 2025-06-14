@@ -3,7 +3,7 @@ members:
   - role: President 
     name: Ayman Ahmad
     email: oubac.president@gmail.com
-    comment: "After leading M2 through a yet another successful BUCS season,  Ayman has stepped up to be the next Lisan AY Gaib of OUBaC. Known for his love for Badminton and Cricket, Ayman is now constitutionally required to prioritise OUBaC over any other club, at least for a year. Donning his iconic headband, his work ethic on and off court combined with his CLUTCH Multi-Purpose Vehicle driving skills will surely steer OUBaC in the right direction."
+    comment: "After leading M2 through a yet another successful BUCS season, Ayman has stepped up to be the next Lisan AY Gaib of OUBaC. Known for his love for Badminton and Cricket, Ayman is now constitutionally required to prioritise OUBaC over any other club, at least for a year. Donning his iconic headband, his work ethic on and off court combined with his CLUTCH Multi-Purpose Vehicle driving skills will surely steer OUBaC in the right direction."
     photo: "/assets/the-committee/2025-2026/ayma.jpg"
 
   - roles:
@@ -87,11 +87,14 @@ members:
               Crystal’s ready to make clubnight even more fun - and maybe even slightly more organized (no promises). Please be nice to her. Or at least bring her brunch."
     photo: "/assets/the-committee/2025-2026/crystal_huang.jpg"
 
-#  - role: Clubnight Rep
-#    name: Linfei Gan
-#    emails: oubac.clubnight@gmail.com
-#    comment: ""
-#    photo: "/assets/the-committee/2025-2026/linfei_gan.jpg"
+  - role: Clubnight Rep
+    name: Linfei Gan
+    emails: oubac.clubnight@gmail.com
+    comment: "Linfei stands tall as one of the OUBaC clubnight reps for the upcoming year! We're not quite sure how she has so much free time on her hands that she can attend every session, but we're definitely grateful for it. <br /><br />
+    
+              Always having a smile on her face and willingness to play some badminton, Linfei brings the good vibes both on and off court. Under her careful eye, clubnight is sure to be a great time for everybody involved!"
+
+    photo: "/assets/the-committee/2025-2026/linfei_gan.jpg"
 
   - role: Alumni Rep
     name: Sophie Taylor
