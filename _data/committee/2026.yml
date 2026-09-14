@@ -1,0 +1,125 @@
+members:
+
+  - role: President
+    name: Lily Yang
+    email: oubac.president@gmail.com
+    comment: "After leading W2 through another hard-fought season of winning, losing, and desperately trying to field a team, Lily has decided she wants even more punishment by taking on the role as club president. With her sharp leadership skills and communication skills, we're sure she can steer OUBaC to even greater heights (or at least out of crushing financial debt)."
+    photo: "/assets/the-committee/2026-2027/lily.jpg"
+
+  - roles:
+      - Vice President
+      - Women's 2nd Team Captain
+    name: Kaavya Kumar
+    email: kaavya.kumar@exeter.ox.ac.uk
+    comment: "Kaavya has taken on the role of vice-president for the club, supporting Lily in running the club and doing her best to manage all the angry elderly people that sit in all of the other positions. To showcase how easy of a job vice-presidency is, she has also decided to take on the role of W2 captain for the year as well! We're sure that she'll do a great job at both regardless!"
+    photo: "/assets/the-committee/2026-2027/kaavya.jpg"
+
+  - role:
+        - Treasurer
+    name: Siru Huang
+    email: siru.huang@exeter.ox.ac.uk
+    comment: "Hi everyone! This is Siru, and he’ll be the OUBaC Treasurer for this coming year (’26–’27). Having joined M3 in MT25 and maintained a perfect 100% BUCS and Varsity win rate (with a grand total of two games played), I’m certain he will manage the club’s finances with equal success and earnestness — at least until another unholy Percival performance in Avalon shakes my confidence (just kidding!)."
+    photo: "/assets/the-committee/2026-2027/siru.jpg"
+
+  - roles:
+      - Secretary
+    name: Ayman Ahmad
+    email: oubac.secretary@gmail.com
+    comment: "Following a successful year as Club president where he oversaw plummeting club profits and another fat L to Cambridge at Varsity, Ayman humbly steps down to take up the secretary position instead. We hope he can achieve similarly big things there."
+    photo: "/assets/the-committee/2026-2027/ayman.jpg"
+
+  - role: Men's 1st Team Captain
+    name: Nicholas Volfbeyn
+    email: nicholas.volfbeyn@stcatz.ox.ac.uk
+    comment: "So imagine dragonite and tyranitar and a poke center nurse had a baby..."
+    photo: "/assets/the-committee/2026-2027/nicholas.jpg"
+
+  - role: Men's 2nd Team Captain
+    name: Ivan Xie
+    email: jiahua.xie@st-annes.ox.ac.uk
+    comment: "Previously the fresher who could always be depended on to play at least 30% of the BUCS matches (with a particular inclination towards away games), Ivan now steps up to take the mantle of M2 captain! As determined to carry out the role as he is to pass his driving test, the club only has some doubts as to this recent fresher’s capabilities to lead his team. One things for certain; he has the makings (and materials) of a wonderful captain."
+    photo: "/assets/the-committee/2026-2027/ivan.jpg"
+
+  - role: Women's 1st Team Captain
+    name: Lydia Marchbank
+    email: lydia.marchbank@merton.ox.ac.uk
+    comment: "Being both an incredible motivator (did someone say cereal?) and having a knack for (flick) serving, Lydia is the best person to lead a team of divas to victory. With amazing performance both on-court and in the club, she never fails to bring the fun, vibes, and cereal :))"
+    photo: "/assets/the-committee/2026-2027/lydia.jpg"
+
+  - roles:
+        - Social Media Officer
+        - IT Officer
+        - Welfare Rep
+    name: Amy Feng
+    email: oubac.it.rep@gmail.com
+    comment: "OUBaC's most employed member comes back to take on the roles of being the social media rep, the IT rep, AND the welfare rep. We're not sure if she's doing it for the love of the game, love of the club, or stat-padding her CV, but we appreciate it nonetheless!"
+    photo: "/assets/the-committee/2026-2027/amy.jpg"
+
+  - role: Women's 2nd Team Captain
+    name: Jessica Shaw
+    email: jessica.shaw@exeter.ox.ac.uk
+    comment: "Kaavya and Jess will be taking on the noble task of W2 captains next year. As second years, they bring the perfect combination of youthful energy, questionable time management, and an alarming amount of enthusiasm for badminton. Always smiley, energetic and ready to get people on court, they’ll be keeping W2 alive through local league matches, training sessions, and the occasional emotional crisis over league game team selection. Whether they’re smashing, defending, cheering from the side, or somehow convincing everyone to come to socials, there’s no doubt they’ll bring great vibes, commitment and plenty of chaos to the team next year"
+    photo: "/assets/the-committee/2026-2027/jessica.jpg"
+
+  - role:
+    - Men's 3rd Team Captain
+    name: Jerry Huang
+    email: junyu.huang@paediatrics.ox.ac.uk
+    comment: "M3 Octopus Captain with BIG Octopus Smash!! Let’s go eat octopus sashimi after every octopus match! 🐙"
+    photo: "/assets/the-committee/2026-2027/jerry.jpg"
+
+  - role: Clubnight Rep
+    name: Bojun Wang
+    emails: oubac.clubnight@gmail.com
+    comment: "So mysterious that nobody has ever even taken a picture of them, Bojun takes on the role of Clubnight rep alongside Linfei. We can only hope that this Batman-level mysteriousness is supported by Batman-level efficiency at running clubnight."
+    photo: "/assets/the-committee/2026-2027/bojun.jpg"
+
+  - role: Clubnight Rep
+    name: Linfei Gan
+    emails: oubac.clubnight@gmail.com
+    comment: "Linfei stands tall as one of the OUBaC clubnight reps for the upcoming year! We're not quite sure how she has so much free time on her hands that she can attend every session, but we're definitely grateful for it. <br /><br />
+    
+              Always having a smile on her face and willingness to play some badminton, Linfei brings the good vibes both on and off court. Under her careful eye, clubnight is sure to be a great time for everybody involved!"
+
+    photo: "/assets/the-committee/2026-2027/linfei_gan.jpg"
+
+  - roles:
+      - Alumni Rep
+      - Entz Rep
+    name: Benjamin Li
+    email: benjamin.li@keble.ox.ac.uk
+    comment: "Passionate professional seeking opportunities in club management, court mopping, and benchwarming. Connect with me on LinkedIn to discuss more!"
+    photo: "/assets/the-committee/2026-2027/benjy.jpg"
+
+  - role: IT Rep
+    name: Jonathan Hau
+    email: oubac.it.rep@gmail.com
+    comment: "Having been strong-armed into the position, Johnny retains the highly coveted position of IT Rep for another year (against his will)."
+    photo: "/assets/the-committee/2026-2027/jon_hau.jpg"
+
+  - role:
+    - Entz Rep
+    name: Hari Balachandar
+    email: haridhra.balachandar@stcatz.ox.ac.uk
+    comment: "Bringing the youthful energy to a team otherwise filled with uncs, Hari takes on the role as Entz rep. He somehow has managed to expand team to having 4 reps, perhaps to make sure that someone is always there to fill in when he is inevitably late to any and every event."
+    photo: "/assets/the-committee/2026-2027/hari.jpg"
+
+  - role:
+      - Entz Rep
+    name: Emily Yuan
+    email: emily.yuan@st-hildas.ox.ac.uk
+    comment: "Emily has stepped up to take on the impossible task of getting new undergraduates to socialise with the introverted aging fossils that make up the rest of the club. Can it be done? Probably not, but we certainly respect the effort."
+    photo: "/assets/the-committee/2026-2027/emily.jpg"
+
+  - role:
+      - Entz Rep
+    name: Jon Metcalf
+    email: jonathan.metcalf@mansfield.ox.ac.uk
+    comment: "If you end up paying for trials, blame this man. Yes he studies philosophy, no he hasn't taken the ethics module."
+    photo: "/assets/the-committee/2026-2027/jon_m.jpg"
+
+  - role: Welfare Rep
+    name: Benny Bacon
+    email: benjamin.bacon@bnc.ox.ac.uk
+    comment: "Benny takes on the role of Welfare rep, alongside Amy. He may vanish during big games and choke when the score gets too close, but you can always count on him off court to have a big smile on his face and lend a helping hand whenever he can!"
+    photo: "/assets/the-committee/2026-2027/benny.jpg"
