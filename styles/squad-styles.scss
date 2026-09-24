@@ -29,8 +29,10 @@ $print-critical-value: 360px; //This number has been chosen such that the table 
     background-size: cover;
     background-position: center;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0.2em;
+    transform: none;
+//     top: 50%;
+//     transform: translateY(-50%);
 }
 
 #oxford{
@@ -90,4 +92,38 @@ h3{
   font-weight: normal;
   font-size: 1.5rem;
   margin-bottom: 0;
+}
+
+// .normal-ordered-list li {
+//     list-style-image: none;
+//     list-style-type: decimal;
+// }
+//
+// .normal-ordered-list li::before {
+//     content: none;
+// }
+
+.normal-ordered-list {
+    list-style: none;
+    counter-reset: item;
+    padding-left: 1em;
+}
+
+.normal-ordered-list > li {
+    counter-increment: item;
+    display: block;
+    grid-template-columns: max-content 1fr;
+    column-gap: 0.5em;
+    padding-left: 1.7em;
+    text-indent: -1.7em;
+}
+
+.normal-ordered-list > li::before {
+    content: "(" counter(item) ")";
+    position: static;
+    width: auto;
+    height: auto;
+    background-image: none;
+    transform: none;
+    margin-right: 0.5em;
 }
