@@ -3,7 +3,7 @@
 ---
 This note covers the installation instructions for the repo, as well as a summary of tasks that you should do immediately upon handover (as well as how to do them). 
 
-Please refer to the `how_to_do.md` file in this directory for a list of your tasks/responsibilities, as well as step-by-step instructions on how to do them.
+Please refer to the `how_to_do.md` file in this directory for a list of your tasks/responsibilities, as well as step-by-step instructions on how to do them. The `other_tasks.md` file contains a list of other responsibilities that were listed in older documentation, but I have yet to be asked to do them (or no longer need to do them).
 
 **Note:** IT Reps are responsible for the maintenance and update of this documentation.
 
