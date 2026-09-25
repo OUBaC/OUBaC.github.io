@@ -1,10 +1,17 @@
 # Oxford University Badminton Club Website
 
-This is the source for the Oxford University Badminton Club website. It is built with Jekyll and hosted using Github pages.
+---
+This is the source code for the Oxford University Badminton Club website. It is built with Jekyll and hosted using Github pages.
+
+**Note:** Any new IT Rep should see the `Handover` directory for a list of useful documentation including install instructions, and common tasks that need to be performed. IT Reps are responsible for the maintenance and update of this documentation.
+
+\[Last updated - 09/2026]
+
+---
 
 ## Structure
 
-Much of the structure is determined by Jekyll.
+Below is a general guide to the repo. Much of the structure is determined by Jekyll.
 
 - `_data` contains data files. In particular, it contains the Varsity scores, the scores and winners of cuppers and a file containing the contact information of the president which is used throughout the website.
 - `_includes` contains files which are included in other files such as the navigation elements.
@@ -18,6 +25,8 @@ Much of the structure is determined by Jekyll.
   - `assets/logo` contains various copies of the logo. Not all of these are used on the website but it is a convenient place to store the files.
 - `latest-news` contains the blog when generated. The blog posts will automatically be split into pages of 5.
 - `styles` contains ths CSS/SASS for the website. `stylesheet.scss` is included on every page and contains general styles, most other files are named after the webpage which uses them.
+
+---
 
 ## Updating the website
 The website has many things which occasionally need updating.
