@@ -25,26 +25,41 @@ Below is a general guide to the repo. Much of the structure is determined by Jek
   - `assets/logo` contains various copies of the logo. Not all of these are used on the website but it is a convenient place to store the files.
 - `latest-news` contains the blog when generated. The blog posts will automatically be split into pages of 5.
 - `styles` contains ths CSS/SASS for the website. `stylesheet.scss` is included on every page and contains general styles, most other files are named after the webpage which uses them.
-
+- `handover` contains further instructions for current IT Reps on what tasks/responsibilities they have, as well as how to do them.
 ---
 
-## Updating the website
-The website has many things which occasionally need updating.
+[//]: # (## Updating the website)
 
-### Frequently
-- Session times and the locations available on the map in [`sessions.html`](sessions.html). 
-- List of college captains in [`college-captains`](college-captatins.html)
-- Cuppers draw in [`cuppers.html`](cuppers.html)
+[//]: # (The website has many things which occasionally need updating.)
 
-### Yearly or less
-- The current committee.
-- Sponsors in [`the-club.html`](the-club.html)
-- Cuppers 'Hall of Fame' in [`cuppers.html`](cuppers.html)
-- Current prices in [`clubnight.html`](clubnight.html)
-- Leagues the teams play in and the links to the current standings in [`squad.html`](squad.html)
+[//]: # ()
+[//]: # (### Frequently)
 
-### Updating the committee.
-Each committee is a data file in the `_data/committee` folder. The files should be named `{{year}}.yml` where `{{year}}` is the year the committee took over. So the `2019.yml` contains the committee for the 2019 - 2020 committee. 
+[//]: # (- Session times and the locations available on the map in [`sessions.html`]&#40;sessions.html&#41;. )
 
-1. Create a new committee file and add the committee data. Old files should be left in place as they can be found in the archive.
-2. Edit the file `variables.yml` with the details of the President and the IT Officer.
+[//]: # (- List of college captains in [`college-captains`]&#40;college-captatins.html&#41;)
+
+[//]: # (- Cuppers draw in [`cuppers.html`]&#40;cuppers.html&#41;)
+
+[//]: # ()
+[//]: # (### Yearly or less)
+
+[//]: # (- The current committee.)
+
+[//]: # (- Sponsors in [`the-club.html`]&#40;the-club.html&#41;)
+
+[//]: # (- Cuppers 'Hall of Fame' in [`cuppers.html`]&#40;cuppers.html&#41;)
+
+[//]: # (- Current prices in [`clubnight.html`]&#40;clubnight.html&#41;)
+
+[//]: # (- Leagues the teams play in and the links to the current standings in [`squad.html`]&#40;squad.html&#41;)
+
+[//]: # ()
+[//]: # (### Updating the committee.)
+
+[//]: # (Each committee is a data file in the `_data/committee` folder. The files should be named `{{year}}.yml` where `{{year}}` is the year the committee took over. So the `2019.yml` contains the committee for the 2019 - 2020 committee. )
+
+[//]: # ()
+[//]: # (1. Create a new committee file and add the committee data. Old files should be left in place as they can be found in the archive.)
+
+[//]: # (2. Edit the file `variables.yml` with the details of the President and the IT Officer.)

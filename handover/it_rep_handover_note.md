@@ -34,7 +34,7 @@ Below is a step-by-step guide to accessing and installing the repo.
 Please make sure you receive the following files from your predecessor:
 1. `Passwords.docx` -  Contains the login details for all useful accounts.
 2. `IT stuff.docx` - Legacy document, but seems to be passed down year-on-year anyway.
-3. ` IT Officer info.docx` - Legacy document, but seems to be passed down year-on-year anyway. This does contain a longer list of responsibilities/tasks than is documented in the `how_to_do.md` file, but I have only documented the stuff I have actually done. 
+3. ` IT Officer info.docx` - Legacy document, but seems to be passed down year-on-year anyway. This does contain a longer list of responsibilities/tasks than is documented in the `how_to_do.md` file, but I have only documented the stuff I have actually done. See `other_tasks.md` for these tasks that I have not yet been asked to do.
 
 Please make sure to do the following upon taking over the role:
 

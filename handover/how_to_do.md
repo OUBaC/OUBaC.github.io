@@ -11,6 +11,9 @@ This note covers the list of your tasks/responsibilities, as well as step-by-ste
 
 # Task List
 
+**Description:** Below are a list of tasks I've done since taking over as IT Rep. Please refer to the `other_tasks.md` file for other tasks that appeared in older docs, but I have not been asked to do them yet.
+
+
 | Task                                                | Frequency                                                      | How To Do                                 |
 |-----------------------------------------------------|----------------------------------------------------------------|-------------------------------------------|
 | Update the Committee page                           | On handover                                                    | [See 1.](#1-update-the-committee-page)    |
