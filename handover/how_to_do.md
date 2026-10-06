@@ -131,6 +131,6 @@ The clubnight prices are also detailed here, along with the clubnight reps. Thes
 ### To add a new page
 
 1. Create a new `.html` file in the main directory as required.
-2. Copy and paste the HTML from an existing page that uses the formatting you need.
+2. Copy and paste the HTML from an existing page that uses the formatting you need. If necessary, you can create a new `.scss` file in the `styles` folder.
 3. Update and complete the page as required.
 4. Update any relevant `href` links (e.g., in any homepage tabs/posts).
